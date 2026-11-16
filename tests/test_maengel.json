@@ -1,0 +1,19 @@
+{
+  "seite": 1,
+  "maengel": [
+    {
+      "nr": 1,
+      "titel": "TEST: Luftdichte Abklebung an der Innenecke fehlt",
+      "sicherheit": "sicher",
+      "kreis": { "x": 53.5, "y": 61.0, "r": 2.5 }
+    },
+    {
+      "nr": 2,
+      "titel": "TEST: Zusätzlicher Eckstiel fehlt",
+      "sicherheit": "unsicher",
+      "nummer_position": "oben-links",
+      "kreis": { "x": 48.7, "y": 66.8, "r": 4.3 },
+      "schraffur": [[47.3, 61.5], [50.0, 61.5], [50.0, 72.0], [47.3, 72.0]]
+    }
+  ]
+}
