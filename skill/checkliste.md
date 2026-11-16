@@ -9,9 +9,9 @@ den Prüfbericht (Abschnitt „Annahmen“).
 |---|---|---|---|
 | C1 | Neubau oder Sanierung? | Andere GEG-Anforderungen an den Wärmeschutz | Neubau |
 | C2 | Nutzung der Räume hinter dem Detail (Wohnen, Büro, Bad/Feuchtraum, Schwimmbad …)? | Raumklima bestimmt die Feuchtebelastung der Konstruktion | Wohnen, normales Raumklima |
-| C3 | Welche Schicht ist als **Luftdichtheitsschicht** geplant (z. B. OSB mit verklebten Stößen, Dampfbremsbahn)? Welches Produkt bzw. welcher sd-Wert? | Ohne festgelegte Luftdichtheitsschicht ist keine sichere Prüfung von Luftdichtheit und Tauwasser möglich | Die raumseitige Holzwerkstoffplatte; sd-Wert unbekannt → Einschätzung „unsicher“ |
+| C3 | Welche Schicht ist als **Luftdichtheitsschicht** geplant (z. B. OSB mit verklebten Stößen, Dampfbremsbahn)? Welches Produkt bzw. welcher sd-Wert? | Ohne festgelegte Luftdichtheitsschicht ist keine sichere Prüfung von Luftdichtheit und Tauwasser möglich | Die raumseitige Holzwerkstoffplatte; sd-Wert unbekannt → **Risiko/Klärungsbedarf** |
 | C4 | Ist die Fassade **hinterlüftet**? Wo sind Zu- und Abluftöffnungen? | Hinterlüftung führt Feuchte ab und schützt die Konstruktion | Hinterlüftet, wenn Lattung + Bekleidung gezeichnet sind |
-| C5 | Welcher **Dämmstoff** liegt im Gefach (Holzfaser, Mineralwolle, Zellulose …), mit welchem λ-Wert? | Wärmeschutz und Feuchteverhalten hängen vom Dämmstoff ab | Faserdämmstoff, λ = 0,040 W/(mK) |
+| C5 | Welcher **Dämmstoff** liegt im Gefach (Holzfaser, Mineralwolle, Zellulose …), mit welchem λ-Wert? | Wärmeschutz und Feuchteverhalten hängen vom Dämmstoff ab | Dämmstoff wie gezeichnet; **kein** λ-Wert angenommen → Wärmeschutz „nicht beurteilbar“ |
 | C6 | **Standort** bzw. Schlagregenbeanspruchung (Gruppe I, II oder III)? | Bestimmt die Anforderungen an den Schlagregenschutz der Fassade | Gruppe II |
 | C7 | **Gebäudeklasse** (GK 1–5)? | Bestimmt die Brandschutzanforderungen an die Außenwand | Unbekannt → Brandschutz wird **nicht** geprüft, nur Hinweis |
 | C8 | Gibt es besondere **Schallschutz**-Anforderungen (Außenlärm, Trennwand)? | Bestimmt die Anforderungen nach DIN 4109 | Keine besonderen → Schallschutz wird **nicht** geprüft, nur Hinweis |

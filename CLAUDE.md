@@ -23,7 +23,11 @@ Details und aktueller Stand: siehe `PLAN.md` – zu Beginn jeder Sitzung lesen.
 - Jede Prüfregel im Skill hat eine **Quelle/Fundstelle**. Keine Regel ohne Quelle.
 - Normtexte und fremde Zeichnungen (z. B. dataholz.eu) **nicht kopieren** – Regeln in
   eigenen Worten, fremde Quellen nur verlinken. Referenzdetails selbst zeichnen.
-- Unsichere Einschätzungen als **unsicher kennzeichnen** statt zu raten.
+- **Qualitative Plausibilitätsprüfung – keine bauphysikalischen Berechnungen** (keine sd-,
+  R-, U-Werte, kein f_Rsi, kein Tauwasser). Keine fehlenden Werte schätzen oder erfinden.
+- Befunde immer in **vier Einstufungen**: Aufbaufehler · Risiko/Klärungsbedarf ·
+  Verbesserungshinweis · Nicht beurteilbar. Fehlende Angabe ≠ baulicher Mangel.
+- Keine Pauschalaussagen „sicher/normgerecht“. Jeder Befund: woran in der Zeichnung erkennbar.
 - Jeder Prüfbericht enthält den Hinweis: *Hilfestellung – ersetzt keine fachliche Prüfung
   und keinen Nachweis. Die KI kann sich irren; Ergebnisse sind zu überprüfen.*
 
@@ -34,7 +38,8 @@ Details und aktueller Stand: siehe `PLAN.md` – zu Beginn jeder Sitzung lesen.
 
 ## Gestaltung
 - Schlicht und verständlich; der Fokus liegt auf der **Richtigkeit** der Prüfung.
-- Markierungen: **Rot** = Mangel (Kreis + Nummer, Schraffur). Nummern = Mängelliste.
+- Markierungen in **Rot** (Kreis + Nummer, ggf. Schraffur); Nummern = Befundliste.
+  Durchgezogen = Aufbaufehler, gestrichelt = Risiko, gepunktet = Hinweis.
 - Skizzen im **CAD-Look**: schwarze Linien, klare Linienstärken, DIN-Schraffuren
   (Dämmung, Holz, Plattenwerkstoffe), Beschriftung mit Hinweislinien.
 

@@ -32,8 +32,10 @@ schnelle **technische Zweitmeinung**.
 6. Ein Skript im Skill erzeugt den **PDF-Prüfbericht**:
    - Deckblatt mit Haftungshinweis
    - Originalzeichnung mit **roten Kreisen / Schraffuren** und nummerierten Mängeln
-   - **Mängelliste:** Nr. · Prüfbereich · Befund · *Warum ist das ein Fehler?* ·
-     *Mögliche Folgen (Bauschaden)* · Verbesserungsvorschlag · Quelle/Norm · Sicherheit der Einschätzung
+   - **Befundliste** in vier Einstufungen (Aufbaufehler · Risiko/Klärungsbedarf ·
+     Verbesserungshinweis · Nicht beurteilbar): Nr. · Fundstelle · woran erkennbar ·
+     *Warum ein Fehler?* · *Mögliche Folgen (Bauschaden)* · Verbesserung · Quelle/Norm
+   - **Keine bauphysikalischen Berechnungen** – qualitative Plausibilitätsprüfung
    - **Verbesserungsskizze** je Mangel, schematisch im CAD-Look (DIN-Schraffuren, Linienstärken)
    - Offene Fragen / Annahmen
 
@@ -112,8 +114,8 @@ Ein öffentliches GitHub-Repo ist öffentliche Wiedergabe. Daraus folgt:
 ### C – Could
 - Dach-Wand-Anschluss, Geschossdecke
 - IFC-Datei als Eingabe
-- U-Wert-Berechnung aus der Legende
 - Massivbau-Details
+- ~~U-Wert-Berechnung~~ → verworfen (16.11.): bewusst nur qualitative Plausibilitätsprüfung
 
 ## 7. Etappen (an die Kurstage gekoppelt)
 
@@ -164,8 +166,14 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
 - [x] **Feature 2 (Mo 16.11.):** `skill/checkliste.md` (9 Rückfragen mit Annahmen) +
       Prüfkatalog Teil 1: `00_uebersicht`, `01_luftdichtheit` (LD-01…06),
       `02_feuchteschutz` (FS-01…04), `03_waermeschutz_waermebruecken` (WB-01…04)
-- [ ] **Du:** Prüfkatalog Teil 1 fachlich gegenlesen
-- [ ] Nächstes Feature: Prüfkatalog Teil 2 (Winddichtheit/Hinterlüftung, Holzschutz,
-      Konstruktion Holzrahmenbau, Zeichnungsqualität)
-- [ ] Danach: erster echter Blindtest am Testdetail
+- [x] Testprüfung nach deinem Prüf-Prompt am Testdetail (nicht blind): beide eingebauten
+      Fehler gefunden
+- [x] **Feature 3 (Mo 16.11.):** Prüf-Prompt eingebaut – keine Berechnungen, vier
+      Einstufungen, Ausgabegliederung (SKILL.md, 00_uebersicht, Teil 1 angepasst);
+      markieren.py: durchgezogen/gestrichelt/gepunktet nach Einstufung
+- [x] Prüfkatalog Teil 2: `04_winddichtheit_hinterlueftung` (WH-01…04), `05_holzschutz`
+      (HS-01…03), `06_konstruktion_holzrahmenbau` (KO-01…04), `07_zeichnungsqualitaet` (ZQ-01…05)
+- [ ] **Du:** Prüfkatalog Teil 1 + 2 fachlich gegenlesen
+- [ ] **Du:** 1–2 neue Testdetails mit Fehlern, die ich nicht kenne (für echten Blindtest)
+- [ ] Nächstes Feature: Berichts-Skript (PDF-Prüfbericht) + Verbesserungsskizze
 - [ ] Danach: Berichts-Skript (PDF-Prüfbericht mit Mängelliste)

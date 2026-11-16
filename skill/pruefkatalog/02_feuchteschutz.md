@@ -4,8 +4,12 @@ Wasserdampf wandert im Winter von innen (warm, feucht) nach außen (kalt). Triff
 Wand auf eine kalte, dichte Schicht, kann er dort kondensieren (Tauwasser). Ziel: Die Wand
 lässt **weniger Dampf hinein, als sie nach außen abgeben kann**.
 
-Kennwert: **sd-Wert** (wasserdampfdiffusionsäquivalente Luftschichtdicke) = μ × Dicke.
+Kennwert: **sd-Wert** (wasserdampfdiffusionsäquivalente Luftschichtdicke).
 Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
+
+> Dieser Bereich wird **qualitativ** geprüft: Schichtenfolge beurteilen, aber **keine**
+> sd-Werte berechnen oder schätzen und **kein** Tauwasser berechnen. sd-Werte nur nennen,
+> wenn sie in der Zeichnung angegeben sind.
 
 ---
 
@@ -14,11 +18,10 @@ Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
 - **Prüfe:** Werden die Schichten von innen nach außen **diffusionsoffener**? Ist die
   raumseitige Schicht (Luftdichtheits-/Dampfbremsschicht) deutlich dichter als die äußeren
   Schichten vor der Hinterlüftung?
-- **So erkennst du es in der Zeichnung:** Schichtenfolge laut Legende; typische Werte
-  (Bemessungswerte DIN EN ISO 10456 bzw. Herstellerangabe):
-  - Holzfaserdämmplatte außen: sehr diffusionsoffen (sd im Bereich von Zentimetern)
-  - OSB: **stark produktabhängig** – bei 15 mm von deutlich unter 1 m bis mehrere Meter
-  - Dampfbremsbahn: laut Produkt (z. B. sd 2 m … feuchtevariabel)
+- **So erkennst du es in der Zeichnung:** Schichtenfolge laut Legende. Qualitative Orientierung:
+  - Holzfaserdämmplatten und Unterdeckbahnen außen sind in der Regel diffusionsoffen.
+  - OSB ist **stark produktabhängig** – ohne Produkt- bzw. sd-Angabe nicht beurteilbar.
+  - Dampfbremsbahnen: Eigenschaft laut Produkt (auch feuchtevariabel möglich).
 - **Fehlerbild:** Außen liegt eine dichtere Schicht als innen (z. B. OSB außen, Gipskarton
   ohne Dampfbremse innen).
 - **Warum ist das ein Fehler?** Feuchte gelangt hinein, kann aber außen nicht abtrocknen.
@@ -26,8 +29,10 @@ Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
   durchfeuchtete Dämmung mit Verlust der Dämmwirkung.
 - **Verbesserung:** Innen dampfbremsend (z. B. verklebte OSB mit ausreichendem sd-Wert oder
   Dampfbremsbahn), außen diffusionsoffen (z. B. Holzfaserplatte, Unterdeckbahn).
-- **Quelle:** DIN 4108-3. Verhältnis sd,innen ≥ 10 × sd,außen = (Faustregel).
-- **Einstufung:** Ist der sd-Wert der Innenschicht unbekannt (Checkliste C3) → `unsicher`.
+- **Quelle:** DIN 4108-3. „Innen deutlich dichter als außen“ = (Faustregel).
+- **Einstufung:** Schichtenfolge offensichtlich umgekehrt (dicht außen, offen innen) →
+  **Aufbaufehler**. Richtige Reihenfolge, aber sd-Wert der Innenschicht unbekannt
+  (Checkliste C3) → **Risiko/Klärungsbedarf**.
 
 ## FS-02 Keine Feuchtefalle auf der kalten Seite
 
@@ -41,6 +46,8 @@ Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
 - **Verbesserung:** Außen diffusionsoffene Materialien; falls eine dichte Außenschicht
   unvermeidbar ist: rechnerischer Nachweis (Glaser oder hygrothermische Simulation).
 - **Quelle:** DIN 4108-3; DIN EN 15026.
+- **Einstufung:** Dampfsperrende Schicht außen und offene Innenseite klar erkennbar →
+  **Aufbaufehler**. Dichtere Außenschicht ohne erwähnten Nachweis → **Risiko/Klärungsbedarf**.
 
 ## FS-03 Tauwassernachweis bzw. nachweisfreie Konstruktion
 
@@ -59,8 +66,8 @@ Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
   (Glaser-Verfahren nach DIN 4108-3 bzw. Simulation nach DIN EN 15026).
 - **Quelle:** DIN 4108-3 (Bauteile ohne rechnerischen Tauwassernachweis). Genaue
   Grenzwerte in der gültigen Normausgabe nachschlagen.
-- **Einstufung:** Meist **Hinweis** oder `unsicher` – die Zeichnung allein reicht selten für ein
-  endgültiges Urteil.
+- **Einstufung:** Meist **Risiko/Klärungsbedarf** oder **Verbesserungshinweis** – die Zeichnung
+  allein reicht selten für ein endgültiges Urteil. **Kein** Tauwasser berechnen.
 
 ## FS-04 Austrocknung ist möglich
 
@@ -74,3 +81,4 @@ Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
 - **Verbesserung:** Mindestens eine Seite diffusionsoffen; innen ggf. feuchtevariable
   Dampfbremse, die im Sommer Rücktrocknung nach innen erlaubt.
 - **Quelle:** DIN 4108-3; DIN 68800-2 (Schutz vor unzuträglicher Feuchte).
+- **Einstufung:** Beidseitig dichte Schichten erkennbar → **Risiko/Klärungsbedarf**.

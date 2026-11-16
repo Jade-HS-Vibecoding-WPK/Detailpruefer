@@ -8,6 +8,9 @@ Aufruf:
 
 Koordinaten in maengel.json sind Prozentwerte:
 x = 0 (links) … 100 (rechts), y = 0 (oben) … 100 (unten), r in % der Blattbreite.
+
+Einstufung → Linienart: aufbaufehler = durchgezogen, risiko = gestrichelt,
+hinweis = gepunktet, nicht beurteilbar = keine Markierung.
 """
 import io
 import json
@@ -29,11 +32,21 @@ RICHTUNGEN = {  # wo die Nummer am Kreis sitzt (x-, y-Richtung in PDF-Koordinate
 }
 
 
-def kreis_und_nummer(c, px, py, r, nr, w, unsicher, richtung="oben-rechts"):
+def strichart(einstufung, linie):
+    """aufbaufehler = durchgezogen, risiko = gestrichelt, hinweis = gepunktet."""
+    if einstufung == "risiko":
+        return [linie * 4, linie * 3]
+    if einstufung == "hinweis":
+        return [linie * 0.1, linie * 2.2]
+    return []
+
+
+def kreis_und_nummer(c, px, py, r, nr, w, einstufung, richtung="oben-rechts"):
     linie = max(1.2, w * 0.0016)
     c.setStrokeColor(ROT)
     c.setLineWidth(linie)
-    c.setDash([linie * 4, linie * 3] if unsicher else [])
+    c.setLineCap(1)  # runde Enden – nötig für gepunktete Linien
+    c.setDash(strichart(einstufung, linie))
     c.setFillColor(ROT_TRANSPARENT)
     c.circle(px, py, r, stroke=1, fill=1)
     c.setDash([])
@@ -116,11 +129,13 @@ def main():
             schraffur(c, [pt(x, y) for x, y in m["schraffur"]], w)
     for m in maengel:
         k = m.get("kreis")
+        einstufung = str(m.get("einstufung", "aufbaufehler")).lower()
+        if einstufung.startswith("nicht"):  # „nicht beurteilbar“ wird nicht markiert
+            continue
         if k:
             px, py = pt(k["x"], k["y"])
             kreis_und_nummer(c, px, py, k.get("r", 3) / 100 * w, m["nr"], w,
-                             m.get("sicherheit") == "unsicher",
-                             m.get("nummer_position", "oben-rechts"))
+                             einstufung, m.get("nummer_position", "oben-rechts"))
     c.save()
     puffer.seek(0)
 

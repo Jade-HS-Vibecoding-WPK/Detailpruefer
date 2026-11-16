@@ -18,8 +18,9 @@ Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern w�
 - **Mögliche Folgen:** Lücken auf der Baustelle, Feuchteschäden, nicht bestandene Luftdichtheitsmessung.
 - **Verbesserung:** Luftdichtheitsschicht in Legende benennen und im Detail eindeutig darstellen.
 - **Quelle:** DIN 4108-7 (Planung der Luftdichtheitsschicht).
-- **Hinweis:** Fehlt nur die grafische Kennzeichnung, aber die Legende nennt z. B. „OSB, Stöße
-  verklebt“, ist das **kein** Mangel, höchstens ein Darstellungshinweis.
+- **Einstufung:** Nirgends festgelegt und auch nicht ableitbar → **Aufbaufehler**
+  (Planungsmangel). Aus Symbolen/Beschriftungen ableitbar, aber in der Legende nicht benannt →
+  **Verbesserungshinweis**. Legende nennt z. B. „OSB, Stöße verklebt“ → `erfüllt`.
 
 ## LD-02 Luftdichtheitsschicht ist lückenlos durchgehend („Stift-Regel“)
 
@@ -40,6 +41,9 @@ Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern w�
   Klebeband dauerhaft verbinden; oder eine Platte/Bahn um die Ecke durchführen.
 - **Quelle:** DIN 4108-7 (lückenlose Luftdichtheitsschicht, Ausbildung von Anschlüssen);
   GEG § 26 (dauerhaft luftundurchlässige Gebäudehülle). Stift-Regel = (Faustregel).
+- **Einstufung:** Unterbrechung klar erkennbar (z. B. Abklebe-Symbol fehlt an einer Stelle,
+  an der es konstruktiv nötig wäre, während es an anderen Stößen gezeichnet ist) →
+  **Aufbaufehler**. Darstellung mehrdeutig → **Risiko/Klärungsbedarf**.
 
 ## LD-03 Stöße von Plattenwerkstoffen sind abgedichtet
 
@@ -54,8 +58,11 @@ Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern w�
 - **Verbesserung:** Stöße mit für den Untergrund geeignetem Klebeband abkleben; Stöße möglichst
   auf tragendem Holz anordnen, damit das Band sicher anliegt.
 - **Quelle:** DIN 4108-7.
-- **Hinweis:** Ob die gewählte OSB-Platte selbst ausreichend luftdicht ist, hängt vom Produkt ab
-  → Checkliste C3; im Zweifel `unsicher`.
+- **Einstufung:** Stoß ohne Abklebung, obwohl Abklebungen an anderen Stößen dargestellt
+  sind, oder Plattenrand ohne Unterkonstruktion (Band hat keinen festen Untergrund) →
+  **Aufbaufehler**. Unklar, ob überhaupt ein Stoß vorliegt → **Risiko/Klärungsbedarf**.
+  Ob die gewählte Platte selbst ausreichend luftdicht ist, hängt vom Produkt ab →
+  **Risiko/Klärungsbedarf** (Checkliste C3).
 
 ## LD-04 Installationsebene schützt die Luftdichtheitsschicht
 
@@ -69,7 +76,7 @@ Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern w�
 - **Mögliche Folgen:** viele kleine Leckagen → wie LD-02.
 - **Verbesserung:** Installationsebene (z. B. 4–6 cm) raumseitig vorsehen.
 - **Quelle:** DIN 4108-7 (Empfehlung zur Vermeidung von Durchdringungen).
-- **Einstufung:** Fehlt die Installationsebene, ist das ein **Hinweis**, kein zwingender Mangel –
+- **Einstufung:** Fehlt die Installationsebene → **Verbesserungshinweis**, kein Aufbaufehler –
   sofern Durchdringungen anderweitig luftdicht gelöst werden.
 
 ## LD-05 Durchdringungen sind abgedichtet
@@ -84,6 +91,8 @@ Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern w�
 - **Verbesserung:** Durchdringungen vermeiden (Installationsebene) oder mit Manschetten bzw.
   Anschlussbändern abdichten.
 - **Quelle:** DIN 4108-7.
+- **Einstufung:** Erkennbare Durchdringung ohne Abdichtung → **Aufbaufehler**.
+  Im Schnitt nicht dargestellt → **Nicht beurteilbar**.
 
 ## LD-06 Lage der Luftdichtheitsschicht: raumseitig der Dämmung
 
@@ -95,3 +104,4 @@ Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern w�
 - **Mögliche Folgen:** Tauwasser in der Konstruktion, Holzfäule, Schimmel.
 - **Verbesserung:** Luftdichtheitsschicht raumseitig der Dämmung anordnen.
 - **Quelle:** DIN 4108-7; DIN 4108-3 (Zusammenhang mit FS-01).
+- **Einstufung:** Falsche Lage klar erkennbar → **Aufbaufehler**.

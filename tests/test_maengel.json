@@ -4,16 +4,34 @@
     {
       "nr": 1,
       "titel": "TEST: Luftdichte Abklebung an der Innenecke fehlt",
-      "sicherheit": "sicher",
-      "kreis": { "x": 53.5, "y": 61.0, "r": 2.5 }
+      "einstufung": "aufbaufehler",
+      "kreis": { "x": 50.6, "y": 64.0, "r": 2.2 }
     },
     {
       "nr": 2,
-      "titel": "TEST: Zusätzlicher Eckstiel fehlt",
-      "sicherheit": "unsicher",
+      "titel": "TEST: OSB-Rand Wand A ohne Unterkonstruktion (Eckstiel fehlt)",
+      "einstufung": "aufbaufehler",
       "nummer_position": "oben-links",
       "kreis": { "x": 48.7, "y": 66.8, "r": 4.3 },
-      "schraffur": [[47.3, 61.5], [50.0, 61.5], [50.0, 72.0], [47.3, 72.0]]
+      "schraffur": [[47.3, 61.5], [49.8, 61.5], [49.8, 71.7], [47.3, 71.7]]
+    },
+    {
+      "nr": 3,
+      "titel": "TEST: Möglicher Plattenstoß zwischen den Ständern",
+      "einstufung": "risiko",
+      "kreis": { "x": 46.0, "y": 27.9, "r": 3.0 }
+    },
+    {
+      "nr": 4,
+      "titel": "TEST: Stoß Holzfaserplatte an der Außenecke",
+      "einstufung": "hinweis",
+      "nummer_position": "unten-links",
+      "kreis": { "x": 41.8, "y": 76.0, "r": 1.8 }
+    },
+    {
+      "nr": 5,
+      "titel": "TEST: Dämmstoff nicht angegeben (wird nicht markiert)",
+      "einstufung": "nicht beurteilbar"
     }
   ]
 }
