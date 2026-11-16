@@ -1,0 +1,185 @@
+{
+  "detail": {
+    "titel": "Gebäudeecke Außenwand (Testdetail)",
+    "datei": "wandeck_mit_fehlern.pdf",
+    "bauart": "Holzrahmenbau",
+    "fassade": "hinterlüftete Holzschalung (Douglasie), geschlossen – aus der Zeichnung abgeleitet",
+    "schnitt": "Horizontalschnitt",
+    "massstab": "1:5",
+    "pruefdatum": "16.11.2026",
+    "normstand": "16.11.2026 (siehe Abschnitt 8)"
+  },
+  "seite": 1,
+  "schichtenaufbau": [
+    { "schicht": "Gipskartonplatten, 2-lagig", "dicke": "2,5 cm", "anmerkung": "" },
+    { "schicht": "Installationsebene mit Ständern", "dicke": "6 cm", "anmerkung": "Dämmschraffur gezeichnet, Dämmstoff in der Legende nicht genannt", "unklar": true },
+    { "schicht": "OSB-Platte", "dicke": "1,5 cm", "anmerkung": "vermutlich Luftdichtheitsschicht (Abklebe-Symbole an Stößen); Funktion und Produkt nicht benannt", "unklar": true },
+    { "schicht": "Ständerwerk (6 cm breit) mit Gefachdämmung", "dicke": "16 cm", "anmerkung": "Dämmstoff nicht benannt", "unklar": true },
+    { "schicht": "Holzfaserdämmplatte", "dicke": "1,5 cm", "anmerkung": "vermutlich winddichtende Schicht; Funktion und Stoßausbildung nicht angegeben", "unklar": true },
+    { "schicht": "Lattung, senkrecht (Hinterlüftungsebene)", "dicke": "3 cm", "anmerkung": "" },
+    { "schicht": "Holzverkleidung Douglasie", "dicke": "2 cm", "anmerkung": "an der Außenecke auf Gehrung gestoßen" }
+  ],
+  "befunde": [
+    {
+      "nr": 1,
+      "einstufung": "aufbaufehler",
+      "regel": "LD-02",
+      "titel": "Luftdichter Anschluss der OSB-Platten an der Innenecke fehlt",
+      "fundstelle": "Innenecke, Stoß der OSB-Platten von Wand A (links) und Wand B (unten), ca. x 50–51 %, y 63–65 %",
+      "erkennbar": "Die Beschriftung „Luftdichte Abklebung“ weist mit ihrer Hinweislinie in diesen Eckbereich, dort ist aber kein Klebeband dargestellt. An anderen Plattenstößen (Wand A ca. x 50,5 %, y 32–35 %; Wand B ca. x 60–62 %, y 63,7 %) zeichnet der Plan die Abklebung als dicke Strichlinie – an der Ecke fehlt sie.",
+      "begruendung": "An der Ecke stoßen zwei Platten stumpf zusammen. Ohne Abdichtung ist eine solche Fuge in der Regel nicht dauerhaft luftdicht; die Luftdichtheitsschicht wäre an dieser Stelle unterbrochen.",
+      "risiko": "Warme, feuchte Raumluft kann durch die Fuge in die Dämmebene strömen. Je nach Leckage und Klima kann das Tauwasser in der Konstruktion begünstigen und langfristig Schimmel- oder Pilzbefall fördern; außerdem Wärmeverluste und Zugluft.",
+      "verbesserung": "Eckstoß dauerhaft luftdicht verbinden – z. B. mit für OSB geeignetem Eckklebeband, mit einer um die Ecke geführten Luftdichtheitsbahn oder einem anderen geprüften System nach Herstellerangabe – und in der Zeichnung mit demselben Symbol wie an den übrigen Stößen darstellen.",
+      "grundlage": "GModG § 13; DIN 4108-7:2026-04",
+      "verweise": "Fester Untergrund für die Abklebung fehlt: siehe Nr. 2 (KO-01). Hinweislinie ohne dargestelltes Bauteil: ZQ-04 (hier zusammengefasst).",
+      "kreis": { "x": 50.6, "y": 64.0, "r": 2.2 },
+      "nummer_position": "oben-rechts"
+    },
+    {
+      "nr": 2,
+      "einstufung": "aufbaufehler",
+      "regel": "KO-01",
+      "titel": "OSB-Plattenrand von Wand A an der Ecke ohne Auflager",
+      "fundstelle": "Unteres Ende der OSB-Platte von Wand A, ca. x 49–50,5 %, y 60–65 %; Gefach dahinter bis ca. y 72 %",
+      "erkennbar": "Direkt hinter dem Plattenende liegt nur Gefachdämmung (Dämmschraffur), kein Holz. Bei Wand B liegt der Plattenrand dagegen auf einem Ständer (ca. x 49,8–52,6 %).",
+      "begruendung": "Ein Plattenrand ohne Auflager lässt sich nicht fachgerecht befestigen und kann federn; ein Klebeband auf diesem Rand hätte keinen festen Untergrund.",
+      "risiko": "Die Abklebung an der Ecke kann sich lösen oder reißen (Folge für die Luftdichtheit, siehe Nr. 1); Risse in der Innenbekleidung der Raumecke sind möglich.",
+      "verbesserung": "Auflager ergänzen – z. B. einen zusätzlichen Stiel (Eckstiel) im Gefach von Wand A direkt hinter dem Plattenrand, oder die Eckausbildung so ändern, dass beide Platten auf Holz enden. Dabei die Dämmung der Ecke beachten (WB-01, WB-02).",
+      "grundlage": "Praxisempfehlung / Fachregeln des Holzbaus",
+      "verweise": "KO-02 (Eckausbildung) hier zusammengefasst.",
+      "kreis": { "x": 48.7, "y": 66.8, "r": 4.3 },
+      "schraffur": [[47.3, 61.5], [49.8, 61.5], [49.8, 71.7], [47.3, 71.7]],
+      "nummer_position": "oben-links"
+    },
+    {
+      "nr": 3,
+      "einstufung": "auffaelligkeit",
+      "regel": "LD-03",
+      "titel": "Möglicher Plattenstoß in OSB und Holzfaserplatte zwischen den Ständern",
+      "fundstelle": "Wand A, ca. x 41–51 %, y ≈ 28 %",
+      "erkennbar": "Bei y ≈ 28 % läuft eine Querlinie durch die OSB- und die Holzfaserplatte, oberhalb des nächsten Ständers; ein Abklebe-Symbol ist dort nicht dargestellt. Es kann sich auch um eine reine Zeichnungslinie handeln.",
+      "fehlt": "Klären, ob dort ein Plattenstoß liegt. Falls ja: Auflager (KO-01) und Abdichtung (LD-03) darstellen.",
+      "risiko": "Falls es ein Stoß ohne Abdichtung und Auflager ist: örtlich wie Nr. 1 und Nr. 2.",
+      "verbesserung": "Stoß auf einen Ständer legen oder einen Riegel ergänzen und abkleben – oder die Linie eindeutig als Zeichnungslinie kennzeichnen.",
+      "grundlage": "DIN 4108-7:2026-04",
+      "kreis": { "x": 50.2, "y": 27.9, "r": 2.0 },
+      "nummer_position": "oben-rechts"
+    },
+    {
+      "nr": 4,
+      "einstufung": "hinweis",
+      "regel": "WH-01",
+      "titel": "Stoßausbildung der Holzfaserplatte an der Außenecke nicht angegeben",
+      "fundstelle": "Außenecke, ca. x 41–42,5 %, y 75–76,5 %",
+      "erkennbar": "Die Holzfaserplatten beider Wände stoßen an der Ecke stumpf aneinander. Ob der Stoß winddicht ausgebildet ist (z. B. Nut-Feder, Abklebung), ist weder dargestellt noch beschrieben. Eine offene Fuge ist nicht erkennbar.",
+      "begruendung": "Die Holzfaserplatte übernimmt hier vermutlich die winddichtende Funktion; an der Ecke ist ihre geschlossene Fortsetzung besonders wichtig.",
+      "risiko": "Bei undichtem Stoß kann Außenluft die Dämmung im Eckbereich durchströmen; das kann den Wärmeschutz örtlich mindern.",
+      "verbesserung": "Stoßausbildung angeben – z. B. Nut-Feder-Profil, Überlappung oder Abklebung nach Herstellersystem.",
+      "grundlage": "Praxisempfehlung; Herstellerverarbeitungsrichtlinien",
+      "verweise": "Wärmetechnische Seite (WB-04): keine Lücke erkennbar.",
+      "kreis": { "x": 41.8, "y": 76.0, "r": 1.8 },
+      "nummer_position": "oben-rechts"
+    },
+    {
+      "nr": 5,
+      "einstufung": "hinweis",
+      "regel": "WH-04",
+      "titel": "Gehrung der Holzschalung an der Außenecke",
+      "fundstelle": "Außenecke der Bekleidung, ca. x 38,5–40,5 %, y 78–80 %",
+      "erkennbar": "Die Bekleidung beider Wände ist an der Ecke auf Gehrung gestoßen (diagonale Fuge), ohne Eckprofil oder Abdeckung.",
+      "begruendung": "Gehrungsfugen an Außenecken von Holzfassaden können sich durch Quellen und Schwinden erfahrungsgemäß öffnen.",
+      "risiko": "Aufklaffende Fuge, Feuchte im Hirnholz, Verfärbungen; langfristig kann Fäulnis an der Bekleidung begünstigt werden.",
+      "verbesserung": "Mehrere Lösungen möglich, z. B. überlappende Eckausbildung, Eckbrett oder Eckprofil.",
+      "grundlage": "DIN 68800-2:2022-02; Praxisempfehlung",
+      "kreis": { "x": 39.4, "y": 79.0, "r": 1.6 },
+      "nummer_position": "unten-links"
+    },
+    {
+      "nr": 6,
+      "einstufung": "auffaelligkeit",
+      "nachweis_erforderlich": true,
+      "regel": "KO-03",
+      "titel": "Beschriftete Schraubenlänge passt nicht zur gezeichneten Länge",
+      "fundstelle": "Eckverbindung, Tellerkopfschraube ca. x 42–53 %, y ≈ 73 %",
+      "erkennbar": "Beschriftet sind Tellerkopfschrauben 6,0 × 280 mm. Gezeichnet ist die Schraube etwa so lang wie Endständer (16 cm) und angrenzender Ständer (6 cm) zusammen, also rund 22 cm (im Maßstab 1:5 abgelesen). Eine 280-mm-Schraube würde über den Ständer hinaus in die Gefachdämmung von Wand B ragen.",
+      "fehlt": "Klären, welche Schraubenlänge gemeint ist. Tragfähigkeit und Bemessung sind nicht Teil dieser Prüfung.",
+      "verbesserung": "Schraubenlänge auf die vorhandenen Holzquerschnitte abstimmen oder die Darstellung korrigieren; Bemessung durch die Tragwerksplanung bestätigen lassen.",
+      "grundlage": "Zeichnungsplausibilität; Bemessung nach Eurocode 5 (nicht Teil dieser Prüfung)",
+      "kreis": { "x": 52.6, "y": 73.4, "r": 1.6 },
+      "nummer_position": "unten-rechts"
+    },
+    {
+      "nr": 7,
+      "einstufung": "hinweis",
+      "regel": "ZQ-03",
+      "titel": "Funktionsschichten und Dämmstoffe in der Legende nicht benannt",
+      "erkennbar": "Die Legende nennt Materialien und Dicken, aber nicht die Funktionen: OSB als Luftdichtheitsschicht bzw. Dampfbremse, Holzfaserplatte als winddichtende Schicht. Dämmstoffe (Gefach, Installationsebene), Produkt bzw. sd-Wert der OSB und Holzqualität fehlen.",
+      "begruendung": "Ohne diese Angaben sind Luftdichtheit (LD-01), Feuchteschutz (FS) und Wärmeschutz (WB) nur eingeschränkt prüfbar, und auf der Baustelle bleibt offen, welche Schicht anzuschließen ist.",
+      "verbesserung": "Legende ergänzen, z. B. „OSB 15 mm, Luftdichtheitsschicht, Stöße luftdicht verklebt“, „Holzfaserplatte, winddichtende Schicht“, Dämmstoff mit λ-Wert, Holzqualität (z. B. technisch getrocknet). Ein Schreibfehler ist ebenfalls zu korrigieren („Holzfasserdämmplatte“, „Gibskartonplatten“).",
+      "grundlage": "DIN 4108-7:2026-04; Zeichnungsplausibilität",
+      "verweise": "LD-01, HS-02 und ZQ-05 hier zusammengefasst."
+    },
+    {
+      "nr": 8,
+      "einstufung": "nicht_pruefbar",
+      "nachweis_erforderlich": true,
+      "regel": "FS-01/FS-03",
+      "titel": "Dampfbremsende Wirkung der OSB und Tauwasserschutz",
+      "fehlt": "Produkt bzw. sd-Wert der OSB; Nachweisfreiheit nach DIN 4108-3:2024-03 oder Tauwassernachweis. Die Schichtenfolge (innen OSB, außen Holzfaserplatte, hinterlüftet) ist plausibel.",
+      "grundlage": "DIN 4108-3:2024-03; DIN EN 15026:2023-12"
+    },
+    {
+      "nr": 9,
+      "einstufung": "nicht_pruefbar",
+      "nachweis_erforderlich": true,
+      "regel": "FS-05",
+      "titel": "Dämmung raumseitig der OSB (gedämmte Installationsebene)",
+      "fehlt": "Ob der Dämmanteil vor der dampfbremsenden Schicht unkritisch ist, hängt vom Gesamtaufbau ab – Nachweisfreiheit nach DIN 4108-3:2024-03 prüfen bzw. Nachweis führen.",
+      "grundlage": "DIN 4108-3:2024-03"
+    },
+    {
+      "nr": 10,
+      "einstufung": "nicht_pruefbar",
+      "nachweis_erforderlich": true,
+      "regel": "WB-02/WB-03",
+      "titel": "Wärmeschutz der Wand und Mindestwärmeschutz der Ecke",
+      "fehlt": "Dämmstoffe und λ-Werte (siehe Nr. 7); Wärmebrückennachweis bzw. Vergleich mit DIN 4108 Beiblatt 2:2019-06; U-Wert-Nachweis.",
+      "grundlage": "GModG § 11, § 12, § 15 mit Anlage 1; DIN 4108-2 (Ausgabe 2026-05, Verweis im GModG auf 2013-02); DIN 4108 Beiblatt 2:2019-06"
+    },
+    {
+      "nr": 11,
+      "einstufung": "nicht_pruefbar",
+      "regel": "WH-02/WH-03/HS-03",
+      "titel": "Strömungsweg der Hinterlüftung, Zu- und Abluftöffnungen, Spritzwasserabstand",
+      "fehlt": "Vertikalschnitte (Sockel, Traufe/Attika, Fenster) – im Horizontalschnitt nicht darstellbar.",
+      "grundlage": "DIN 18516-1:2024-10; DIN 68800-2:2022-02"
+    },
+    {
+      "nr": 12,
+      "einstufung": "nicht_pruefbar",
+      "regel": "C7/C8",
+      "titel": "Brand- und Schallschutz",
+      "fehlt": "Nicht Teil dieser Prüfung. Gebäudeklasse und Schallschutzanforderungen angeben und gesondert nachweisen."
+    }
+  ],
+  "positiv": [
+    "LD-03: An den übrigen dargestellten Plattenstößen ist eine Abklebung eingezeichnet.",
+    "LD-04: Raumseitige Installationsebene vorhanden – sie schützt die Luftdichtheitsschicht vor Durchdringungen durch Leitungen und Dosen.",
+    "LD-05: Die Tellerkopfschraube verläuft in der Darstellung nicht durch die OSB-Luftdichtheitsschicht.",
+    "FS-01/FS-04: Schichtenfolge plausibel – innen OSB, außen diffusionsoffene Holzfaserplatte mit Hinterlüftung (abschließend nur mit Nachweis, siehe Nr. 8).",
+    "WB-01: Gefachdämmung im Eckbereich ohne erkennbare Hohlräume.",
+    "WB-04: Holzfaserplatte läuft außen über die Ecke und überdeckt die Eckhölzer; keine Lücke erkennbar.",
+    "WH-02: Hinterlüftungsebene (senkrechte Lattung, 3 cm) im Horizontalschnitt erkennbar."
+  ],
+  "annahmen": [
+    "Testlauf ohne Fragerunde – alle Punkte der Checkliste als Annahme.",
+    "C1: Neubau.",
+    "C2: Wohnnutzung mit normalem Raumklima.",
+    "C3: OSB als Luftdichtheitsschicht (aus den Abklebe-Symbolen abgeleitet); Produkt und sd-Wert unbekannt.",
+    "C4: Hinterlüftete Holzschalung mit geschlossener Bekleidung (aus Lattung und Schalung abgeleitet).",
+    "C5: Dämmstoff nicht angegeben – kein λ-Wert angenommen.",
+    "C6: Schlagregenbeanspruchung Gruppe II (Annahme).",
+    "C7/C8: Brand- und Schallschutz nicht geprüft.",
+    "C9: Lage wie gezeichnet, Regelgeschoss."
+  ]
+}

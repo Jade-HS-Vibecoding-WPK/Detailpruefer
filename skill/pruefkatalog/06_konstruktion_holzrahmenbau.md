@@ -1,76 +1,82 @@
 # 06 – Konstruktion Holzrahmenbau (KO)
 
-Hier wird geprüft, ob das Detail **konstruktiv plausibel** ist: Haben alle Platten ein
-Auflager, sind die Ecken baubar, passen Verbindungsmittel und Raster?
+**Funktion:** Hier wird nur die **sichtbare, qualitative** Plausibilität geprüft: Haben
+Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung zusammen?
 
-> **Keine Statik.** Tragfähigkeit, Aussteifung und Bemessung von Verbindungsmitteln werden
-> **nicht** geprüft – sie sind Aufgabe der Tragwerksplanung (DIN EN 1995-1-1, Eurocode 5).
-> Hier nur sichtbare, qualitative Plausibilität.
+> **Keine Statik, keine Bemessung.** Tragfähigkeit, Aussteifung, Schraubenbemessung und
+> Verbindungsmittelabstände werden **nicht** geprüft. Das ist Aufgabe der Tragwerksplanung
+> (Eurocode 5, DIN EN 1995-1-1 mit Nationalem Anhang) → bei Bedarf **„Nachweis erforderlich“**.
 
 ---
 
-## KO-01 Plattenränder liegen auf Unterkonstruktion
+## KO-01 Plattenränder haben ein Auflager
 
-- **Prüfe:** Liegt jeder Rand und jeder Stoß einer Beplankung (OSB, Holzfaserplatte,
-  Gipskarton) auf einem Ständer, Riegel oder Eckholz, an dem er befestigt werden kann?
-- **So erkennst du es in der Zeichnung:** Fahre jedes Plattenende bis zu seinem Ende:
-  Was liegt direkt dahinter – Holz (Kreuz-Symbol/Holzschraffur) oder Dämmung/Hohlraum?
-- **Fehlerbild:** Plattenrand endet frei vor Dämmung; Stoß zwischen zwei Ständern ohne Riegel.
-- **Warum ist das ein Fehler?** Die Platte kann am Rand nicht befestigt werden; der Rand
-  federt. Klebebänder der Luftdichtheitsschicht haben keinen festen Untergrund.
-- **Mögliche Folgen:** Abgerissene Luftdichtheitsabklebung (→ LD-02, LD-03), Risse in der
-  Innenbekleidung, lose Plattenränder.
-- **Verbesserung:** Zusätzlichen Ständer, Riegel oder Eckstiel als Auflager anordnen.
-- **Quelle:** Holzrahmenbau-Praxis / Fachregeln (Praxisregel); bei aussteifender Beplankung
-  zusätzlich Tragwerksplanung nach DIN EN 1995-1-1.
-- **Einstufung:** Freier Plattenrand klar erkennbar → **Aufbaufehler**.
+- **Gilt für:** Holzrahmen- und Holztafelbau mit Beplankung (OSB, Holzfaser, Gipskarton …).
+- **Prüfe:** Liegt jeder Rand und Stoß einer Beplankung auf Holz (Ständer, Riegel, Eckholz),
+  an dem er befestigt werden kann?
+- **So erkennst du es in der Zeichnung:** Jedes Plattenende verfolgen: Liegt direkt dahinter
+  Holz (Kreuz-Symbol / Holzschraffur) oder Dämmung / Hohlraum?
+- **Typische Auffälligkeit:** Plattenrand endet frei vor Dämmung.
+- **Warum relevant?** Ein Plattenrand ohne Auflager lässt sich nicht fachgerecht befestigen
+  und kann federn; Klebebänder auf diesem Rand haben keinen festen Untergrund.
+- **Mögliches Risiko:** Abgelöste oder gerissene Abklebungen, Risse in der Innenbekleidung,
+  lose Plattenränder.
+- **Verbesserungsmöglichkeiten:** Auflager ergänzen – z. B. zusätzlicher Ständer, Riegel oder
+  Eckstiel; alternativ Plattenstoß auf ein vorhandenes Holz verlegen.
+- **Grundlage:** (Praxisempfehlung / Fachregeln des Holzbaus); bei aussteifender Beplankung
+  zusätzlich Tragwerksplanung.
+- **Einstufung:** Freier Plattenrand eindeutig erkennbar → **klarer Aufbaufehler**.
+  Darstellung mehrdeutig → **mögliche Auffälligkeit**.
+- **Abgrenzung:** Folge für die Luftdichtheit → in LD-02/LD-03 nur **verweisen**.
 
-## KO-02 Eckausbildung ist baubar und vollständig
+## KO-02 Eckausbildung ist baubar
 
-- **Prüfe:** Ist an der Wandecke genug Holz vorhanden, um
-  1. die beiden Wände miteinander zu verbinden,
-  2. die **innere** Beplankung beider Wände zu befestigen und
-  3. die **äußere** Beplankung/Bekleidung beider Wände zu befestigen?
-  Und ist die Ecke dabei so gedämmt, dass keine unnötige Holzanhäufung entsteht (→ WB-02)?
-- **So erkennst du es in der Zeichnung:** Eckhölzer (Kreuz-Symbole) im Eckbereich; prüfen,
-  ob jede Platte an der Ecke auf einem Holz endet (→ KO-01).
-- **Fehlerbild:** Nur Endständer der beiden Wände, aber kein Auflager für die
-  innenliegende Platte einer Wand; Hohlräume ohne Dämmung.
-- **Warum ist das ein Fehler?** Die Ecke lässt sich nicht fachgerecht beplanken und dicht
-  anschließen.
-- **Mögliche Folgen:** Wie KO-01; zusätzlich Risse in der Raumecke.
-- **Verbesserung:** Zusätzlichen Eckstiel (z. B. in Ständerbreite) so anordnen, dass beide
-  Beplankungen ein Auflager haben; verbleibende Hohlräume dämmen.
-- **Quelle:** Holzrahmenbau-Praxis / Fachregeln (Praxisregel); DIN 4108 Beiblatt 2 (Dämmung
-  der Ecke).
-- **Einstufung:** Fehlendes Auflager erkennbar → **Aufbaufehler**. Eckausbildung unklar
-  dargestellt → **Risiko/Klärungsbedarf**.
+- **Gilt für:** Wandecken im Holzrahmen- und Holztafelbau.
+- **Prüfe:** Ist an der Ecke genug Holz vorhanden, um die Wände zu verbinden und die innere
+  und äußere Beplankung beider Wände zu befestigen?
+- **So erkennst du es in der Zeichnung:** Eckhölzer (Kreuz-Symbole); jede Platte an der Ecke
+  auf Auflager prüfen (→ KO-01).
+- **Typische Auffälligkeit:** Eine der Platten hat an der Ecke kein Auflager.
+- **Warum relevant?** Ohne geeignete Eckausbildung lassen sich Beplankung und Abdichtung nicht
+  fachgerecht ausführen.
+- **Mögliches Risiko:** wie KO-01.
+- **Verbesserungsmöglichkeiten:** Mehrere übliche Eckausbildungen sind möglich, z. B.
+  zusätzlicher Eckstiel, versetzter Endständer oder Eckausbildung nach Planungsbeispielen
+  der Fachliteratur; dabei Holzanteil und Dämmung beachten (→ WB-02).
+- **Grundlage:** (Praxisempfehlung / Fachliteratur Holzrahmenbau).
+- **Einstufung:** Wenn das fehlende Auflager bereits unter KO-01 aufgeführt ist → hier
+  **kein zweiter Befund**, nur Verweis. Eckausbildung unklar → **mögliche Auffälligkeit**.
 
-## KO-03 Verbindungsmittel sind plausibel dargestellt
+## KO-03 Verbindungsmittel: Darstellung und Beschriftung passen zusammen
 
-- **Prüfe:** Passt die **gezeichnete** Länge eines Verbindungsmittels zur **beschrifteten**
-  Länge und zum verfügbaren Holz? Durchdringt es ungeplant eine Funktionsschicht
-  (Luftdichtheitsschicht)?
+- **Gilt für:** dargestellte Schrauben, Nägel, Verbinder.
+- **Prüfe:** Passt die **gezeichnete** Länge zur **beschrifteten** Länge und zum Holz, in das
+  das Verbindungsmittel greift? Ragt es ungeplant durch eine Funktionsschicht?
+  (Längen ablesen ist erlaubt – **keine Bemessung**.)
 - **So erkennst du es in der Zeichnung:** Beschriftung (z. B. „6,0 × 280 mm“) mit der
-  gezeichneten Länge im Maßstab vergleichen (Längen messen ist erlaubt – keine Bemessung).
-- **Fehlerbild:** Schraube länger als das Holz, in das sie greift; Spitze ragt in Dämmung
-  oder durch die Luftdichtheitsschicht; Beschriftung und Zeichnung widersprechen sich.
-- **Warum ist das ein Fehler?** Die Verbindung wäre nicht wie geplant ausführbar.
-- **Mögliche Folgen:** Unwirksame Verbindung, ungeplante Durchdringung (→ LD-05).
-- **Verbesserung:** Schraubenlänge an die Holzstärken anpassen bzw. Darstellung korrigieren;
-  Bemessung durch Tragwerksplanung.
-- **Quelle:** Zeichnungsplausibilität; Bemessung nach DIN EN 1995-1-1 (nicht Teil dieser Prüfung).
-- **Einstufung:** Widerspruch Beschriftung/Zeichnung → **Risiko/Klärungsbedarf**.
-  Tragfähigkeit → **Nicht beurteilbar**.
+  gezeichneten Länge über den Maßstab vergleichen.
+- **Typische Auffälligkeit:** Beschriftete Länge größer als das verfügbare Holz; Spitze
+  würde in Dämmung oder durch eine Funktionsschicht ragen.
+- **Warum relevant?** Die Verbindung wäre sonst nicht wie gezeichnet ausführbar.
+- **Mögliches Risiko:** Ungeplante Durchdringung oder nicht wie geplant wirkende Verbindung.
+- **Verbesserungsmöglichkeiten:** Darstellung bzw. Länge abstimmen; Bemessung durch die
+  Tragwerksplanung bestätigen lassen.
+- **Grundlage:** Zeichnungsplausibilität; Bemessung nach Eurocode 5 (nicht Teil dieser Prüfung).
+- **Einstufung:** Widerspruch → **mögliche Auffälligkeit**; Tragfähigkeit →
+  **aus der Datei nicht prüfbar** + **Nachweis erforderlich**.
 
-## KO-04 Raster und Achsmaße sind plausibel
+## KO-04 Raster und Plattenstöße passen zusammen
 
-- **Prüfe:** Passen Ständerraster und Anfangsachsmaß zu üblichen Plattenformaten, sodass
-  Plattenstöße auf Ständern liegen? (Häufig: 62,5 cm Raster bei 125 cm breiten Platten.)
+- **Gilt für:** Holzrahmenbau mit Plattenbeplankung.
+- **Prüfe:** Passen Ständerraster und Anfangsachsmaß so zum Plattenformat, dass Plattenstöße
+  auf Ständern liegen? (Häufig, aber nicht zwingend: 62,5 cm Raster bei 125 cm breiten
+  Platten – Praxisempfehlung.)
 - **So erkennst du es in der Zeichnung:** Maßketten „Raster“, „Achsmaß“; Lage der Plattenstöße.
-- **Fehlerbild:** Plattenstöße liegen erkennbar zwischen den Ständern.
-- **Warum ist das ein Fehler?** Siehe KO-01.
-- **Mögliche Folgen:** Siehe KO-01.
-- **Verbesserung:** Raster an Plattenformat anpassen oder Riegel/Zusatzständer an Stößen.
-- **Quelle:** Holzrahmenbau-Praxis (Praxisregel).
-- **Einstufung:** Meist **Verbesserungshinweis** oder **Risiko/Klärungsbedarf**.
+- **Typische Auffälligkeit:** Plattenstoß erkennbar zwischen zwei Ständern.
+- **Warum relevant?** siehe KO-01.
+- **Mögliches Risiko:** siehe KO-01.
+- **Verbesserungsmöglichkeiten:** Raster an das Plattenformat anpassen oder Riegel bzw.
+  Zusatzständer an Stößen vorsehen.
+- **Grundlage:** (Praxisempfehlung).
+- **Einstufung:** **Mögliche Auffälligkeit** oder **Verbesserungshinweis**; ein eindeutig
+  erkennbarer freier Stoß wird unter KO-01 geführt.

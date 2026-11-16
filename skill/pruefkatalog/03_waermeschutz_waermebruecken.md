@@ -1,84 +1,90 @@
 # 03 – Wärmeschutz und Wärmebrücken (WB)
 
-Eine **Wärmebrücke** ist eine Stelle, an der mehr Wärme verloren geht als in der Fläche –
-durch die Geometrie (z. B. Außenecke: kleine Innenfläche, große Außenfläche) oder durch
-Material (z. B. Holz leitet Wärme etwa drei- bis viermal besser als Faserdämmung).
-Folgen sind Wärmeverlust und vor allem **kalte Innenoberflächen** → Schimmelgefahr.
+**Funktion:** Die Dämmebene soll die Wärme im Gebäude halten. Eine **Wärmebrücke** ist eine
+Stelle mit erhöhtem Wärmeverlust – durch die Geometrie (z. B. Außenecke) oder das Material
+(z. B. Holz leitet Wärme deutlich besser als Dämmstoff). Dort können Innenoberflächen
+kälter sein, was das Schimmelrisiko erhöhen kann.
 
-> Dieser Bereich wird **qualitativ** geprüft. Keine U-Werte, keine f_Rsi-Werte berechnen,
-> keine fehlenden λ-Werte schätzen.
+> **Keine Berechnungen:** keine U-, R- oder f_Rsi-Werte berechnen, keine fehlenden
+> λ-Werte schätzen. Ob Anforderungen eingehalten sind, zeigt nur ein Nachweis →
+> **„Nachweis erforderlich“**.
+
+**Nicht hier geprüft:** Winddichtheit von Plattenstößen → WH-01 · Eckausbildung als
+Konstruktion → KO-02.
 
 ---
 
 ## WB-01 Dämmebene ist durchgehend
 
-- **Prüfe:** Läuft die Dämmung ohne Lücken durch – besonders an Ecken, Stößen und Anschlüssen?
-  Sind alle Hohlräume (z. B. zwischen Eckhölzern) gedämmt?
-- **So erkennst du es in der Zeichnung:** Dämmschraffur (Wellen-/Schlangenlinie, Zickzack)
-  durchgehend; keine weißen, ungedämmten Hohlräume; Dämmung schließt an beide Wände an.
-- **Fehlerbild:** Ungedämmter Hohlraum in der Ecke, Dämmung endet vor dem Anschluss.
-- **Warum ist das ein Fehler?** Jede Lücke ist eine Wärmebrücke; in Hohlräumen kann zudem
-  Luft zirkulieren.
-- **Mögliche Folgen:** kalte Innenecke, Tauwasser und Schimmel innen, höherer Energieverbrauch.
-- **Verbesserung:** Hohlräume vollständig dämmen; Dämmebenen beider Wände lückenlos verbinden.
-- **Quelle:** DIN 4108 Beiblatt 2 (Planungsprinzipien für Wärmebrücken); DIN 4108-2.
-- **Einstufung:** Ungedämmter Hohlraum oder Unterbrechung klar erkennbar → **Aufbaufehler**.
+- **Gilt für:** alle gedämmten Bauteile, besonders Ecken und Anschlüsse.
+- **Prüfe:** Läuft die Dämmung ohne Lücken durch? Sind Hohlräume (z. B. zwischen Eckhölzern)
+  gedämmt?
+- **So erkennst du es in der Zeichnung:** Dämmschraffur durchgehend; keine weißen,
+  ungedämmten Hohlräume; Dämmebenen beider Wände schließen aneinander an.
+- **Typische Auffälligkeit:** Ungedämmter Hohlraum in der Ecke; Dämmung endet vor dem Anschluss.
+- **Warum relevant?** Jede Lücke erhöht den Wärmeverlust örtlich.
+- **Mögliches Risiko:** Kältere Innenoberfläche an dieser Stelle; das kann das Risiko für
+  Tauwasser an der Oberfläche und Schimmel erhöhen; höherer Energieverbrauch.
+- **Verbesserungsmöglichkeiten:** Hohlräume vollständig dämmen (z. B. Zuschnitt, Einblasdämmung)
+  oder Eckausbildung so ändern, dass kein Hohlraum entsteht.
+- **Grundlage:** GModG § 12 (Wärmebrücken so gering wie möglich halten);
+  DIN 4108 Beiblatt 2:2019-06 (Planungsbeispiele).
+- **Einstufung:** Ungedämmter Hohlraum eindeutig erkennbar → **klarer Aufbaufehler**.
+  Darstellung unklar → **mögliche Auffälligkeit**.
 
-## WB-02 Mindestwärmeschutz an der Wärmebrücke (Außenecke)
+## WB-02 Mindestwärmeschutz an der Wärmebrücke (z. B. Außenecke)
 
-- **Prüfe:** Ist die Ecke so ausgebildet, dass die Innenoberfläche warm genug bleibt?
-  Mindestanforderung nach DIN 4108-2: Temperaturfaktor **f_Rsi ≥ 0,70**
-  (entspricht ≥ 12,6 °C Innenoberflächentemperatur bei den Normrandbedingungen).
-- **So erkennst du es in der Zeichnung:** Viel Holz im Eckbereich (mehrere Stiele direkt
-  nebeneinander, Vollholzblock) ohne außen überdeckende Dämmung → kritischer.
-  Durchgehende außenliegende Dämmplatte über die Ecke → günstiger.
-- **Fehlerbild:** Massive Holzanhäufung in der Ecke, außenliegende Dämmung unterbrochen.
-- **Warum ist das ein Fehler?** Außenecken sind bereits geometrische Wärmebrücken; zusätzliches
-  Holz verstärkt den Effekt.
-- **Mögliche Folgen:** Schimmel in der Raumecke, besonders hinter Möbeln.
-- **Verbesserung:** Eckausbildung mit möglichst wenig Vollholz bzw. gedämmten Zwischenräumen;
-  außenliegende Dämmschicht (z. B. Holzfaserplatte) **über die Ecke durchführen**.
-- **Quelle:** DIN 4108-2 (Mindestwärmeschutz im Bereich von Wärmebrücken); DIN 4108 Beiblatt 2.
-- **Einstufung:** Ob f_Rsi ≥ 0,70 eingehalten ist, lässt sich nur rechnerisch nachweisen –
-  **nicht berechnen**. Auffällige Holzanhäufung → **Risiko/Klärungsbedarf** (Hinweis auf
-  Wärmebrückennachweis bzw. Vergleich mit Beiblatt 2). Offensichtliche Fehler (ungedämmte
-  Ecke, unterbrochene Dämmung) → **Aufbaufehler** (siehe WB-01).
+- **Gilt für:** Außenecken und Anschlüsse aller Bauarten.
+- **Prüfe:** Ist die Ecke so ausgebildet, dass sie wärmetechnisch plausibel wirkt?
+  Anforderung zum Mindestwärmeschutz an Wärmebrücken: Temperaturfaktor **f_Rsi ≥ 0,70**
+  (DIN 4108-2:2013-02, auf die GModG § 11 verweist) – **nicht berechnen**.
+- **So erkennst du es in der Zeichnung:** Menge an Vollholz in der Ecke; ob eine
+  außenliegende Dämmschicht die Ecke überdeckt; ob die Ecke einem bekannten Planungsbeispiel
+  ähnelt.
+- **Typische Auffälligkeit:** Auffällige Holzanhäufung ohne außen überdeckende Dämmung.
+- **Warum relevant?** Außenecken sind geometrische Wärmebrücken; viel Holz verstärkt den Effekt.
+- **Mögliches Risiko:** Kühlere Raumecke; das kann – besonders hinter Möbeln – Schimmel
+  begünstigen.
+- **Verbesserungsmöglichkeiten:** Eckausbildung mit möglichst wenig Vollholz bzw. gedämmten
+  Zwischenräumen; außenliegende Dämmschicht über die Ecke führen; Vergleich mit
+  Planungsbeispielen aus DIN 4108 Beiblatt 2 oder Wärmebrückenberechnung.
+- **Grundlage:** GModG § 11 und § 12; DIN 4108-2 (geltende Ausgabe 2026-05; Verweis im GModG
+  auf 2013-02 – siehe `quellen.md`); DIN 4108 Beiblatt 2:2019-06.
+- **Einstufung:** **Aus der Zeichnung nicht abschließend prüfbar** + **Nachweis erforderlich**;
+  bei auffälliger Holzanhäufung **mögliche Auffälligkeit**. Ungedämmte Lücken → WB-01.
 
-## WB-03 Dämmstärke ist plausibel (Plausibilitätsprüfung, keine Berechnung)
+## WB-03 Dämmung ist plausibel (keine U-Wert-Berechnung)
 
-- **Prüfe:** Wirkt die Dämmung für eine heutige beheizte Außenwand **plausibel**?
-  Gibt es eine durchgehende Hauptdämmebene, und ist sie nicht auffällig dünn?
-  Rahmen: Das GEG stellt Anforderungen an den Wärmeschutz von Außenwänden
-  (Neubau über das Referenzgebäude, GEG Anlage 1; Änderung im Bestand, GEG Anlage 7).
-  Ob sie erfüllt sind, zeigt **nur ein U-Wert-Nachweis** – hier wird **nicht gerechnet**.
-- **So erkennst du es in der Zeichnung:** Dämmstärken aus Legende und Maßkette;
-  Dämmstoff benannt? Gefach vollständig gedämmt? Zusätzliche Dämmebenen
-  (Installationsebene, Außendämmplatte)?
-- **Fehlerbild:** Auffällig dünne oder lückenhafte Dämmung, Gefach nur teilweise gefüllt,
-  Dämmstoff nicht angegeben.
-- **Warum ist das ein Fehler?** Die Wärmeschutzanforderungen werden dann möglicherweise
-  nicht erreicht.
-- **Mögliche Folgen:** Energienachweis scheitert, hohe Heizkosten, kalte Oberflächen.
-- **Verbesserung:** Gefach vergrößern, Installationsebene dämmen, außen Dämmplatte ergänzen;
-  Dämmstoff und λ-Wert in der Legende angeben; U-Wert-Nachweis führen lassen.
-- **Quelle:** GEG Anlage 1 und Anlage 7; DIN 4108-2.
-- **Einstufung:** Dämmstoff oder λ-Wert fehlt → **Nicht beurteilbar** (genau benennen, was
-  fehlt). Dämmung auffällig dünn → **Risiko/Klärungsbedarf** („U-Wert-Nachweis erforderlich“).
-  Plausibel → `erfüllt (plausibel, ohne Nachweis)`.
+- **Gilt für:** beheizte Außenbauteile.
+- **Prüfe:** Gibt es eine durchgehende Hauptdämmebene, und wirkt sie für eine heutige
+  beheizte Außenwand nicht auffällig dünn oder lückenhaft? Ist der Dämmstoff benannt?
+- **So erkennst du es in der Zeichnung:** Dämmstärken aus Legende und Maßkette; Dämmstoff
+  benannt; Gefach vollständig gefüllt; zusätzliche Dämmebenen.
+- **Typische Auffälligkeit:** Auffällig dünne Dämmung; Dämmstoff nicht angegeben.
+- **Warum relevant?** Das GModG stellt Wärmeschutzanforderungen (Neubau über das
+  Referenzgebäude, Anlage 1 zu § 15; Änderung im Bestand, Anlage 7 zu § 36). Ob sie
+  eingehalten sind, zeigt nur ein Nachweis.
+- **Mögliches Risiko:** Anforderungen werden möglicherweise nicht erreicht; höhere Heizkosten.
+- **Verbesserungsmöglichkeiten:** Dämmstoff und λ-Wert in der Legende angeben; ggf. Gefach
+  vergrößern, Installationsebene dämmen oder außen eine Dämmplatte ergänzen; U-Wert-Nachweis.
+- **Grundlage:** GModG § 15 mit Anlage 1, § 36 mit Anlage 7.
+- **Einstufung:** Dämmstoff fehlt → **aus der Datei nicht prüfbar** (benennen, was fehlt).
+  Auffällig dünn → **mögliche Auffälligkeit** + **Nachweis erforderlich**.
+  Sonst `erfüllt (plausibel, ohne Nachweis)`.
 
-## WB-04 Außenliegende Dämmschicht überdeckt Stiele und Ecke
+## WB-04 Außenliegende Dämmschicht überdeckt Ständer und Ecke
 
-- **Prüfe:** Ist eine außenliegende Dämm-/Holzfaserplatte vorhanden, und läuft sie ohne Lücke
-  über Ständer und Gebäudeecke?
-- **So erkennst du es in der Zeichnung:** Platte vor dem Ständerwerk, an der Ecke gestoßen
-  oder überlappend, ohne offene Fuge.
-- **Fehlerbild:** Platte endet an der Ecke mit offener Fuge, Stoß ohne Verbindung.
-- **Warum ist das ein Fehler?** Die Platte reduziert die Wärmebrücke der Holzständer; eine Fuge
-  hebt das an der kritischsten Stelle auf. Bei winddichtender Funktion zusätzlich Durchströmung.
-- **Mögliche Folgen:** Wärmebrücke, Kaltluft in der Dämmebene (Winddichtheit, siehe Teil 2).
-- **Verbesserung:** Platten an der Ecke dicht stoßen (z. B. Nut-Feder, Überlappung) bzw.
-  Stoß winddicht abkleben.
-- **Quelle:** DIN 4108 Beiblatt 2; Herstellerverarbeitungsrichtlinien.
-- **Einstufung:** Offene Fuge klar erkennbar → **Aufbaufehler**. Stoßausbildung nicht
-  angegeben → **Risiko/Klärungsbedarf**. Ist keine außenliegende Dämmschicht geplant, ist das
-  **kein** Mangel, sondern höchstens ein **Verbesserungshinweis**.
+- **Gilt für:** Wände mit außenliegender Dämm-/Holzfaserplatte.
+- **Prüfe:** Läuft die außenliegende Platte ohne Unterbrechung über Ständer und Gebäudeecke?
+- **So erkennst du es in der Zeichnung:** Platte vor dem Ständerwerk, an der Ecke ohne
+  sichtbare Lücke.
+- **Typische Auffälligkeit:** Platte endet an der Ecke mit offener Lücke.
+- **Warum relevant?** Die Platte mindert die Wärmebrücke der Ständer; eine Lücke an der Ecke
+  hebt das an der kritischsten Stelle auf.
+- **Mögliches Risiko:** Örtlich erhöhter Wärmeverlust.
+- **Verbesserungsmöglichkeiten:** Platten an der Ecke lückenlos stoßen, z. B. mit Nut-Feder,
+  Überlappung oder Ausfüllen der Fuge nach Herstellerangabe.
+- **Grundlage:** DIN 4108 Beiblatt 2:2019-06; Herstellerrichtlinien (Praxisempfehlung).
+- **Einstufung:** Sichtbare Lücke → **klarer Aufbaufehler**. Keine außenliegende Dämmschicht
+  geplant → **nicht anwendbar** bzw. höchstens Verbesserungshinweis.
+- **Abgrenzung:** Ob der Stoß **winddicht** ausgebildet ist → **WH-01** (dort einmal aufführen).

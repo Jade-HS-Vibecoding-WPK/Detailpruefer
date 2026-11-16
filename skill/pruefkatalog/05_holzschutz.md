@@ -1,56 +1,57 @@
-# 05 – Konstruktiver Holzschutz (HS)
+# 05 – Baulicher Holzschutz (HS)
 
-Holz ist dauerhaft, solange es **trocken** bleibt. DIN 68800 setzt deshalb vorrangig auf
-**bauliche** Maßnahmen statt auf chemischen Holzschutz.
+**Funktion:** Holz bleibt dauerhaft, solange es trocken bleibt. DIN 68800-2:2022-02 setzt
+vorrangig auf **bauliche** Maßnahmen; grundsätzliche bauliche Maßnahmen sind immer anzuwenden.
 
-> Qualitative Prüfung – keine Berechnungen. Holzfeuchten oder Gebrauchsklassen nur nennen,
-> wenn sie in der Zeichnung angegeben sind oder hier im Katalog stehen.
+> Keine Berechnungen. Gebrauchsklassen oder Holzfeuchten nur nennen, wenn sie in der
+> Zeichnung angegeben sind.
+
+**Doppelbefunde vermeiden:** Feuchteursachen (Leckage, Diffusion, Hinterlüftung, Regen)
+werden in LD, FS bzw. WH als Befund geführt. Hier nur **verweisen**.
 
 ---
 
-## HS-01 Tragende Hölzer sind dauerhaft trocken geschützt
+## HS-01 Tragende Hölzer liegen im geschützten Bereich
 
-- **Prüfe:** Liegen die tragenden Hölzer (Ständer, Rähm, Schwelle) vollständig im geschützten
-  Bereich – also innerhalb von Luftdichtheitsschicht und winddichtender Schicht, geschützt vor
-  Niederschlag, Tauwasser und Spritzwasser?
-- **So erkennst du es in der Zeichnung:** Lage der Hölzer relativ zu den Schutzschichten
-  (siehe LD, FS, WH).
-- **Fehlerbild:** Tragendes Holz liegt außerhalb der winddichten Schicht oder im Bereich
-  möglicher Leckagen (z. B. an einer unterbrochenen Luftdichtheitsschicht).
-- **Warum ist das ein Fehler?** Dauerhaft feuchtes Holz wird von Pilzen befallen.
-- **Mögliche Folgen:** Fäulnis, Verlust der Tragfähigkeit.
-- **Verbesserung:** Hölzer vollständig in die geschützte Ebene legen; Schutzschichten
-  lückenlos ausführen.
-- **Quelle:** DIN 68800-1 und -2 (Vorrang baulicher Maßnahmen).
-- **Einstufung:** Folgebefund aus LD/FS/WH → als **Risiko/Klärungsbedarf** mit Verweis auf
-  den Ursprungsbefund nennen (nicht doppelt als Aufbaufehler zählen).
+- **Gilt für:** Holzbauteile aller Bauarten.
+- **Prüfe:** Liegen Ständer, Schwellen und Rähme innerhalb der schützenden Schichten
+  (Luftdichtheitsschicht innen, winddichte Schicht und Bekleidung außen)?
+- **So erkennst du es in der Zeichnung:** Lage der Hölzer relativ zu den Schutzschichten.
+- **Typische Auffälligkeit:** Tragendes Holz außerhalb der winddichten Schicht oder an einer
+  Stelle, an der eine Schutzschicht unterbrochen ist.
+- **Warum relevant?** Dauerhaft erhöhte Holzfeuchte kann Pilzbefall begünstigen.
+- **Mögliches Risiko:** Langfristig Fäulnis und – im ungünstigen Fall – Schwächung des Holzes.
+- **Verbesserungsmöglichkeiten:** Hölzer in die geschützte Ebene legen; Schutzschichten
+  lückenlos ausbilden (siehe Ursprungsbefund).
+- **Grundlage:** DIN 68800-1:2019-06; DIN 68800-2:2022-02.
+- **Einstufung:** Ist die Ursache bereits ein Befund in LD/FS/WH → **kein eigener Befund**,
+  nur Verweis („betrifft auch den Holzschutz, siehe LD-02“). Holz eindeutig ungeschützt
+  außerhalb aller Schutzschichten → **mögliche Auffälligkeit**.
 
-## HS-02 Holzqualität und Einbaufeuchte
+## HS-02 Holzqualität und Einbaufeuchte sind angegeben
 
-- **Prüfe:** Ist für das Konstruktionsholz technisch getrocknetes Holz angegeben
-  (z. B. „KVH“, „technisch getrocknet“)?
-- **So erkennst du es in der Zeichnung:** Legende, Materialangabe.
-- **Fehlerbild:** Keine Angabe.
-- **Warum ist das wichtig?** Zu feuchtes Holz schwindet nach dem Einbau (Risse, offene Fugen,
-  gerissene Klebebänder) und bietet Pilzen Nährboden.
-- **Mögliche Folgen:** Undichtheiten, Verformungen, Pilzbefall.
-- **Verbesserung:** Technisch getrocknetes Konstruktionsholz in der Legende angeben.
-- **Quelle:** DIN 68800-2.
-- **Einstufung:** Fehlende Angabe → **Verbesserungshinweis** (kein baulicher Mangel).
+- **Gilt für:** Konstruktionsholz im Holzbau.
+- **Prüfe:** Ist technisch getrocknetes Holz angegeben (z. B. „KVH“, „technisch getrocknet“)?
+- **So erkennst du es in der Zeichnung:** Legende, Materialangaben.
+- **Typische Auffälligkeit:** Keine Angabe zur Holzqualität.
+- **Warum relevant?** Zu feuchtes Holz schwindet nach dem Einbau.
+- **Mögliches Risiko:** Fugen und gerissene Abklebungen; günstige Bedingungen für Pilze.
+- **Verbesserungsmöglichkeiten:** Holzart und Trocknung in der Legende angeben.
+- **Grundlage:** DIN 68800-2:2022-02.
+- **Einstufung:** Fehlende Angabe → **Verbesserungshinweis** (kein Baufehler).
 
-## HS-03 Außenbekleidung aus Holz ist baulich geschützt
+## HS-03 Fassadenholz ist baulich geschützt
 
-- **Prüfe:** Ist die Holzbekleidung so ausgebildet, dass sie nach Regen schnell abtrocknet:
-  hinterlüftet, Hirnholz geschützt, ausreichender Abstand zum Gelände bzw. zu waagerechten
-  Flächen (Spritzwasser)?
-- **So erkennst du es in der Zeichnung:** Hinterlüftung (WH-02), Eckausbildung (WH-04);
-  Abstand zum Gelände nur im Vertikalschnitt (Sockel).
-- **Fehlerbild:** Bekleidung ohne Hinterlüftung, Holz bis ins Spritzwasser, ungeschütztes
-  Hirnholz.
-- **Warum ist das ein Fehler?** Dauerhaft feuchtes Fassadenholz verwittert und fault.
-- **Mögliche Folgen:** Fäulnis, Verformungen, häufiger Austausch.
-- **Verbesserung:** Hinterlüften, Hirnholz abdecken, ausreichenden Spritzwasserabstand
-  einhalten (Maß nach DIN 68800-2 prüfen).
-- **Quelle:** DIN 68800-2.
-- **Einstufung:** Im Horizontalschnitt meist **Nicht beurteilbar** (Spritzwasser) bzw.
-  **Verbesserungshinweis** (Eckausbildung, siehe WH-04).
+- **Gilt für:** Holzbekleidungen außen.
+- **Prüfe:** Kann die Holzbekleidung nach Regen abtrocknen (Hinterlüftung), ist Hirnholz
+  geschützt, und hält sie Abstand zu Spritzwasserbereichen?
+- **So erkennst du es in der Zeichnung:** Hinterlüftung (→ WH-02), Eckausbildung
+  (→ WH-04); Spritzwasserabstand nur im Vertikalschnitt (Sockel).
+- **Typische Auffälligkeit:** Holz bis in den Spritzwasserbereich; ungeschütztes Hirnholz.
+- **Warum relevant?** Häufig nasses Fassadenholz altert und verwittert schneller.
+- **Mögliches Risiko:** Verfärbung, Verformung, langfristig Fäulnis an der Bekleidung.
+- **Verbesserungsmöglichkeiten:** Ausreichenden Abstand zu Spritzwasser nach
+  DIN 68800-2:2022-02 einhalten; Hirnholz abdecken; dauerhafte Holzart wählen.
+- **Grundlage:** DIN 68800-2:2022-02.
+- **Einstufung:** Im Horizontalschnitt meist **aus der Datei nicht prüfbar** (Spritzwasser);
+  Hinterlüftung und Ecken nur über Verweis auf WH-02 / WH-04.

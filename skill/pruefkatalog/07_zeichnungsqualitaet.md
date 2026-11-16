@@ -1,75 +1,78 @@
 # 07 – Zeichnungsqualität (ZQ)
 
-Eine Detailzeichnung ist eine **Anweisung an die Baustelle**. Was nicht eindeutig
-dargestellt ist, wird auf der Baustelle oft falsch oder gar nicht ausgeführt.
+**Funktion:** Eine Detailzeichnung ist eine Anweisung an die Baustelle. Unklare Darstellungen
+werden leicht falsch ausgeführt.
 
-> Befunde in diesem Bereich sind **Darstellungsbefunde**, keine baulichen Mängel –
-> es sei denn, die unklare Darstellung führt erkennbar zu einem Baufehler.
+> Befunde hier sind **Darstellungsbefunde**, keine Baufehler. Führt eine unklare Darstellung
+> erkennbar zu einem konstruktiven Problem, wird der Befund im **fachlichen** Bereich geführt
+> (LD, FS, WB, WH, KO) und hier nur verwiesen.
 
 ---
 
 ## ZQ-01 Legende und Zeichnung stimmen überein
 
-- **Prüfe:** Ist jede Schicht der Legende in der Zeichnung dargestellt – und umgekehrt?
-  Stimmen Reihenfolge und Dicken?
-- **So erkennst du es in der Zeichnung:** Legende Zeile für Zeile mit den Schichten und der
-  Maßkette vergleichen.
-- **Fehlerbild:** Schicht gezeichnet, aber nicht in der Legende (oder umgekehrt); Dicke in
-  Legende ≠ Maßkette.
-- **Warum ist das ein Fehler?** Widersprüche führen zu Fehlern bei Ausschreibung und Ausführung.
-- **Mögliche Folgen:** Falsche Materialien oder Dicken auf der Baustelle.
-- **Verbesserung:** Legende und Zeichnung abgleichen.
-- **Quelle:** Zeichnungsplausibilität (Praxisregel).
-- **Einstufung:** **Risiko/Klärungsbedarf** (bei Funktionsschichten) bzw. **Verbesserungshinweis**.
+- **Gilt für:** alle Detailzeichnungen mit Legende.
+- **Prüfe:** Ist jede Schicht der Legende gezeichnet – und umgekehrt? Stimmen Reihenfolge und
+  Dicken mit der Maßkette überein?
+- **So erkennst du es in der Zeichnung:** Legende Zeile für Zeile mit Schichten und Maßkette
+  vergleichen.
+- **Typische Auffälligkeit:** Schicht gezeichnet, aber nicht in der Legende (oder umgekehrt);
+  Dicke in der Legende weicht von der Maßkette ab.
+- **Warum relevant?** Widersprüche führen leicht zu Fehlern in Ausschreibung und Ausführung.
+- **Verbesserungsmöglichkeiten:** Legende und Zeichnung abgleichen.
+- **Grundlage:** Zeichnungsplausibilität (Praxisempfehlung).
+- **Einstufung:** **Verbesserungshinweis**; Widerspruch bei einer Funktionsschicht →
+  **mögliche Auffälligkeit**.
 
 ## ZQ-02 Maßketten sind vollständig und schlüssig
 
+- **Gilt für:** alle Detailzeichnungen.
 - **Prüfe:** Sind alle Schichtdicken bemaßt, und ergibt die Summe der Einzelmaße das
-  Gesamtmaß? (Einfaches Aufaddieren ist erlaubt.)
-- **So erkennst du es in der Zeichnung:** Maßketten über dem Wandaufbau, Achsmaße.
-- **Fehlerbild:** Fehlende Maße; Summe passt nicht.
-- **Warum ist das ein Fehler?** Die Wand lässt sich nicht eindeutig herstellen.
-- **Mögliche Folgen:** Abweichende Wanddicken, Anschlussprobleme.
-- **Verbesserung:** Maßketten ergänzen bzw. korrigieren.
-- **Quelle:** Zeichnungsplausibilität (Praxisregel).
-- **Einstufung:** **Verbesserungshinweis**; bei Widerspruch **Risiko/Klärungsbedarf**.
+  Gesamtmaß? (Aufaddieren ist erlaubt.)
+- **So erkennst du es in der Zeichnung:** Maßketten über dem Aufbau, Achsmaße.
+- **Typische Auffälligkeit:** Fehlende Maße; Summe passt nicht.
+- **Warum relevant?** Die Wand lässt sich sonst nicht eindeutig herstellen.
+- **Verbesserungsmöglichkeiten:** Maßketten ergänzen bzw. korrigieren.
+- **Grundlage:** Zeichnungsplausibilität (Praxisempfehlung).
+- **Einstufung:** **Verbesserungshinweis**; Widerspruch → **mögliche Auffälligkeit**.
 
-## ZQ-03 Funktionsschichten sind benannt
+## ZQ-03 Funktionsschichten und Materialien sind benannt
 
-- **Prüfe:** Sind die Funktionen der Schichten eindeutig benannt – insbesondere
-  **Luftdichtheitsschicht**, **winddichtende Schicht**, **Hinterlüftung** – und sind
-  Materialien so beschrieben, dass sie beurteilbar sind (Dämmstoff, Plattentyp, ggf. Produkt)?
+- **Gilt für:** alle Detailzeichnungen.
+- **Prüfe:** Sind Luftdichtheitsschicht, Dampfbremse, winddichtende Schicht und Hinterlüftung
+  benannt? Sind Materialien so beschrieben, dass sie beurteilbar sind (Dämmstoff,
+  Plattentyp, ggf. Produkt)?
 - **So erkennst du es in der Zeichnung:** Legende, Beschriftungen, Hinweislinien.
-- **Fehlerbild:** „Dämmung“ ohne Stoffangabe; „OSB-Platte“ ohne Hinweis auf Luftdichtheitsfunktion.
-- **Warum ist das wichtig?** Ohne diese Angaben sind LD, FS und WB nur eingeschränkt prüfbar.
-- **Mögliche Folgen:** Falsche Materialwahl, vergessene Abklebungen.
-- **Verbesserung:** Funktionen und Materialien in der Legende benennen.
-- **Quelle:** DIN 4108-7 (Planung der Luftdichtheitsschicht); Praxisregel.
-- **Einstufung:** **Verbesserungshinweis** – führt aber oft zu **Nicht beurteilbar** in anderen
-  Bereichen (dort benennen, was fehlt).
+- **Typische Auffälligkeit:** „Dämmung“ ohne Stoffangabe; Platte ohne Funktionsangabe.
+- **Warum relevant?** Ohne diese Angaben sind LD, FS und WB nur eingeschränkt prüfbar.
+- **Verbesserungsmöglichkeiten:** Funktionen und Materialien in der Legende benennen.
+- **Grundlage:** Zeichnungsplausibilität; DIN 4108-7:2026-04 (Planung der Luftdichtheitsschicht).
+- **Einstufung:** **Verbesserungshinweis** – die fehlenden Angaben einmal hier sammeln und in
+  den Fachbereichen nur „aus der Datei nicht prüfbar, siehe ZQ-03“ vermerken.
 
 ## ZQ-04 Beschriftungen zeigen auf das Richtige
 
-- **Prüfe:** Zeigen Hinweislinien auf das Bauteil, das sie beschreiben? Ist das Beschriebene
-  an dieser Stelle auch **gezeichnet**?
-- **So erkennst du es in der Zeichnung:** Jede Hinweislinie bis zum Ende verfolgen.
-- **Fehlerbild:** Beschriftung „Luftdichte Abklebung“, aber an der Spitze der Hinweislinie
-  ist kein Band dargestellt; Hinweislinie zeigt ins Leere.
-- **Warum ist das ein Fehler?** Die Baustelle sieht einen Widerspruch – oder übersieht das Bauteil.
-- **Mögliche Folgen:** Fehlendes Bauteil in der Ausführung.
-- **Verbesserung:** Bauteil an der Stelle darstellen bzw. Hinweislinie korrigieren.
-- **Quelle:** Zeichnungsplausibilität (Praxisregel).
-- **Einstufung:** Wenn dadurch eine Funktionsschicht fehlt → beim jeweiligen Bereich als
-  **Aufbaufehler** (z. B. LD-02) und hier nur als Verweis. Sonst **Verbesserungshinweis**.
+- **Gilt für:** alle Detailzeichnungen.
+- **Prüfe:** Zeigt jede Hinweislinie auf das beschriebene Bauteil, und ist es dort auch
+  **gezeichnet**?
+- **So erkennst du es in der Zeichnung:** Jede Hinweislinie bis zur Spitze verfolgen.
+- **Typische Auffälligkeit:** Beschriftung „Luftdichte Abklebung“, an der Spitze der
+  Hinweislinie ist aber kein Band dargestellt.
+- **Warum relevant?** Die Baustelle sieht einen Widerspruch oder übersieht das Bauteil.
+- **Verbesserungsmöglichkeiten:** Bauteil darstellen oder Hinweislinie korrigieren.
+- **Grundlage:** Zeichnungsplausibilität (Praxisempfehlung).
+- **Einstufung:** Fehlt dadurch eine Funktionsschicht → Befund im Fachbereich (z. B. LD-02),
+  hier nur Verweis. Sonst **Verbesserungshinweis**.
 
 ## ZQ-05 Darstellung nach üblichen Konventionen
 
-- **Prüfe:** Maßstab angegeben? Schraffuren eindeutig (Dämmung, Holz, Plattenwerkstoffe
-  unterscheidbar)? Rechtschreibung und Bezeichnungen fachlich korrekt?
+- **Gilt für:** alle Detailzeichnungen.
+- **Prüfe:** Maßstab angegeben? Schraffuren unterscheidbar (Dämmung, Holz, Plattenwerkstoffe)?
+  Bezeichnungen fachlich korrekt geschrieben?
 - **So erkennst du es in der Zeichnung:** Titel/Maßstab, Schraffuren, Texte.
-- **Fehlerbild:** Kein Maßstab; gleiche Schraffur für verschiedene Materialien; Tippfehler
-  in Materialbezeichnungen.
-- **Warum ist das wichtig?** Verwechslungsgefahr, unprofessioneller Eindruck.
-- **Verbesserung:** Maßstab ergänzen, Schraffuren vereinheitlichen, Texte korrigieren.
-- **Quelle:** Zeichnungskonventionen (Praxisregel).
+- **Typische Auffälligkeit:** Fehlender Maßstab; gleiche Schraffur für verschiedene
+  Materialien; Tippfehler in Materialbezeichnungen.
+- **Warum relevant?** Verwechslungsgefahr.
+- **Verbesserungsmöglichkeiten:** Maßstab ergänzen, Schraffuren vereinheitlichen, Texte korrigieren.
+- **Grundlage:** Zeichnungskonventionen (Praxisempfehlung).
 - **Einstufung:** **Verbesserungshinweis**.

@@ -1,84 +1,108 @@
-# 02 – Feuchteschutz, Diffusion, Tauwasser (FS)
+# 02 – Feuchteschutz: Dampfbremse, Diffusion, Tauwasser (FS)
 
-Wasserdampf wandert im Winter von innen (warm, feucht) nach außen (kalt). Trifft er in der
-Wand auf eine kalte, dichte Schicht, kann er dort kondensieren (Tauwasser). Ziel: Die Wand
-lässt **weniger Dampf hinein, als sie nach außen abgeben kann**.
+**Funktion:** Wasserdampf wandert im Winter durch die Bauteilschichten von innen (warm,
+feucht) nach außen (kalt). Ziel: Es soll nicht mehr Feuchte in die Konstruktion gelangen,
+als wieder austrocknen kann. Kennwert ist der **sd-Wert** (großer Wert = dampfbremsend,
+kleiner Wert = diffusionsoffen).
 
-Kennwert: **sd-Wert** (wasserdampfdiffusionsäquivalente Luftschichtdicke).
-Großer sd-Wert = dampfbremsend, kleiner sd-Wert = diffusionsoffen.
+> **Keine Berechnungen:** keine sd-Werte berechnen oder schätzen, kein Tauwasser berechnen.
+> sd-Werte nur nennen, wenn sie in der Zeichnung angegeben sind. Ob kein schädliches
+> Tauwasser entsteht, klärt nur eine nachweisfreie Konstruktion oder ein Nachweis nach
+> DIN 4108-3:2024-03 bzw. DIN EN 15026:2023-12 → sonst **„Nachweis erforderlich“**.
 
-> Dieser Bereich wird **qualitativ** geprüft: Schichtenfolge beurteilen, aber **keine**
-> sd-Werte berechnen oder schätzen und **kein** Tauwasser berechnen. sd-Werte nur nennen,
-> wenn sie in der Zeichnung angegeben sind.
+**Nicht hier geprüft:** Luftströmung durch Fugen → LD · Winddichtheit, Hinterlüftung,
+Regen → WH.
 
 ---
 
-## FS-01 Diffusionsgefälle: innen dicht – außen offen
+## FS-01 Schichtenfolge: innen dampfbremsend – außen diffusionsoffener
 
-- **Prüfe:** Werden die Schichten von innen nach außen **diffusionsoffener**? Ist die
-  raumseitige Schicht (Luftdichtheits-/Dampfbremsschicht) deutlich dichter als die äußeren
-  Schichten vor der Hinterlüftung?
-- **So erkennst du es in der Zeichnung:** Schichtenfolge laut Legende. Qualitative Orientierung:
-  - Holzfaserdämmplatten und Unterdeckbahnen außen sind in der Regel diffusionsoffen.
-  - OSB ist **stark produktabhängig** – ohne Produkt- bzw. sd-Angabe nicht beurteilbar.
-  - Dampfbremsbahnen: Eigenschaft laut Produkt (auch feuchtevariabel möglich).
-- **Fehlerbild:** Außen liegt eine dichtere Schicht als innen (z. B. OSB außen, Gipskarton
-  ohne Dampfbremse innen).
-- **Warum ist das ein Fehler?** Feuchte gelangt hinein, kann aber außen nicht abtrocknen.
-- **Mögliche Folgen:** Tauwasser an der Innenseite der äußeren Schicht, Holzfäule, Schimmel,
-  durchfeuchtete Dämmung mit Verlust der Dämmwirkung.
-- **Verbesserung:** Innen dampfbremsend (z. B. verklebte OSB mit ausreichendem sd-Wert oder
-  Dampfbremsbahn), außen diffusionsoffen (z. B. Holzfaserplatte, Unterdeckbahn).
-- **Quelle:** DIN 4108-3. „Innen deutlich dichter als außen“ = (Faustregel).
-- **Einstufung:** Schichtenfolge offensichtlich umgekehrt (dicht außen, offen innen) →
-  **Aufbaufehler**. Richtige Reihenfolge, aber sd-Wert der Innenschicht unbekannt
-  (Checkliste C3) → **Risiko/Klärungsbedarf**.
+- **Gilt für:** gedämmte Holzbau-Außenwände in Leichtbauweise.
+- **Prüfe:** Werden die Schichten von innen nach außen tendenziell diffusionsoffener?
+- **So erkennst du es in der Zeichnung:** Schichtenfolge laut Legende. Qualitativ:
+  Holzfaserdämmplatten und Unterdeckbahnen außen sind in der Regel diffusionsoffen;
+  bei OSB hängt das Verhalten stark vom Produkt ab; Dampfbremsbahnen laut Produkt.
+- **Typische Auffälligkeit:** Außen liegt erkennbar eine dichtere Schicht als innen.
+- **Warum relevant?** Feuchte, die hineingelangt, soll nach außen abgegeben werden können.
+- **Mögliches Risiko:** Feuchteanreicherung an der kalten Seite der Dämmung; das kann
+  Tauwasser begünstigen und langfristig Schimmel- oder Pilzbefall fördern.
+- **Verbesserungsmöglichkeiten:** Raumseitig eine ausreichend dampfbremsende Schicht (z. B.
+  geeignete Holzwerkstoffplatte oder Dampfbremsbahn, ggf. feuchtevariabel), außen
+  diffusionsoffene Schichten – oder die Eignung des gewählten Aufbaus nachweisen lassen.
+- **Grundlage:** DIN 4108-3:2024-03. „Innen deutlich dichter als außen“ = (Praxisempfehlung).
+- **Einstufung:** Schichtenfolge eindeutig umgekehrt → **klarer Aufbaufehler**
+  (+ Nachweis erforderlich). Reihenfolge plausibel, aber Produkt/sd-Wert der Innenschicht
+  unbekannt → **aus der Datei nicht prüfbar** bzw. **Nachweis erforderlich**.
 
-## FS-02 Keine Feuchtefalle auf der kalten Seite
+## FS-02 Keine dampfdichte Schicht auf der kalten Seite ohne Nachweis
 
-- **Prüfe:** Liegt außen (kalte Seite der Dämmung) eine dampfdichte Schicht – z. B.
-  Bitumenbahn, Folie mit hohem sd-Wert, beschichtete Platte – ohne rechnerischen Nachweis?
-- **So erkennst du es in der Zeichnung:** Außenschichten in der Legende, Beschriftungen wie
+- **Gilt für:** gedämmte Außenbauteile.
+- **Prüfe:** Liegt außen auf der Dämmung eine dampfdichte Schicht (z. B. Bitumenbahn, Folie,
+  beschichtete Platte)?
+- **So erkennst du es in der Zeichnung:** Außenschichten in der Legende; Beschriftungen wie
   „Dampfsperre“, „Bitumen“, „PE-Folie“ außen.
-- **Fehlerbild:** Dampfsperre außen, innen nur Gipskarton.
-- **Warum ist das ein Fehler?** Wasserdampf staut sich vor der dichten Außenschicht.
-- **Mögliche Folgen:** Tauwasser, Holzfäule – oft lange unbemerkt.
-- **Verbesserung:** Außen diffusionsoffene Materialien; falls eine dichte Außenschicht
-  unvermeidbar ist: rechnerischer Nachweis (Glaser oder hygrothermische Simulation).
-- **Quelle:** DIN 4108-3; DIN EN 15026.
-- **Einstufung:** Dampfsperrende Schicht außen und offene Innenseite klar erkennbar →
-  **Aufbaufehler**. Dichtere Außenschicht ohne erwähnten Nachweis → **Risiko/Klärungsbedarf**.
+- **Typische Auffälligkeit:** Dampfsperrende Schicht außen, innen nur offene Bekleidung.
+- **Warum relevant?** Wasserdampf kann sich vor der dichten Außenschicht anreichern.
+- **Mögliches Risiko:** wie FS-01.
+- **Verbesserungsmöglichkeiten:** Außen diffusionsoffene Materialien verwenden; ist eine
+  dichte Außenschicht gewollt, Tauwasserschutz rechnerisch nachweisen.
+- **Grundlage:** DIN 4108-3:2024-03; DIN EN 15026:2023-12.
+- **Einstufung:** Dichte Außenschicht **und** offene Innenseite eindeutig → **klarer
+  Aufbaufehler** (+ Nachweis erforderlich). Dichtere Außenschicht ohne erwähnten Nachweis →
+  **mögliche Auffälligkeit** (+ Nachweis erforderlich).
 
-## FS-03 Tauwassernachweis bzw. nachweisfreie Konstruktion
+## FS-03 Tauwasserschutz ist nachgewiesen oder die Konstruktion ist nachweisfrei
 
-- **Prüfe:** Entspricht der Aufbau einer Holzbau-Außenwand, für die DIN 4108-3 **keinen
-  rechnerischen Tauwassernachweis** verlangt? Diese Konstruktionen sind in der Norm mit
-  Bedingungen an die sd-Werte innen und außen beschrieben.
-- **So erkennst du es in der Zeichnung:** Typischer nachweisfreier Aufbau: raumseitig
-  dampfbremsende Schicht, Gefachdämmung, außen diffusionsoffene Bekleidung bzw. Platte,
-  hinterlüftete Fassade.
-- **Fehlerbild:** Aufbau weicht davon ab (z. B. außen dichte Platte, unbekannte sd-Werte), und
-  es wird kein Nachweis erwähnt.
-- **Warum ist das ein Fehler?** Ohne Nachweis ist nicht belegt, dass kein schädliches Tauwasser
-  entsteht.
-- **Mögliche Folgen:** wie FS-01.
-- **Verbesserung:** Aufbau an nachweisfreie Konstruktion anpassen **oder** Nachweis führen
-  (Glaser-Verfahren nach DIN 4108-3 bzw. Simulation nach DIN EN 15026).
-- **Quelle:** DIN 4108-3 (Bauteile ohne rechnerischen Tauwassernachweis). Genaue
-  Grenzwerte in der gültigen Normausgabe nachschlagen.
-- **Einstufung:** Meist **Risiko/Klärungsbedarf** oder **Verbesserungshinweis** – die Zeichnung
-  allein reicht selten für ein endgültiges Urteil. **Kein** Tauwasser berechnen.
+- **Gilt für:** alle Außenbauteile.
+- **Prüfe:** Ist erkennbar, ob der Aufbau einer nachweisfreien Konstruktion nach
+  DIN 4108-3:2024-03 entspricht oder ob ein Nachweis erwähnt ist?
+- **So erkennst du es in der Zeichnung:** Hinweis auf Nachweis/Prüfzeugnis; Aufbau ähnelt
+  einer üblichen nachweisfreien Holzbauwand (raumseitig dampfbremsend, außen
+  diffusionsoffen, hinterlüftet). Die Bedingungen selbst stehen in der Norm – **nicht** aus
+  dem Gedächtnis ergänzen.
+- **Typische Auffälligkeit:** Ungewöhnlicher Aufbau ohne Hinweis auf einen Nachweis.
+- **Warum relevant?** Ohne Nachweis bzw. Nachweisfreiheit ist nicht belegt, dass kein
+  schädliches Tauwasser entsteht.
+- **Mögliches Risiko:** wie FS-01.
+- **Verbesserungsmöglichkeiten:** Nachweisfreiheit anhand DIN 4108-3:2024-03 prüfen oder
+  einen Nachweis (vereinfachtes Verfahren bzw. hygrothermische Simulation) führen lassen.
+- **Grundlage:** DIN 4108-3:2024-03; DIN EN 15026:2023-12.
+- **Einstufung:** Meist **aus der Zeichnung nicht abschließend prüfbar** + **Nachweis
+  erforderlich**. Nicht als Aufbaufehler einstufen.
 
 ## FS-04 Austrocknung ist möglich
 
-- **Prüfe:** Kann eingedrungene Feuchte (Baufeuchte, Leckagen) wieder austrocknen – in der
-  Regel nach außen über diffusionsoffene Schichten und eine Hinterlüftung?
-- **So erkennst du es in der Zeichnung:** Diffusionsoffene Außenschicht + Lattung mit
-  Luftraum hinter der Bekleidung.
-- **Fehlerbild:** Beidseitig dichte Schichten („eingepackte“ Konstruktion).
-- **Warum ist das ein Fehler?** Feuchte, die einmal drin ist, bleibt drin.
-- **Mögliche Folgen:** dauerhaft erhöhte Holzfeuchte → Pilzbefall, Schimmel.
-- **Verbesserung:** Mindestens eine Seite diffusionsoffen; innen ggf. feuchtevariable
-  Dampfbremse, die im Sommer Rücktrocknung nach innen erlaubt.
-- **Quelle:** DIN 4108-3; DIN 68800-2 (Schutz vor unzuträglicher Feuchte).
-- **Einstufung:** Beidseitig dichte Schichten erkennbar → **Risiko/Klärungsbedarf**.
+- **Gilt für:** Holzbau-Außenbauteile.
+- **Prüfe:** Kann eingedrungene Feuchte (Baufeuchte, kleine Leckagen) wieder austrocknen –
+  meist nach außen über diffusionsoffene Schichten und eine Hinterlüftung, ggf. auch nach
+  innen über eine feuchtevariable Dampfbremse?
+- **So erkennst du es in der Zeichnung:** Diffusionsoffene Außenschicht, Luftraum hinter der
+  Bekleidung; Angaben zur Dampfbremse.
+- **Typische Auffälligkeit:** Beidseitig dichte Schichten („eingepackte“ Konstruktion).
+- **Warum relevant?** Feuchte, die einmal in der Konstruktion ist, braucht einen Weg nach außen
+  oder innen.
+- **Mögliches Risiko:** Dauerhaft erhöhte Holzfeuchte kann Pilzbefall begünstigen.
+- **Verbesserungsmöglichkeiten:** Mindestens eine Seite diffusionsoffen gestalten; z. B.
+  diffusionsoffene Außenplatte mit Hinterlüftung oder feuchtevariable Dampfbremse innen.
+- **Grundlage:** DIN 4108-3:2024-03; DIN 68800-2:2022-02 (Schutz vor unzuträglicher Feuchte).
+- **Einstufung:** Beidseitig dichte Schichten erkennbar → **mögliche Auffälligkeit**
+  (+ Nachweis erforderlich).
+- **Abgrenzung:** Hinterlüftung selbst → WH-B.
+
+## FS-05 Dämmung raumseitig der Dampfbremse (gedämmte Installationsebene)
+
+- **Gilt für:** Aufbauten mit gedämmter Installationsebene vor der dampfbremsenden Schicht.
+- **Prüfe:** Liegt ein Teil der Dämmung raumseitig der dampfbremsenden Schicht?
+- **So erkennst du es in der Zeichnung:** Dämmschraffur in der Installationsebene; Legende.
+- **Typische Auffälligkeit:** Gedämmte Installationsebene, deren Dämmdicke im Verhältnis zur
+  Hauptdämmung groß erscheint.
+- **Warum relevant?** Die dampfbremsende Schicht liegt dann nicht mehr ganz auf der warmen
+  Seite; ob das unkritisch ist, hängt vom Gesamtaufbau ab.
+- **Mögliches Risiko:** Bei ungünstigem Verhältnis kann sich Feuchte an der Dampfbremse
+  anreichern.
+- **Verbesserungsmöglichkeiten:** Prüfen, ob der Aufbau einer nachweisfreien Konstruktion
+  entspricht, sonst Nachweis führen; alternativ Installationsebene schlanker dämmen oder
+  Dampfbremse anders anordnen.
+- **Grundlage:** DIN 4108-3:2024-03.
+- **Einstufung:** **Aus der Zeichnung nicht abschließend prüfbar** + **Nachweis erforderlich**;
+  bei üblichen schlanken Installationsebenen höchstens **Verbesserungshinweis**.

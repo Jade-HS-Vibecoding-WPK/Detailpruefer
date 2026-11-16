@@ -173,7 +173,20 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       markieren.py: durchgezogen/gestrichelt/gepunktet nach Einstufung
 - [x] Prüfkatalog Teil 2: `04_winddichtheit_hinterlueftung` (WH-01…04), `05_holzschutz`
       (HS-01…03), `06_konstruktion_holzrahmenbau` (KO-01…04), `07_zeichnungsqualitaet` (ZQ-01…05)
-- [ ] **Du:** Prüfkatalog Teil 1 + 2 fachlich gegenlesen
+- [x] **Feature 4 (Mo 16.11.):** Prüfliste nach deinen Vorgaben überarbeitet:
+      Normstand 16.11.2026 recherchiert (`pruefkatalog/quellen.md`; u. a. GEG → GModG,
+      DIN 4108-7:2026-04, DIN 4108-2:2026-05, DIN 18516-1:2024-10 ohne unverifizierte
+      Zahlenwerte); Einstufungen „klarer Aufbaufehler / mögliche Auffälligkeit /
+      Verbesserungshinweis / aus der Datei nicht prüfbar“ + „Nachweis erforderlich“;
+      Funktionen getrennt (WH Teil A/B/C); „Gilt für“ je Regel; Risiken vorsichtig;
+      mehrere Lösungswege; Doppelbefunde per Verweis; neue Regeln FS-05, WH-05
+- [x] **Feature 5 (Mo 16.11.):** `scripts/bericht.py` – PDF-Prüfbericht (Deckblatt mit
+      Pflichthinweis und Legende, markierte Zeichnung, Befundliste nach Einstufung,
+      nicht Prüfbares, Positives, Annahmen, Grundlagen, Fußzeile); Format `befunde.json`
+- [x] Beispielbericht: `beispiel/pruefbericht_wandeck_mit_fehlern.pdf` (7 Seiten)
+- [ ] **Du:** Prüfkatalog und Beispielbericht fachlich gegenlesen
 - [ ] **Du:** 1–2 neue Testdetails mit Fehlern, die ich nicht kenne (für echten Blindtest)
-- [ ] Nächstes Feature: Berichts-Skript (PDF-Prüfbericht) + Verbesserungsskizze
+- [ ] Skill als ZIP für claude.ai packen und dort testen (Code-Ausführung aktivieren)
+- [ ] Should: Verbesserungsskizze im CAD-Look
+- [ ] README.md für GitHub, Poster
 - [ ] Danach: Berichts-Skript (PDF-Prüfbericht mit Mängelliste)

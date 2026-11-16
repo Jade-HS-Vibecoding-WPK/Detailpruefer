@@ -1,107 +1,125 @@
 # 01 – Luftdichtheit (LD)
 
-Die Luftdichtheitsschicht verhindert, dass warme, feuchte Raumluft durch Fugen in die
-Konstruktion strömt. Das ist im Holzbau die **wichtigste Schutzschicht überhaupt**:
-Durch eine kleine Fuge gelangt per Luftströmung (Konvektion) ein Vielfaches der
-Feuchtemenge in die Wand, die durch Diffusion durch die ganze Fläche wandern würde.
+**Funktion:** Die Luftdichtheitsschicht soll verhindern, dass warme, feuchte Raumluft durch
+Fugen in die Konstruktion strömt (Konvektion). Sie liegt in der Regel raumseitig.
+**Nicht hier geprüft:** Dampfdiffusion / Dampfbremse → FS · Winddichtheit außen → WH-A ·
+Plattenränder ohne Auflager → KO-01.
 
 ---
 
 ## LD-01 Luftdichtheitsschicht ist festgelegt
 
-- **Prüfe:** Ist erkennbar, welche Schicht die Luftdichtheitsschicht ist (Legende, Beschriftung, Linienart)?
-- **So erkennst du es in der Zeichnung:** Beschriftung wie „Luftdichtheitsebene“, „luftdichte
-  Abklebung“, „Dampfbremse“; oft eine besondere Linie (gestrichelt, farbig, dick) entlang der
-  raumseitigen Platte oder Bahn.
-- **Fehlerbild:** Nirgends gekennzeichnet; unklar, ob Platte oder Bahn die Funktion übernimmt.
-- **Warum ist das ein Fehler?** Ohne Festlegung kann niemand die Anschlüsse planen und ausführen.
-- **Mögliche Folgen:** Lücken auf der Baustelle, Feuchteschäden, nicht bestandene Luftdichtheitsmessung.
-- **Verbesserung:** Luftdichtheitsschicht in Legende benennen und im Detail eindeutig darstellen.
-- **Quelle:** DIN 4108-7 (Planung der Luftdichtheitsschicht).
-- **Einstufung:** Nirgends festgelegt und auch nicht ableitbar → **Aufbaufehler**
-  (Planungsmangel). Aus Symbolen/Beschriftungen ableitbar, aber in der Legende nicht benannt →
-  **Verbesserungshinweis**. Legende nennt z. B. „OSB, Stöße verklebt“ → `erfüllt`.
+- **Gilt für:** alle Außenbauteile beheizter Gebäude (hier: Holzbau-Außenwände).
+- **Prüfe:** Ist erkennbar, welche Schicht die Luftdichtheitsschicht ist?
+- **So erkennst du es in der Zeichnung:** Legende („luftdicht“, „Stöße verklebt“),
+  Beschriftungen („Luftdichtheitsebene“, „luftdichte Abklebung“), besondere Linienart oder
+  Klebeband-Symbole an Plattenstößen.
+- **Typische Auffälligkeit:** Keine Schicht als luftdicht benannt; unklar, ob Platte oder Bahn
+  die Funktion übernimmt.
+- **Warum relevant?** Nur eine festgelegte Schicht kann an Stößen und Anschlüssen geplant und
+  ausgeführt werden.
+- **Mögliches Risiko:** Lücken bei der Ausführung, weil niemand weiß, welche Schicht
+  anzuschließen ist.
+- **Verbesserungsmöglichkeiten:** Funktion in der Legende benennen (z. B. „OSB, Stöße luftdicht
+  verklebt“ oder „Luftdichtheitsbahn, Stöße verklebt“) und im Detail eindeutig darstellen.
+- **Grundlage:** GModG § 13 (Gebäudehülle dauerhaft luftundurchlässig nach den anerkannten
+  Regeln der Technik); DIN 4108-7:2026-04 (Planung der Luftdichtheitsschicht).
+- **Einstufung:** Aus Symbolen/Beschriftungen ableitbar, aber nicht benannt →
+  **Verbesserungshinweis**. Gar nicht ableitbar → **mögliche Auffälligkeit**
+  (fehlende Planungsangabe, kein nachgewiesener Baufehler).
 
-## LD-02 Luftdichtheitsschicht ist lückenlos durchgehend („Stift-Regel“)
+## LD-02 Luftdichtheitsschicht ist an Ecken und Anschlüssen geschlossen
 
-- **Prüfe:** Lässt sich die Luftdichtheitsschicht im Schnitt **ohne Absetzen** mit einem Stift
-  nachfahren – über Ecken, Stöße und Anschlüsse an andere Bauteile hinweg?
-- **So erkennst du es in der Zeichnung:** Fahre die raumseitige Platte/Bahn entlang. An jeder
-  Stelle, an der sie endet (Ecke, Stoß, Anschluss), muss sie an die nächste Luftdichtheitsschicht
-  **angeschlossen** sein: Klebeband, Anschlussband, überlappende und verklebte Bahn oder
-  durchlaufende Platte.
-- **Fehlerbild:** Die Platte endet an einer Ecke stumpf an einem Holz oder einer anderen Platte,
-  ohne dass eine Verklebung/Abdichtung gezeichnet oder beschriftet ist.
-- **Warum ist das ein Fehler?** Holz-zu-Holz- oder Platte-zu-Holz-Fugen sind **nicht** luftdicht;
-  Holz schwindet und quillt, Fugen öffnen sich.
-- **Mögliche Folgen:** Raumluft strömt in die Dämmebene → Tauwasser auf der kalten Seite →
-  Schimmel, Holzfäule (holzzerstörende Pilze), durchfeuchtete Dämmung; zusätzlich Wärmeverlust,
-  Zugluft, schlechterer Schallschutz.
-- **Verbesserung:** An der Ecke die Luftdichtheitsschichten beider Wände mit geeignetem
-  Klebeband dauerhaft verbinden; oder eine Platte/Bahn um die Ecke durchführen.
-- **Quelle:** DIN 4108-7 (lückenlose Luftdichtheitsschicht, Ausbildung von Anschlüssen);
-  GEG § 26 (dauerhaft luftundurchlässige Gebäudehülle). Stift-Regel = (Faustregel).
-- **Einstufung:** Unterbrechung klar erkennbar (z. B. Abklebe-Symbol fehlt an einer Stelle,
-  an der es konstruktiv nötig wäre, während es an anderen Stößen gezeichnet ist) →
-  **Aufbaufehler**. Darstellung mehrdeutig → **Risiko/Klärungsbedarf**.
+- **Gilt für:** alle Bauarten; besonders Wandecken, Wand-Decken- und Wand-Boden-Anschlüsse.
+- **Prüfe:** Ist die Luftdichtheitsschicht dort, wo sie endet (Ecke, Anschluss an anderes
+  Bauteil), an die nächste Luftdichtheitsschicht **angeschlossen**?
+  Hilfreich (Praxisempfehlung): Die Schicht lässt sich im Schnitt ohne Absetzen mit einem
+  Stift nachfahren („Stift-Regel“).
+- **So erkennst du es in der Zeichnung:** Raumseitige Platte/Bahn bis zu ihrem Ende verfolgen:
+  Ist dort ein Klebeband, eine Überlappung, ein Anschlussband oder eine durchlaufende Platte
+  dargestellt oder beschrieben?
+- **Typische Auffälligkeit:** Platten zweier Wände stoßen in der Ecke stumpf zusammen, ohne
+  dargestellte oder beschriebene Abdichtung.
+- **Warum relevant?** Holz- und Plattenfugen sind ohne Abdichtung in der Regel nicht dauerhaft
+  luftdicht; Holz schwindet und quillt.
+- **Mögliches Risiko:** Durch die Fuge kann Raumluft in die Konstruktion strömen. Je nach
+  Leckage und Klima kann das Tauwasser in der Konstruktion begünstigen und langfristig
+  Schimmel- oder Pilzbefall fördern; außerdem Wärmeverluste und Zugluft.
+- **Verbesserungsmöglichkeiten:** Eckstoß dauerhaft luftdicht verbinden – z. B. mit für den
+  Untergrund geeignetem Klebeband (Eckband), mit einer um die Ecke geführten Bahn oder mit
+  einem anderen geprüften System nach Herstellerangabe; in der Zeichnung darstellen.
+- **Grundlage:** GModG § 13; DIN 4108-7:2026-04. „Stift-Regel“ = (Praxisempfehlung).
+- **Einstufung:** **Klarer Aufbaufehler** nur, wenn eindeutig – z. B. die Zeichnung verwendet
+  an anderen Stößen ein Abklebe-Symbol, an der Ecke aber nicht, **und** eine Beschriftung oder
+  Hinweislinie weist auf eine Abklebung an genau dieser Stelle hin. Sonst
+  **mögliche Auffälligkeit** („Anschluss nicht dargestellt – Ausführung klären“).
+- **Abgrenzung:** Fehlt hinter dem Plattenrand das Auflager → Hauptbefund **KO-01**; hier nur
+  Verweis, dass dadurch auch der luftdichte Anschluss gefährdet ist.
 
-## LD-03 Stöße von Plattenwerkstoffen sind abgedichtet
+## LD-03 Flächige Plattenstöße sind abgedichtet
 
-- **Prüfe:** Wenn Holzwerkstoffplatten (z. B. OSB) die Luftdichtheitsschicht bilden: Sind
-  Plattenstöße und Plattenränder abgeklebt bzw. abgedichtet?
-- **So erkennst du es in der Zeichnung:** Beschriftung „Stöße verklebt“, „luftdichte Abklebung“,
-  Klebeband-Symbol (kurze dicke Linie über dem Stoß).
-- **Fehlerbild:** Stoß sichtbar, aber keine Abklebung dargestellt oder beschrieben.
-- **Warum ist das ein Fehler?** Die Fläche der Platte ist (bei geeigneter Platte) luftdicht, der
-  Stoß nicht.
-- **Mögliche Folgen:** wie LD-02.
-- **Verbesserung:** Stöße mit für den Untergrund geeignetem Klebeband abkleben; Stöße möglichst
-  auf tragendem Holz anordnen, damit das Band sicher anliegt.
-- **Quelle:** DIN 4108-7.
-- **Einstufung:** Stoß ohne Abklebung, obwohl Abklebungen an anderen Stößen dargestellt
-  sind, oder Plattenrand ohne Unterkonstruktion (Band hat keinen festen Untergrund) →
-  **Aufbaufehler**. Unklar, ob überhaupt ein Stoß vorliegt → **Risiko/Klärungsbedarf**.
-  Ob die gewählte Platte selbst ausreichend luftdicht ist, hängt vom Produkt ab →
-  **Risiko/Klärungsbedarf** (Checkliste C3).
+- **Gilt für:** Luftdichtheitsschichten aus Holzwerkstoffplatten (z. B. OSB). Bei Bahnen:
+  Überlappungen und Verklebung sinngemäß.
+- **Prüfe:** Sind Stöße innerhalb der Wandfläche abgeklebt bzw. abgedichtet?
+- **So erkennst du es in der Zeichnung:** Klebeband-Symbol (z. B. kurze dicke Linie) oder
+  Beschriftung an Plattenstößen; im Horizontalschnitt sind Stöße oft als Querlinie durch die
+  Plattenschraffur zu sehen.
+- **Typische Auffälligkeit:** Stoß erkennbar, aber keine Abdichtung dargestellt, obwohl andere
+  Stöße abgeklebt gezeichnet sind.
+- **Warum relevant?** Die Plattenfläche kann (bei geeigneter Platte) luftdicht sein, der Stoß
+  ohne Abdichtung in der Regel nicht.
+- **Mögliches Risiko:** wie LD-02.
+- **Verbesserungsmöglichkeiten:** Stöße mit geeignetem Klebeband abkleben oder ein anderes
+  geprüftes Abdichtungssystem verwenden; Stöße möglichst auf Holz anordnen (siehe KO-01).
+- **Grundlage:** DIN 4108-7:2026-04.
+- **Einstufung:** Eindeutig erkennbarer Stoß ohne Abdichtung bei sonst abgeklebt
+  dargestellten Stößen → **klarer Aufbaufehler**. Unklar, ob überhaupt ein Stoß vorliegt →
+  **mögliche Auffälligkeit**. Ob die gewählte Platte selbst luftdicht genug ist (Produkt) →
+  **aus der Datei nicht prüfbar** (Checkliste C3).
+- **Abgrenzung:** Stöße an Ecken → LD-02.
 
 ## LD-04 Installationsebene schützt die Luftdichtheitsschicht
 
-- **Prüfe:** Liegt raumseitig vor der Luftdichtheitsschicht eine Installationsebene, damit
-  Leitungen und Dosen die Schicht nicht durchdringen?
+- **Gilt für:** Außenwände mit Elektro- oder Sanitärinstallation.
+- **Prüfe:** Liegt raumseitig vor der Luftdichtheitsschicht eine Installationsebene, sodass
+  Leitungen und Dosen die Schicht nicht durchdringen müssen?
 - **So erkennst du es in der Zeichnung:** Lattung/Ständer mit Hohlraum oder Dämmung zwischen
   Luftdichtheitsschicht und Innenbekleidung; Legende „Installationsebene“.
-- **Fehlerbild:** Innenbekleidung direkt auf der Luftdichtheitsschicht, obwohl Installationen
-  in der Außenwand zu erwarten sind.
-- **Warum ist das ein Fehler?** Jede Steckdose und Leitung würde die Schicht durchlöchern.
-- **Mögliche Folgen:** viele kleine Leckagen → wie LD-02.
-- **Verbesserung:** Installationsebene (z. B. 4–6 cm) raumseitig vorsehen.
-- **Quelle:** DIN 4108-7 (Empfehlung zur Vermeidung von Durchdringungen).
-- **Einstufung:** Fehlt die Installationsebene → **Verbesserungshinweis**, kein Aufbaufehler –
-  sofern Durchdringungen anderweitig luftdicht gelöst werden.
+- **Typische Auffälligkeit:** Innenbekleidung direkt auf der Luftdichtheitsschicht.
+- **Warum relevant?** Jede Durchdringung muss sonst einzeln abgedichtet werden.
+- **Mögliches Risiko:** Viele kleine Leckagen durch Dosen und Leitungen.
+- **Verbesserungsmöglichkeiten:** Installationsebene vorsehen **oder** alle Durchdringungen
+  mit geeigneten luftdichten Dosen/Manschetten planen.
+- **Grundlage:** (Praxisempfehlung); Durchdringungen allgemein: DIN 4108-7:2026-04.
+- **Einstufung:** Fehlt die Installationsebene → **Verbesserungshinweis**, kein Aufbaufehler.
 
 ## LD-05 Durchdringungen sind abgedichtet
 
-- **Prüfe:** Durchdringen Balken, Rohre, Kabel oder Befestigungsmittel die Luftdichtheitsschicht?
-  Sind diese Stellen abgedichtet?
+- **Gilt für:** alle Bauarten.
+- **Prüfe:** Durchdringen Balken, Rohre, Kabel oder Verbindungsmittel die
+  Luftdichtheitsschicht? Ist eine Abdichtung dargestellt?
 - **So erkennst du es in der Zeichnung:** Bauteile, die quer durch die raumseitige Platte/Bahn
   laufen; Manschetten, Anschlussbänder.
-- **Fehlerbild:** Durchdringung ohne Manschette/Abklebung.
-- **Warum ist das ein Fehler?** Jede Durchdringung ist eine potenzielle Leckage.
-- **Mögliche Folgen:** wie LD-02.
-- **Verbesserung:** Durchdringungen vermeiden (Installationsebene) oder mit Manschetten bzw.
-  Anschlussbändern abdichten.
-- **Quelle:** DIN 4108-7.
-- **Einstufung:** Erkennbare Durchdringung ohne Abdichtung → **Aufbaufehler**.
-  Im Schnitt nicht dargestellt → **Nicht beurteilbar**.
+- **Typische Auffälligkeit:** Durchdringung ohne erkennbare Abdichtung.
+- **Warum relevant?** Jede Durchdringung ist eine mögliche Leckage.
+- **Mögliches Risiko:** wie LD-02, örtlich begrenzt.
+- **Verbesserungsmöglichkeiten:** Durchdringung vermeiden (z. B. Installationsebene) oder mit
+  Manschette, Anschlussband oder Dichtstoff nach Herstellersystem abdichten.
+- **Grundlage:** DIN 4108-7:2026-04.
+- **Einstufung:** Eindeutige Durchdringung ohne Abdichtung → **klarer Aufbaufehler**.
+  Im Schnitt nicht dargestellt → **aus der Datei nicht prüfbar**.
+- **Abgrenzung:** Zu lang dargestellte Schrauben → KO-03.
 
-## LD-06 Lage der Luftdichtheitsschicht: raumseitig der Dämmung
+## LD-06 Luftdichtheitsschicht liegt auf der warmen Seite der Hauptdämmung
 
-- **Prüfe:** Liegt die Luftdichtheitsschicht auf der **warmen** (Raum-)Seite der Hauptdämmung?
+- **Gilt für:** gedämmte Außenbauteile.
+- **Prüfe:** Liegt die Luftdichtheitsschicht raumseitig der Hauptdämmebene?
 - **So erkennst du es in der Zeichnung:** Reihenfolge der Schichten in Legende und Zeichnung.
-- **Fehlerbild:** Luftdichte/dampfbremsende Schicht außen, Raumseite nur offen bekleidet.
-- **Warum ist das ein Fehler?** Raumluft könnte in die Dämmung strömen und an der kalten,
-  dichten Außenschicht kondensieren.
-- **Mögliche Folgen:** Tauwasser in der Konstruktion, Holzfäule, Schimmel.
-- **Verbesserung:** Luftdichtheitsschicht raumseitig der Dämmung anordnen.
-- **Quelle:** DIN 4108-7; DIN 4108-3 (Zusammenhang mit FS-01).
-- **Einstufung:** Falsche Lage klar erkennbar → **Aufbaufehler**.
+- **Typische Auffälligkeit:** Luftdichte Schicht nur außen, raumseitig nur offene Bekleidung.
+- **Warum relevant?** Raumluft könnte sonst in die Dämmung strömen, bevor sie auf die dichte
+  Schicht trifft.
+- **Mögliches Risiko:** Feuchteeintrag in die Dämmebene, der Tauwasser begünstigen kann.
+- **Verbesserungsmöglichkeiten:** Luftdichtheitsschicht raumseitig der Hauptdämmung anordnen.
+- **Grundlage:** DIN 4108-7:2026-04.
+- **Einstufung:** Eindeutig falsche Lage → **klarer Aufbaufehler**.
+- **Abgrenzung:** Dämmung in der Installationsebene (raumseitig der Dampfbremse) → FS-05.
