@@ -65,6 +65,32 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
 - **Einstufung:** Widerspruch → **mögliche Auffälligkeit**; Tragfähigkeit →
   **aus der Datei nicht prüfbar** + **Nachweis erforderlich**.
 
+## KO-05 Bekleidungen haben eine Unterkonstruktion – auch an Ecken und Rändern
+
+- **Gilt für:** Fassadenbekleidungen auf Lattung (z. B. Holzschalung) und Innenbekleidungen
+  auf Installationslattung (z. B. Gipskarton).
+- **Prüfe:** Ist die Unterkonstruktion (Traglattung, Installationslattung) so dargestellt,
+  dass die Bekleidung in sinnvollen Abständen **und an Ecken und Rändern** befestigt werden
+  kann? Passen Richtung und Lage der Lattung zur Bekleidung?
+- **So erkennst du es in der Zeichnung:** In einem Horizontalschnitt erscheinen **senkrechte**
+  Latten als einzelne geschnittene Hölzer (Kreuz-Symbole) in der Lattungsebene; die Abstände
+  dazwischen ablesen (im Maßstab, keine Berechnung). Prüfen, ob an der Ecke beider Wände eine
+  Latte liegt. Waagerechte Latten werden in einem Horizontalschnitt meist **nicht** geschnitten
+  – dann die Richtung erfragen statt einen Fehler anzunehmen.
+- **Typische Auffälligkeit:** Lattungsebene an der Ecke leer, Bekleidungsenden ohne Latte
+  dahinter; in einer Wand ist eine Lattung gezeichnet, in der anderen nicht.
+- **Warum relevant?** Bekleidungsenden ohne Befestigung können sich verformen oder lösen.
+- **Mögliches Risiko:** Aufklaffende Fugen an der Ecke, lose Bretter oder Platten; an der
+  Fassade kann dadurch leichter Wasser hinter die Bekleidung gelangen.
+- **Verbesserungsmöglichkeiten:** Latten an beiden Seiten der Ecke bzw. an Plattenrändern
+  vorsehen; Abstände nach Herstellerangabe der Bekleidung; alternativ Eckausbildung mit
+  eigener Unterkonstruktion (z. B. Eckbrett auf Latte).
+- **Grundlage:** Herstellerrichtlinien der Bekleidung (Praxisempfehlung).
+- **Einstufung:** Senkrechte Lattung erkennbar, aber an der Ecke eindeutig keine Latte →
+  **klarer Aufbaufehler**. Lattung nur teilweise dargestellt oder Richtung unklar →
+  **mögliche Auffälligkeit**.
+- **Abgrenzung:** Hinterlüftung (Luftraum) → WH-02; Wasserableitung der Ecke → WH-04.
+
 ## KO-04 Raster und Plattenstöße passen zusammen
 
 - **Gilt für:** Holzrahmenbau mit Plattenbeplankung.

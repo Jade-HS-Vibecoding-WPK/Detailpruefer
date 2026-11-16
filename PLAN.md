@@ -184,8 +184,13 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Pflichthinweis und Legende, markierte Zeichnung, Befundliste nach Einstufung,
       nicht Prüfbares, Positives, Annahmen, Grundlagen, Fußzeile); Format `befunde.json`
 - [x] Beispielbericht: `beispiel/pruefbericht_wandeck_mit_fehlern.pdf` (7 Seiten)
-- [ ] **Du:** Prüfkatalog und Beispielbericht fachlich gegenlesen
-- [ ] **Du:** 1–2 neue Testdetails mit Fehlern, die ich nicht kenne (für echten Blindtest)
+- [x] **Blindtest 2 (Mo 16.11.):** `tests/details/blindtest_2.pdf` geprüft →
+      `beispiel/pruefbericht_blindtest_2.pdf` (1 klarer Aufbaufehler, 5 mögliche
+      Auffälligkeiten, 2 Hinweise, 5 nicht prüfbar). Dabei Katalog ergänzt: **KO-05**
+      (Unterkonstruktion von Bekleidungen, auch an Ecken) und **Wand-zu-Wand-Abgleich**
+      (ZQ-01, SKILL.md Schritt 1)
+- [ ] **Du:** Lösungsschlüssel zu Blindtest 2 schicken → Trefferquote auswerten
+- [ ] **Du:** Prüfkatalog und Beispielberichte fachlich gegenlesen
 - [ ] Skill als ZIP für claude.ai packen und dort testen (Code-Ausführung aktivieren)
 - [ ] Should: Verbesserungsskizze im CAD-Look
 - [ ] README.md für GitHub, Poster

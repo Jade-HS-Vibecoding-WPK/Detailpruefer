@@ -23,6 +23,11 @@ werden leicht falsch ausgeführt.
 - **Grundlage:** Zeichnungsplausibilität (Praxisempfehlung).
 - **Einstufung:** **Verbesserungshinweis**; Widerspruch bei einer Funktionsschicht →
   **mögliche Auffälligkeit**.
+- **Wand-zu-Wand-Abgleich (bei Ecken und Anschlüssen):** Jede Schicht in **beiden** Wänden
+  vergleichen. Ist eine Schicht in einer Wand mit Materialschraffur dargestellt, in der
+  anderen aber leer (nur Begrenzungslinien) oder ganz weggelassen → **mögliche Auffälligkeit**
+  („Schicht fehlt möglicherweise“). Die fachlichen Folgen (z. B. fehlende
+  Luftdichtheitsschicht) werden im zuständigen Bereich beschrieben, hier nur Verweis.
 
 ## ZQ-02 Maßketten sind vollständig und schlüssig
 

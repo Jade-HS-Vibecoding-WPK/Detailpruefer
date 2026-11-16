@@ -92,7 +92,8 @@ eine Berechnung bzw. ein Nachweis (Tauwasser, Wärmebrücke, Statik, U-Wert) Sic
 ## Vorgehen
 
 1. Schichtenaufbau von innen nach außen erkennen (Zeichnung **und** Legende); unklare
-   Schichten als „unklar“ markieren.
+   Schichten als „unklar“ markieren. Bei Ecken beide Wände Schicht für Schicht vergleichen
+   (ZQ-01) und Unterkonstruktionen bis zur Ecke verfolgen (KO-01, KO-05).
 2. Jede Regel aller Bereiche durchgehen; Geltungsbereich prüfen.
 3. Je Regel notieren: `erfüllt`, `nicht anwendbar` oder eine Einstufung – mit Kürzel.
 4. Doppelbefunde zusammenführen (Grundsatz 8).

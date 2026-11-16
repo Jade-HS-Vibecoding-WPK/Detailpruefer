@@ -56,6 +56,9 @@ Verbesserungsvorschläge. Du schreibst in **klarem, verständlichem Deutsch**.
   Raster in Prozent: **x = 0 links … 100 rechts**, **y = 0 oben … 100 unten**.
 - **Schichtenaufbau von innen nach außen** aus Zeichnung **und** Legende; unklare Schichten
   als unklar kennzeichnen.
+- **Drei Abgleiche** machen: (1) Legende ↔ Maßkette ↔ Zeichnung, (2) bei Ecken/Anschlüssen
+  **Wand A ↔ Wand B Schicht für Schicht** (Schraffur vorhanden? Schicht leer oder
+  weggelassen?), (3) Unterkonstruktionen (Ständer, Lattung) in beiden Wänden bis zur Ecke.
 
 ### 2. Checkliste
 - `checkliste.md` lesen; **in einer Runde** nur die Fragen stellen, die die Zeichnung nicht
