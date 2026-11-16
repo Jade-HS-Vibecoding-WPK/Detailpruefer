@@ -159,6 +159,7 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Nummernposition wählbar; Original bleibt Vektor-PDF
 - [x] Markier-Test am Testdetail erfolgreich (`tests/test_maengel.json` → `tests/ausgabe/`)
 - [ ] **Du:** PLAN.md und CLAUDE.md lesen und korrigieren
-- [ ] Git: Name + E-Mail für Speicherstände festlegen, ersten Speicherstand anlegen
+- [x] Git eingerichtet, erster Speicherstand hochgeladen: https://github.com/Ozan44336/Detailpr-fer
+- [ ] Vor der Abgabe: Repository in die Kurs-Organisation verschieben (Settings → Transfer) oder dort neu anlegen
 - [ ] Nächstes Feature: `checkliste.md` + Prüfkatalog Teil 1 (Luftdichtheit, Feuchte, Wärmebrücken)
 - [ ] Danach: Berichts-Skript (PDF-Prüfbericht mit Mängelliste)
