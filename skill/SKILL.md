@@ -23,13 +23,19 @@ erstellst einen Prüfbericht. Du schreibst auf **Deutsch**, klar und verständli
 - Fasse kurz zusammen, was du erkannt hast, und frage nach, falls die Detailart unklar ist.
 
 ### 2. Checkliste – Rückfragen
-- Stelle die Fragen aus `checkliste.md`, die die Zeichnung nicht beantwortet
-  (z. B. Gebäudeklasse, Nutzung, Fassadenart). *(Datei folgt – Stand: in Arbeit.)*
+- Lies `checkliste.md` und stelle **in einer Runde** nur die Fragen, die die Zeichnung
+  nicht beantwortet (z. B. Luftdichtheitsschicht, Gebäudeklasse, Nutzung).
 - Nicht beantwortete Punkte werden im Bericht als **Annahme** aufgeführt.
 
 ### 3. Prüfen
-- Prüfe das Detail Bereich für Bereich anhand von `pruefkatalog/`.
-  *(Prüfkatalog folgt – Stand: in Arbeit.)*
+- Lies zuerst `pruefkatalog/00_uebersicht.md` (Vorgehen, Einstufung, Quellen).
+- Gehe dann **jede Regel** aller vorhandenen Bereichsdateien durch
+  (`pruefkatalog/01_…`, `02_…`, `03_…` usw.) und notiere je Regel:
+  `erfüllt`, `Mangel` oder `nicht prüfbar` – mit Regel-Kürzel (z. B. LD-02).
+- Untersuche dafür die Zeichnung gezielt: Nutze `raster.py --ausschnitt` zum Hineinzoomen
+  in Ecken, Stöße und Anschlüsse – dort sitzen die meisten Fehler.
+- Vergleiche das korrekte Bild mit dem, was gezeichnet ist: Fehlende Bauteile, Bänder oder
+  Beschriftungen sind genauso Fehler wie falsch gezeichnete.
 - Jeder Mangel braucht: Befund, warum es ein Fehler ist, mögliche Folgen (Bauschaden),
   Verbesserungsvorschlag, Quelle/Norm und die **Sicherheit** deiner Einschätzung
   (`sicher` oder `unsicher`). Wenn du unsicher bist, sag es – rate nicht.

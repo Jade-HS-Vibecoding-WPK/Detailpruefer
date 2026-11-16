@@ -161,5 +161,11 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
 - [ ] **Du:** PLAN.md und CLAUDE.md lesen und korrigieren
 - [x] Git eingerichtet, erster Speicherstand hochgeladen: https://github.com/Ozan44336/Detailpr-fer
 - [ ] Vor der Abgabe: Repository in die Kurs-Organisation verschieben (Settings → Transfer) oder dort neu anlegen
-- [ ] Nächstes Feature: `checkliste.md` + Prüfkatalog Teil 1 (Luftdichtheit, Feuchte, Wärmebrücken)
+- [x] **Feature 2 (Mo 16.11.):** `skill/checkliste.md` (9 Rückfragen mit Annahmen) +
+      Prüfkatalog Teil 1: `00_uebersicht`, `01_luftdichtheit` (LD-01…06),
+      `02_feuchteschutz` (FS-01…04), `03_waermeschutz_waermebruecken` (WB-01…04)
+- [ ] **Du:** Prüfkatalog Teil 1 fachlich gegenlesen
+- [ ] Nächstes Feature: Prüfkatalog Teil 2 (Winddichtheit/Hinterlüftung, Holzschutz,
+      Konstruktion Holzrahmenbau, Zeichnungsqualität)
+- [ ] Danach: erster echter Blindtest am Testdetail
 - [ ] Danach: Berichts-Skript (PDF-Prüfbericht mit Mängelliste)
