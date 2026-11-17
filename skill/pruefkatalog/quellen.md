@@ -1,5 +1,13 @@
 # Quellen und Normausgaben – Stand 16.11.2026
 
+> **Für den Bericht maßgeblich ist `quellen.json`** (IDs, Titel, Links). Im Text von
+> `befunde.json` wird mit `[[ID]]` zitiert; der Bericht erzeugt daraus verlinkte Fußnoten.
+> Diese Datei erläutert den Stand der Recherche.
+>
+> Korrektur 17.11.2026: Laut BauNetz Wissen soll der Stoß zweier Holzfassaden **auf Gehrung**
+> ausgeführt werden, damit kein Hirnholz frei liegt. Ein früherer Hinweis gegen Gehrungen war
+> nicht belegt und wurde entfernt (WH-04).
+
 Geprüft am 16.11.2026 über die Normenportale von DIN Media / DIN und über Gesetzesportale.
 Der Prüfkatalog **paraphrasiert** Norminhalte und gibt keine Normtexte wieder.
 Grenzwerte werden nur genannt, wenn sie unten als **verifiziert** vermerkt sind.

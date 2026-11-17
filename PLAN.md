@@ -189,6 +189,15 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Auffälligkeiten, 2 Hinweise, 5 nicht prüfbar). Dabei Katalog ergänzt: **KO-05**
       (Unterkonstruktion von Bekleidungen, auch an Ecken) und **Wand-zu-Wand-Abgleich**
       (ZQ-01, SKILL.md Schritt 1)
+- [x] **Feature 6 (Di 17.11.):** Bericht nach Feedback neu aufgebaut – Kurzfazit mit
+      Befundliste und Seitenverweisen, Maßnahmenliste zum Abhaken (Priorität automatisch),
+      markierte Zeichnung (Rot/Orange/Blau, Badges mit Führungslinie, „Wand A/B“),
+      Befundkarten mit Zeichnungsausschnitt und Aussagesicherheit, offene Fragen im Bericht,
+      Anhang mit Methode, Annahmen, Code-Legende und **Quellenverzeichnis mit verlinkten
+      Fußnoten** (`pruefkatalog/quellen.json`, 23 Quellen mit Links). Präfixe B/S/F,
+      Schichten außen → innen. Disclaimer nur Seite 1 + Fußzeile.
+- [x] WH-04 korrigiert: Gehrung an der Außenecke ist laut BauNetz Wissen empfohlen (kein Befund)
+- [x] Checkliste: Projektname (C0); Berichtskopf mit leerem Feld „Fachlich geprüft von“
 - [ ] **Du:** Lösungsschlüssel zu Blindtest 2 schicken → Trefferquote auswerten
 - [ ] **Du:** Prüfkatalog und Beispielberichte fachlich gegenlesen
 - [ ] Skill als ZIP für claude.ai packen und dort testen (Code-Ausführung aktivieren)

@@ -7,6 +7,7 @@ den Prüfbericht (Abschnitt „Annahmen“).
 
 | Nr. | Frage | Warum wichtig? | Annahme, wenn keine Antwort |
 |---|---|---|---|
+| C0 | **Projektname / Bauvorhaben?** | Erscheint im Berichtskopf | „nicht angegeben“ |
 | C1 | Neubau oder Sanierung? | Andere Wärmeschutzanforderungen nach GModG (vormals GEG) | Neubau |
 | C2 | Nutzung der Räume hinter dem Detail (Wohnen, Büro, Bad/Feuchtraum, Schwimmbad …)? | Raumklima bestimmt die Feuchtebelastung der Konstruktion | Wohnen, normales Raumklima |
 | C3 | Welche Schicht ist als **Luftdichtheitsschicht** geplant (z. B. OSB mit verklebten Stößen, Dampfbremsbahn)? Welches Produkt bzw. welcher sd-Wert? | Ohne festgelegte Luftdichtheitsschicht ist keine sichere Prüfung von Luftdichtheit und Tauwasser möglich | Die raumseitige Holzwerkstoffplatte; Produkt/sd-Wert unbekannt → **aus der Datei nicht prüfbar** |
@@ -19,6 +20,9 @@ den Prüfbericht (Abschnitt „Annahmen“).
 
 ## Regeln
 - Höchstens **eine** Fragerunde. Danach prüfen, auch wenn nicht alles beantwortet ist.
+- Unbeantwortete Fragen kommen **in den Bericht** (Abschnitt „Offene Fragen“, Feld
+  `offene_fragen` mit Frage, Warum, Annahme) – nicht nur in die Chat-Antwort.
+  Im Bericht keine Checklisten-Kürzel (C1 …) verwenden, sondern F1, F2 …
 - Wenn die Zeichnung eine Frage eindeutig beantwortet (z. B. Legende nennt den Dämmstoff),
   nicht fragen, sondern im Bericht als „aus Zeichnung übernommen“ vermerken.
 - Brand- und Schallschutz werden im aktuellen Stand **nur abgefragt, nicht geprüft**.

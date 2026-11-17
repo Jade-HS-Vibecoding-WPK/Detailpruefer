@@ -83,23 +83,27 @@ Drei **verschiedene** Funktionen auf der Außenseite – getrennt prüfen:
 
 ## Teil C – Schlagregenschutz
 
-### WH-04 Bekleidung leitet Wasser ab – besonders an Ecken und Stößen
+### WH-04 Holzbekleidung: kein ungeschütztes Hirnholz, Wasser kann ablaufen
 
-- **Gilt für:** Fassadenbekleidungen, besonders aus Holz.
-- **Prüfe:** Kann Wasser an Ecken, Stößen und Kanten ablaufen, ohne in Fugen oder Hirnholz
-  stehen zu bleiben?
-- **So erkennst du es in der Zeichnung:** Eckausbildung (Gehrung, Überlappung, Eckbrett,
-  Eckprofil), Fugenbild, Tropfkanten.
-- **Typische Auffälligkeit:** Gehrung an der Außenecke ohne zusätzlichen Schutz; offenes
-  Hirnholz; waagerechte Flächen.
-- **Warum relevant?** Holz quillt und schwindet; Gehrungsfugen an Außenecken können sich
-  erfahrungsgemäß öffnen.
-- **Mögliches Risiko:** Aufklaffende Fugen, Feuchte im Hirnholz, Verfärbungen; langfristig
-  kann Fäulnis an der Bekleidung begünstigt werden.
-- **Verbesserungsmöglichkeiten:** Mehrere Lösungen möglich, z. B. überlappende Eckausbildung,
-  Eckbrett oder Eckprofil; Hirnholz abdecken; Tropfkanten vorsehen.
-- **Grundlage:** DIN 68800-2:2022-02 (bauliche Maßnahmen); Eckausbildung = (Praxisempfehlung).
-- **Einstufung:** In der Regel **Verbesserungshinweis**.
+- **Gilt für:** Fassadenbekleidungen aus Holz.
+- **Prüfe:** Liegt an Ecken, Stößen und Kanten Hirnholz frei in der Witterung? Kann Wasser
+  ablaufen, ohne stehen zu bleiben?
+- **So erkennst du es in der Zeichnung:** Eckausbildung (Gehrung, Eckprofil, Eckpfosten,
+  überlappend), Stoßausbildung, Abtropfkanten.
+- **Typische Auffälligkeit:** Stumpf gestoßene Außenecke, bei der eine Hirnholzseite frei
+  liegt; waagerechte Flächen ohne Gefälle oder Tropfkante.
+- **Warum relevant?** Hirnholz nimmt deutlich mehr Wasser auf als Längsholz. Laut BauNetz
+  Wissen soll der Stoß zweier Fassaden **auf Gehrung** ausgeführt werden, damit keine
+  Hirnholzseite der Witterung ausgesetzt ist; ergänzend sind Metallprofil oder Eckpfosten
+  möglich [[BAUNETZ-HOLZFASSADE]].
+- **Mögliches Risiko:** Feuchte im Hirnholz, Verfärbungen; langfristig kann Fäulnis an der
+  Bekleidung begünstigt werden.
+- **Verbesserungsmöglichkeiten:** Gehrung, Eckprofil oder Eckpfosten; Hirnholz abdecken;
+  Abtropfkanten vorsehen; Regeldetails der Fachregel 01 [[FACHREGEL-01]].
+- **Grundlage:** [[BAUNETZ-HOLZFASSADE]]; [[FACHREGEL-01]]; DIN 68800-2:2022-02 [[DIN-68800-2]].
+- **Einstufung:** Freiliegendes Hirnholz erkennbar → **Verbesserungshinweis** bzw.
+  **mögliche Auffälligkeit**. **Eine Gehrung an der Außenecke ist kein Befund** – sie ist
+  eine empfohlene Ausführung (positiv festhalten).
 
 ### WH-05 Offene Fugen: zweite wasserführende Ebene
 

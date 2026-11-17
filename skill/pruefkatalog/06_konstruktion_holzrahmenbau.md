@@ -85,7 +85,8 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
 - **Verbesserungsmöglichkeiten:** Latten an beiden Seiten der Ecke bzw. an Plattenrändern
   vorsehen; Abstände nach Herstellerangabe der Bekleidung; alternativ Eckausbildung mit
   eigener Unterkonstruktion (z. B. Eckbrett auf Latte).
-- **Grundlage:** Herstellerrichtlinien der Bekleidung (Praxisempfehlung).
+- **Grundlage:** Befestigung von Außenwandbekleidungen und Regeldetails für Außenecken:
+  Fachregel 01 des Zimmererhandwerks [[FACHREGEL-01]]; Herstellerangaben [[HERSTELLER]].
 - **Einstufung:** Senkrechte Lattung erkennbar, aber an der Ecke eindeutig keine Latte →
   **klarer Aufbaufehler**. Lattung nur teilweise dargestellt oder Richtung unklar →
   **mögliche Auffälligkeit**.

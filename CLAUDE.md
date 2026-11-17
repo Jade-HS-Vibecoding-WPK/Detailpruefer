@@ -46,8 +46,14 @@ Details und aktueller Stand: siehe `PLAN.md` – zu Beginn jeder Sitzung lesen.
 
 ## Gestaltung
 - Schlicht und verständlich; der Fokus liegt auf der **Richtigkeit** der Prüfung.
-- Markierungen in **Rot** (Kreis + Nummer, ggf. Schraffur); Nummern = Befundliste.
-  Durchgezogen = klarer Aufbaufehler, gestrichelt = mögliche Auffälligkeit, gepunktet = Hinweis.
+- Markierungen: Kreis ohne Füllung + Badge „B1…“ mit Führungslinie neben der Zeichnung.
+  **Rot** durchgezogen = klarer Aufbaufehler · **Orange** gestrichelt = mögliche Auffälligkeit ·
+  **Blau** gepunktet = Verbesserungshinweis. Rot nur für klare Aufbaufehler.
+- Präfixe: B1… = Befunde, S1… = Schichten (außen → innen wie die Legende), F1… = offene Fragen.
+- **Quellenpflicht:** Jede Norm-/Gesetzes-/Paragraphennennung im Bericht mit `[[ID]]` aus
+  `skill/pruefkatalog/quellen.json` belegen (wird zur verlinkten Fußnote).
+- Der Bericht steht für sich: keine Dateipfade, keine Verweise auf den Chat;
+  Disclaimer nur einmal auf Seite 1 + dezent in der Fußzeile.
 - Skizzen im **CAD-Look**: schwarze Linien, klare Linienstärken, DIN-Schraffuren
   (Dämmung, Holz, Plattenwerkstoffe), Beschriftung mit Hinweislinien.
 

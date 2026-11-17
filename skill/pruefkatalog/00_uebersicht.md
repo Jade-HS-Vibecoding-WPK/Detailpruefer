@@ -1,12 +1,22 @@
 # Prüfkatalog – Übersicht
 
 **Ziel:** Eine hochgeladene Bauzeichnung oder ein Baudetail wird **qualitativ** geprüft.
-Zuerst wird der dargestellte Schichtenaufbau von innen nach außen erkannt. Dann werden
-sichtbare Konstruktionsfehler und mögliche Risiken benannt und konkrete, zum dargestellten
-Aufbau passende Verbesserungsvorschläge gegeben.
+Zuerst wird der dargestellte Schichtenaufbau erkannt – nummeriert **wie die Legende der
+Zeichnung, von außen nach innen (S1 = außen)**. Dann werden sichtbare Konstruktionsfehler
+und mögliche Risiken benannt und konkrete, zum dargestellten Aufbau passende
+Verbesserungsvorschläge gegeben.
 
 Maßstab sind deutsche Regeln. Ausgaben und Status der Normen: **`quellen.md`**
-(Stand 16.11.2026).
+(Erläuterung) und **`quellen.json`** (Quellenverzeichnis mit Links, Stand 16./17.11.2026).
+
+## Quellenpflicht
+
+Jede Nennung einer **Norm, eines Gesetzes oder Paragraphen** und jeder Grenzwert im Bericht
+wird mit einer Quelle aus `quellen.json` belegt: im Text **`[[ID]]`** direkt hinter der
+Aussage (z. B. „GModG § 13 [[GMODG-13]]“). Der Bericht macht daraus eine hochgestellte,
+verlinkte Fußnote und listet die Quelle im Quellenverzeichnis. Fehlt eine passende Quelle:
+erst recherchieren und in `quellen.json` ergänzen (mit Link) – sonst die Aussage weglassen.
+Praxisempfehlungen werden mit `[[PRAXIS]]`, Herstellerangaben mit `[[HERSTELLER]]` gekennzeichnet.
 
 ## Dateien
 
@@ -75,6 +85,12 @@ Dampfbremse). Die Funktionen werden trotzdem **getrennt** geprüft und jeder Bef
 
 Zusatzkennzeichnung (zu jeder Einstufung möglich): **„Nachweis erforderlich“** – wenn nur
 eine Berechnung bzw. ein Nachweis (Tauwasser, Wärmebrücke, Statik, U-Wert) Sicherheit gibt.
+
+**Aussagesicherheit** je Befund: **hoch** (eindeutig dargestellt) · **mittel** (naheliegende
+Deutung, andere möglich) · **gering** (mehrere Deutungen möglich) – mit kurzem Grund.
+
+**Priorität** in der Maßnahmenliste (automatisch): hoch = klarer Aufbaufehler oder mögliche
+Auffälligkeit bei LD/FS · mittel = übrige mögliche Auffälligkeiten · niedrig = Hinweise.
 
 ## Schema jeder Regel
 

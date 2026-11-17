@@ -1,0 +1,139 @@
+{
+  "_hinweis": "Quellenverzeichnis des Detailprüfers. In befunde.json wird eine Quelle mit [[ID]] im Text zitiert; der Bericht setzt daraus eine hochgestellte, verlinkte Fußnote und listet nur zitierte Quellen. Alle Links wurden am 16./17.11.2026 aufgerufen.",
+  "abgerufen": "17.11.2026",
+  "gruppen": ["Gesetze", "Normen", "Regelwerke und Fachliteratur", "Herstellerangaben", "Praxisempfehlungen"],
+  "quellen": {
+    "GMODG": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG",
+      "titel": "Gesetz zur Einsparung von Energie und zur Modernisierung der Wärmeversorgung in Gebäuden (Gebäudemodernisierungsgesetz – GModG, vormals Gebäudeenergiegesetz GEG). Inhaltsverzeichnis.",
+      "url": "https://www.gesetze-im-internet.de/geg/"
+    },
+    "GMODG-INKRAFT": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG – Inkrafttreten",
+      "titel": "Bundesregierung: Neues Gebäudemodernisierungsgesetz (verkündet 28.07.2026, wesentliche Neuregelungen ab 29.07.2026).",
+      "url": "https://www.bundesregierung.de/breg-de/aktuelles/neues-gebaeudemodernisierungsgesetz-2430284"
+    },
+    "GMODG-11": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG § 11",
+      "titel": "GModG § 11 Mindestwärmeschutz – verweist für neu zu errichtende Gebäude auf DIN 4108-2:2013-02 und DIN 4108-3.",
+      "url": "https://www.gesetze-im-internet.de/geg/__11.html"
+    },
+    "GMODG-12": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG § 12",
+      "titel": "GModG § 12 Wärmebrücken – Einfluss konstruktiver Wärmebrücken so gering wie möglich halten.",
+      "url": "https://www.gesetze-im-internet.de/geg/__12.html"
+    },
+    "GMODG-13": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG § 13",
+      "titel": "GModG § 13 Dichtheit – wärmeübertragende Umfassungsfläche einschließlich Fugen dauerhaft luftundurchlässig nach den anerkannten Regeln der Technik.",
+      "url": "https://www.gesetze-im-internet.de/geg/__13.html"
+    },
+    "GMODG-A1": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG Anlage 1",
+      "titel": "GModG Anlage 1 (zu § 15 Absatz 1) – Technische Ausführung des Referenzgebäudes (Wohngebäude).",
+      "url": "https://www.gesetze-im-internet.de/geg/anlage_1.html"
+    },
+    "GMODG-A7": {
+      "gruppe": "Gesetze",
+      "kurz": "GModG Anlage 7",
+      "titel": "GModG Anlage 7 (zu § 36) – Höchstwerte der Wärmedurchgangskoeffizienten von Außenbauteilen bei Änderung an bestehenden Gebäuden.",
+      "url": "https://www.gesetze-im-internet.de/geg/anlage_7.html"
+    },
+    "DIN-4108-2": {
+      "gruppe": "Normen",
+      "kurz": "DIN 4108-2",
+      "titel": "DIN 4108-2:2013-02 – Wärmeschutz und Energie-Einsparung in Gebäuden, Teil 2: Mindestanforderungen an den Wärmeschutz. Laut DIN Media zurückgezogen und ersetzt durch DIN 4108-2:2026-05; GModG § 11 verweist auf die Ausgabe 2013-02. Normtext kostenpflichtig.",
+      "url": "https://www.dinmedia.de/de/norm/din-4108-2/167922321"
+    },
+    "FRSI-SEKUNDAER": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "f_Rsi ≥ 0,70 (Sekundärquelle)",
+      "titel": "FIRA Fassaden Spezialtechnik GmbH: Temperaturfaktor (fRsi) – nennt fRsi ≥ 0,70 als Mindestwert nach DIN 4108-2 (Ausgabe nicht genannt). Frei zugängliche Sekundärquelle eines Unternehmens; maßgeblich ist der Normtext.",
+      "url": "https://fira-fassaden.de/fachwissen/temperaturfaktor/"
+    },
+    "DIN-4108-3": {
+      "gruppe": "Normen",
+      "kurz": "DIN 4108-3",
+      "titel": "DIN 4108-3:2024-03 – Wärmeschutz und Energie-Einsparung in Gebäuden, Teil 3: Klimabedingter Feuchteschutz (ersetzt 2018-10). Normtext kostenpflichtig.",
+      "url": "https://www.dinmedia.de/de/norm/din-4108-3/373925063"
+    },
+    "DIN-4108-7": {
+      "gruppe": "Normen",
+      "kurz": "DIN 4108-7",
+      "titel": "DIN 4108-7:2026-04 – Wärmeschutz und Energie-Einsparung in Gebäuden, Teil 7: Luftdichtheit von Gebäuden – Anforderungen, Planungs- und Ausführungsempfehlungen sowie -beispiele (ersetzt 2011-01). Normtext kostenpflichtig.",
+      "url": "https://www.dinmedia.de/en/standard/din-4108-7/398456216"
+    },
+    "DIN-4108-BBL2": {
+      "gruppe": "Normen",
+      "kurz": "DIN 4108 Beiblatt 2",
+      "titel": "DIN 4108 Beiblatt 2:2019-06 – Wärmebrücken, Planungs- und Ausführungsbeispiele; berichtigt durch Berichtigung 1:2025-02.",
+      "url": "https://www.dinmedia.de/de/technische-regel/din-4108-beiblatt-2/305990077"
+    },
+    "DIN-EN-15026": {
+      "gruppe": "Normen",
+      "kurz": "DIN EN 15026",
+      "titel": "DIN EN 15026:2023-12 – Wärme- und feuchtetechnisches Verhalten von Bauteilen – Bewertung der Feuchteübertragung durch numerische Simulation (ersetzt 2007-07).",
+      "url": "https://www.dinmedia.de/en/standard/din-en-15026/369808466"
+    },
+    "DIN-18516-1": {
+      "gruppe": "Normen",
+      "kurz": "DIN 18516-1",
+      "titel": "DIN 18516-1:2024-10 – Außenwandbekleidungen, hinterlüftet. Mindestabstände und Lüftungsquerschnitte wurden für diese Ausgabe nicht verifiziert; Geltungsbereich für Holzschalungen im Einzelfall prüfen.",
+      "url": "https://www.din.de/en/wdc-beuth:din21:382252032"
+    },
+    "DIN-68800-1": {
+      "gruppe": "Normen",
+      "kurz": "DIN 68800-1",
+      "titel": "DIN 68800-1:2019-06 – Holzschutz, Teil 1: Allgemeines.",
+      "url": "https://www.dinmedia.de/de/norm/din-68800-1/302767659"
+    },
+    "DIN-68800-2": {
+      "gruppe": "Normen",
+      "kurz": "DIN 68800-2",
+      "titel": "DIN 68800-2:2022-02 – Holzschutz, Teil 2: Vorbeugende bauliche Maßnahmen im Hochbau.",
+      "url": "https://www.dinmedia.de/de/norm/din-68800-2/347538695"
+    },
+    "DIN-4109-1": {
+      "gruppe": "Normen",
+      "kurz": "DIN 4109-1",
+      "titel": "DIN 4109-1:2018-01 – Schallschutz im Hochbau, Teil 1: Mindestanforderungen.",
+      "url": "https://www.dinmedia.de/de/norm/din-4109-1/280079001"
+    },
+    "EC5": {
+      "gruppe": "Normen",
+      "kurz": "Eurocode 5",
+      "titel": "DIN EN 1995-1-1 (Eurocode 5) mit Nationalem Anhang DIN EN 1995-1-1/NA:2013-08 – Bemessung und Konstruktion von Holzbauten. Hier nur Verweis; Bemessung ist nicht Teil der Prüfung.",
+      "url": "https://www.dinmedia.de/de/norm/din-en-1995-1-1-na/188145635"
+    },
+    "FACHREGEL-01": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "Fachregel 01 Zimmererhandwerk",
+      "titel": "Holzbau Deutschland – Bund Deutscher Zimmermeister: Fachregeln des Zimmererhandwerks 01 – Außenwandbekleidungen aus Holz, Ausgabe März 2023 (mit digitalem Regeldetailkatalog, u. a. Innen- und Außenecken). Beschreibung bei BauNetz Wissen.",
+      "url": "https://www.baunetzwissen.de/holz/fachwissen/regelwerke/fachregeln-des-zimmererhandwerks-aussenwandbekleidungen-aus-holz-8337201"
+    },
+    "BAUNETZ-HOLZFASSADE": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Holzfassade",
+      "titel": "BauNetz Wissen Fassade: Holz – Langlebigkeit durch gute Detailausbildung und schnelle Abtrocknung (u. a. Gehrung an Fassadenecken, Hirnholzschutz, Abtropfkanten, 30 cm Spritzschutz am Sockel).",
+      "url": "https://www.baunetzwissen.de/fassade/fachwissen/materialien/holz-konstruktiver-holzschutz-2458197"
+    },
+    "HERSTELLER": {
+      "gruppe": "Herstellerangaben",
+      "kurz": "Herstellerangaben",
+      "titel": "Verarbeitungsrichtlinien des jeweiligen Produktherstellers (Klebebänder, Holzfaserplatten, Bekleidungen, Gipskartonplatten). In der geprüften Zeichnung sind keine Produkte benannt; daher ohne Link.",
+      "url": ""
+    },
+    "PRAXIS": {
+      "gruppe": "Praxisempfehlungen",
+      "kurz": "Praxisempfehlung",
+      "titel": "Praxisempfehlung aus anerkannter Baupraxis bzw. Zeichnungsplausibilität – keine Normpflicht und keine verlinkte Einzelquelle. Im Bericht als solche gekennzeichnet.",
+      "url": ""
+    }
+  }
+}
