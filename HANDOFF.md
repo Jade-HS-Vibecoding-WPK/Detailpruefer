@@ -65,7 +65,7 @@ detailpruefer-architektur/
 %LOCALAPPDATA%\Programs\Python\Python312\python.exe skill/scripts/bericht.py <zeichnung.pdf> <befunde.json> <bericht.pdf>
 ```
 In Git Bash: `/c/Users/ozand/AppData/Local/Programs/Python/Python312/python.exe`.
-Git 2.56 ist installiert; Repo: **https://github.com/Ozan44336/Detailpr-fer** (Branch `main`,
+Git 2.56 ist installiert; Repo: **https://github.com/Jade-HS-Vibecoding-WPK/Detailpruefer** (Kurs-Organisation, Branch `main`, Remote `origin`; altes Repo = Remote `alt`,
 Anmeldung über Git Credential Manager erledigt).
 
 ## 3. Wichtige Entscheidungen und Regeln (Kurzfassung – vollständig in CLAUDE.md)
@@ -106,6 +106,17 @@ Anmeldung über Git Credential Manager erledigt).
    Dabei Regeln WH-06, WH-07, KO-06 + Quelle ZVDH ergänzt.
 5. Speicherstand `adefb13` auf GitHub.
 
+## 4b. Stand Feature 9 (17.11., nach Interview zum First)
+
+Entscheidungen des Nutzers stehen in PLAN.md („Entscheidungen aus dem Interview“). Umgesetzt:
+neue Checkliste (nur konstruktiv relevante Fragen), Fehlteile = klarer Aufbaufehler,
+mehrere richtige Varianten, Tragsystem erkennen, neue Zeichenwerkzeuge (cm-Maße, gedrehte
+Hölzer, Firstziegel/-latte, Profile, Bahnen), Bauteil-Kataloge `08_dach_steildach.md` und
+`09_wand_sockel.md`. In claude.ai ist diese Version aktiv. Testdetail First:
+`tests/details/blindtest_4_first.pdf`, Musterlösung `tests/loesung/blindtest_4_first_musterloesung.pdf`.
+Lüftungsquerschnitte (DIN 4108-3) und Kiesbett-Regeln (DIN 68800-2) bewusst ohne Zahlen
+(Quellen widersprüchlich bzw. nicht im Original geprüft).
+
 ## 5. Was als Nächstes ansteht
 
 1. ~~Auswertung Blindtest 3~~ erledigt (17.11.): 3 von 4, OSB-Überstand übersehen → KO-07.
@@ -123,7 +134,7 @@ Anmeldung über Git Credential Manager erledigt).
    Überarbeitete Traufe-Befunde: `tests/befunde_blindtest_3_traufe_v2.json`.
 3. **README.md** für GitHub schreiben (Was, Wie benutzen, Beispielbericht-Bilder, Grenzen,
    KI-Kennzeichnung) – Pflicht für die Abgabe.
-4. **Repository in die Kurs-Organisation** übertragen (GitHub → Settings → Transfer) –
+4. ~~Repository in die Kurs-Organisation übertragen~~ erledigt (17.11.) (GitHub → Settings → Transfer) –
    macht der Nutzer selbst.
 5. **Poster** (Vorlage auf Moodle) – Inhalte/Bilder aus `beispiel/` vorbereiten.
 6. Optional: weitere Blindtests (Sockel, Fenster), fehlerfreies Detail für Fehlalarm-Quote.

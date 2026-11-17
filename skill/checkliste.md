@@ -1,29 +1,39 @@
 # Checkliste – Rückfragen an Nutzer:innen
 
-Stelle nur die Fragen, die die Zeichnung **nicht** beantwortet. Stelle sie gesammelt,
-nummeriert und kurz – mit jeweils einem Satz, **warum** die Frage wichtig ist.
-Wird eine Frage nicht beantwortet, gilt die **Annahme**. Jede verwendete Annahme kommt in
-den Prüfbericht (Abschnitt „Annahmen“).
+**Nur konstruktiv relevante Fragen:** Gefragt wird nur, was die Zeichnung **nicht**
+beantwortet **und** ohne das ein Befund **nicht beurteilbar** wäre. Gibt es keine solche
+Frage, wird **ohne Rückfrage** geprüft; alle Annahmen stehen dann im Bericht.
+
+Fragen gesammelt, nummeriert (1, 2, …) und kurz stellen – je ein Satz, **warum** die Frage
+für die Konstruktion wichtig ist, und die **Annahme**, die ohne Antwort gilt.
+
+## Nicht fragen
+
+- **Keinen Projektnamen** (im Bericht steht „nicht angegeben“, wenn er nicht in der
+  Zeichnung steht).
+- **Keine sd-Werte, λ-Werte oder Produktnamen** – fehlen sie, ist der betroffene Punkt
+  „aus der Datei nicht prüfbar“ bzw. „Nachweis erforderlich“.
+- **Nie fragen, ob ein fehlendes Bauteil „geplant, aber nicht gezeichnet“ ist.** Das Detail
+  wird geprüft, **wie es gezeichnet ist**. Fehlt ein funktional notwendiges Bauteil, ist das
+  ein Befund (siehe `pruefkatalog/00_uebersicht.md`, Grundsatz 5).
+- Nichts, was die Zeichnung beantwortet (Legende, Beschriftung, Maßkette, andere Bauteile).
+- Brand- und Schallschutz nicht abfragen; im Bericht steht: „Brand- und Schallschutz nicht
+  Teil dieser Prüfung – gesondert nachweisen.“
+
+## Mögliche Fragen (nur wenn für dieses Detail entscheidend)
 
 | Nr. | Frage | Warum wichtig? | Annahme, wenn keine Antwort |
 |---|---|---|---|
-| C0 | **Projektname / Bauvorhaben?** | Erscheint im Berichtskopf | „nicht angegeben“ |
-| C1 | Neubau oder Sanierung? | Andere Wärmeschutzanforderungen nach GModG (vormals GEG) | Neubau |
-| C2 | Nutzung der Räume hinter dem Detail (Wohnen, Büro, Bad/Feuchtraum, Schwimmbad …)? | Raumklima bestimmt die Feuchtebelastung der Konstruktion | Wohnen, normales Raumklima |
-| C3 | Welche Schicht ist als **Luftdichtheitsschicht** geplant (z. B. OSB mit verklebten Stößen, Dampfbremsbahn)? Welches Produkt bzw. welcher sd-Wert? | Ohne festgelegte Luftdichtheitsschicht ist keine sichere Prüfung von Luftdichtheit und Tauwasser möglich | Die raumseitige Holzwerkstoffplatte; Produkt/sd-Wert unbekannt → **aus der Datei nicht prüfbar** |
-| C4 | Welches **Fassadensystem**: hinterlüftet (geschlossene oder offene Fugen), WDVS, anderes? Wo sind Zu- und Abluftöffnungen? | Viele Regeln (WH) gelten nur für bestimmte Fassadensysteme | Hinterlüftet mit geschlossener Bekleidung, wenn Lattung + Bekleidung gezeichnet sind |
-| C5 | Welcher **Dämmstoff** liegt im Gefach (Holzfaser, Mineralwolle, Zellulose …), mit welchem λ-Wert? | Wärmeschutz und Feuchteverhalten hängen vom Dämmstoff ab | Dämmstoff wie gezeichnet; **kein** λ-Wert angenommen → Wärmeschutz „aus der Datei nicht prüfbar“ |
-| C6 | **Standort** bzw. Schlagregenbeanspruchung (Gruppe I, II oder III)? | Bestimmt die Anforderungen an den Schlagregenschutz der Fassade | Gruppe II |
-| C7 | **Gebäudeklasse** (GK 1–5)? | Bestimmt die Brandschutzanforderungen an die Außenwand | Unbekannt → Brandschutz wird **nicht** geprüft, nur Hinweis |
-| C8 | Gibt es besondere **Schallschutz**-Anforderungen (Außenlärm, Trennwand)? | Bestimmt die Anforderungen nach DIN 4109 | Keine besonderen → Schallschutz wird **nicht** geprüft, nur Hinweis |
-| C9 | Wo liegt das Detail im Gebäude (Geschoss, Himmelsrichtung, Außen- oder Innenecke)? | Hilft bei Wärmebrücken und Wetterbeanspruchung | Wie gezeichnet, Regelgeschoss |
+| K1 | Ist der Raum hinter dem Detail **beheizt** (z. B. ausgebautes Dachgeschoss) oder **unbeheizt** (Kaltdach, Spitzboden)? | Bestimmt, ob Dämmung, Luftdichtheit und Dampfbremse an dieser Stelle nötig sind | wie gezeichnet: gedämmt = beheizt |
+| K2 | **Neubau oder Bestand/Sanierung?** | Bestand kann vorhandene Bauteile erklären, die man neu anders lösen würde | Neubau |
+| K3 | **Besondere Raumnutzung** mit hoher Feuchte (Bad, Schwimmbad, Küche gewerblich)? | Hohe Raumfeuchte verschärft die Anforderungen an die Dampfbremse | Wohnen, normales Raumklima |
+| K4 | **Funktion eines unklaren Bauteils**, das weder beschriftet noch eindeutig erkennbar ist (z. B. „Was ist das senkrechte Bauteil in der Firstachse?“) | Ohne Funktion lässt sich der Lastabtrag bzw. die Schichtfolge nicht beurteilen | Deutung, die zur Zeichnung am besten passt – mit Aussagesicherheit „mittel“ |
+| K5 | **Hohe Wetterbeanspruchung** (Küste, Gebirge, freie Lage) – nur bei Fassaden-, Sockel- und Ortgangdetails | Bestimmt Schlagregen- und Windsogschutz | normale Lage (Schlagregen-Beanspruchungsgruppe II) |
 
 ## Regeln
-- Höchstens **eine** Fragerunde. Danach prüfen, auch wenn nicht alles beantwortet ist.
-- Unbeantwortete Fragen kommen **in den Bericht** (Abschnitt „Offene Fragen“, Feld
-  `offene_fragen` mit Frage, Warum, Annahme) – nicht nur in die Chat-Antwort.
-  Im Bericht keine Checklisten-Kürzel (C1 …) verwenden, sondern F1, F2 …
-- Wenn die Zeichnung eine Frage eindeutig beantwortet (z. B. Legende nennt den Dämmstoff),
-  nicht fragen, sondern im Bericht als „aus Zeichnung übernommen“ vermerken.
-- Brand- und Schallschutz werden im aktuellen Stand **nur abgefragt, nicht geprüft**.
-  Im Bericht steht dann: „Brand-/Schallschutz nicht Teil dieser Prüfung – gesondert nachweisen.“
+
+- Höchstens **eine** Fragerunde, danach prüfen.
+- Unbeantwortete Fragen und verwendete Annahmen kommen **in den Bericht** (Feld
+  `offene_fragen` bzw. `annahmen`); im Bericht F1, F2 … statt K-Nummern.
+- Mehrere Details desselben Projekts: Antworten aus der vorigen Prüfung übernehmen und
+  nicht noch einmal fragen.

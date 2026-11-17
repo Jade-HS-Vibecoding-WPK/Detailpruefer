@@ -1,7 +1,13 @@
 {
   "_hinweis": "Quellenverzeichnis des Detailprüfers. In befunde.json wird eine Quelle mit [[ID]] im Text zitiert; der Bericht setzt daraus eine hochgestellte, verlinkte Fußnote und listet nur zitierte Quellen. Alle Links wurden am 16./17.11.2026 aufgerufen.",
   "abgerufen": "17.11.2026",
-  "gruppen": ["Gesetze", "Normen", "Regelwerke und Fachliteratur", "Herstellerangaben", "Praxisempfehlungen"],
+  "gruppen": [
+    "Gesetze",
+    "Normen",
+    "Regelwerke und Fachliteratur",
+    "Herstellerangaben",
+    "Praxisempfehlungen"
+  ],
   "quellen": {
     "GMODG": {
       "gruppe": "Gesetze",
@@ -129,16 +135,58 @@
       "titel": "Zentralverband des Deutschen Dachdeckerhandwerks (ZVDH): Fachregeln des Dachdeckerhandwerks, u. a. Fachregel für Dachdeckungen mit Dachziegeln und Dachsteinen (Neuerungen gültig seit 04/2024; Regeldachneigung und Zusatzmaßnahmen) und Merkblatt für Unterdächer, Unterdeckungen und Unterspannungen. Übersicht bei Bauprofessor; Regeltexte kostenpflichtig.",
       "url": "https://www.bauprofessor.de/dachdecker-fachregeln/"
     },
-    "HERSTELLER": {
+    "BAUNETZ-FIRST": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – First",
+      "titel": "BauNetz Wissen Geneigtes Dach, Glossar „First“: höchster Punkt des Daches, wetterfester Zusammenschluss der Dachflächen; Abluft der Belüftung am First, Lüfter-Firstziegel/-Formsteine.",
+      "url": "https://www.baunetzwissen.de/geneigtes-dach/fachwissen/glossar-a-z/first-49013"
+    },
+    "BAUNETZ-PFETTENDACH": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Pfettendach",
+      "titel": "BauNetz Wissen Geneigtes Dach, Dachtragwerke: Pfettendach – Pfetten (Fuß-, Mittel-, Firstpfette) tragen die Sparren; Sparren als Biegeträger; Kerven gering halten, Auflagerfläche ausreichend.",
+      "url": "https://www.baunetzwissen.de/geneigtes-dach/fachwissen/dachtragwerke/pfettendach-158389"
+    },
+    "BAUNETZ-SPARRENDACH": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Sparrendach",
+      "titel": "BauNetz Wissen Geneigtes Dach, Dachtragwerke: Sparrendach – Sparrenpaar stützt sich im First gegenseitig, Fußpunkte über Deckenbalken bzw. Decke zugfest verbunden (unverschiebliches Dreieck).",
+      "url": "https://www.baunetzwissen.de/geneigtes-dach/fachwissen/dachtragwerke/sparrendach-158385"
+    },
+    "BAUNETZ-KEHLBALKENDACH": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Kehlbalkendach",
+      "titel": "BauNetz Wissen Geneigtes Dach, Dachtragwerke: Kehlbalkendach – Sparrendach mit horizontalem Kehlbalken zwischen den Sparrenpaaren.",
+      "url": "https://www.baunetzwissen.de/geneigtes-dach/fachwissen/dachtragwerke/kehlbalkendach-158387"
+    },
+    "BAUNETZ-TRAUFE": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Traufe",
+      "titel": "BauNetz Wissen Glossar „Traufe“: unterster Punkt des Daches, Entwässerungs- und Belüftungsebene; Lüftungsbleche/-kämme führen Außenluft zu und halten Kleintiere ab.",
+      "url": "https://www.baunetzwissen.de/glossar/t/traufe-49011"
+    },
+    "BAUNETZ-UNTERDECKUNG-RAND": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Unterdeckung an den Außenrändern",
+      "titel": "BauNetz Wissen Geneigtes Dach: Unterdeckung/-spannung im Bereich der Außenränder – bis zu den Außenkanten führen; an der Traufe über Traufblech (kein Wassersack), Ende mit Tropf- oder Rinneneinlaufblech; am Ortgang sinnvollerweise bis zur Außenkante der Dachfläche.",
+      "url": "https://www.baunetzwissen.de/geneigtes-dach/fachwissen/unterdaecher/unterdeckung----spannung-im-bereich-der-aussenraender-158467"
+    },
+    "NELSKAMP-D13": {
       "gruppe": "Herstellerangaben",
-      "kurz": "Herstellerangaben",
-      "titel": "Verarbeitungsrichtlinien des jeweiligen Produktherstellers (Klebebänder, Holzfaserplatten, Bekleidungen, Gipskartonplatten). In der geprüften Zeichnung sind keine Produkte benannt; daher ohne Link.",
-      "url": ""
+      "kurz": "Nelskamp – Verlegeanleitung D 13 Ü",
+      "titel": "Dachziegelwerke Nelskamp: Verlegeanleitung Doppelmuldenfalzziegel D 13 Ü – Detailempfehlungen für First, Grat, Ortgang und Traufe; Sturmklammern zur Windsogsicherung nach den Fachregeln; Lattung 30×50 bzw. 40×60 mm. Weitere funktionale Ausführungen nach den Fachregeln sind möglich.",
+      "url": "https://nelskamp.de/downloads/Dachziegel/Doppelmuldenfalz-Ziegel/D13-Ue/Verlegeanleitung_D13-Ue.pdf"
     },
     "PRAXIS": {
       "gruppe": "Praxisempfehlungen",
       "kurz": "Praxisempfehlung",
       "titel": "Praxisempfehlung aus anerkannter Baupraxis bzw. Zeichnungsplausibilität – keine Normpflicht und keine verlinkte Einzelquelle. Im Bericht als solche gekennzeichnet.",
+      "url": ""
+    },
+    "HERSTELLER": {
+      "gruppe": "Herstellerangaben",
+      "kurz": "Herstellerangaben",
+      "titel": "Verarbeitungsrichtlinien des jeweiligen Produktherstellers (Klebebänder, Holzfaserplatten, Bekleidungen, Gipskartonplatten). In der geprüften Zeichnung sind keine Produkte benannt; daher ohne Link.",
       "url": ""
     }
   }

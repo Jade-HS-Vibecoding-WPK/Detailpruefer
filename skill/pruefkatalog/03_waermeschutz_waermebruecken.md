@@ -26,6 +26,12 @@ Konstruktion → KO-02.
   Befund – auch wenn die Dämmschraffur den Bereich optisch zu füllen scheint (große
   Schlaufen reichen oft weit ins Feld). Im Zoom prüfen, ob die Schraffur wirklich bis an
   beide begrenzenden Schichten reicht; Maßkette mitlesen (z. B. „10 / 10“ statt „20“).
+  **Schraffur-Abgleich (immer):** Für jede Dämmschicht prüfen, ob die Schraffur die **ganze
+  Schichtdicke** füllt – von Schichtgrenze zu Schichtgrenze (z. B. Unterseite Unterdeckung
+  bis Unterseite Sparren). Füllt die Schraffur nur einen Teil (halbe Schlaufen, Schlaufen
+  enden in der Mitte, weißer Streifen), ist das Feld **nur teilweise gedämmt dargestellt** –
+  auch wenn die Legende die volle Dicke nennt. Das gilt auch, wenn die Schraffur nur
+  „angedeutet“ wirkt: Gezeichnet ist, was gebaut wird.
 - **Typische Auffälligkeit:** Ungedämmter Hohlraum in der Ecke; Dämmung endet vor dem Anschluss;
   Sparren- oder Ständerfeld nur teilweise gedämmt, Rest als „Luftschicht“ bezeichnet.
 - **Warum relevant?** Jede Lücke erhöht den Wärmeverlust örtlich.
@@ -35,12 +41,16 @@ Konstruktion → KO-02.
   oder Eckausbildung so ändern, dass kein Hohlraum entsteht.
 - **Grundlage:** GModG § 12 (Wärmebrücken so gering wie möglich halten);
   DIN 4108 Beiblatt 2:2019-06 (Planungsbeispiele).
-- **Einstufung:** Ungedämmter Hohlraum eindeutig erkennbar **oder** in Legende/Maßkette als
-  Luftschicht im Dämmfeld ausgewiesen → **klarer Aufbaufehler**. Darstellung unklar →
+- **Einstufung:** Ungedämmter Hohlraum eindeutig erkennbar, Schraffur füllt die Schichtdicke
+  sichtbar nur teilweise, **oder** in Legende/Maßkette als Luftschicht bzw. Teildicke im
+  Dämmfeld ausgewiesen → **klarer Aufbaufehler**. Darstellung unklar →
   **mögliche Auffälligkeit**. Nicht gemeint: planmäßige belüftete Ebenen **außen** auf der
   Dämmung bzw. Unterdeckung (Hinterlüftung, Konterlattung) → WH-B/D.
-- **Korrekturskizze:** Luftschicht/Hohlraum mit `daemmung` in voller Schichtdicke füllen
-  (Schlaufen-Schraffur wie in der Zeichnung), ggf. vorher falsch Gezeichnetes `entfernen`.
+- **Korrekturskizze (Pflicht):** Das **ganze** Dämmfeld neu einzeichnen – `daemmung` über die
+  volle Schichtdicke (`band`: zwei Punkte auf der einen, ein Punkt auf der anderen
+  Schichtgrenze) und über die ganze sichtbare Länge, bei Dächern **beide Dachseiten** bis zum
+  First bzw. bis an Pfette/Firstbauteil. `daemmung` deckt die alte halbe Schraffur weiß ab.
+  `art` wie in der Zeichnung (Faserdämmung → `weich`). Nicht nur die Maßkette korrigieren.
 
 ## WB-02 Mindestwärmeschutz an der Wärmebrücke (z. B. Außenecke)
 

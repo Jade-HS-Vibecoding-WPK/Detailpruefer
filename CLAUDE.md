@@ -39,7 +39,15 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   Keine fehlenden Werte schätzen oder erfinden.
 - Einstufungen: **klarer Aufbaufehler** (nur wenn eindeutig) · **mögliche Auffälligkeit** ·
   **Verbesserungshinweis** · **aus der Datei nicht prüfbar**; Zusatz „Nachweis erforderlich“.
-  Fehlende/unklare Zeichnungsangabe ≠ Baufehler.
+  **Fehlt ein funktional notwendiges Bauteil** (Regensicherheit, Lastabtrag, Dichtheit,
+  Dämmung, Belüftung), ist das ein **klarer Aufbaufehler** – auch wenn es „geplant“ ist.
+  Fehlende **Angaben** (Material, Maß, Produkt) bleiben Hinweis bzw. „nicht prüfbar“.
+- **Mehrere richtige Ausführungen anerkennen:** Der Skill prüft gegen allgemeine, belegte
+  Regeln, nicht gegen eine Musterlösung. Musterlösungen dienen nur zum Bewerten; keine
+  detailbezogenen Koordinaten oder Lösungen in den Skill übernehmen. Als Verbesserung die
+  am besten geeignete Lösung zeichnen, Alternativen im Text nennen.
+- **Tragsystem erkennen** (Pfetten-/Sparrendach usw.) und danach prüfen.
+- **Rückfragen nur konstruktiv relevant** (kein Projektname, keine sd-Werte, nie „geplant?“).
 - Keine Pauschalaussagen „sicher/normgerecht“. Jeder Befund: woran in der Zeichnung erkennbar.
 - Jeder Prüfbericht enthält den Hinweis: *Hilfestellung – ersetzt keine fachliche Prüfung
   und keinen Nachweis. Die KI kann sich irren; Ergebnisse sind zu überprüfen.*
@@ -69,7 +77,7 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   (Latten, Konterlatten, Stiele, Platten mit Schraffur, Abklebungen, korrigierte Werte),
   damit die Korrektur visuell verständlich ist – nicht nur textlich.
   **Festes Prinzip für alle Details:** Die Skizze zeigt den korrigierten Zustand wie eine
-  überarbeitete Zeichnung (Vorbild: Musterlösung Traufe) – falsch Gezeichnetes wird entfernt
+  überarbeitete Zeichnung – falsch Gezeichnetes wird entfernt
   (weiß abgedeckt), fortzuführende Schichten werden mit **derselben Schraffur wie in der
   Zeichnung** und **durchgehend** bis an das nächste Bauteil eingezeichnet (z. B. Dämmung als
   Schlaufen in voller Schichtdicke). Keine bloßen Grenzstriche. Hinweistexte müssen vollständig
@@ -95,7 +103,7 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   `markieren.py` (Kontrolle) → `skizze.py` (Korrekturskizze) → `bericht.py` (PDF-Prüfbericht).
 - Python: `%LOCALAPPDATA%\Programs\Python\Python312\python.exe` (in Git Bash:
   `/c/Users/ozand/AppData/Local/Programs/Python/Python312/python.exe`); Git 2.56.
-- GitHub: https://github.com/Ozan44336/Detailpr-fer (Branch `main`).
+- GitHub: https://github.com/Jade-HS-Vibecoding-WPK/Detailpruefer (Branch `main`, Kurs-Organisation; Remote `origin`). Altes Repo als Remote `alt`.
 - Keine `rm`-Befehle mit Shell-Variablen; Zwischenbilder in `tests/ausgabe/` dürfen bleiben.
 - Beispielbericht für README/Poster: `beispiel/`.
 - Skripte in Python; sie müssen in claude.ai (Code-Ausführung) und in Claude Code laufen.

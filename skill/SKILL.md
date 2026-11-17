@@ -25,8 +25,13 @@ Hilfestellung – ersetzt keine fachliche Prüfung und keinen Nachweis; die KI k
 4. **Faustregeln** als Praxisempfehlung kennzeichnen (`[[PRAXIS]]`) – keine Normpflicht.
 5. **Funktionen trennen:** LD · FS · WH (A Winddichtheit, B Hinterlüftung, C Schlagregen).
 6. **Risiken vorsichtig** („kann … begünstigen“), nie als automatische Folge.
-7. **Fehlende/unklare Zeichnungsangabe ≠ Baufehler.**
-8. **Geltungsbereich** jeder Regel beachten; **mehrere Lösungen** zulassen.
+7. **Fehlende Bauteile nach Funktion werten:** fehlt ein funktional notwendiges Bauteil
+   (Regensicherheit, Lastabtrag, Dichtheit, Dämmung, Belüftung) → **klarer Aufbaufehler**,
+   auch wenn es „geplant“ sein könnte; fehlendes Zubehör → mögliche Auffälligkeit; fehlende
+   Angaben (Material, Maß) → Hinweis bzw. nicht prüfbar.
+8. **Geltungsbereich** jeder Regel beachten. **Mehrere richtige Ausführungen** anerkennen –
+   geprüft wird die Funktion, nicht die Übereinstimmung mit einer bestimmten Lösung. Als
+   Verbesserung die **am besten geeignete** Lösung zeichnen, Alternativen im Text nennen.
 9. **Keine Doppelbefunde** – einmal im Hauptbereich, sonst Verweis (z. B. „siehe B2“).
 10. **Keine Pauschalaussagen**; der Bericht enthält **keine internen Dateipfade und keine
     Verweise auf den Chat**.
@@ -47,6 +52,13 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 
 ### 1. Zeichnung erfassen
 - Detailart, Schnittart, Maßstab, Bauart, Fassadensystem bestimmen.
+- **Tragsystem bestimmen** (bei Dächern: Pfettendach mit First-/Mittel-/Fußpfette,
+  Sparrendach mit Sparrenpaaren und Kehlbalken/Zugband, Kehlbalkendach; bei Wänden:
+  Holzrahmen, Massivholz) – aus Beschriftung, Bauteilen und Querschnitten.
+- **Bauteil-Vollständigkeit:** Im passenden Bauteil-Katalog (`pruefkatalog/08_…` ff.) die
+  notwendigen Bauteile und Funktionen dieser Detailart nachschlagen und **jedes einzeln** in
+  der Zeichnung suchen (z. B. First: Lastabtrag am First, Firstlatte mit Halter, Firstziegel,
+  Lüftung mit Insektenschutz, durchgehende Luftdichtheit, Dämmung bis zum First).
 - Raster und Zooms erzeugen:
   ```
   python scripts/raster.py <zeichnung.pdf> raster.png
@@ -57,7 +69,10 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   `ok`, `unklar` oder `fehler`.
 - **Vier Abgleiche:** (1) Legende ↔ Maßkette ↔ Zeichnung – nennt die Legende eine
   **Luftschicht oder einen Hohlraum innerhalb der Dämmebene**, den Bereich im Zoom prüfen und
-  nach WB-01 als Befund aufnehmen, auch wenn die Schraffur ihn scheinbar füllt; (2) bei Ecken **Wand A ↔ Wand B
+  nach WB-01 als Befund aufnehmen, auch wenn die Schraffur ihn scheinbar füllt; **jede
+  Dämmschraffur muss die ganze Schichtdicke füllen** – füllt sie nur einen Teil (z. B. halbe
+  Schlaufen), ist das ein WB-01-Befund, und die Korrekturskizze zeichnet die Dämmung in
+  voller Dicke über das ganze Feld (beide Dachseiten); (2) bei Ecken **Wand A ↔ Wand B
   Schicht für Schicht**, (3) Unterkonstruktionen (Ständer, Lattung) bis zur Ecke,
   (4) an Anschlüssen **jede Platte und Bahn bis zu ihrem tatsächlichen Ende verfolgen** und
   mit der Lage des Anschlusses vergleichen – endet sie zu früh oder läuft sie in das
@@ -65,20 +80,25 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 - Bei Ecken die Wände **„Wand A“ / „Wand B“** nennen und in der Zeichnung beschriften
   (Feld `beschriftungen`).
 
-### 2. Checkliste – ANHALTEN und fragen (Pflicht)
-- `checkliste.md`: **eine** Fragerunde, nur Fragen, die die Zeichnung nicht beantwortet
-  (inkl. Projektname). Kurz sagen, was du erkannt hast (Detailart, Bauteile), dann die Fragen
-  gesammelt stellen – wenn möglich mit Antwortoptionen und der jeweiligen Annahme.
-- **Danach die Antwort abwarten.** Nicht weiterprüfen, keine `befunde.json`, keinen Bericht
-  erzeugen, bevor geantwortet wurde. Diese Runde nie überspringen und keine Annahmen still
-  treffen – auch nicht, wenn die Anfrage „erstelle den Bericht“ lautet.
-- Nur wenn der Nutzer ausdrücklich „ohne Rückfragen“ o. ä. schreibt, mit den Annahmen aus
-  `checkliste.md` weiterarbeiten und das im Bericht offenlegen.
+### 2. Checkliste – nur konstruktiv relevante Fragen
+- `checkliste.md` lesen. Gefragt wird **nur**, was die Zeichnung nicht beantwortet **und**
+  ohne das ein Befund nicht beurteilbar wäre (z. B. beheizt/unbeheizt, Funktion eines
+  unklaren Bauteils). **Nicht** fragen: Projektname, sd-/λ-Werte, Produkte, Brand-/Schallschutz
+  und **nie**, ob ein fehlendes Bauteil „geplant, aber nicht gezeichnet“ ist.
+- **Gibt es relevante Fragen:** kurz sagen, was du erkannt hast (Detailart, Tragsystem,
+  Bauteile), die Fragen gesammelt mit Annahme stellen und **die Antwort abwarten** – keine
+  `befunde.json`, kein Bericht vorher.
+- **Gibt es keine relevante Frage:** direkt prüfen und die Annahmen im Bericht offenlegen.
 - Unbeantwortetes → `offene_fragen` **im Bericht** (F1, F2 …) mit Annahme.
 
 ### 3. Prüfen
 - `pruefkatalog/00_uebersicht.md`, `quellen.md` lesen; **jede Regel** aus `01_…` bis `07_…`
-  durchgehen: `erfüllt`, `nicht anwendbar` oder Einstufung. Doppelbefunde zusammenführen.
+  (Funktionen) **und** den passenden Bauteil-Katalog (`08_dach_steildach.md` für Dach,
+  First, Traufe, Ortgang; `09_wand_sockel.md` für Wand und Sockel) durchgehen: `erfüllt`,
+  `nicht anwendbar` oder Einstufung. Doppelbefunde zusammenführen.
+- Eine **abweichende, aber anerkannte Variante** (siehe „Anerkannte Varianten“ im Katalog)
+  ist **kein** Befund. Fehlt für eine Detailart eine Regel, aus dem Fachwissen der Kataloge
+  und belegten Quellen ableiten und das im Bericht offenlegen.
 
 ### 4. `befunde.json` schreiben (Format unten)
 - Befunde nach Schwere nummerieren: B1 = wichtigster.
@@ -116,7 +136,18 @@ Zeichnung (gilt für jedes Detail):**
    Bauteil läuft (z. B. Dachdämmung bis an Füllholz und Pfette). Grenzen mehrerer Flächen
    derselben Schicht mit **demselben `band`** angeben – dann läuft die Schraffur nahtlos weiter.
 4. **Maße und Lage** an vorhandenen Bauteilen derselben Zeichnung abnehmen (Schichtgrenzen,
-   Latte so groß wie die vorhandenen Latten, Pfette in beschrifteter Größe).
+   Latte so groß wie die vorhandenen Latten, Pfette in beschrifteter Größe). **Bauteile in
+   echten Maßen (cm)** angeben (`querschnitt_cm`, `breite_cm` …) – das Skript rechnet über
+   `detail.massstab` um; nur die **Lage** (Mittelpunkt, Linie, Firstpunkt) wird aus dem Raster
+   abgelesen. **Neigung** immer über `richtung` (zwei Punkte auf der Dachfläche/Schicht)
+   übernehmen, nicht schätzen.
+6. **Vollständiges technisches Detail:** Fehlt ein Bauteil, wird es **mit allen zugehörigen
+   Teilen** eingezeichnet (z. B. First: Firstziegel + Lüftungselement + Firstlatte + Halter;
+   Pfettendach: Pfette in Querschnitt; Traufe: Traufblech, Lüftungsgitter, Traufbohle).
+   Werkzeuge: `holz` (jede Lage/Neigung, quer/längs), `lattenreihe`, `firstlatte`,
+   `firstziegel`, `profil` (freie Form, auch mit Dicke – Bleche, Formteile), `bahn` (Folien,
+   Abdichtungen, Lüftungsband), `platte`, `daemmung`, `entfernen`. Was keine Vorlage hat,
+   mit `profil` aus Punkten zeichnen.
 5. **Beschriftung** kurz („B1: Sparrenfeld vollständig dämmen“) mit Hinweislinie in einem
    freien Bereich; lange Texte werden automatisch umbrochen und auf dem Blatt gehalten.
    Keine Texte oder Linien der Zeichnung verdecken.
@@ -227,12 +258,29 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
     gelten erste Polygonkante + letzter Punkt.
   - `platte` – `rechteck` oder `punkte` (+ `band`), `schraffur`: `striche` | `zickzack` |
     `punkte` | `diagonal`.
-  - `holz` (Rechteck mit Kreuz), `abklebung` (dicke gestrichelte Linie), `linie`,
-    `durchstreichen`, `text` (mit optionaler Hinweislinie `ziel`, `rahmen`: false für
-    Ersatzwerte direkt im Text, `groesse` in pt).
-  - Beispiel Traufe (OSB läuft zu weit, Dämmung fortführen):
-    `{"typ": "entfernen", "punkte": [[55.2,37.9],[55.8,38.3],[55.8,48.7],[55.2,48.7]]}`,
-    `{"typ": "daemmung", "art": "weich", "punkte": [...], "band": [[45.6,31.9],[58.6,40.4],[42.7,40.5]]}`.
+  - `holz` – `rechteck` (achsparallel) **oder** `mitte`/`auf` `[x,y]` + `querschnitt_cm`
+    `[b, h]` + `richtung` `[[x,y],[x,y]]` bzw. `winkel` (Grad) + `seite` (`oben`/`unten`/
+    `links`/`rechts`, wohin das Holz von einer Linie aus ragt) + `schnitt` (`quer` = Kreuz,
+    `laengs` = Faserlinien, z. B. Sparren/Konterlatte im Längsschnitt).
+    `b` liegt entlang der Richtung, `h` senkrecht dazu (Pfette 14/28 senkrecht: `winkel` 0,
+    `querschnitt_cm` [14, 28]).
+  - `lattenreihe` – `von`, `bis` (Linie, auf der die Latten sitzen), `querschnitt_cm`,
+    `abstand_cm`, `start_cm`, `seite`: gleichmäßige Lattenquerschnitte in Neigung.
+  - `firstlatte` – `mitte`, `querschnitt_cm` (Standard [3, 5]), `halter_bis` (Fußpunkt des
+    Firstlattenhalters, z. B. Oberkante Sparren/Konterlatte im First).
+  - `firstziegel` – `first` (Firstpunkt = Schnittpunkt der beiden Deckungs-Oberseiten),
+    `richtung_links`/`richtung_rechts` (je zwei Punkte auf der Deckung) oder `neigung`,
+    `breite_cm` (Standard 24), `hoehe_cm` (Standard 7), `dicke_cm`, `lueftung` (true =
+    Lüftungselement unter den Rändern).
+  - `profil` – `punkte`, optional `dicke_cm` (Band, z. B. Blech) oder `geschlossen`: freie Form.
+  - `bahn` – `punkte` + `art`: `luftdicht` (Strich-Punkt), `winddicht` (gestrichelt),
+    `abdichtung`/`unterdeckbahn` (kräftig), `lueftungsband` (Zickzack).
+  - `abklebung` (dicke gestrichelte Linie), `linie`, `durchstreichen`, `text` (mit optionaler
+    Hinweislinie `ziel`, `rahmen`: false für Ersatzwerte direkt im Text, `groesse` in pt).
+  - Angaben in cm brauchen `"detail": {"massstab": "1:5"}`; fehlt der Maßstab in der
+    Zeichnung, aus einer Maßkette ableiten und als Annahme nennen.
+  - Alle Koordinaten werden **in jeder Zeichnung neu** aus Raster und Zooms abgelesen –
+    nie aus Beispielen oder früheren Prüfungen übernehmen.
 - `prioritaet` optional (`hoch`/`mittel`/`niedrig`), sonst automatisch.
 - Für `nicht_pruefbar`: `regel`, `titel`, `zu_klaeren`, ggf. `nachweis_erforderlich`.
 - Befundnummern im Text („siehe B2“) und Quellen `[[ID]]` werden im Bericht verlinkt.

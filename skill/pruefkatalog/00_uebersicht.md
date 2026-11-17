@@ -29,6 +29,8 @@ Praxisempfehlungen werden mit `[[PRAXIS]]`, Herstellerangaben mit `[[HERSTELLER]
 | `05_holzschutz.md` | Baulicher Holzschutz | HS |
 | `06_konstruktion_holzrahmenbau.md` | Konstruktion – qualitative Plausibilität, keine Statik | KO |
 | `07_zeichnungsqualitaet.md` | Zeichnungsqualität | ZQ |
+| `08_dach_steildach.md` | **Bauteil-Katalog** Steildach: Tragsystem, First, Traufe, Ortgang, Lattung | DA |
+| `09_wand_sockel.md` | **Bauteil-Katalog** Außenwand Holzrahmenbau und Sockel | SO |
 | `quellen.md` | Normausgaben, Gesetzesstand, Quellen | – |
 
 Brand- und Schallschutz: nur Abfrage über `checkliste.md`, keine Prüfung.
@@ -62,12 +64,27 @@ Dampfbremse). Die Funktionen werden trotzdem **getrennt** geprüft und jeder Bef
 4. **Risiken vorsichtig formulieren:** Tauwasser, Schimmel, Fäulnis oder Tragfähigkeitsverlust
    folgen **nicht automatisch** aus einer sichtbaren Auffälligkeit. Sie werden als
    **mögliche** Risiken beschrieben („kann … begünstigen“), wenn das fachlich passt.
-5. **Fehlende oder unklare Zeichnungsangabe ≠ Baufehler.** Sie wird als Verbesserungshinweis
-   oder „aus der Datei nicht prüfbar“ eingeordnet.
+5. **Fehlende Bauteile nach ihrer Funktion werten.** Das Detail wird geprüft, **wie es
+   gezeichnet ist** – ein Ausführungsdetail muss vollständig sein.
+   - Fehlt ein **funktional notwendiges Bauteil** (ohne das Regensicherheit, Lastabtrag,
+     Luft-/Winddichtheit, Dämmebene oder Belüftung nicht funktionieren – z. B. Firstziegel
+     und Firstlatte am First, Auflager einer Pfette, Unterkonstruktion einer Bekleidung),
+     ist das ein **klarer Aufbaufehler** – auch wenn es „vielleicht geplant“ ist.
+   - Fehlt **Zubehör** mit Schutzfunktion (z. B. Insektenschutz, Tropfkante), ist das eine
+     **mögliche Auffälligkeit**.
+   - Fehlen nur **Angaben** (Material, Produkt, Maß, Benennung), ist das ein
+     **Verbesserungshinweis** oder „aus der Datei nicht prüfbar“.
+   Welche Bauteile je Detailart notwendig sind, steht in den Bauteil-Katalogen (`08_…` ff.).
 6. **Geltungsbereich beachten:** Jede Regel sagt unter **„Gilt für“**, für welche Bauart bzw.
    welches Fassadensystem sie gilt. Passt sie nicht zum Detail → nicht anwenden.
-7. **Mehrere Lösungen zulassen:** Verbesserungsvorschläge sind konkret, aber nicht die
-   einzig zulässige Ausführung („z. B.“, „eine Möglichkeit ist …“).
+7. **Mehrere richtige Ausführungen anerkennen:** Es gibt für fast jedes Detail mehrere
+   fachgerechte Lösungen (z. B. Trocken- oder Mörtelfirst, Pfetten- oder Sparrendach,
+   Holzfaser- oder Bahnenunterdeckung). Geprüft wird, ob die **gezeichnete** Lösung die
+   Funktionen erfüllt – nicht, ob sie einer bestimmten Musterlösung gleicht. Eine
+   abweichende, aber funktionierende Ausführung ist **kein** Befund.
+   **Verbesserung:** die für das gezeichnete Detail **am besten geeignete** Lösung vorschlagen
+   und in die Korrekturskizze zeichnen (passend zu Tragsystem, Deckung, Schichtenfolge und
+   vorhandenen Bauteilen – möglichst wenig ändern); sinnvolle Alternativen im Text nennen.
 8. **Keine Doppelbefunde:** Ein Sachverhalt wird nur **einmal** als Befund aufgeführt – im
    Bereich, in dem seine Hauptursache liegt. Andere Bereiche **verweisen** darauf
    (z. B. „siehe LD-02“).
@@ -107,6 +124,10 @@ Auffälligkeit bei LD/FS · mittel = übrige mögliche Auffälligkeiten · niedr
 
 ## Vorgehen
 
+0. **Detailart und Tragsystem bestimmen** (z. B. First eines Pfettendachs, Traufe mit
+   Fußpfette, Sockel einer Holzrahmenwand) und den passenden Bauteil-Katalog (`08_…` ff.)
+   öffnen: **Welche Bauteile und Funktionen muss dieses Detail haben?** Jedes davon in der
+   Zeichnung suchen – fehlt eines, Grundsatz 5 anwenden.
 1. Schichtenaufbau von innen nach außen erkennen (Zeichnung **und** Legende); unklare
    Schichten als „unklar“ markieren. Bei Ecken beide Wände Schicht für Schicht vergleichen
    (ZQ-01) und Unterkonstruktionen bis zur Ecke verfolgen (KO-01, KO-05). An Anschlüssen

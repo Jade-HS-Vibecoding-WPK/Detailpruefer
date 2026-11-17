@@ -39,7 +39,8 @@ from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, Image, KeepTog
 HIER = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HIER)
 from markieren import (FARBEN, GRUEN, befund_kennung, befunde_lesen,  # noqa: E402
-                       einstufung_normalisieren, korrektur_grenzen, korrigierte_seite, markierte_seite)
+                       einstufung_normalisieren, korrektur_grenzen, korrektur_zoom, korrigierte_seite,
+                       markierte_seite)
 
 GRUEN_HEX = GRUEN.hexval().replace("0x", "#")
 
@@ -65,7 +66,8 @@ ART = {k: a for k, _, a in EINSTUFUNGEN}
 BEREICHE = {"LD": "Luftdichtheit", "FS": "Feuchteschutz / Dampfbremse",
             "WB": "Wärmeschutz / Wärmebrücken",
             "WH": "Winddichtheit / Hinterlüftung / Schlagregenschutz",
-            "HS": "Holzschutz", "KO": "Konstruktion", "ZQ": "Zeichnungsqualität"}
+            "HS": "Holzschutz", "KO": "Konstruktion", "ZQ": "Zeichnungsqualität",
+            "DA": "Steildach (Tragsystem, First, Traufe, Ortgang)", "SO": "Außenwand und Sockel"}
 FELDER = [("fundstelle", "Fundstelle"), ("erkennbar", "Woran erkennbar"),
           ("begruendung", "Warum relevant"), ("risiko", "Mögliches Risiko"),
           ("zu_klaeren", "Zu klären"), ("verbesserung", "Verbesserung"),
@@ -794,6 +796,11 @@ def main():
         kw.write(kp)
         BILDER_KORREKTUR = Zeichnungsbilder(kp.getvalue(), seitennr)
         BILDER_KORREKTUR.grenzen = korrektur_grenzen(daten, *BILDER_KORREKTUR.seite_pt)
+        for b in befunde_lesen(daten):   # Ausschnitt für Karten ohne Kreis/Zoom aus den Korrekturelementen
+            if b.get("korrektur") and not b.get("zoom") and not b.get("kreis"):
+                zoom = korrektur_zoom(daten, b, *BILDER_KORREKTUR.seite_pt)
+                if zoom:
+                    b["zoom"] = zoom
         ow, _, _ = korrigierte_seite(pdf_ein, daten, hinweistexte=False)
         op = io.BytesIO()
         ow.write(op)

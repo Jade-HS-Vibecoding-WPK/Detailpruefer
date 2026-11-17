@@ -1,0 +1,24 @@
+{
+  "detail": {"titel": "Werkzeugtest First (nur Zeichenwerkzeuge)", "massstab": "1:5", "schnitt": "Vertikalschnitt"},
+  "seite": 1,
+  "zeichnung_ausschnitt": [5, 8, 95, 92],
+  "befunde": [
+    {"nr": 1, "einstufung": "aufbaufehler", "titel": "Firstabdeckung fehlt",
+     "korrektur": [
+       {"typ": "firstziegel", "first": [46.18, 21.66],
+        "richtung_links": [[36.01, 26.95], [44.11, 22.74]], "richtung_rechts": [[48.16, 22.74], [55.94, 26.95]],
+        "breite_cm": 24, "hoehe_cm": 7},
+       {"typ": "firstlatte", "mitte": [46.16, 23.4], "querschnitt_cm": [3, 5], "halter_bis": [46.16, 26.4]},
+       {"typ": "text", "text": "B1: Firstziegel mit Lüftungselement, Firstlatte 3/5 auf Firstlattenhalter", "x": 58, "y": 13, "ziel": [47.5, 19.5]}]},
+    {"nr": 2, "einstufung": "aufbaufehler", "titel": "Lastabtrag am First fehlt",
+     "korrektur": [
+       {"typ": "holz", "mitte": [46.15, 51.5], "querschnitt_cm": [14, 28], "winkel": 0},
+       {"typ": "lattenreihe", "von": [45.94, 44.76], "bis": [36.01, 51.34], "querschnitt_cm": [5, 3], "abstand_cm": 40, "start_cm": 6, "seite": "unten"},
+       {"typ": "text", "text": "B2: Firstpfette 14/28 – Sparren auf der Pfette auflagern", "x": 58, "y": 60, "ziel": [49, 55]}]},
+    {"nr": 3, "einstufung": "auffaelligkeit", "titel": "Luftdichtheit an der Pfette",
+     "korrektur": [
+       {"typ": "bahn", "art": "luftdicht", "punkte": [[37.0, 50.68], [42.81, 46.83], [42.81, 48.5]]},
+       {"typ": "profil", "punkte": [[60, 70], [64, 70], [64, 73]], "dicke_cm": 0.5},
+       {"typ": "text", "text": "B3: Dampfbremse an die Pfette anschließen und verkleben", "x": 14, "y": 62, "ziel": [41, 48]}]}
+  ]
+}

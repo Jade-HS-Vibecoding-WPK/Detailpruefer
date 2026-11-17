@@ -162,7 +162,7 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
 - [x] Markier-Test am Testdetail erfolgreich (`tests/test_maengel.json` → `tests/ausgabe/`)
 - [ ] **Du:** PLAN.md und CLAUDE.md lesen und korrigieren
 - [x] Git eingerichtet, erster Speicherstand hochgeladen: https://github.com/Ozan44336/Detailpr-fer
-- [ ] Vor der Abgabe: Repository in die Kurs-Organisation verschieben (Settings → Transfer) oder dort neu anlegen
+- [x] Repository in der Kurs-Organisation: https://github.com/Jade-HS-Vibecoding-WPK/Detailpruefer
 - [x] **Feature 2 (Mo 16.11.):** `skill/checkliste.md` (9 Rückfragen mit Annahmen) +
       Prüfkatalog Teil 1: `00_uebersicht`, `01_luftdichtheit` (LD-01…06),
       `02_feuchteschutz` (FS-01…04), `03_waermeschutz_waermebruecken` (WB-01…04)
@@ -242,7 +242,53 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Hinweistexte vollständig. Schwäche: Dämmung über dem Wandkopf nicht bis zum Füllholz
       fortgeführt → KO-07 ergänzt, als **v3** eingespielt
 - [ ] v3 in claude.ai testen (am besten mit einem neuen Blindtest-Detail)
+- [x] **Blindtest 4 – First in claude.ai (Nutzer, 17.11.):** Fehler nur teilweise erkannt;
+      Firstabdeckung nur als Auffälligkeit (Rückfrage „geplant?“ hat sie entschärft),
+      Firstpfette nicht erkannt, Korrekturskizze ohne Firstziegel/Firstlatte/Pfette
+      (Werkzeuge fehlen). Musterlösung: `Firstmuster 2.pdf`, Testdetail: `first mit fehler.pdf`
+
+### Entscheidungen aus dem Interview (17.11.2026)
+- **Mehrere richtige Lösungen:** Der Skill prüft gegen allgemeine, belegte Regeln und
+  erkennt verschiedene korrekte Ausführungen an (keine Bindung an eine Musterlösung). Bei
+  Mängeln zeichnet er **die am besten geeignete Verbesserung**; Alternativen im Text.
+  Musterlösungen dienen nur zum Bewerten – keine detailbezogenen Koordinaten/Lösungen in
+  den Skill.
+- **Korrekturskizze:** muss praktisch jedes Bauteil zeichnen können, damit ein vollständiges
+  technisches Detail entsteht – Firstziegel/-pfanne, Firstlatte + Halter, Pfetten/Sparren/
+  Latten auch schräg in Dachneigung, Folien/Bahnen mit Anschlüssen.
+- **Fragerunde:** nur konstruktiv relevante Fragen (ohne die ein Befund nicht beurteilbar
+  ist); kein Projektname, keine sd-Werte; keine Fragen „ist X geplant, aber nicht gezeichnet?“.
+- **Fehlende Bauteile:** Fehlt ein funktional notwendiges Bauteil (Regensicherheit,
+  Lastabtrag, Dichtheit), ist das ein **klarer Aufbaufehler** – auch wenn es „geplant“ ist.
+- **Tragsystem:** Skill erkennt Pfetten- oder Sparrendach; ist am First kein Lastabtrag
+  erkennbar → Befund; Korrektur nach dem passendsten System.
+- **Umfang bis Freeze (Do 19.11., 12 Uhr):** Wand, Traufe, First, Sockel, Ortgang.
+- **Quellen:** freie Web-Recherche, nur seriöse, technisch richtige Quellen (Fachregeln,
+  Verbände, Hersteller-Verlegeanleitungen, BauNetz Wissen), jede Regel mit Link.
+
+- [x] **Feature 9 (Di 17.11.): Umsetzung der Interview-Entscheidungen**
+      - Checkliste neu: nur konstruktiv relevante Fragen (K1–K5), kein Projektname, keine
+        sd-Werte, nie „geplant?“; ohne relevante Frage direkt prüfen
+      - Grundsatz 5 neu: fehlendes funktional notwendiges Bauteil = klarer Aufbaufehler;
+        Grundsatz 7: mehrere richtige Ausführungen anerkennen, beste Korrektur zeichnen;
+        Tragsystem erkennen (SKILL.md Schritt 1); Traufe-Koordinaten-Beispiel entfernt
+      - Neue Zeichenwerkzeuge: Maße in cm über den Maßstab; `holz` in jeder Lage/Neigung
+        (quer/längs), `lattenreihe`, `firstlatte` (mit Halter), `firstziegel` (mit
+        Lüftungselement), `profil` (freie Form, auch mit Dicke), `bahn` (luftdicht, winddicht,
+        Abdichtung, Unterdeckbahn, Lüftungsband)
+      - Bauteil-Datenbank: `08_dach_steildach.md` (DA-01 Tragsystem, DA-02 Firstabdeckung,
+        DA-03 Belüftung/Unterdeckung First, DA-04 Traufe, DA-05 Ortgang, DA-06 Lattung) und
+        `09_wand_sockel.md` (SO-01 Wand-Schichtenfolge, SO-02 Spritzwasserabstand, SO-03
+        Schwelle/Feuchteschutz); 7 neue Quellen (BauNetz Wissen, Nelskamp-Verlegeanleitung)
+      - Test First lokal: `tests/befunde_blindtest_4_first.json` → `tests/ausgabe/bt4_bericht.pdf`
+        (Firstziegel, Firstlatte, Pfette, Dampfbremsen-Anschluss gezeichnet); alte Berichte
+        laufen weiter; in claude.ai als neue Version eingespielt
+- [ ] **Du:** neue Blindtests (Ortgang, Sockel, ggf. anderer First) in claude.ai durchspielen
 - [ ] **Du:** Winkel Traufe klären – Musterlösung 35°, gezeichnet ca. 25°
 - [ ] **Du:** Prüfkatalog und Beispielberichte fachlich gegenlesen
 - [ ] README.md für GitHub, Poster
 - [x] ~~Verbesserungsskizze im CAD-Look~~ und ~~Berichts-Skript~~ → erledigt durch Feature 5 und 7
+- [x] **Nachbesserung First (17.11.):** Dämmung im Blindtest halbiert gezeichnet, Korrektur
+      zeigte sie nicht vollständig → WB-01 und SKILL.md: **Schraffur-Abgleich** (jede
+      Dämmschraffur muss die ganze Schichtdicke füllen); Korrekturskizze zeichnet das ganze
+      Dämmfeld in voller Dicke auf beiden Dachseiten. Test: `tests/ausgabe/bt4_bericht.pdf`
