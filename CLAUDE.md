@@ -68,6 +68,16 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
 - **Korrekturskizze (grün):** Was fehlt oder falsch ist, wird immer auch eingezeichnet
   (Latten, Konterlatten, Stiele, Platten mit Schraffur, Abklebungen, korrigierte Werte),
   damit die Korrektur visuell verständlich ist – nicht nur textlich.
+  **Festes Prinzip für alle Details:** Die Skizze zeigt den korrigierten Zustand wie eine
+  überarbeitete Zeichnung (Vorbild: Musterlösung Traufe) – falsch Gezeichnetes wird entfernt
+  (weiß abgedeckt), fortzuführende Schichten werden mit **derselben Schraffur wie in der
+  Zeichnung** und **durchgehend** bis an das nächste Bauteil eingezeichnet (z. B. Dämmung als
+  Schlaufen in voller Schichtdicke). Keine bloßen Grenzstriche. Hinweistexte müssen vollständig
+  lesbar sein (nie abgeschnitten).
+  **Dämmstoff-Schraffuren unterscheiden und sinngemäß einsetzen:** weich = Schlaufen
+  (Faserdämmstoffe in Gefach/Sparrenfeld), hart = Zickzack (Dämmplatten: Holzfaserplatte,
+  EPS, XPS, PUR), geschlängelt = Wellenlinie (dünne weiche Lagen, z. B. Trittschall).
+  Vorrang hat immer die Darstellung derselben Schicht in der Zeichnung (Tabelle in SKILL.md 5b).
 - Kein Berichtskopf-Block auf Seite 1 (Projekt/ID/Version stehen in der Kopfzeile).
 - Präfixe: B1… = Befunde, S1… = Schichten (außen → innen wie die Legende; bei mehreren
   Bauteilen z. B. D1… Dach, W1… Wand), F1… = offene Fragen.

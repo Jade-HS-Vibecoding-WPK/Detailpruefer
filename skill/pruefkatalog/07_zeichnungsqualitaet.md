@@ -73,10 +73,14 @@ werden leicht falsch ausgeführt.
 
 - **Gilt für:** alle Detailzeichnungen.
 - **Prüfe:** Maßstab angegeben? Schraffuren unterscheidbar (Dämmung, Holz, Plattenwerkstoffe)?
-  Bezeichnungen fachlich korrekt geschrieben?
-- **So erkennst du es in der Zeichnung:** Titel/Maßstab, Schraffuren, Texte.
+  Passt die **Dämmstoff-Schraffur zur Dämmstoffart** – weich (Schlaufen) für Faserdämmstoffe,
+  hart (Zickzack) für Dämmplatten, geschlängelt (Wellenlinie) für dünne weiche Lagen wie
+  Trittschall? Bezeichnungen fachlich korrekt geschrieben?
+- **So erkennst du es in der Zeichnung:** Titel/Maßstab, Schraffuren, Texte; Schraffur jeder
+  Dämmschicht mit der Legende vergleichen.
 - **Typische Auffälligkeit:** Fehlender Maßstab; gleiche Schraffur für verschiedene
-  Materialien; Tippfehler in Materialbezeichnungen.
+  Materialien; Dämmplatte mit Schlaufen bzw. Mineralwolle mit Zickzack dargestellt;
+  Tippfehler in Materialbezeichnungen.
 - **Warum relevant?** Verwechslungsgefahr.
 - **Verbesserungsmöglichkeiten:** Maßstab ergänzen, Schraffuren vereinheitlichen, Texte korrigieren.
 - **Grundlage:** Zeichnungskonventionen (Praxisempfehlung).

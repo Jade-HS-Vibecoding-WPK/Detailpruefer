@@ -40,7 +40,7 @@ detailpruefer-architektur/
 │  │  ├─ 03_waermeschutz_waermebruecken.md   WB-01…04
 │  │  ├─ 04_winddichtheit_hinterlueftung.md  WH-01…07 (A Wind, B Hinterlüftung, C Schlagregen, D Steildach)
 │  │  ├─ 05_holzschutz.md             HS-01…03
-│  │  ├─ 06_konstruktion_holzrahmenbau.md    KO-01…06 (keine Statik)
+│  │  ├─ 06_konstruktion_holzrahmenbau.md    KO-01…07 (keine Statik; KO-07 Schichtenden)
 │  │  ├─ 07_zeichnungsqualitaet.md    ZQ-01…05 (inkl. Wand-zu-Wand-Abgleich)
 │  │  ├─ quellen.json        Quellenverzeichnis (IDs, Titel, Links) – maßgeblich für den Bericht
 │  │  └─ quellen.md          Erläuterung des Normstands (Recherche 16./17.11.2026)
@@ -108,11 +108,19 @@ Anmeldung über Git Credential Manager erledigt).
 
 ## 5. Was als Nächstes ansteht
 
-1. **Lösungsschlüssel zu Blindtest 3 (Traufe)** vom Nutzer holen → Auswertung in
-   `tests/loesung/AUSWERTUNG_blindtest_3.md` (Treffer, Fehlalarme, Lehren für den Katalog).
-2. **Skill in claude.ai testen:** `skill/` als ZIP packen, in claude.ai hochladen
-   (Einstellungen: Code-Ausführung + Skills aktiv), mit einem Testdetail durchspielen;
-   prüfen, ob Schriften (DejaVu-Fallback) und Pakete (pypdfium2!) dort vorhanden sind.
+1. ~~Auswertung Blindtest 3~~ erledigt (17.11.): 3 von 4, OSB-Überstand übersehen → KO-07.
+   Offen: Winkel laut Musterlösung 35°, gezeichnet ca. 25° (Nutzer fragen).
+2. ~~claude.ai-Test~~ erledigt (17.11., über Claude in Chrome): Skill als Plugin hochgeladen
+   (claude.ai → Plugins → Hinzufügen → Plugin hochladen → `dist/detailpruefer-architektur.zip`).
+   Technik läuft vollständig (auch ohne Netzwerkzugriff). Die drei Nachbesserungen
+   (Fragerunde, Luftschicht, Überschrift) und das neue **Korrekturskizzen-Prinzip**
+   (entfernen + gleiche Schraffur durchgehend, Dämm-Schlaufen, Texte nie abgeschnitten) sind
+   seit Feature 8 umgesetzt, dazu **Dämmstoff-Schraffuren** weich/hart/hart_doppelt/
+   geschlaengelt (Tabelle SKILL.md 5b). In claude.ai ist **v3** aktiv (Update:
+   Plugins → Detailpruefer architektur → ⋯ → „Neue Version hochladen“ → `dist/…​.skill`).
+   Zweiter claude.ai-Lauf (v2): Fragerunde ok, 4 von 4 Fehlern. v3 noch nicht getestet.
+   Nach jeder Änderung an `skill/` ZIP und `.skill` neu packen.
+   Überarbeitete Traufe-Befunde: `tests/befunde_blindtest_3_traufe_v2.json`.
 3. **README.md** für GitHub schreiben (Was, Wie benutzen, Beispielbericht-Bilder, Grenzen,
    KI-Kennzeichnung) – Pflicht für die Abgabe.
 4. **Repository in die Kurs-Organisation** übertragen (GitHub → Settings → Transfer) –

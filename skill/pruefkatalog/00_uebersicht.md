@@ -109,7 +109,9 @@ Auffälligkeit bei LD/FS · mittel = übrige mögliche Auffälligkeiten · niedr
 
 1. Schichtenaufbau von innen nach außen erkennen (Zeichnung **und** Legende); unklare
    Schichten als „unklar“ markieren. Bei Ecken beide Wände Schicht für Schicht vergleichen
-   (ZQ-01) und Unterkonstruktionen bis zur Ecke verfolgen (KO-01, KO-05).
+   (ZQ-01) und Unterkonstruktionen bis zur Ecke verfolgen (KO-01, KO-05). An Anschlüssen
+   jede Platte und Bahn bis zu ihrem tatsächlichen Ende verfolgen: Endet sie dort, wo ihre
+   Funktion übergeben wird, oder läuft sie in das Nachbarbauteil hinein (KO-07)?
 2. Jede Regel aller Bereiche durchgehen; Geltungsbereich prüfen.
 3. Je Regel notieren: `erfüllt`, `nicht anwendbar` oder eine Einstufung – mit Kürzel.
 4. Doppelbefunde zusammenführen (Grundsatz 8).

@@ -115,6 +115,44 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
 - **Einstufung:** Holz eindeutig ohne Auflager → **klarer Aufbaufehler** + **Nachweis
   erforderlich**. Nur Größe abweichend → **mögliche Auffälligkeit**.
 
+## KO-07 Schichten enden am Anschluss – keine Platte läuft in die Dämmebene des Nachbarbauteils
+
+- **Gilt für:** Anschlüsse zweier Bauteile (Wand–Dach/Traufe, Wand–Decke, Wand–Boden,
+  Ecken), besonders in Vertikalschnitten.
+- **Prüfe:** Wo endet jede Platte und Bahn eines Bauteils? Endet sie dort, wo ihre Funktion
+  an die Schicht des Nachbarbauteils übergeben wird (z. B. raumseitige OSB der Wand am
+  Wandkopf bzw. an der Stelle, an der die Dachfolie angeschlossen ist)? Oder läuft sie
+  darüber hinaus in das Nachbarbauteil hinein – etwa durch dessen Dämmebene?
+- **So erkennst du es in der Zeichnung:** Jede Schraffur bzw. Linie bis zu ihrem
+  **tatsächlichen Ende** verfolgen – nicht nur bis zum Anschlusspunkt. Höhe des Anschlusses
+  (Klebeband, „Folienanschluss“) mit dem Ende der Platte vergleichen. Liegt auf **beiden**
+  Seiten des überstehenden Plattenstücks Dämmung des Nachbarbauteils?
+- **Typische Auffälligkeit:** Die OSB der Wand läuft über den Wandkopf hinaus schräg durch
+  die Dachdämmung bis unter die Unterdeckplatte; die Dachdämmung wird dadurch geteilt.
+- **Warum relevant?** Ein solches Plattenstück unterbricht die Dämmebene des Nachbarbauteils
+  (vgl. WB-01) und liegt auf der kalten Seite von dessen Luftdichtheits-/Dampfbremsschicht
+  (vgl. FS-02). Außerdem kreuzen Sparren bzw. Balken diese Ebene – die Platte wäre so nicht
+  durchgehend einbaubar [[PRAXIS]].
+- **Mögliches Risiko:** Geschwächte Dämmebene am Anschluss; eine je nach Produkt
+  dampfbremsende Platte auf der kalten Seite kann Feuchteanreicherung begünstigen; die Lage
+  der Luftdichtheitsebene wird unklar.
+- **Verbesserungsmöglichkeiten:** Platte am Anschluss enden lassen (z. B. Oberkante
+  Wand bzw. Höhe Folienanschluss), Folie/Bahn des Nachbarbauteils dort luftdicht anschließen
+  (LD-02) und die Dämmung des Nachbarbauteils ohne Unterbrechung durchlaufen lassen.
+- **Grundlage:** Zeichnungsplausibilität [[PRAXIS]]; Wärmebrücken gering halten:
+  GModG § 12 [[GMODG-12]], Planungsbeispiele DIN 4108 Beiblatt 2:2019-06 [[DIN-4108-BBL2]];
+  Schichtenfolge beim Feuchteschutz: DIN 4108-3:2024-03 [[DIN-4108-3]].
+- **Einstufung:** Platte läuft eindeutig erkennbar durch die Dämmebene des Nachbarbauteils →
+  **klarer Aufbaufehler**. Ende nicht eindeutig erkennbar → **mögliche Auffälligkeit**.
+- **Abgrenzung:** Hauptbefund hier; Dämmlücke (WB-01) und dichte Schicht auf der kalten
+  Seite (FS-02) nur als Verweis. Fehlender Anschluss der Luftdichtheitsschicht → LD-02.
+- **Korrekturskizze (immer beide Schritte):** (1) überstehendes Plattenstück mit `entfernen`
+  weiß abdecken; (2) den **ganzen frei werdenden Bereich bis zum nächsten Bauteil** (z. B. bis
+  Füllholz, Sparren, Pfettenoberkante) mit der Dämmung des Nachbarbauteils füllen – `daemmung`
+  mit derselben `art` und demselben `band` wie die angrenzende Dämmfläche, damit die
+  Schraffur nahtlos weiterläuft. Alte Linien im Bereich (z. B. Gefachdämmung der Wand) werden
+  dabei mit abgedeckt.
+
 ## KO-04 Raster und Plattenstöße passen zusammen
 
 - **Gilt für:** Holzrahmenbau mit Plattenbeplankung.

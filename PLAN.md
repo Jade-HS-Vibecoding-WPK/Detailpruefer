@@ -209,9 +209,40 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       (2 klare Aufbaufehler, 2 mögliche Auffälligkeiten, 1 Hinweis, 3 nicht prüfbar) mit
       Korrekturskizze. Katalog ergänzt: WH-06/WH-07 (geneigtes Dach), KO-06 (Auflager
       tragender Hölzer), Quelle ZVDH-Fachregeln; Korrekturelement „daemmung“
-- [ ] **Du:** Lösungsschlüssel zu Blindtest 3 schicken → Auswertung
+- [x] **Blindtest 3 ausgewertet (Di 17.11.):** 3 von 4 eingebauten Fehlern gefunden
+      (Dämmung, Fußpfette, Winkelangabe); **übersehen:** OSB der Wand läuft über den Wandkopf
+      durch die Dachdämmung. Keine Fehlalarme. → neue Regel **KO-07** (Schichten enden am
+      Anschluss) und **vierter Abgleich** „jede Schicht bis zu ihrem Ende verfolgen“
+      (SKILL.md, 00_uebersicht). Details: `tests/loesung/AUSWERTUNG_blindtest_3.md`
+- [x] Skill als ZIP gepackt: `dist/detailpruefer-architektur.zip` (nicht auf GitHub)
+- [x] **Skill in claude.ai getestet (Di 17.11.):** Upload über Plugins → Hinzufügen → Plugin
+      hochladen; alle Skripte laufen, Bericht + Korrekturskizze korrekt. Traufe: OSB (KO-07),
+      Fußpfette, Winkel gefunden; Dämmlücke nur als Legendenwiderspruch. Details in
+      `tests/loesung/AUSWERTUNG_blindtest_3.md`
+- [x] **Feature 8 (Di 17.11.): Korrekturskizze nach Musterlösung + Nachbesserungen**
+      - Festes Prinzip (SKILL.md 5b, CLAUDE.md): Skizze zeigt den korrigierten Zustand –
+        falsch Gezeichnetes `entfernen` (weiß), Schichten mit **derselben Schraffur** und
+        **durchgehend** fortführen; keine Grenzstriche
+      - `daemmung` zeichnet jetzt Dämm-Schlaufen in Schichtdicke und -richtung (`band`),
+        `platte` mit Schraffur `striche`/`zickzack`/`punkte`/`diagonal`
+      - Hinweistexte werden umbrochen und auf dem Blatt gehalten; Bericht schneidet die
+        Skizze so zu, dass alle Texte sichtbar sind; Befundkarten ohne abgeschnittene Texte
+      - Überschrift „Befunde im Detail“ bleibt bei der ersten Karte
+      - Fragerunde ist Pflicht (anhalten und Antwort abwarten)
+      - WB-01: Luftschicht/Hohlraum im Dämmfeld laut Legende = Befund
+      - Test: `tests/befunde_blindtest_3_traufe_v2.json` (mit OSB-Befund B3) →
+        `tests/ausgabe/bt3v2_bericht.pdf`; Blindtest 2 und Wandecke laufen weiter fehlerfrei
+- [x] **Dämmstoff-Schraffuren unterschieden (Di 17.11.):** `daemmung` mit `art` = `weich`
+      (Schlaufen, Faserdämmstoffe), `hart` (Zickzack, Dämmplatten), `hart_doppelt` (Rauten),
+      `geschlaengelt` (Wellenlinie, dünne weiche Lagen/Trittschall); Zuordnungstabelle und
+      Entscheidungsreihenfolge in SKILL.md 5b (Vorrang: Darstellung in der Zeichnung);
+      ZQ-05 prüft, ob die Dämmschraffur zur Dämmstoffart passt. Musterblatt:
+      `tests/ausgabe/daemmarten_muster.png`
+- [x] **claude.ai, zweiter Lauf (v2):** Fragerunde kommt, **4 von 4** Fehlern gefunden,
+      Hinweistexte vollständig. Schwäche: Dämmung über dem Wandkopf nicht bis zum Füllholz
+      fortgeführt → KO-07 ergänzt, als **v3** eingespielt
+- [ ] v3 in claude.ai testen (am besten mit einem neuen Blindtest-Detail)
+- [ ] **Du:** Winkel Traufe klären – Musterlösung 35°, gezeichnet ca. 25°
 - [ ] **Du:** Prüfkatalog und Beispielberichte fachlich gegenlesen
-- [ ] Skill als ZIP für claude.ai packen und dort testen (Code-Ausführung aktivieren)
-- [ ] Should: Verbesserungsskizze im CAD-Look
 - [ ] README.md für GitHub, Poster
-- [ ] Danach: Berichts-Skript (PDF-Prüfbericht mit Mängelliste)
+- [x] ~~Verbesserungsskizze im CAD-Look~~ und ~~Berichts-Skript~~ → erledigt durch Feature 5 und 7

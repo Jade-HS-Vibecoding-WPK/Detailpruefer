@@ -21,7 +21,13 @@ Konstruktion → KO-02.
   gedämmt?
 - **So erkennst du es in der Zeichnung:** Dämmschraffur durchgehend; keine weißen,
   ungedämmten Hohlräume; Dämmebenen beider Wände schließen aneinander an.
-- **Typische Auffälligkeit:** Ungedämmter Hohlraum in der Ecke; Dämmung endet vor dem Anschluss.
+  **Legende zuerst:** Nennt die Legende eine „Luftschicht“, „Hohlraum“ o. ä. **zwischen**
+  Dämmung und innerer Schicht (Folie, Bekleidung) bzw. innerhalb des Gefachs, ist das ein
+  Befund – auch wenn die Dämmschraffur den Bereich optisch zu füllen scheint (große
+  Schlaufen reichen oft weit ins Feld). Im Zoom prüfen, ob die Schraffur wirklich bis an
+  beide begrenzenden Schichten reicht; Maßkette mitlesen (z. B. „10 / 10“ statt „20“).
+- **Typische Auffälligkeit:** Ungedämmter Hohlraum in der Ecke; Dämmung endet vor dem Anschluss;
+  Sparren- oder Ständerfeld nur teilweise gedämmt, Rest als „Luftschicht“ bezeichnet.
 - **Warum relevant?** Jede Lücke erhöht den Wärmeverlust örtlich.
 - **Mögliches Risiko:** Kältere Innenoberfläche an dieser Stelle; das kann das Risiko für
   Tauwasser an der Oberfläche und Schimmel erhöhen; höherer Energieverbrauch.
@@ -29,8 +35,12 @@ Konstruktion → KO-02.
   oder Eckausbildung so ändern, dass kein Hohlraum entsteht.
 - **Grundlage:** GModG § 12 (Wärmebrücken so gering wie möglich halten);
   DIN 4108 Beiblatt 2:2019-06 (Planungsbeispiele).
-- **Einstufung:** Ungedämmter Hohlraum eindeutig erkennbar → **klarer Aufbaufehler**.
-  Darstellung unklar → **mögliche Auffälligkeit**.
+- **Einstufung:** Ungedämmter Hohlraum eindeutig erkennbar **oder** in Legende/Maßkette als
+  Luftschicht im Dämmfeld ausgewiesen → **klarer Aufbaufehler**. Darstellung unklar →
+  **mögliche Auffälligkeit**. Nicht gemeint: planmäßige belüftete Ebenen **außen** auf der
+  Dämmung bzw. Unterdeckung (Hinterlüftung, Konterlattung) → WH-B/D.
+- **Korrekturskizze:** Luftschicht/Hohlraum mit `daemmung` in voller Schichtdicke füllen
+  (Schlaufen-Schraffur wie in der Zeichnung), ggf. vorher falsch Gezeichnetes `entfernen`.
 
 ## WB-02 Mindestwärmeschutz an der Wärmebrücke (z. B. Außenecke)
 

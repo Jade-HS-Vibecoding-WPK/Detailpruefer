@@ -55,14 +55,26 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   Raster in Prozent: **x = 0 links … 100 rechts**, **y = 0 oben … 100 unten**.
 - **Schichtenaufbau wie die Legende: von außen nach innen, S1 = außen.** Status je Schicht:
   `ok`, `unklar` oder `fehler`.
-- **Drei Abgleiche:** (1) Legende ↔ Maßkette ↔ Zeichnung, (2) bei Ecken **Wand A ↔ Wand B
-  Schicht für Schicht**, (3) Unterkonstruktionen (Ständer, Lattung) bis zur Ecke.
+- **Vier Abgleiche:** (1) Legende ↔ Maßkette ↔ Zeichnung – nennt die Legende eine
+  **Luftschicht oder einen Hohlraum innerhalb der Dämmebene**, den Bereich im Zoom prüfen und
+  nach WB-01 als Befund aufnehmen, auch wenn die Schraffur ihn scheinbar füllt; (2) bei Ecken **Wand A ↔ Wand B
+  Schicht für Schicht**, (3) Unterkonstruktionen (Ständer, Lattung) bis zur Ecke,
+  (4) an Anschlüssen **jede Platte und Bahn bis zu ihrem tatsächlichen Ende verfolgen** und
+  mit der Lage des Anschlusses vergleichen – endet sie zu früh oder läuft sie in das
+  Nachbarbauteil hinein (KO-07, LD-02)? Besonders bei Vertikalschnitten (Traufe, Sockel).
 - Bei Ecken die Wände **„Wand A“ / „Wand B“** nennen und in der Zeichnung beschriften
   (Feld `beschriftungen`).
 
-### 2. Checkliste
+### 2. Checkliste – ANHALTEN und fragen (Pflicht)
 - `checkliste.md`: **eine** Fragerunde, nur Fragen, die die Zeichnung nicht beantwortet
-  (inkl. Projektname). Unbeantwortetes → `offene_fragen` **im Bericht** (F1, F2 …) mit Annahme.
+  (inkl. Projektname). Kurz sagen, was du erkannt hast (Detailart, Bauteile), dann die Fragen
+  gesammelt stellen – wenn möglich mit Antwortoptionen und der jeweiligen Annahme.
+- **Danach die Antwort abwarten.** Nicht weiterprüfen, keine `befunde.json`, keinen Bericht
+  erzeugen, bevor geantwortet wurde. Diese Runde nie überspringen und keine Annahmen still
+  treffen – auch nicht, wenn die Anfrage „erstelle den Bericht“ lautet.
+- Nur wenn der Nutzer ausdrücklich „ohne Rückfragen“ o. ä. schreibt, mit den Annahmen aus
+  `checkliste.md` weiterarbeiten und das im Bericht offenlegen.
+- Unbeantwortetes → `offene_fragen` **im Bericht** (F1, F2 …) mit Annahme.
 
 ### 3. Prüfen
 - `pruefkatalog/00_uebersicht.md`, `quellen.md` lesen; **jede Regel** aus `01_…` bis `07_…`
@@ -86,13 +98,46 @@ keine verdeckten Inhalte? Sonst korrigieren.
 
 ### 5b. Korrekturskizze zeichnen (immer, wenn sich etwas einzeichnen lässt)
 Fehlende oder falsche Teile werden **nicht nur beschrieben, sondern in die Zeichnung
-eingezeichnet** – grün, als Vorschlag. Je Befund im Feld `korrektur` (Format unten), z. B.:
-fehlende Latten/Konterlatten/Stiele als `holz`, fehlende Platten als `platte` (mit
-Schraffur), fehlende Klebebänder als `abklebung`, falsche Werte mit `durchstreichen` +
-`text`, dazu eine kurze Beschriftung („B1: Latte ergänzen“) mit Hinweislinie.
-- Maße und Lage an vorhandenen Bauteilen derselben Zeichnung orientieren (z. B. Latte so
-  groß wie die vorhandenen Latten, Schraffur wie dieselbe Schicht in der anderen Wand).
-- Beschriftungen in freie Bereiche setzen; keine Texte oder Linien verdecken.
+eingezeichnet** – grün, als Vorschlag. Je Befund im Feld `korrektur` (Format unten).
+
+**Festes Prinzip – die Skizze zeigt den korrigierten Zustand wie eine überarbeitete
+Zeichnung (gilt für jedes Detail):**
+1. **Falsch Gezeichnetes entfernen:** Teile, die zu weit laufen, falsch liegen oder entfallen
+   (z. B. überstehendes Plattenstück, zu kleine Pfette, Luftschicht), mit `entfernen` weiß
+   abdecken – nicht nur mit einem Strich „abgrenzen“.
+2. **Richtiges mit derselben Darstellung einzeichnen:** Fehlende oder fortzuführende Schichten
+   mit **derselben Schraffur wie in der Zeichnung**: Dämmung als `daemmung` über die ganze
+   Schichtdicke, in Schichtrichtung (`band`), mit der **passenden Dämmstoff-Art** (Tabelle
+   unten); Platten als `platte` mit `schraffur` wie dieselbe Schicht in der Zeichnung
+   (`striche` OSB/Holzwerkstoff, `zickzack` MDF/Holzfaser, `punkte` Gipskarton, `diagonal`
+   Brett); Kanthölzer als `holz`.
+3. **Schichten durchgehend führen:** Wird eine Schicht unterbrochen (z. B. Dämmung durch ein
+   Plattenstück), die Fläche so festlegen, dass die Schicht ohne Lücke bis an das nächste
+   Bauteil läuft (z. B. Dachdämmung bis an Füllholz und Pfette). Grenzen mehrerer Flächen
+   derselben Schicht mit **demselben `band`** angeben – dann läuft die Schraffur nahtlos weiter.
+4. **Maße und Lage** an vorhandenen Bauteilen derselben Zeichnung abnehmen (Schichtgrenzen,
+   Latte so groß wie die vorhandenen Latten, Pfette in beschrifteter Größe).
+5. **Beschriftung** kurz („B1: Sparrenfeld vollständig dämmen“) mit Hinweislinie in einem
+   freien Bereich; lange Texte werden automatisch umbrochen und auf dem Blatt gehalten.
+   Keine Texte oder Linien der Zeichnung verdecken.
+
+**Dämmstoff-Schraffuren – immer sinngemäß wählen (`"art"` bei `daemmung`):**
+
+| `art` | Darstellung | Verwenden für |
+|---|---|---|
+| `weich` | Schlaufen (Tropfen, abwechselnd an beiden Schichtgrenzen) | weiche, faserige Dämmstoffe als Matte/Klemmfilz/Einblasdämmung: Mineralwolle, Holzfaser flexibel, Hanf, Zellulose – z. B. Gefach-, Sparren-, Installationsebenen-Dämmung |
+| `hart` | Zickzack über die Schichtdicke | druckfeste Dämmplatten: Holzfaserdämmplatte (Unterdeck-/Putzträgerplatte), EPS, XPS, PUR/PIR, Perimeter-, Aufsparren-, Untersparrendämmplatte |
+| `hart_doppelt` | gekreuzter Zickzack (Rauten) | wie `hart`, wenn die Zeichnung diese Platte so darstellt |
+| `geschlaengelt` | Wellenlinie ohne Schlaufen | dünne, weiche Lagen: Trittschalldämmung, Dämmfilz, Randdämmstreifen, Fugendämmung |
+
+Reihenfolge der Entscheidung: (1) **Wie stellt die Zeichnung dieselbe oder eine gleichartige
+Schicht dar?** → genau diese Art übernehmen (Legende, Nachbarbereich, andere Wand). (2) Nur wenn
+die Schicht in der Zeichnung nicht vorkommt: nach Dämmstoffart laut Legende/Rückfrage aus der
+Tabelle wählen. (3) Ist die Dämmstoffart unbekannt, die Art der umgebenden gleichartigen Schicht
+nehmen und das im Hinweistext offenlassen („Dämmstoff nach Wahl“). Weiche Faserdämmung nie
+mit Zickzack, Dämmplatten nie mit Schlaufen darstellen. (Zeichenkonvention, angelehnt an die
+CAD-Standardschraffuren „Dämmung, weich“ und „Dämmung, Zickzack“; Schraffuren allgemein nach
+DIN 1356-1 / DIN ISO 128-50 – Praxisempfehlung.)
 ```
 python scripts/skizze.py <zeichnung.pdf> befunde.json korrekturskizze.pdf
 python scripts/raster.py korrekturskizze.pdf kontrolle_korrektur.png
@@ -173,10 +218,21 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
 ```
 - Koordinaten in **Prozent** (x von links, y von oben, r bezogen auf die Blattbreite).
 - `zoom` optional (Ausschnitt für die Befundkarte, sonst automatisch um den Kreis).
-- `korrektur`: Elemente der Korrekturskizze (grün) – `holz` (Rechteck mit Kreuz),
-  `platte` (Rechteck mit Querstrich-Schraffur), `abklebung` (dicke gestrichelte Linie),
-  `linie`, `durchstreichen`, `text` (mit optionaler Hinweislinie `ziel`, `rahmen`: false
-  für Ersatzwerte direkt im Text, `groesse` in pt).
+- `korrektur`: Elemente der Korrekturskizze (grün), Reihenfolge beim Zeichnen: entfernen →
+  Flächen → Linien → Texte:
+  - `entfernen` – `punkte` (Polygon) oder `rechteck`: falsch Gezeichnetes weiß abdecken.
+  - `daemmung` – `punkte` (Polygon) + `band` `[[x,y],[x,y],[x,y]]` (zwei Punkte auf einer
+    Schichtgrenze, ein Punkt auf der gegenüberliegenden) + `art` (`weich` | `hart` |
+    `hart_doppelt` | `geschlaengelt`, siehe Tabelle 5b – **immer angeben**). Ohne `band`
+    gelten erste Polygonkante + letzter Punkt.
+  - `platte` – `rechteck` oder `punkte` (+ `band`), `schraffur`: `striche` | `zickzack` |
+    `punkte` | `diagonal`.
+  - `holz` (Rechteck mit Kreuz), `abklebung` (dicke gestrichelte Linie), `linie`,
+    `durchstreichen`, `text` (mit optionaler Hinweislinie `ziel`, `rahmen`: false für
+    Ersatzwerte direkt im Text, `groesse` in pt).
+  - Beispiel Traufe (OSB läuft zu weit, Dämmung fortführen):
+    `{"typ": "entfernen", "punkte": [[55.2,37.9],[55.8,38.3],[55.8,48.7],[55.2,48.7]]}`,
+    `{"typ": "daemmung", "art": "weich", "punkte": [...], "band": [[45.6,31.9],[58.6,40.4],[42.7,40.5]]}`.
 - `prioritaet` optional (`hoch`/`mittel`/`niedrig`), sonst automatisch.
 - Für `nicht_pruefbar`: `regel`, `titel`, `zu_klaeren`, ggf. `nachweis_erforderlich`.
 - Befundnummern im Text („siehe B2“) und Quellen `[[ID]]` werden im Bericht verlinkt.

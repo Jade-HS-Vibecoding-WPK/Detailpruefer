@@ -39,7 +39,7 @@ from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, Image, KeepTog
 HIER = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HIER)
 from markieren import (FARBEN, GRUEN, befund_kennung, befunde_lesen,  # noqa: E402
-                       einstufung_normalisieren, korrigierte_seite, markierte_seite)
+                       einstufung_normalisieren, korrektur_grenzen, korrigierte_seite, markierte_seite)
 
 GRUEN_HEX = GRUEN.hexval().replace("0x", "#")
 
@@ -324,6 +324,9 @@ class Zeichnungsbilder:
         self.bild = seite.render(scale=dpi / 72).to_pil().convert("RGB")
         self.W, self.H = self.bild.size
         self.verhaeltnis = seite.get_width() / seite.get_height()  # Breite/Höhe
+        self.seite_pt = (seite.get_width(), seite.get_height())
+        self.grenzen = None   # nur Korrekturskizze: Umriss aller Korrekturelemente in Prozent
+        self.karten = None    # nur Korrekturskizze: Variante ohne Hinweistexte für die Befundkarten
 
     def ausschnitt(self, x1, y1, x2, y2, breite_mm):
         x1, y1 = max(0, x1), max(0, y1)
@@ -477,9 +480,15 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
 
     # ---------- Korrekturskizze (nur wenn Korrekturen vorhanden)
     if bilder_korrektur is not None:
-        kbild, kh = bilder_korrektur.ausschnitt(x1, y1, x2, y2, 174)
+        # Ausschnitt so erweitern, dass alle grünen Hinweistexte vollständig sichtbar sind
+        kx1, ky1, kx2, ky2 = x1, y1, x2, y2
+        if bilder_korrektur.grenzen:
+            gx1, gy1, gx2, gy2 = bilder_korrektur.grenzen
+            kx1, ky1 = max(0, min(kx1, gx1 - 1)), max(0, min(ky1, gy1 - 1))
+            kx2, ky2 = min(100, max(kx2, gx2 + 1)), min(100, max(ky2, gy2 + 1))
+        kbild, kh = bilder_korrektur.ausschnitt(kx1, ky1, kx2, ky2, 174)
         if kh > 150:
-            kbild, kh = bilder_korrektur.ausschnitt(x1, y1, x2, y2, 174 * 150 / kh)
+            kbild, kh = bilder_korrektur.ausschnitt(kx1, ky1, kx2, ky2, 174 * 150 / kh)
         f.append(KeepTogether([
             Anker("korrektur", SEITEN_AKTUELL), P("Korrekturskizze (Vorschlag)", S_H1),
             Paragraph(f'<font color="{GRUEN_HEX}"><b>Grün</b></font> = einzuzeichnende Ergänzung bzw. '
@@ -494,11 +503,16 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
                            Spacer(1, 1.5 * mm), schichten_tabelle(daten)]))
 
     # ---------- 1 Befunde im Detail
-    f.append(P("1  Befunde im Detail", S_H1))
-    f.append(P("Feldreihenfolge in jeder Karte: Fundstelle → Woran erkennbar → Warum relevant → "
-               "Mögliches Risiko → Zu klären → Verbesserung → Grundlage → Verweis.", S_GRAU))
-    f.append(Spacer(1, 2 * mm))
-    for b in karten:
+    # Überschrift bleibt mit der ersten Karte zusammen (keine Überschrift allein am Seitenende)
+    kopf_detail = [P("1  Befunde im Detail", S_H1),
+                   P("Feldreihenfolge in jeder Karte: Fundstelle → Woran erkennbar → Warum relevant → "
+                     "Mögliches Risiko → Zu klären → Verbesserung → Grundlage → Verweis.", S_GRAU),
+                   Spacer(1, 2 * mm)]
+    if karten:
+        f.append(KeepTogether(kopf_detail + [befund_karte(karten[0], bilder, bilder_korrektur)]))
+    else:
+        f += kopf_detail
+    for b in karten[1:]:
         f.append(befund_karte(b, bilder, bilder_korrektur))
 
     # ---------- 2 Nicht prüfbar und offene Fragen
@@ -646,14 +660,22 @@ def befund_karte(b, bilder, bilder_korrektur=None):
     if hat_korrektur:
         # Vorher (markiert) und Nachher (Korrekturskizze) nebeneinander, gleicher Ausschnitt
         if not b.get("zoom") and not b.get("kreis"):
-            pts = [p for k in b["korrektur"] for p in (
-                [k["rechteck"][:2], k["rechteck"][2:]] if "rechteck" in k else
-                k.get("punkte") or [k.get("von"), k.get("bis")] if k.get("typ") != "text" else [[k["x"], k["y"]]])
-                if p]
-            xs, ys = [p[0] for p in pts], [p[1] for p in pts]
-            b = dict(b, zoom=[min(xs) - 4, min(ys) - 4, max(xs) + 8, max(ys) + 4])
+            pts = []
+            for k in b["korrektur"]:
+                if k.get("typ") == "text":
+                    if k.get("rahmen") is False:  # Ersatzwert direkt im Text
+                        pts.append([k["x"], k["y"]])
+                    continue
+                pts += [p for p in (k.get("punkte") or ([k["rechteck"][:2], k["rechteck"][2:]]
+                                     if "rechteck" in k else [k.get("von"), k.get("bis")])) if p]
+            if not pts:  # nur Hinweistexte → Ausschnitt um die Textposition
+                pts = [[k["x"], k["y"]] for k in b["korrektur"] if k.get("typ") == "text"]
+            if pts:
+                xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+                b = dict(b, zoom=[min(xs) - 4, min(ys) - 4, max(xs) + 8, max(ys) + 4])
         vorher = bilder.zoom_fuer(b, breite_mm=74, hoehe_max_mm=44)
-        nachher = bilder_korrektur.zoom_fuer(b, breite_mm=74, hoehe_max_mm=44)
+        # Kartenbild ohne Hinweistexte: der Text steht in der Karte, abgeschnittene Beschriftungen entfallen
+        nachher = (bilder_korrektur.karten or bilder_korrektur).zoom_fuer(b, breite_mm=74, hoehe_max_mm=44)
         bildzeile = Table([[P("Ist (markiert)", S_GRAU), Paragraph(
                                 f'<font color="{GRUEN_HEX}">Korrekturvorschlag (grün)</font>', S_GRAU)],
                            [vorher, nachher]], colWidths=[breite_inhalt / 2, breite_inhalt / 2])
@@ -771,6 +793,11 @@ def main():
         kp = io.BytesIO()
         kw.write(kp)
         BILDER_KORREKTUR = Zeichnungsbilder(kp.getvalue(), seitennr)
+        BILDER_KORREKTUR.grenzen = korrektur_grenzen(daten, *BILDER_KORREKTUR.seite_pt)
+        ow, _, _ = korrigierte_seite(pdf_ein, daten, hinweistexte=False)
+        op = io.BytesIO()
+        ow.write(op)
+        BILDER_KORREKTUR.karten = Zeichnungsbilder(op.getvalue(), seitennr)
         kw_pdf = os.path.splitext(pdf_aus)[0] + "_korrekturskizze.pdf"
         with open(kw_pdf, "wb") as f:   # Korrekturskizze zusätzlich als Vektor-PDF zum Weiterarbeiten
             kw.write(f)
