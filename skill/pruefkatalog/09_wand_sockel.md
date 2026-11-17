@@ -86,3 +86,33 @@ Funktionskatalogen (LD, FS, WB, WH, HS, KO) – hier wird darauf verwiesen.
 - **Grundlage:** [[DIN-68800-2]]; [[DIN-4108-7]]; [[BAUNETZ-HOLZFASSADE]]; [[PRAXIS]].
 - **Einstufung:** Trennlage/Abdichtung fehlt eindeutig → **klarer Aufbaufehler**; nur nicht
   beschriftet → **Verbesserungshinweis**; Insektenschutz fehlt → **mögliche Auffälligkeit**.
+
+## SO-04 Bodenaufbau auf Bodenplatte: vollständige Schichtenfolge und Höhen
+
+- **Gilt für:** Sockel- und Bodendetails mit Bodenplatte (auch Decken mit schwimmendem Estrich).
+- **Pflichtbauteile von unten nach oben (typische Folge, Praxisempfehlung [[PRAXIS]]):**
+  Sauberkeitsschicht unter der Bodenplatte · Bodenplatte · Abdichtung · Dämmung (Platten →
+  Schraffur `hart`) · Trennlage/PE-Folie · Estrich mit **Randdämmstreifen** an allen
+  aufgehenden Bauteilen (Estrich darf die Wand nicht berühren) · Bodenbelag ·
+  **Fuß-/Sockelleiste** als Abschluss zur Wand.
+- **Anerkannte Varianten:** Dämmung unter der Bodenplatte (Perimeter) statt darauf;
+  Trockenestrich; andere Abdichtungslage nach Planung.
+- **Höhen-Abgleich (immer):** Höhenkoten (OKFF, OKRD, UKRD), Maßketten und Schichtdicken
+  müssen zusammenpassen. Widerspruch → die **verursachende Schicht** bestimmen (z. B.
+  Dämmung dünner gezeichnet als nach Koten/Legende möglich) und benennen.
+- **Typische Auffälligkeit:** Sauberkeitsschicht fehlt; Estrich stößt ohne Randdämmstreifen
+  an die Wand; Fußleiste fehlt; Summe der Schichten ≠ Höhenkoten bzw. Maßkette.
+- **Warum relevant?** Randdämmstreifen trennen den Estrich schalltechnisch und lassen ihm
+  Bewegung; falsche Schichtdicken verschieben alle Höhen und den Wärmeschutz.
+- **Mögliches Risiko:** Schallbrücken und Risse am Estrichrand; geringerer Wärmeschutz bei zu
+  dünner Dämmung; Höhenfehler an Türen und Anschlüssen.
+- **Beste Korrektur:** fehlende bzw. zu dünne Schicht **in richtiger Dicke** einzeichnen
+  (`entfernen` + `daemmung` `hart` bzw. `platte`/`profil`); Sauberkeitsschicht als `platte`;
+  Randdämmstreifen als `daemmung` `geschlaengelt`; Fußleiste als `holz`; Maßkette/Kote mit
+  `durchstreichen` + `text`.
+- **Grundlage:** Zeichnungsplausibilität und übliche Bauweise [[PRAXIS]]; Dämmung/Wärmebrücke
+  → WB-01; Abdichtung/Holzschutz → SO-03.
+- **Einstufung:** funktional notwendige Schicht fehlt (Abdichtung, Dämmung, Randdämmstreifen
+  bei schwimmendem Estrich) → **klarer Aufbaufehler**; Sauberkeitsschicht oder Fußleiste fehlt
+  → **mögliche Auffälligkeit**; Höhenwiderspruch → **mögliche Auffälligkeit** mit Benennung
+  der Schicht (eindeutig zu dünne Dämmschicht → **klarer Aufbaufehler**, WB-01).

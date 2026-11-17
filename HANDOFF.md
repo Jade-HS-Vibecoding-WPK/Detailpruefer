@@ -117,6 +117,10 @@ Hölzer, Firstziegel/-latte, Profile, Bahnen), Bauteil-Kataloge `08_dach_steilda
 Lüftungsquerschnitte (DIN 4108-3) und Kiesbett-Regeln (DIN 68800-2) bewusst ohne Zahlen
 (Quellen widersprüchlich bzw. nicht im Original geprüft).
 
+- 17.11. später: Blindtest 5 (Sockel) ausgewertet (`tests/loesung/AUSWERTUNG_blindtest_5_sockel.md`);
+  danach SO-04 Bodenaufbau, Höhen-Abgleich bis zur Schicht, `text` mit `"farbe": "original"`.
+  Diese Nachbesserung ist **noch nicht** in claude.ai eingespielt (dort v5).
+
 ## 5. Was als Nächstes ansteht
 
 1. ~~Auswertung Blindtest 3~~ erledigt (17.11.): 3 von 4, OSB-Überstand übersehen → KO-07.

@@ -67,6 +67,11 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   Raster in Prozent: **x = 0 links … 100 rechts**, **y = 0 oben … 100 unten**.
 - **Schichtenaufbau wie die Legende: von außen nach innen, S1 = außen.** Status je Schicht:
   `ok`, `unklar` oder `fehler`.
+- **Höhen-Abgleich bis zur Schicht:** Höhenkoten (z. B. OKFF, OKRD, UKRD), Maßketten und
+  Schichtdicken der Legende gegeneinander prüfen. Passt etwas nicht zusammen, **die
+  verursachende Schicht bestimmen** (welche Schicht ist zu dünn/zu dick gezeichnet oder
+  fehlt?) und im Befund benennen – die Korrekturskizze zeichnet diese Schicht **in der
+  richtigen Dicke** (z. B. Dämmung nach Legende/Koten), statt nur den Widerspruch zu nennen.
 - **Vier Abgleiche:** (1) Legende ↔ Maßkette ↔ Zeichnung – nennt die Legende eine
   **Luftschicht oder einen Hohlraum innerhalb der Dämmebene**, den Bereich im Zoom prüfen und
   nach WB-01 als Befund aufnehmen, auch wenn die Schraffur ihn scheinbar füllt; **jede
@@ -94,7 +99,7 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 ### 3. Prüfen
 - `pruefkatalog/00_uebersicht.md`, `quellen.md` lesen; **jede Regel** aus `01_…` bis `07_…`
   (Funktionen) **und** den passenden Bauteil-Katalog (`08_dach_steildach.md` für Dach,
-  First, Traufe, Ortgang; `09_wand_sockel.md` für Wand und Sockel) durchgehen: `erfüllt`,
+  First, Traufe, Ortgang; `09_wand_sockel.md` für Wand, Sockel und Bodenaufbau) durchgehen: `erfüllt`,
   `nicht anwendbar` oder Einstufung. Doppelbefunde zusammenführen.
 - Eine **abweichende, aber anerkannte Variante** (siehe „Anerkannte Varianten“ im Katalog)
   ist **kein** Befund. Fehlt für eine Detailart eine Regel, aus dem Fachwissen der Kataloge
@@ -150,7 +155,9 @@ Zeichnung (gilt für jedes Detail):**
    mit `profil` aus Punkten zeichnen.
 5. **Beschriftung** kurz („B1: Sparrenfeld vollständig dämmen“) mit Hinweislinie in einem
    freien Bereich; lange Texte werden automatisch umbrochen und auf dem Blatt gehalten.
-   Keine Texte oder Linien der Zeichnung verdecken.
+   Keine Texte oder Linien der Zeichnung verdecken. **Verdeckt ein eingezeichnetes Bauteil
+   eine Beschriftung oder Höhenkote der Zeichnung**, diese daneben mit `text` und
+   `"farbe": "original"` (schwarz, ohne Rahmen) neu setzen.
 
 **Dämmstoff-Schraffuren – immer sinngemäß wählen (`"art"` bei `daemmung`):**
 
@@ -276,7 +283,9 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
   - `bahn` – `punkte` + `art`: `luftdicht` (Strich-Punkt), `winddicht` (gestrichelt),
     `abdichtung`/`unterdeckbahn` (kräftig), `lueftungsband` (Zickzack).
   - `abklebung` (dicke gestrichelte Linie), `linie`, `durchstreichen`, `text` (mit optionaler
-    Hinweislinie `ziel`, `rahmen`: false für Ersatzwerte direkt im Text, `groesse` in pt).
+    Hinweislinie `ziel`, `rahmen`: false für Ersatzwerte direkt im Text, `groesse` in pt,
+    `"farbe": "original"` = schwarz ohne Rahmen, um verdeckte Beschriftungen/Koten der
+    Zeichnung neu zu setzen).
   - Angaben in cm brauchen `"detail": {"massstab": "1:5"}`; fehlt der Maßstab in der
     Zeichnung, aus einer Maßkette ableiten und als Annahme nennen.
   - Alle Koordinaten werden **in jeder Zeichnung neu** aus Raster und Zooms abgelesen –

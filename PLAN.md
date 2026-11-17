@@ -292,3 +292,11 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       zeigte sie nicht vollständig → WB-01 und SKILL.md: **Schraffur-Abgleich** (jede
       Dämmschraffur muss die ganze Schichtdicke füllen); Korrekturskizze zeichnet das ganze
       Dämmfeld in voller Dicke auf beiden Dachseiten. Test: `tests/ausgabe/bt4_bericht.pdf`
+- [x] **Blindtest 5 – Sockel in claude.ai (v5, 17.11.):** keine Fragerunde (richtig), Schwelle
+      (klarer Aufbaufehler) und Randdämmstreifen (geschlängelt eingezeichnet) gefunden;
+      XPS 10 statt 16 cm nur als Höhenwiderspruch erkannt; Sauberkeitsschicht und Fußleiste
+      übersehen. Details: `tests/loesung/AUSWERTUNG_blindtest_5_sockel.md`
+- [x] Nachbesserung danach: Höhen-Abgleich bis zur verursachenden Schicht (SKILL.md),
+      neue Regel **SO-04 Bodenaufbau** (Sauberkeitsschicht, Randdämmstreifen, Fußleiste,
+      Höhen), Textoption `"farbe": "original"` für verdeckte Beschriftungen/Koten
+- [ ] Neue Version in claude.ai einspielen und weiteren Blindtest (z. B. Ortgang) machen

@@ -828,6 +828,15 @@ def zeichne_korrektur(c, k, pt, w, h):
         (ax, ay), (bx, by) = pt(*k["von"]), pt(*k["bis"])
         c.setLineWidth(linie * 1.3)
         c.line(ax, ay, bx, by)
+    elif typ == "text" and k.get("farbe") == "original":
+        # verdeckte Beschriftung/Höhenkote der Zeichnung neu setzen: schwarz, ohne Rahmen
+        x, y, zeilen, _, gr, breite, hoehe = text_box(dict(k, fett=False), pt, w, h)
+        c.setFillColor(WEISS)
+        c.rect(x - gr * 0.15, y - hoehe + gr * 0.85, breite + gr * 0.3, hoehe + gr * 0.05, stroke=0, fill=1)
+        c.setFillColor(HexColor("#000000"))
+        c.setFont("Helvetica", gr)
+        for i, z in enumerate(zeilen):
+            c.drawString(x, y - i * gr * 1.2, z)
     elif typ == "text":
         x, y, zeilen, schrift, gr, breite, hoehe = text_box(k, pt, w, h)
         if k.get("ziel"):
@@ -869,7 +878,8 @@ def korrigierte_seite(pdf_ein, daten, hinweistexte=True):
     massstab_setzen(daten)
     elemente = [k for b in befunde_lesen(daten) for k in b.get("korrektur", [])]
     if not hinweistexte:
-        elemente = [k for k in elemente if k.get("typ") != "text" or k.get("rahmen") is False]
+        elemente = [k for k in elemente if k.get("typ") != "text" or k.get("rahmen") is False
+                    or k.get("farbe") == "original"]
     # Entfernen zuerst, dann Flächen, Bauteile, Linien, Texte zuletzt
     reihenfolge = {"entfernen": -1, "daemmung": 0, "platte": 0.5, "bahn": 0.55, "holz": 0.6,
                    "lattenreihe": 0.6, "profil": 0.7, "firstlatte": 0.8, "firstziegel": 0.9,
