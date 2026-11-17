@@ -92,6 +92,29 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
   **mögliche Auffälligkeit**.
 - **Abgrenzung:** Hinterlüftung (Luftraum) → WH-02; Wasserableitung der Ecke → WH-04.
 
+## KO-06 Tragende Hölzer haben ein Auflager – Lastweg ist plausibel dargestellt
+
+- **Gilt für:** Pfetten, Rähme, Sparren, Balken und Stiele in Holzbaudetails.
+- **Prüfe:** Liegt jedes tragende Holz erkennbar auf einem anderen tragenden Bauteil auf
+  (z. B. Fußpfette auf Rähm/Wand, Sparren auf Pfette)? Passt die beschriftete Querschnitts-
+  größe zur gezeichneten (im Maßstab ablesen – **keine Bemessung**)?
+- **So erkennst du es in der Zeichnung:** Kreuz-Symbole der Hölzer verfolgen: Berühren sie
+  sich, oder liegt Dämmung bzw. ein Spalt dazwischen? Beschriftung „16/20“ mit Kästchengröße
+  vergleichen.
+- **Typische Auffälligkeit:** Pfette „schwebt“ in der Dämmung ohne Kontakt zu Rähm oder
+  Sparren; Querschnitt deutlich kleiner gezeichnet als beschriftet.
+- **Warum relevant?** Ohne Auflager ist der Lastweg (Dach → Pfette → Wand) nicht wie
+  gezeichnet ausführbar.
+- **Mögliches Risiko:** Widersprüchliche Ausführungsplanung; im ungünstigen Fall ein nicht
+  funktionierender Lastabtrag – nur die Tragwerksplanung kann das beurteilen.
+- **Verbesserungsmöglichkeiten:** Holz in beschrifteter Größe so anordnen, dass es aufliegt
+  und die darüberliegenden Bauteile trägt; Verbindungen (z. B. Kerve, Verbinder) nach
+  Tragwerksplanung [[EC5]].
+- **Grundlage:** Zeichnungsplausibilität [[PRAXIS]]; Bemessung nach Eurocode 5 [[EC5]]
+  (nicht Teil der Prüfung).
+- **Einstufung:** Holz eindeutig ohne Auflager → **klarer Aufbaufehler** + **Nachweis
+  erforderlich**. Nur Größe abweichend → **mögliche Auffälligkeit**.
+
 ## KO-04 Raster und Plattenstöße passen zusammen
 
 - **Gilt für:** Holzrahmenbau mit Plattenbeplankung.

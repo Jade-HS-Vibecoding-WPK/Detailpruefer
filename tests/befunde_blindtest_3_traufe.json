@@ -1,0 +1,545 @@
+{
+  "bericht": {
+    "id": "DPA-20261117-BT3",
+    "version": "1.0"
+  },
+  "detail": {
+    "projekt": "nicht angegeben",
+    "titel": "Traufe – Anschluss Steildach an Außenwand (Blindtest 3)",
+    "datei": "Traufe 1.pdf",
+    "bauart": "Holzrahmenbau-Außenwand, Sparrendach mit Ziegeldeckung",
+    "fassade": "hinterlüftete Holzschalung; Dach: Ziegel auf Lattung und Konterlattung über Unterdeckplatte",
+    "schnitt": "Vertikalschnitt",
+    "massstab": "1:5",
+    "pruefdatum": "17.11.2026"
+  },
+  "seite": 1,
+  "zeichnung_ausschnitt": [
+    19,
+    18,
+    94,
+    82
+  ],
+  "beschriftungen": [
+    {
+      "text": "Dach",
+      "x": 31.0,
+      "y": 31.0
+    },
+    {
+      "text": "Außenwand",
+      "x": 47.0,
+      "y": 72.0
+    },
+    {
+      "text": "innen",
+      "x": 49.5,
+      "y": 66.5
+    },
+    {
+      "text": "außen",
+      "x": 66.5,
+      "y": 69.0
+    }
+  ],
+  "kurzfazit": "Wichtigste Punkte: Das Sparrenfeld ist nur zur Hälfte gedämmt – unter 10 cm Dämmung liegt laut Legende und Zeichnung eine 10 cm Luftschicht (B1). Die Fußpfette ist mit 16/20 beschriftet, aber deutlich kleiner und ohne Auflager in der Dämmung gezeichnet (B2). Außerdem widerspricht die Dachlegende der Zeichnung (Reihenfolge Lattung/Konterlattung, Maße), und die Dachneigung ist mit 45° beschriftet, gezeichnet sind etwa 25° (B3, B4).",
+  "schichtenaufbau": [
+    {
+      "nr": "D1",
+      "schicht": "Dach: Dacheindeckung Ziegel (Rubin 11V)",
+      "dicke": "6,8 cm (Maßkette 7)",
+      "status": "ok",
+      "anmerkung": ""
+    },
+    {
+      "nr": "D2",
+      "schicht": "Dach: Traglattung (Querschnitte unter den Ziegeln)",
+      "dicke": "3,0 cm",
+      "status": "unklar",
+      "anmerkung": "Legende nennt an dieser Stelle „Konterlattung“ (B3)"
+    },
+    {
+      "nr": "D3",
+      "schicht": "Dach: Konterlattung, belüftete Ebene",
+      "dicke": "3,0 cm",
+      "status": "unklar",
+      "anmerkung": "Legende nennt an dieser Stelle „Lattung“ (B3)"
+    },
+    {
+      "nr": "D4",
+      "schicht": "Dach: MDF-Platte (Unterdeckung)",
+      "dicke": "1,6 cm (Maßkette 1,5)",
+      "status": "ok",
+      "anmerkung": ""
+    },
+    {
+      "nr": "D5",
+      "schicht": "Dach: Sparren mit Dämmung",
+      "dicke": "10 cm",
+      "status": "unklar",
+      "anmerkung": "Dämmstoff nicht benannt; Sparrenfeld nur teilweise gedämmt (B1)"
+    },
+    {
+      "nr": "D6",
+      "schicht": "Dach: Luftschicht (Legende „Luftsicht“)",
+      "dicke": "10 cm",
+      "status": "fehler",
+      "anmerkung": "ungedämmter Hohlraum im Sparrenfeld (B1)"
+    },
+    {
+      "nr": "D7",
+      "schicht": "Dach: Folie (Luftdichtheit / Dampfbremse)",
+      "dicke": "–",
+      "status": "unklar",
+      "anmerkung": "gezeichnet und als „Folienanschluss zur Luftdichtung“ beschriftet, in der Legende nicht aufgeführt (B5)"
+    },
+    {
+      "nr": "D8",
+      "schicht": "Dach: Lattung, gedämmt gezeichnet",
+      "dicke": "3,0 cm",
+      "status": "ok",
+      "anmerkung": ""
+    },
+    {
+      "nr": "D9",
+      "schicht": "Dach: Gipskartonplatte, 2-lagig",
+      "dicke": "2,5 cm (Maßkette 1,5)",
+      "status": "unklar",
+      "anmerkung": "Widerspruch Legende und Maßkette (B3)"
+    },
+    {
+      "nr": "W1",
+      "schicht": "Wand: Holzverkleidung Douglasie",
+      "dicke": "2,0 cm",
+      "status": "ok",
+      "anmerkung": ""
+    },
+    {
+      "nr": "W2",
+      "schicht": "Wand: Lattung (Hinterlüftungsebene)",
+      "dicke": "3,0 cm",
+      "status": "ok",
+      "anmerkung": "oben Lüftungsgitter"
+    },
+    {
+      "nr": "W3",
+      "schicht": "Wand: Holzfaserdämmplatte",
+      "dicke": "1,5 cm",
+      "status": "ok",
+      "anmerkung": "winddicht an die Unterdeckung des Dachs angeklebt"
+    },
+    {
+      "nr": "W4",
+      "schicht": "Wand: Ständerwerk mit Dämmung",
+      "dicke": "16,0 cm",
+      "status": "unklar",
+      "anmerkung": "Dämmstoff nicht benannt (B5)"
+    },
+    {
+      "nr": "W5",
+      "schicht": "Wand: OSB-Platte",
+      "dicke": "1,5 cm",
+      "status": "ok",
+      "anmerkung": "Luftdichtheitsschicht; Anschluss der Dachfolie dargestellt"
+    },
+    {
+      "nr": "W6",
+      "schicht": "Wand: Installationsebene, gedämmt",
+      "dicke": "6,0 cm",
+      "status": "ok",
+      "anmerkung": ""
+    },
+    {
+      "nr": "W7",
+      "schicht": "Wand: Gipskartonplatten, 2-lagig",
+      "dicke": "2,5 cm",
+      "status": "ok",
+      "anmerkung": ""
+    }
+  ],
+  "befunde": [
+    {
+      "nr": 1,
+      "einstufung": "aufbaufehler",
+      "nachweis_erforderlich": true,
+      "regel": "WB-01",
+      "titel": "Sparrenfeld nur zur Hälfte gedämmt – 10 cm Luftschicht unter der Dämmung",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Legende („10 cm Luftsicht“), Maßkette (10 / 10) und Zeichnung stimmen überein",
+      "fundstelle": "Dach, Sparrenfeld zwischen Dämmung (D5) und Folie (D7), im dargestellten Bereich ca. 30 cm Dachschräge ab Wandinnenseite",
+      "erkennbar": "Die Legende nennt „10cm Sparren / Dämmung“ und darunter „10cm Luftsicht“; die Maßkette entlang der Dachschräge zeigt 10 und 10 cm. In der Zeichnung füllt die Dämmschraffur nur den oberen Teil des Sparrenfelds; zwischen Dämmung und Folie ist das Feld leer.",
+      "begruendung": "Ein ungedämmter Hohlraum im Sparrenfeld trägt kaum zum Wärmeschutz bei. Mit nur 10 cm Dämmung wirkt der Dachaufbau für ein beheiztes Dachgeschoss im Neubau zudem auffällig dünn; der Wärmeschutz ist über das Referenzgebäude nachzuweisen (GModG Anlage 1 [[GMODG-A1]]), der Mindestwärmeschutz nach GModG § 11 [[GMODG-11]] mit DIN 4108-2 [[DIN-4108-2]]. Hohlräume sind zu vermeiden [[PRAXIS]].",
+      "risiko": "Deutlich geringerer Wärmeschutz, kältere Innenoberflächen; Luftbewegung im Hohlraum kann die Dämmwirkung zusätzlich mindern. Das kann Tauwasser- und Schimmelrisiken an der Dachschräge begünstigen.",
+      "verbesserung": "Sparrenfeld vollständig und hohlraumfrei dämmen (Dämmung bis an die Folie). Je nach Nachweis zusätzlich z. B. Untersparren- oder Aufsparrendämmung vorsehen. U-Wert-Nachweis führen lassen.",
+      "grundlage": "GModG § 11 [[GMODG-11]] und Anlage 1 [[GMODG-A1]]; DIN 4108-2 [[DIN-4108-2]]; Praxisempfehlung [[PRAXIS]]",
+      "verweise": "Dämmstärke (WB-03) hier zusammengefasst.",
+      "massnahme": "Sparrenfeld vollständig dämmen, Luftschicht entfallen lassen; Wärmeschutz nachweisen",
+      "wo": "Dach, Sparrenfeld über der Folie",
+      "kreis": {
+        "x": 50.5,
+        "y": 43.0,
+        "r": 2.6
+      },
+      "badge": {
+        "x": 34.0,
+        "y": 37.0
+      },
+      "zoom": [
+        41.0,
+        34.0,
+        58.0,
+        52.0
+      ],
+      "korrektur": [
+        {
+          "typ": "daemmung",
+          "punkte": [
+            [
+              46.0,
+              42.2
+            ],
+            [
+              55.0,
+              48.2
+            ],
+            [
+              55.0,
+              43.4
+            ],
+            [
+              46.0,
+              37.4
+            ]
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B1: Sparrenfeld vollständig dämmen\n(keine Luftschicht unter der Dämmung)",
+          "x": 24.0,
+          "y": 44.3,
+          "ziel": [
+            50.0,
+            43.4
+          ],
+          "groesse": 9.5
+        }
+      ]
+    },
+    {
+      "nr": 2,
+      "einstufung": "aufbaufehler",
+      "nachweis_erforderlich": true,
+      "regel": "KO-06",
+      "titel": "Fußpfette ohne Auflager und kleiner gezeichnet als beschriftet (16/20)",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Abstände zu Rähm und Füllholz eindeutig gezeichnet; Größe im Maßstab abgelesen",
+      "fundstelle": "Wandkopf, im Gefach der Außenwand zwischen Füllholz (oben) und Rähm (unten), ca. 4–30 cm unter dem Anschluss der Dachschräge",
+      "erkennbar": "Die Fußpfette ist mit „16/20“ beschriftet, gezeichnet ist sie im Maßstab 1:5 nur etwa 7/12 cm. Sie liegt mitten in der Dämmung: Zwischen Pfette und Rähm darunter sowie zwischen Pfette und Füllholz bzw. Sparren darüber ist jeweils ein Spalt mit Dämmschraffur. Der Raum zwischen Rähm und Füllholz ist etwa 16 cm breit und 20 cm hoch – genau eine Pfette 16/20.",
+      "begruendung": "Eine Pfette ohne Auflager kann die Lasten der Sparren nicht wie gezeichnet in die Wand leiten. Beschriftung und Darstellung widersprechen sich.",
+      "risiko": "Widersprüchliche Ausführungsplanung; der Lastabtrag Sparren → Pfette → Wand ist so nicht ausführbar. Ob die Konstruktion trägt, kann nur die Tragwerksplanung beurteilen.",
+      "verbesserung": "Fußpfette 16/20 direkt auf dem Rähm anordnen, sodass sie Füllholz und Sparren trägt (z. B. im Raum zwischen Rähm und Füllholz); Anschluss Sparren–Pfette (z. B. Kerve, Verbinder) und Bemessung durch die Tragwerksplanung [[EC5]].",
+      "grundlage": "Zeichnungsplausibilität [[PRAXIS]]; Bemessung nach Eurocode 5 [[EC5]] (nicht Teil dieser Prüfung)",
+      "verweise": "Beschriftung/Größe (KO-03) hier zusammengefasst.",
+      "massnahme": "Fußpfette 16/20 auf dem Rähm unter Füllholz/Sparren anordnen; Tragwerksplanung",
+      "wo": "Wandkopf, Gefach unter dem Füllholz",
+      "kreis": {
+        "x": 58.4,
+        "y": 53.7,
+        "r": 3.0
+      },
+      "badge": {
+        "x": 48.0,
+        "y": 64.0
+      },
+      "zoom": [
+        51.0,
+        44.0,
+        66.0,
+        64.0
+      ],
+      "korrektur": [
+        {
+          "typ": "holz",
+          "rechteck": [
+            55.75,
+            49.1,
+            61.1,
+            58.6
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B2: Fußpfette 16/20 auf den Rähm legen",
+          "x": 37.0,
+          "y": 61.6,
+          "ziel": [
+            55.75,
+            55.0
+          ],
+          "groesse": 9.5
+        }
+      ]
+    },
+    {
+      "nr": 3,
+      "einstufung": "auffaelligkeit",
+      "regel": "ZQ-01",
+      "titel": "Dachlegende widerspricht Zeichnung und Maßkette",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Legende, Maßkette und Zeichnung eindeutig lesbar",
+      "fundstelle": "Legende „Dachaufbau“ links und Maßkette entlang der Dachschräge",
+      "erkennbar": "(1) Die Legende nennt von außen „Konterlattung“ vor „Lattung“. Gezeichnet liegen – richtig – die Traglatten als einzelne Querschnitte unter den Ziegeln und darunter die durchlaufende Konterlattung. (2) Die Maßkette zeigt für die Gipskartonplatten 1,5 cm, die Legende 2,5 cm (2-fach); die Einzelmaße der Kette ergeben 39 cm, das Gesamtmaß lautet 40 cm. Kleinere Abweichungen: Ziegel 7 statt 6,8 cm, MDF 1,5 statt 1,6 cm. (3) Die Lattungsebene der Decke ist gedämmt gezeichnet, die Legende nennt nur „Lattung“.",
+      "begruendung": "Widersprüche zwischen Legende, Maßkette und Zeichnung führen leicht zu Fehlern in Ausschreibung und Ausführung – hier bei der belüfteten Ebene unter der Deckung [[PRAXIS]].",
+      "risiko": "Wird die Reihenfolge nach Legende ausgeführt, entsteht keine durchgehende Belüftungsebene unter der Deckung.",
+      "zu_klaeren": "Welche Dicken gelten (Gipskarton, Ziegel, MDF)?",
+      "verbesserung": "Legende in der gezeichneten Reihenfolge schreiben (Dacheindeckung – Traglattung – Konterlattung – Unterdeckplatte …); Maßkette und Legende abgleichen.",
+      "grundlage": "Zeichnungsplausibilität [[PRAXIS]]; Aufbau unter Ziegeldeckungen nach Fachregeln [[ZVDH]]",
+      "verweise": "Bezug zu WH-06 (Belüftung unter der Deckung) und ZQ-02 (Maßkette).",
+      "massnahme": "Dachlegende korrigieren (Lattung/Konterlattung) und mit der Maßkette abgleichen",
+      "wo": "Legende „Dachaufbau“ und Maßkette am Dach",
+      "korrektur": [
+        {
+          "typ": "durchstreichen",
+          "von": [
+            26.2,
+            53.62
+          ],
+          "bis": [
+            31.0,
+            53.62
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "Lattung (Traglattung)",
+          "x": 32.0,
+          "y": 54.0,
+          "rahmen": false,
+          "groesse": 10
+        },
+        {
+          "typ": "durchstreichen",
+          "von": [
+            26.2,
+            54.82
+          ],
+          "bis": [
+            29.0,
+            54.82
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "Konterlattung",
+          "x": 32.0,
+          "y": 55.2,
+          "rahmen": false,
+          "groesse": 10
+        },
+        {
+          "typ": "durchstreichen",
+          "von": [
+            26.2,
+            58.12
+          ],
+          "bis": [
+            29.4,
+            58.12
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "Dämmung (statt Luftschicht, B1)",
+          "x": 32.0,
+          "y": 58.5,
+          "rahmen": false,
+          "groesse": 10
+        },
+        {
+          "typ": "text",
+          "text": "B3: Maßkette abgleichen: Gipskarton 2,5 cm (2-fach),\nZiegel 6,8 cm, MDF 1,6 cm – Summe 40 cm",
+          "x": 22.0,
+          "y": 62.7,
+          "groesse": 9
+        }
+      ]
+    },
+    {
+      "nr": 4,
+      "einstufung": "auffaelligkeit",
+      "regel": "WH-07",
+      "titel": "Dachneigung mit 45° beschriftet, gezeichnet sind etwa 25°",
+      "sicherheit": "mittel",
+      "sicherheit_grund": "Neigung an der Folienlinie im Maßstab abgelesen; die Bezugslinie des Winkels ist nicht eindeutig",
+      "fundstelle": "Winkelangabe „45°“ an der Dachschräge, innen",
+      "erkennbar": "Die Winkelangabe lautet 45°. Die gezeichnete Dachschräge (Folien- und Deckenlinie, Ziegellinie) steigt im Plan nur mit etwa 25° an.",
+      "begruendung": "Die Dachneigung bestimmt die Regensicherheit der Ziegeldeckung: Unterhalb der Regeldachneigung des Produkts sind Zusatzmaßnahmen nötig [[ZVDH]]. Außerdem hängen alle Maße am Traufpunkt von der Neigung ab.",
+      "risiko": "Falsch ausgeführte Neigung; liegt die tatsächliche Neigung unter der Regeldachneigung des Ziegels, kann ohne Zusatzmaßnahme Wassereintrag begünstigt werden.",
+      "zu_klaeren": "Welche Neigung gilt? Regeldachneigung des Ziegels nach Herstellerangabe [[HERSTELLER]].",
+      "verbesserung": "Neigung prüfen und Winkelangabe bzw. Zeichnung korrigieren; Regeldachneigung des gewählten Ziegels und ggf. Zusatzmaßnahmen nach Fachregel festlegen [[ZVDH]].",
+      "grundlage": "Fachregel Dachziegel/Dachsteine [[ZVDH]]; Herstellerangaben [[HERSTELLER]]",
+      "massnahme": "Dachneigung prüfen und Winkelangabe bzw. Zeichnung korrigieren",
+      "wo": "Winkelangabe an der Dachschräge",
+      "kreis": {
+        "x": 45.4,
+        "y": 47.0,
+        "r": 1.6
+      },
+      "badge": {
+        "x": 35.0,
+        "y": 45.5
+      },
+      "zoom": [
+        40.0,
+        40.0,
+        54.0,
+        52.0
+      ],
+      "korrektur": [
+        {
+          "typ": "durchstreichen",
+          "von": [
+            44.4,
+            46.95
+          ],
+          "bis": [
+            46.4,
+            46.95
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B4: gezeichnet ca. 25° – Neigung prüfen",
+          "x": 26.0,
+          "y": 47.4,
+          "ziel": [
+            45.4,
+            47.0
+          ],
+          "groesse": 9.5
+        }
+      ]
+    },
+    {
+      "nr": 5,
+      "einstufung": "hinweis",
+      "regel": "ZQ-03",
+      "titel": "Folie, Funktionsschichten und Dämmstoffe nicht in der Legende benannt",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Legenden vollständig lesbar",
+      "fundstelle": "Legenden „Dachaufbau“ und „Außenwandaufbau“",
+      "erkennbar": "Die Folie im Dach ist gezeichnet und als „Folienanschluss zur Luftdichtung“ beschriftet, steht aber nicht in der Legende. Funktionen (Luftdichtheit, Dampfbremse, winddichte Schicht), Dämmstoffe und Produkte fehlen. Schreibfehler: „Luftsicht“, „Holzfasserdämmplatte“, „Gibskartonplatten“.",
+      "begruendung": "Die Luftdichtheitsschicht ist in der Planung festzulegen (DIN 4108-7 [[DIN-4108-7]]). Ohne Produktangaben sind Feuchte- und Wärmeschutz nicht prüfbar.",
+      "verbesserung": "Legende ergänzen, z. B. „Luftdichtheits- und Dampfbremsbahn (Produkt, sd-Wert), Stöße und Anschlüsse verklebt“, Dämmstoffe mit λ-Wert, „MDF-Unterdeckplatte, diffusionsoffen“; Schreibfehler korrigieren.",
+      "grundlage": "DIN 4108-7:2026-04 [[DIN-4108-7]]; Zeichnungsplausibilität [[PRAXIS]]",
+      "verweise": "LD-01 und HS-02 hier zusammengefasst.",
+      "massnahme": "Folie, Funktionen, Dämmstoffe und Produkte in die Legenden aufnehmen; Schreibfehler korrigieren",
+      "wo": "Legenden links",
+      "korrektur": [
+        {
+          "typ": "text",
+          "text": "B5: ergänzen: Luftdichtheits-/Dampfbremsfolie (Produkt, sd-Wert),\nDämmstoffe mit λ-Wert; „Luftsicht“ → „Luftschicht“",
+          "x": 22.0,
+          "y": 64.7,
+          "groesse": 9
+        }
+      ]
+    },
+    {
+      "nr": 6,
+      "einstufung": "nicht_pruefbar",
+      "nachweis_erforderlich": true,
+      "regel": "FS-01",
+      "titel": "Dampfbremsende Wirkung der Dachfolie und Tauwasserschutz",
+      "zu_klaeren": "Produkt bzw. sd-Wert der Folie und der MDF-Unterdeckplatte; Nachweisfreiheit nach DIN 4108-3:2024-03 [[DIN-4108-3]] oder Nachweis, ggf. Simulation nach DIN EN 15026:2023-12 [[DIN-EN-15026]]. Die Schichtenfolge (innen Folie, außen diffusionsoffene Unterdeckplatte, belüftete Deckung) ist plausibel."
+    },
+    {
+      "nr": 7,
+      "einstufung": "nicht_pruefbar",
+      "nachweis_erforderlich": true,
+      "regel": "WB-02",
+      "titel": "Wärmebrücke am Wandkopf (Pfette, Füllholz, Rähm)",
+      "zu_klaeren": "Dämmstoffe und λ-Werte; am Wandkopf liegt viel Vollholz. Wärmebrücken nach GModG § 12 [[GMODG-12]], Vergleich mit DIN 4108 Beiblatt 2:2019-06 [[DIN-4108-BBL2]]; Mindestwärmeschutz an Wärmebrücken f_Rsi ≥ 0,70 nach DIN 4108-2 [[DIN-4108-2]] [[FRSI-SEKUNDAER]]."
+    },
+    {
+      "nr": 8,
+      "einstufung": "nicht_pruefbar",
+      "regel": "WH-06",
+      "titel": "Abluft der Konterlattungsebene am First",
+      "zu_klaeren": "Firstdetail – im Traufdetail nicht dargestellt. Zuluft an der Traufe ist vorhanden; die Abluft am First ist nach Fachregeln zu planen [[ZVDH]]."
+    }
+  ],
+  "offene_fragen": [
+    {
+      "nr": "F1",
+      "frage": "Welches Produkt (sd-Wert) hat die Folie im Dach, welches die MDF-Unterdeckplatte?",
+      "warum": "Für Feuchteschutz und Luftdichtheit (B6).",
+      "annahme": "unbekannt – nicht prüfbar"
+    },
+    {
+      "nr": "F2",
+      "frage": "Welche Dämmstoffe (Dach, Wand) mit welchem λ-Wert?",
+      "warum": "Für den Wärmeschutz (B1, B7).",
+      "annahme": "unbekannt – kein λ-Wert angenommen"
+    },
+    {
+      "nr": "F3",
+      "frage": "Welche Dachneigung gilt, und welcher Ziegel mit welcher Regeldachneigung?",
+      "warum": "Regensicherheit der Deckung (B4).",
+      "annahme": "offen"
+    },
+    {
+      "nr": "F4",
+      "frage": "Welche Gebäudeklasse und welche Schallschutzanforderungen gelten?",
+      "warum": "Brand- und Schallschutz (DIN 4109-1 [[DIN-4109-1]]) sind nicht Teil dieser Prüfung.",
+      "annahme": "nicht geprüft"
+    }
+  ],
+  "positiv": [
+    {
+      "regel": "LD-02",
+      "thema": "Luftdichtheit Dach–Wand",
+      "text": "Die Folie des Dachs ist an die OSB der Wand angeschlossen und als „Folienanschluss zur Luftdichtung“ beschriftet."
+    },
+    {
+      "regel": "LD-04",
+      "thema": "Installationsebenen",
+      "text": "In Wand und Decke liegt raumseitig vor der Luftdichtheitsschicht eine Installationsebene."
+    },
+    {
+      "regel": "WH-01",
+      "thema": "Winddichtheit Dach–Wand",
+      "text": "Die Holzfaserplatte der Wand ist mit einer „winddichten Abklebung“ an die Unterdeckplatte des Dachs angeschlossen."
+    },
+    {
+      "regel": "WB-04",
+      "thema": "Außendämmplatte",
+      "text": "Die Holzfaserplatte der Wand läuft bis unter die Unterdeckplatte und überdeckt den Wandkopf außen."
+    },
+    {
+      "regel": "WH-03",
+      "thema": "Hinterlüftung Fassade",
+      "text": "Am oberen Ende der Fassaden-Hinterlüftung ist unter dem Stellbrett ein Lüftungsgitter dargestellt."
+    },
+    {
+      "regel": "WH-06",
+      "thema": "Belüftung unter der Deckung",
+      "text": "Durchgehende Konterlattungsebene; an der Traufe Zuluft mit Lüftungsgitter/Insektenschutz, Einlaufblech in die Rinne und Abtropfblech an der Traufschalung [[ZVDH]]."
+    },
+    {
+      "regel": "FS-01",
+      "thema": "Schichtenfolge Dach",
+      "text": "Innen Folie, außen diffusionsoffene Unterdeckplatte mit belüfteter Deckung – plausibel (abschließend nur mit Nachweis, B6)."
+    },
+    {
+      "regel": "ZQ-02",
+      "thema": "Maßkette Wand",
+      "text": "Die Maßkette der Außenwand (32,5 cm) stimmt mit der Wandlegende überein."
+    }
+  ],
+  "annahmen": [
+    "Laut Rückfrage: beheiztes, ausgebautes Dachgeschoss mit Wohnnutzung; Neubau; Projektname nicht angegeben; Produktangaben nicht bekannt.",
+    "Rechtsstand: Gebäudemodernisierungsgesetz (GModG, vormals GEG), wesentliche Neuregelungen in Kraft seit 29.07.2026 [[GMODG-INKRAFT]].",
+    "Innen liegt links, außen rechts. Maße wurden im Maßstab 1:5 abgelesen (keine Berechnungen)."
+  ]
+}

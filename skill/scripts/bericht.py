@@ -466,9 +466,13 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
     bild, h = bilder.ausschnitt(x1, y1, x2, y2, 174)
     if h > 150:
         bild, h = bilder.ausschnitt(x1, y1, x2, y2, 174 * 150 / h)
+    namen = [s["text"] for s in daten.get("beschriftungen", []) if s.get("text")]
+    hinweis_zeichnung = "Badges B1 … = Befundnummer mit Führungslinie zur Stelle."
+    if namen:
+        hinweis_zeichnung += (" Kästchen " + ", ".join(f"„{n}“" for n in namen)
+                              + " = Bezeichnungen, die dieser Bericht verwendet.")
     f.append(KeepTogether([Anker("zeichnung", SEITEN_AKTUELL), P("Markierte Zeichnung", S_H1), leg,
-                           P("Badges B1 … = Befundnummer mit Führungslinie zur Stelle. "
-                             "„Wand A“ / „Wand B“ = Bezeichnung der Wände in diesem Bericht.", S_GRAU),
+                           P(hinweis_zeichnung, S_GRAU),
                            Spacer(1, 2 * mm), bild]))
 
     # ---------- Korrekturskizze (nur wenn Korrekturen vorhanden)
@@ -485,7 +489,7 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
 
     # ---------- Schichtenaufbau
     f.append(KeepTogether([P("Erkannter Schichtenaufbau", S_H1),
-                           P("Nummerierung wie die Legende der Zeichnung: S1 = außen. "
+                           P("Nummerierung wie die Legende der Zeichnung, jeweils von außen nach innen. "
                              "Status: Haken = eindeutig, ? = unklar, Kreuz = fehlerhaft.", S_GRAU),
                            Spacer(1, 1.5 * mm), schichten_tabelle(daten)]))
 

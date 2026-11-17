@@ -7,6 +7,7 @@ Drei **verschiedene** Funktionen auf der Außenseite – getrennt prüfen:
 | **A** | **Winddichtheit:** kalte Außenluft soll die Dämmung nicht durchströmen | WH-01 |
 | **B** | **Hinterlüftung:** Luftraum hinter der Bekleidung führt Feuchte ab | WH-02, WH-03 |
 | **C** | **Schlagregenschutz:** Regenwasser soll nicht in die Konstruktion gelangen | WH-04, WH-05 |
+| **D** | **Geneigtes Dach:** Belüftung unter der Deckung, Dachneigung | WH-06, WH-07 |
 
 > Keine Berechnungen. Für DIN 18516-1:2024-10 sind Mindestabstände und Lüftungsquerschnitte
 > **nicht** verifiziert → keine Zahlenwerte nennen, sondern auf Norm bzw. Herstellerangabe
@@ -104,6 +105,47 @@ Drei **verschiedene** Funktionen auf der Außenseite – getrennt prüfen:
 - **Einstufung:** Freiliegendes Hirnholz erkennbar → **Verbesserungshinweis** bzw.
   **mögliche Auffälligkeit**. **Eine Gehrung an der Außenecke ist kein Befund** – sie ist
   eine empfohlene Ausführung (positiv festhalten).
+
+## Teil D – Geneigtes Dach (Dachdeckung und Unterdeckung)
+
+### WH-06 Belüftung unter der Dachdeckung: Zuluft an der Traufe, Abluft am First
+
+- **Gilt für:** geneigte Dächer mit Dachdeckung auf Lattung und Konterlattung über einer
+  Unterdeckung (z. B. Holzfaser-Unterdeckplatte, Unterdeckbahn).
+- **Prüfe:** Ist zwischen Unterdeckung und Dachdeckung eine durchgehende Luftebene
+  (Konterlattung) vorhanden? Ist an der Traufe eine Zuluftöffnung mit Insektenschutz
+  dargestellt? Ist die Unterdeckung bis in die Rinne bzw. auf ein Traufblech geführt?
+- **So erkennst du es in der Zeichnung:** Konterlattung als durchgehendes Band entlang der
+  Dachneigung, Traglatten als einzelne Querschnitte darauf; an der Traufe Lüftungsgitter,
+  Traufblech/Einlaufblech in die Rinne. Die Abluft am First ist im Traufdetail nicht sichtbar.
+- **Typische Auffälligkeit:** Konterlattungsebene an der Traufe geschlossen; Unterdeckung
+  endet vor der Rinne; kein Insektenschutz.
+- **Warum relevant?** Die Luftebene führt Feuchte unter der Deckung ab; eindringendes Wasser
+  muss über die Unterdeckung in die Rinne abgeleitet werden [[ZVDH]].
+- **Mögliches Risiko:** Feuchte unter der Deckung, Durchfeuchtung der Traufe, Insekten.
+- **Verbesserungsmöglichkeiten:** Zuluftöffnung mit Insektenschutz an der Traufe vorsehen;
+  Unterdeckung auf ein Traufblech in die Rinne führen; Abluft am First planen.
+- **Grundlage:** Fachregeln und Merkblatt Unterdächer des Dachdeckerhandwerks [[ZVDH]];
+  Herstellerangaben [[HERSTELLER]].
+- **Einstufung:** Im Traufdetail geschlossene Luftebene → **klarer Aufbaufehler**. Abluft
+  am First → **aus der Datei nicht prüfbar**.
+
+### WH-07 Dachneigung passt zur Deckung und ist eindeutig angegeben
+
+- **Gilt für:** geneigte Dächer mit Dachziegeln oder Dachsteinen.
+- **Prüfe:** Ist die Dachneigung angegeben, und passt die Angabe zur Zeichnung? Für die
+  Deckung gilt je Produkt eine Regeldachneigung; darunter sind Zusatzmaßnahmen nötig [[ZVDH]].
+- **So erkennst du es in der Zeichnung:** Winkelangabe mit Bezugslinie; gezeichnete Neigung
+  (im Maßstab ablesen – keine Berechnung von Grenzwerten).
+- **Typische Auffälligkeit:** Beschriftete Neigung weicht sichtbar von der gezeichneten ab.
+- **Warum relevant?** Die Neigung entscheidet über Regensicherheit, Zusatzmaßnahmen und Maße.
+- **Mögliches Risiko:** Falsch ausgeführte Neigung; Deckung unterhalb ihrer Regeldachneigung
+  ohne Zusatzmaßnahme kann Wassereintrag begünstigen.
+- **Verbesserungsmöglichkeiten:** Neigung prüfen und eindeutig angeben; Regeldachneigung des
+  gewählten Ziegels nach Herstellerangabe [[HERSTELLER]] und Fachregel [[ZVDH]] abgleichen.
+- **Grundlage:** [[ZVDH]]; [[HERSTELLER]].
+- **Einstufung:** Widerspruch Beschriftung/Zeichnung → **mögliche Auffälligkeit**.
+  Regeldachneigung des Produkts → **aus der Datei nicht prüfbar** (Produktangabe nötig).
 
 ### WH-05 Offene Fugen: zweite wasserführende Ebene
 

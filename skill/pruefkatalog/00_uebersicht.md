@@ -25,7 +25,7 @@ Praxisempfehlungen werden mit `[[PRAXIS]]`, Herstellerangaben mit `[[HERSTELLER]
 | `01_luftdichtheit.md` | Luftdichtheit (Raumluft soll nicht in die Konstruktion strömen) | LD |
 | `02_feuchteschutz.md` | Feuchteschutz: Dampfbremse, Diffusion, Tauwasser, Austrocknung | FS |
 | `03_waermeschutz_waermebruecken.md` | Wärmeschutz und Wärmebrücken | WB |
-| `04_winddichtheit_hinterlueftung.md` | Winddichtheit · Hinterlüftung · Schlagregenschutz (drei getrennte Teile) | WH |
+| `04_winddichtheit_hinterlueftung.md` | Winddichtheit · Hinterlüftung · Schlagregenschutz · geneigtes Dach (Teile A–D) | WH |
 | `05_holzschutz.md` | Baulicher Holzschutz | HS |
 | `06_konstruktion_holzrahmenbau.md` | Konstruktion – qualitative Plausibilität, keine Statik | KO |
 | `07_zeichnungsqualitaet.md` | Zeichnungsqualität | ZQ |

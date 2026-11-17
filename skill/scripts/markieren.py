@@ -207,6 +207,33 @@ def zeichne_korrektur(c, k, pt, w, h):
                 while xx < ux:
                     c.line(xx, ly, xx, uy)
                     xx += abstand
+    elif typ == "daemmung":
+        # fehlende Dämmung: Fläche (Polygon) mit grüner Wellen-/Kreuzschraffur
+        punkte = [pt(x, y) for x, y in k["punkte"]]
+        pfad = c.beginPath()
+        pfad.moveTo(*punkte[0])
+        for p in punkte[1:]:
+            pfad.lineTo(*p)
+        pfad.close()
+        c.setFillColor(HexColor("#FFFFFF"))
+        c.drawPath(pfad, stroke=0, fill=1)
+        c.saveState()
+        c.clipPath(pfad, stroke=0, fill=0)
+        c.setStrokeColor(GRUEN)
+        c.setLineWidth(linie * 0.6)
+        xs = [p[0] for p in punkte]
+        ys = [p[1] for p in punkte]
+        hoehe = max(ys) - min(ys)
+        abstand = max(3.0, w * 0.004)
+        t = -hoehe
+        while t <= max(xs) - min(xs):
+            c.line(min(xs) + t, min(ys), min(xs) + t + hoehe, max(ys))
+            c.line(min(xs) + t, max(ys), min(xs) + t + hoehe, min(ys))
+            t += abstand * 1.6
+        c.restoreState()
+        c.setStrokeColor(GRUEN)
+        c.setLineWidth(linie)
+        c.drawPath(pfad, stroke=1, fill=0)
     elif typ in ("abklebung", "linie"):
         punkte = [pt(x, y) for x, y in k["punkte"]]
         c.setLineWidth(linie * (2.2 if typ == "abklebung" else 1.0))
@@ -262,7 +289,7 @@ def korrigierte_seite(pdf_ein, daten):
     c = canvas.Canvas(puffer, pagesize=(w, h))
     elemente = [k for b in befunde_lesen(daten) for k in b.get("korrektur", [])]
     # Flächen zuerst, Texte zuletzt
-    for k in sorted(elemente, key=lambda k: {"holz": 0, "platte": 0, "abklebung": 1, "linie": 1,
+    for k in sorted(elemente, key=lambda k: {"daemmung": 0, "holz": 0, "platte": 0, "abklebung": 1, "linie": 1,
                                               "durchstreichen": 2, "text": 3}.get(k.get("typ"), 1)):
         zeichne_korrektur(c, k, pt, w, h)
     for s in daten.get("beschriftungen", []):

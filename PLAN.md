@@ -205,6 +205,11 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       eingezeichnet (`scripts/skizze.py`, Feld `korrektur`); im Bericht eigene Seite
       „Korrekturskizze“ und je Befundkarte Ist/Korrektur nebeneinander; zusätzlich
       `*_korrekturskizze.pdf` als Vektor-PDF. Berichtskopf-Tabelle auf Seite 1 entfernt.
+- [x] **Blindtest 3 – Traufe (Di 17.11.):** `beispiel/pruefbericht_blindtest_3_traufe.pdf`
+      (2 klare Aufbaufehler, 2 mögliche Auffälligkeiten, 1 Hinweis, 3 nicht prüfbar) mit
+      Korrekturskizze. Katalog ergänzt: WH-06/WH-07 (geneigtes Dach), KO-06 (Auflager
+      tragender Hölzer), Quelle ZVDH-Fachregeln; Korrekturelement „daemmung“
+- [ ] **Du:** Lösungsschlüssel zu Blindtest 3 schicken → Auswertung
 - [ ] **Du:** Prüfkatalog und Beispielberichte fachlich gegenlesen
 - [ ] Skill als ZIP für claude.ai packen und dort testen (Code-Ausführung aktivieren)
 - [ ] Should: Verbesserungsskizze im CAD-Look
