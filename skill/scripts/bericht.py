@@ -38,8 +38,10 @@ from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, Image, KeepTog
 
 HIER = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HIER)
-from markieren import (FARBEN, befund_kennung, befunde_lesen,  # noqa: E402
-                       einstufung_normalisieren, markierte_seite)
+from markieren import (FARBEN, GRUEN, befund_kennung, befunde_lesen,  # noqa: E402
+                       einstufung_normalisieren, korrigierte_seite, markierte_seite)
+
+GRUEN_HEX = GRUEN.hexval().replace("0x", "#")
 
 KATALOG = os.path.join(HIER, "..", "pruefkatalog")
 
@@ -386,7 +388,7 @@ def koordinaten_text(b):
 
 
 # ---------------------------------------------------------------- Inhalt
-def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None):
+def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=None):
     global ZITATE
     ZITATE = Zitate(quellen["quellen"], fest)
     CODES.clear()
@@ -408,35 +410,11 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None):
         n = seiten.get(name)
         return f'<a href="#{name}" color="{LINK.hexval().replace("0x", "#")}">{n}</a>' if n else "–"
 
-    # ---------- Seite 1: Kopf
+    # ---------- Seite 1: Titel (ohne Kopf-Tabelle – Projekt, Bericht-ID und Version stehen in der Kopfzeile)
+    unterzeile = " · ".join(x for x in (d.get("titel"), d.get("pruefdatum")) if x)
     f = [P("Prüfbericht Baudetail", S_TITEL),
-         P("Qualitative Plausibilitätsprüfung einer Detailzeichnung – Detailprüfer Architektur", S_UNTER),
+         P(unterzeile or "Qualitative Plausibilitätsprüfung einer Detailzeichnung", S_UNTER),
          Spacer(1, 4 * mm)]
-    pruefer = "Fachlich geprüft von: __________________  Datum: _________"
-    felder = [("Projekt", d.get("projekt") or "nicht angegeben"), ("Detail", d.get("titel")),
-              ("Datei", d.get("datei")), ("Bauart", d.get("bauart")),
-              ("Schnitt / Maßstab", " · ".join(x for x in (d.get("schnitt"), d.get("massstab")) if x)),
-              ("Fassadensystem", d.get("fassade")),
-              ("Prüfdatum", d.get("pruefdatum")),
-              ("Normstand", f"gemäß Quellenverzeichnis (Anhang A4), abgefragt am {quellen.get('abgerufen', '–')}"),
-              ("Berichts-ID", bericht.get("id")), ("Version", bericht.get("version", "1.0"))]
-    zeilen = []
-    for i in range(0, len(felder), 2):
-        zeile = []
-        for k, v in felder[i:i + 2]:
-            zeile += [P(k, S_LABEL), P(v or "–", S_KLEIN)]
-        while len(zeile) < 4:
-            zeile += ["", ""]
-        zeilen.append(zeile)
-    zeilen.append([P("Erstellt", S_LABEL), P("Detailprüfer Architektur (KI-gestützt)", S_KLEIN),
-                   P(pruefer, S_KLEIN), ""])
-    kopf = Table(zeilen, colWidths=[27 * mm, 60 * mm, 27 * mm, 60 * mm])
-    kopf.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP"),
-                              ("LINEBELOW", (0, 0), (-1, -1), 0.4, LINIE),
-                              ("SPAN", (2, -1), (3, -1)),
-                              ("LEFTPADDING", (0, 0), (-1, -1), 3), ("RIGHTPADDING", (0, 0), (-1, -1), 3),
-                              ("TOPPADDING", (0, 0), (-1, -1), 2.5), ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5)]))
-    f += [kopf, Spacer(1, 4 * mm)]
 
     hinweis = Table([[P(HINWEIS, S_HINWEIS)]], colWidths=[BREITE])
     hinweis.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.8, KOPF),
@@ -493,6 +471,18 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None):
                              "„Wand A“ / „Wand B“ = Bezeichnung der Wände in diesem Bericht.", S_GRAU),
                            Spacer(1, 2 * mm), bild]))
 
+    # ---------- Korrekturskizze (nur wenn Korrekturen vorhanden)
+    if bilder_korrektur is not None:
+        kbild, kh = bilder_korrektur.ausschnitt(x1, y1, x2, y2, 174)
+        if kh > 150:
+            kbild, kh = bilder_korrektur.ausschnitt(x1, y1, x2, y2, 174 * 150 / kh)
+        f.append(KeepTogether([
+            Anker("korrektur", SEITEN_AKTUELL), P("Korrekturskizze (Vorschlag)", S_H1),
+            Paragraph(f'<font color="{GRUEN_HEX}"><b>Grün</b></font> = einzuzeichnende Ergänzung bzw. '
+                      f'Korrektur; die Beschriftung nennt den zugehörigen Befund. Die Skizze zeigt eine '
+                      f'mögliche Lösung – andere fachgerechte Lösungen sind möglich.', S_KLEIN),
+            Spacer(1, 2 * mm), kbild]))
+
     # ---------- Schichtenaufbau
     f.append(KeepTogether([P("Erkannter Schichtenaufbau", S_H1),
                            P("Nummerierung wie die Legende der Zeichnung: S1 = außen. "
@@ -505,7 +495,7 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None):
                "Mögliches Risiko → Zu klären → Verbesserung → Grundlage → Verweis.", S_GRAU))
     f.append(Spacer(1, 2 * mm))
     for b in karten:
-        f.append(befund_karte(b, bilder))
+        f.append(befund_karte(b, bilder, bilder_korrektur))
 
     # ---------- 2 Nicht prüfbar und offene Fragen
     f += [Anker("abschnitt_offen", SEITEN_AKTUELL), P("2  Nicht prüfbar und offene Fragen", S_H1),
@@ -620,7 +610,7 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None):
     return f
 
 
-def befund_karte(b, bilder):
+def befund_karte(b, bilder, bilder_korrektur=None):
     e = b["_e"]
     farbe = FARBEN[e]
     breite_inhalt = 169 * mm
@@ -648,7 +638,27 @@ def befund_karte(b, bilder):
             inhalt += f'<br/><font color="#6B7280" size="7">{escape(t(koordinaten_text(b)))}</font>'
         zeilen.append([P(label, S_LABEL), Paragraph(inhalt, S_KLEIN)])
 
-    if b.get("kreis"):
+    hat_korrektur = bool(b.get("korrektur")) and bilder_korrektur is not None
+    if hat_korrektur:
+        # Vorher (markiert) und Nachher (Korrekturskizze) nebeneinander, gleicher Ausschnitt
+        if not b.get("zoom") and not b.get("kreis"):
+            pts = [p for k in b["korrektur"] for p in (
+                [k["rechteck"][:2], k["rechteck"][2:]] if "rechteck" in k else
+                k.get("punkte") or [k.get("von"), k.get("bis")] if k.get("typ") != "text" else [[k["x"], k["y"]]])
+                if p]
+            xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+            b = dict(b, zoom=[min(xs) - 4, min(ys) - 4, max(xs) + 8, max(ys) + 4])
+        vorher = bilder.zoom_fuer(b, breite_mm=74, hoehe_max_mm=44)
+        nachher = bilder_korrektur.zoom_fuer(b, breite_mm=74, hoehe_max_mm=44)
+        bildzeile = Table([[P("Ist (markiert)", S_GRAU), Paragraph(
+                                f'<font color="{GRUEN_HEX}">Korrekturvorschlag (grün)</font>', S_GRAU)],
+                           [vorher, nachher]], colWidths=[breite_inhalt / 2, breite_inhalt / 2])
+        bildzeile.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP"),
+                                       ("LEFTPADDING", (0, 0), (-1, -1), 0),
+                                       ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+                                       ("BOTTOMPADDING", (0, 0), (-1, 0), 1)]))
+        oben = Table([[kopf], [Spacer(1, 2 * mm)], [bildzeile]], colWidths=[breite_inhalt])
+    elif b.get("kreis"):
         bild = bilder.zoom_fuer(b)
         oben = Table([[kopf, bild]], colWidths=[breite_inhalt - 60 * mm, 60 * mm])
     else:
@@ -674,6 +684,7 @@ def befund_karte(b, bilder):
 
 
 SEITEN_AKTUELL = {}
+BILDER_KORREKTUR = None  # wird in main() gesetzt, wenn Korrekturen vorhanden sind
 
 
 def schichten_tabelle(daten):
@@ -722,7 +733,7 @@ def baue(pdf_ziel, daten, quellen, bilder, seiten, gesamt, fest=None):
 
     global SEITEN_AKTUELL
     SEITEN_AKTUELL = {}
-    inhalt = inhalt_erzeugen(daten, quellen, bilder, seiten, fest)
+    inhalt = inhalt_erzeugen(daten, quellen, bilder, seiten, fest, BILDER_KORREKTUR)
     doc.build(inhalt)
     neue_seiten = dict(SEITEN_AKTUELL)
     neue_seiten.update({k: v for k, v in seiten.items() if k not in neue_seiten})
@@ -748,6 +759,18 @@ def main():
     puffer = io.BytesIO()
     writer.write(puffer)
     bilder = Zeichnungsbilder(puffer.getvalue(), seitennr)
+
+    # Korrekturskizze (nur wenn mindestens ein Befund Korrektur-Elemente hat)
+    global BILDER_KORREKTUR
+    if any(b.get("korrektur") for b in befunde_lesen(daten)):
+        kw, _, _ = korrigierte_seite(pdf_ein, daten)
+        kp = io.BytesIO()
+        kw.write(kp)
+        BILDER_KORREKTUR = Zeichnungsbilder(kp.getvalue(), seitennr)
+        kw_pdf = os.path.splitext(pdf_aus)[0] + "_korrekturskizze.pdf"
+        with open(kw_pdf, "wb") as f:   # Korrekturskizze zusätzlich als Vektor-PDF zum Weiterarbeiten
+            kw.write(f)
+        print(f"Korrekturskizze als eigene Datei: {kw_pdf}")
 
     # Zwei Durchläufe: erst Seitenzahlen sammeln, dann mit Seitenverweisen setzen
     seiten, gesamt, fest = baue(io.BytesIO(), daten, quellen, bilder, {}, None)

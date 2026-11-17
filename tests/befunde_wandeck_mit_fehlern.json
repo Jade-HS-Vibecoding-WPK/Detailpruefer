@@ -1,5 +1,8 @@
 {
-  "bericht": { "id": "DPA-20261117-TD1", "version": "2.0" },
+  "bericht": {
+    "id": "DPA-20261117-TD1",
+    "version": "2.0"
+  },
   "detail": {
     "projekt": "nicht angegeben",
     "titel": "Gebäudeecke Außenwand (Testdetail 1)",
@@ -11,20 +14,75 @@
     "pruefdatum": "17.11.2026"
   },
   "seite": 1,
-  "zeichnung_ausschnitt": [12, 8, 95, 97],
+  "zeichnung_ausschnitt": [
+    12,
+    8,
+    95,
+    97
+  ],
   "beschriftungen": [
-    { "text": "Wand A", "x": 33.0, "y": 22.0 },
-    { "text": "Wand B", "x": 58.0, "y": 84.0 }
+    {
+      "text": "Wand A",
+      "x": 33.0,
+      "y": 22.0
+    },
+    {
+      "text": "Wand B",
+      "x": 61.0,
+      "y": 83.5
+    }
   ],
   "kurzfazit": "An der Innenecke ist die Luftdichtheitsschicht nicht geschlossen dargestellt: Die luftdichte Abklebung der OSB-Platten fehlt (B1), und der OSB-Rand von Wand A hat dort kein Auflager, auf dem Platte und Klebeband befestigt werden könnten (B2). Beides sollte vor der Ausführung korrigiert werden.",
   "schichtenaufbau": [
-    { "nr": "S1", "schicht": "Holzverkleidung Douglasie", "dicke": "2,0 cm", "status": "ok", "anmerkung": "an der Außenecke auf Gehrung gestoßen" },
-    { "nr": "S2", "schicht": "Lattung, senkrecht (Hinterlüftungsebene)", "dicke": "3,0 cm", "status": "ok", "anmerkung": "" },
-    { "nr": "S3", "schicht": "Holzfaserdämmplatte", "dicke": "1,5 cm", "status": "unklar", "anmerkung": "Funktion (winddichtende Schicht) und Stoßausbildung an der Ecke nicht angegeben (B4)" },
-    { "nr": "S4", "schicht": "Ständerwerk mit Gefachdämmung", "dicke": "16,0 cm", "status": "unklar", "anmerkung": "Dämmstoff nicht benannt (B6)" },
-    { "nr": "S5", "schicht": "OSB-Platte", "dicke": "1,5 cm", "status": "fehler", "anmerkung": "Eckstoß nicht abgeklebt (B1), Plattenrand von Wand A ohne Auflager (B2)" },
-    { "nr": "S6", "schicht": "Installationsebene, gedämmt", "dicke": "6,0 cm", "status": "unklar", "anmerkung": "Dämmstoff nicht benannt (B6)" },
-    { "nr": "S7", "schicht": "Gipskartonplatten, 2-lagig", "dicke": "2,5 cm", "status": "ok", "anmerkung": "" }
+    {
+      "nr": "S1",
+      "schicht": "Holzverkleidung Douglasie",
+      "dicke": "2,0 cm",
+      "status": "ok",
+      "anmerkung": "an der Außenecke auf Gehrung gestoßen"
+    },
+    {
+      "nr": "S2",
+      "schicht": "Lattung, senkrecht (Hinterlüftungsebene)",
+      "dicke": "3,0 cm",
+      "status": "ok",
+      "anmerkung": ""
+    },
+    {
+      "nr": "S3",
+      "schicht": "Holzfaserdämmplatte",
+      "dicke": "1,5 cm",
+      "status": "unklar",
+      "anmerkung": "Funktion (winddichtende Schicht) und Stoßausbildung an der Ecke nicht angegeben (B4)"
+    },
+    {
+      "nr": "S4",
+      "schicht": "Ständerwerk mit Gefachdämmung",
+      "dicke": "16,0 cm",
+      "status": "unklar",
+      "anmerkung": "Dämmstoff nicht benannt (B6)"
+    },
+    {
+      "nr": "S5",
+      "schicht": "OSB-Platte",
+      "dicke": "1,5 cm",
+      "status": "fehler",
+      "anmerkung": "Eckstoß nicht abgeklebt (B1), Plattenrand von Wand A ohne Auflager (B2)"
+    },
+    {
+      "nr": "S6",
+      "schicht": "Installationsebene, gedämmt",
+      "dicke": "6,0 cm",
+      "status": "unklar",
+      "anmerkung": "Dämmstoff nicht benannt (B6)"
+    },
+    {
+      "nr": "S7",
+      "schicht": "Gipskartonplatten, 2-lagig",
+      "dicke": "2,5 cm",
+      "status": "ok",
+      "anmerkung": ""
+    }
   ],
   "befunde": [
     {
@@ -43,9 +101,50 @@
       "verweise": "Fester Untergrund für die Abklebung fehlt: siehe B2. Hinweislinie ohne dargestelltes Bauteil (ZQ-04) hier zusammengefasst.",
       "massnahme": "Eckstoß der OSB-Platten luftdicht abkleben und darstellen",
       "wo": "Innenecke, OSB-Stoß Wand A / Wand B",
-      "kreis": { "x": 50.6, "y": 64.0, "r": 1.6 },
-      "badge": { "x": 66.0, "y": 57.0 },
-      "zoom": [42.0, 54.0, 60.0, 72.0]
+      "kreis": {
+        "x": 50.6,
+        "y": 64.0,
+        "r": 1.6
+      },
+      "badge": {
+        "x": 66.0,
+        "y": 57.0
+      },
+      "zoom": [
+        42.0,
+        54.0,
+        60.0,
+        72.0
+      ],
+      "korrektur": [
+        {
+          "typ": "abklebung",
+          "punkte": [
+            [
+              50.55,
+              56.5
+            ],
+            [
+              50.55,
+              63.65
+            ],
+            [
+              56.0,
+              63.65
+            ]
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B1: Eckstoß der OSB luftdicht abkleben",
+          "x": 60.0,
+          "y": 51.5,
+          "ziel": [
+            50.55,
+            60.0
+          ]
+        }
+      ]
     },
     {
       "nr": 2,
@@ -63,10 +162,60 @@
       "verweise": "Eckausbildung (KO-02) hier zusammengefasst.",
       "massnahme": "Eckstiel hinter dem OSB-Rand von Wand A ergänzen",
       "wo": "Wand A, Gefach an der Innenecke",
-      "kreis": { "x": 48.7, "y": 66.8, "r": 3.2 },
-      "badge": { "x": 36.0, "y": 64.0 },
-      "schraffur": [[47.3, 61.5], [49.8, 61.5], [49.8, 71.7], [47.3, 71.7]],
-      "zoom": [40.0, 56.0, 58.0, 76.0]
+      "kreis": {
+        "x": 48.7,
+        "y": 66.8,
+        "r": 3.2
+      },
+      "badge": {
+        "x": 36.0,
+        "y": 64.0
+      },
+      "schraffur": [
+        [
+          47.3,
+          61.5
+        ],
+        [
+          49.8,
+          61.5
+        ],
+        [
+          49.8,
+          71.7
+        ],
+        [
+          47.3,
+          71.7
+        ]
+      ],
+      "zoom": [
+        40.0,
+        56.0,
+        58.0,
+        76.0
+      ],
+      "korrektur": [
+        {
+          "typ": "holz",
+          "rechteck": [
+            47.3,
+            60.7,
+            49.8,
+            71.7
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B2: Eckstiel ergänzen",
+          "x": 49.5,
+          "y": 88.5,
+          "ziel": [
+            48.5,
+            69.0
+          ]
+        }
+      ]
     },
     {
       "nr": 3,
@@ -84,9 +233,21 @@
       "grundlage": "DIN 4108-7:2026-04 [[DIN-4108-7]]",
       "massnahme": "Klären, ob Plattenstoß; falls ja auf Ständer legen und abkleben",
       "wo": "Wand A, ca. 75–80 cm ab Außenecke",
-      "kreis": { "x": 50.2, "y": 27.9, "r": 1.5 },
-      "badge": { "x": 66.0, "y": 26.5 },
-      "zoom": [40.0, 22.0, 56.0, 34.0]
+      "kreis": {
+        "x": 50.2,
+        "y": 27.9,
+        "r": 1.5
+      },
+      "badge": {
+        "x": 66.0,
+        "y": 26.5
+      },
+      "zoom": [
+        40.0,
+        22.0,
+        56.0,
+        34.0
+      ]
     },
     {
       "nr": 4,
@@ -104,9 +265,50 @@
       "verweise": "Wärmetechnische Seite (WB-04): keine Lücke erkennbar.",
       "massnahme": "Stoßausbildung der Holzfaserplatten an der Außenecke angeben",
       "wo": "Außenecke, Holzfaserplatte",
-      "kreis": { "x": 41.8, "y": 76.0, "r": 1.5 },
-      "badge": { "x": 38.0, "y": 92.0 },
-      "zoom": [34.0, 66.0, 50.0, 84.0]
+      "kreis": {
+        "x": 41.8,
+        "y": 76.0,
+        "r": 1.5
+      },
+      "badge": {
+        "x": 38.0,
+        "y": 92.0
+      },
+      "zoom": [
+        34.0,
+        66.0,
+        50.0,
+        84.0
+      ],
+      "korrektur": [
+        {
+          "typ": "abklebung",
+          "punkte": [
+            [
+              41.45,
+              67.5
+            ],
+            [
+              41.45,
+              76.6
+            ],
+            [
+              47.5,
+              76.6
+            ]
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B4: Eckstoß der Holzfaserplatte\nwinddicht ausbilden (z. B. abkleben)",
+          "x": 14.0,
+          "y": 79.0,
+          "ziel": [
+            41.45,
+            73.0
+          ]
+        }
+      ]
     },
     {
       "nr": 5,
@@ -124,9 +326,21 @@
       "grundlage": "Zeichnungsplausibilität [[PRAXIS]]; Bemessung nach Eurocode 5 [[EC5]] (nicht Teil dieser Prüfung)",
       "massnahme": "Schraubenlänge bzw. Darstellung abstimmen; Bemessung durch Tragwerksplanung",
       "wo": "Eckverbindung, Tellerkopfschraube",
-      "kreis": { "x": 52.6, "y": 73.4, "r": 1.5 },
-      "badge": { "x": 65.0, "y": 80.0 },
-      "zoom": [40.0, 66.0, 58.0, 80.0]
+      "kreis": {
+        "x": 52.6,
+        "y": 73.4,
+        "r": 1.5
+      },
+      "badge": {
+        "x": 65.0,
+        "y": 80.0
+      },
+      "zoom": [
+        40.0,
+        66.0,
+        58.0,
+        80.0
+      ]
     },
     {
       "nr": 6,
@@ -142,7 +356,15 @@
       "grundlage": "DIN 4108-7:2026-04 [[DIN-4108-7]]; Zeichnungsplausibilität [[PRAXIS]]",
       "verweise": "LD-01, HS-02 und ZQ-05 hier zusammengefasst.",
       "massnahme": "Legende um Funktionen, Dämmstoffe, OSB-Produkt und Holzqualität ergänzen; Schreibfehler korrigieren",
-      "wo": "Legende rechts neben der Zeichnung"
+      "wo": "Legende rechts neben der Zeichnung",
+      "korrektur": [
+        {
+          "typ": "text",
+          "text": "B6: Legende ergänzen: Funktionen (luftdicht, winddicht),\nDämmstoffe mit λ, OSB-Produkt, Holzqualität",
+          "x": 68.4,
+          "y": 78.6
+        }
+      ]
     },
     {
       "nr": 7,
@@ -177,21 +399,79 @@
     }
   ],
   "offene_fragen": [
-    { "nr": "F1", "frage": "Wie heißt das Projekt bzw. Bauvorhaben?", "warum": "Angabe im Berichtskopf", "annahme": "nicht angegeben" },
-    { "nr": "F2", "frage": "Welches OSB-Produkt bzw. welcher sd-Wert ist vorgesehen?", "warum": "Für die Beurteilung der dampfbremsenden Wirkung (B7).", "annahme": "unbekannt – Tauwasserschutz nicht prüfbar" },
-    { "nr": "F3", "frage": "Neubau oder Änderung im Bestand?", "warum": "Unterschiedliche Wärmeschutzanforderungen nach GModG (Anlage 1 bzw. Anlage 7 [[GMODG-A7]]).", "annahme": "Neubau" },
-    { "nr": "F4", "frage": "Welche Nutzung haben die Räume hinter dem Detail?", "warum": "Raumklima bestimmt die Feuchtebelastung.", "annahme": "Wohnen, normales Raumklima" },
-    { "nr": "F5", "frage": "Welche Dämmstoffe (Gefach, Installationsebene) mit welchem λ-Wert?", "warum": "Für Wärme- und Feuchteschutz (B8, B9).", "annahme": "nicht angegeben – kein λ-Wert angenommen" },
-    { "nr": "F6", "frage": "Welche Gebäudeklasse und welche Schallschutzanforderungen gelten?", "warum": "Brand- und Schallschutz (DIN 4109-1 [[DIN-4109-1]]) sind nicht Teil dieser Prüfung und gesondert nachzuweisen.", "annahme": "nicht geprüft" }
+    {
+      "nr": "F1",
+      "frage": "Wie heißt das Projekt bzw. Bauvorhaben?",
+      "warum": "Angabe im Berichtskopf",
+      "annahme": "nicht angegeben"
+    },
+    {
+      "nr": "F2",
+      "frage": "Welches OSB-Produkt bzw. welcher sd-Wert ist vorgesehen?",
+      "warum": "Für die Beurteilung der dampfbremsenden Wirkung (B7).",
+      "annahme": "unbekannt – Tauwasserschutz nicht prüfbar"
+    },
+    {
+      "nr": "F3",
+      "frage": "Neubau oder Änderung im Bestand?",
+      "warum": "Unterschiedliche Wärmeschutzanforderungen nach GModG (Anlage 1 bzw. Anlage 7 [[GMODG-A7]]).",
+      "annahme": "Neubau"
+    },
+    {
+      "nr": "F4",
+      "frage": "Welche Nutzung haben die Räume hinter dem Detail?",
+      "warum": "Raumklima bestimmt die Feuchtebelastung.",
+      "annahme": "Wohnen, normales Raumklima"
+    },
+    {
+      "nr": "F5",
+      "frage": "Welche Dämmstoffe (Gefach, Installationsebene) mit welchem λ-Wert?",
+      "warum": "Für Wärme- und Feuchteschutz (B8, B9).",
+      "annahme": "nicht angegeben – kein λ-Wert angenommen"
+    },
+    {
+      "nr": "F6",
+      "frage": "Welche Gebäudeklasse und welche Schallschutzanforderungen gelten?",
+      "warum": "Brand- und Schallschutz (DIN 4109-1 [[DIN-4109-1]]) sind nicht Teil dieser Prüfung und gesondert nachzuweisen.",
+      "annahme": "nicht geprüft"
+    }
   ],
   "positiv": [
-    { "regel": "LD-03", "thema": "Plattenstöße", "text": "An den übrigen dargestellten Plattenstößen der OSB ist eine Abklebung eingezeichnet." },
-    { "regel": "LD-04", "thema": "Installationsebene", "text": "Raumseitige Installationsebene vorhanden; sie schützt die Luftdichtheitsschicht vor Durchdringungen." },
-    { "regel": "LD-05", "thema": "Durchdringungen", "text": "Die Tellerkopfschraube verläuft in der Darstellung nicht durch die OSB-Schicht." },
-    { "regel": "WB-01", "thema": "Dämmung im Eckbereich", "text": "Gefachdämmung im Eckbereich ohne erkennbare Hohlräume." },
-    { "regel": "WB-04", "thema": "Außendämmplatte", "text": "Die Holzfaserplatte läuft außen über die Ecke und überdeckt die Eckhölzer; keine Lücke erkennbar." },
-    { "regel": "WH-02", "thema": "Hinterlüftung", "text": "Hinterlüftungsebene (senkrechte Lattung, 3 cm) im Horizontalschnitt erkennbar, mit Latten an der Ecke." },
-    { "regel": "WH-04", "thema": "Eckausbildung der Schalung", "text": "Die Holzschalung ist an der Außenecke auf Gehrung gestoßen; so liegt kein Hirnholz frei – eine empfohlene Ausführung [[BAUNETZ-HOLZFASSADE]]." }
+    {
+      "regel": "LD-03",
+      "thema": "Plattenstöße",
+      "text": "An den übrigen dargestellten Plattenstößen der OSB ist eine Abklebung eingezeichnet."
+    },
+    {
+      "regel": "LD-04",
+      "thema": "Installationsebene",
+      "text": "Raumseitige Installationsebene vorhanden; sie schützt die Luftdichtheitsschicht vor Durchdringungen."
+    },
+    {
+      "regel": "LD-05",
+      "thema": "Durchdringungen",
+      "text": "Die Tellerkopfschraube verläuft in der Darstellung nicht durch die OSB-Schicht."
+    },
+    {
+      "regel": "WB-01",
+      "thema": "Dämmung im Eckbereich",
+      "text": "Gefachdämmung im Eckbereich ohne erkennbare Hohlräume."
+    },
+    {
+      "regel": "WB-04",
+      "thema": "Außendämmplatte",
+      "text": "Die Holzfaserplatte läuft außen über die Ecke und überdeckt die Eckhölzer; keine Lücke erkennbar."
+    },
+    {
+      "regel": "WH-02",
+      "thema": "Hinterlüftung",
+      "text": "Hinterlüftungsebene (senkrechte Lattung, 3 cm) im Horizontalschnitt erkennbar, mit Latten an der Ecke."
+    },
+    {
+      "regel": "WH-04",
+      "thema": "Eckausbildung der Schalung",
+      "text": "Die Holzschalung ist an der Außenecke auf Gehrung gestoßen; so liegt kein Hirnholz frei – eine empfohlene Ausführung [[BAUNETZ-HOLZFASSADE]]."
+    }
   ],
   "annahmen": [
     "Prüfung ohne Fragerunde; nicht beantwortete Punkte sind als offene Fragen F1–F6 mit der jeweils verwendeten Annahme aufgeführt.",

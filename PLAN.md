@@ -198,7 +198,13 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Schichten außen → innen. Disclaimer nur Seite 1 + Fußzeile.
 - [x] WH-04 korrigiert: Gehrung an der Außenecke ist laut BauNetz Wissen empfohlen (kein Befund)
 - [x] Checkliste: Projektname (C0); Berichtskopf mit leerem Feld „Fachlich geprüft von“
-- [ ] **Du:** Lösungsschlüssel zu Blindtest 2 schicken → Trefferquote auswerten
+- [x] **Blindtest 2 ausgewertet (Di 17.11.):** 4 von 4 eingebauten Fehlern gefunden
+      (B1 Latten Ecke, B2 OSB Wand A, B3 Legende, B5 Installationslatte); 1 Fehlalarm
+      (B4, Aussagesicherheit „gering“). Details: `tests/loesung/AUSWERTUNG_blindtest_2.md`
+- [x] **Feature 7 (Di 17.11.):** Korrekturskizze – fehlende Teile werden grün in die Zeichnung
+      eingezeichnet (`scripts/skizze.py`, Feld `korrektur`); im Bericht eigene Seite
+      „Korrekturskizze“ und je Befundkarte Ist/Korrektur nebeneinander; zusätzlich
+      `*_korrekturskizze.pdf` als Vektor-PDF. Berichtskopf-Tabelle auf Seite 1 entfernt.
 - [ ] **Du:** Prüfkatalog und Beispielberichte fachlich gegenlesen
 - [ ] Skill als ZIP für claude.ai packen und dort testen (Code-Ausführung aktivieren)
 - [ ] Should: Verbesserungsskizze im CAD-Look

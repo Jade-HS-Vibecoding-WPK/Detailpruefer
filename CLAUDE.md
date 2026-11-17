@@ -49,6 +49,10 @@ Details und aktueller Stand: siehe `PLAN.md` – zu Beginn jeder Sitzung lesen.
 - Markierungen: Kreis ohne Füllung + Badge „B1…“ mit Führungslinie neben der Zeichnung.
   **Rot** durchgezogen = klarer Aufbaufehler · **Orange** gestrichelt = mögliche Auffälligkeit ·
   **Blau** gepunktet = Verbesserungshinweis. Rot nur für klare Aufbaufehler.
+- **Korrekturskizze (grün):** Was fehlt oder falsch ist, wird immer auch eingezeichnet
+  (Latten, Konterlatten, Stiele, Platten mit Schraffur, Abklebungen, korrigierte Werte),
+  damit die Korrektur visuell verständlich ist – nicht nur textlich.
+- Kein Berichtskopf-Block auf Seite 1 (Projekt/ID/Version stehen in der Kopfzeile).
 - Präfixe: B1… = Befunde, S1… = Schichten (außen → innen wie die Legende), F1… = offene Fragen.
 - **Quellenpflicht:** Jede Norm-/Gesetzes-/Paragraphennennung im Bericht mit `[[ID]]` aus
   `skill/pruefkatalog/quellen.json` belegen (wird zur verlinkten Fußnote).

@@ -84,6 +84,22 @@ python scripts/raster.py markiert.pdf kontrolle.png
 Kontrollieren: Kreise an der richtigen Stelle? Badges frei, Führungslinien eindeutig,
 keine verdeckten Inhalte? Sonst korrigieren.
 
+### 5b. Korrekturskizze zeichnen (immer, wenn sich etwas einzeichnen lässt)
+Fehlende oder falsche Teile werden **nicht nur beschrieben, sondern in die Zeichnung
+eingezeichnet** – grün, als Vorschlag. Je Befund im Feld `korrektur` (Format unten), z. B.:
+fehlende Latten/Konterlatten/Stiele als `holz`, fehlende Platten als `platte` (mit
+Schraffur), fehlende Klebebänder als `abklebung`, falsche Werte mit `durchstreichen` +
+`text`, dazu eine kurze Beschriftung („B1: Latte ergänzen“) mit Hinweislinie.
+- Maße und Lage an vorhandenen Bauteilen derselben Zeichnung orientieren (z. B. Latte so
+  groß wie die vorhandenen Latten, Schraffur wie dieselbe Schicht in der anderen Wand).
+- Beschriftungen in freie Bereiche setzen; keine Texte oder Linien verdecken.
+```
+python scripts/skizze.py <zeichnung.pdf> befunde.json korrekturskizze.pdf
+python scripts/raster.py korrekturskizze.pdf kontrolle_korrektur.png
+```
+Im Bericht erscheinen die Skizze als eigene Seite und je Befundkarte **Ist / Korrektur**
+nebeneinander; zusätzlich wird `<bericht>_korrekturskizze.pdf` als Vektor-PDF gespeichert.
+
 ### 6. PDF-Prüfbericht erzeugen
 ```
 python scripts/bericht.py <zeichnung.pdf> befunde.json pruefbericht.pdf
@@ -140,7 +156,14 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
       "kreis": { "x": 41.2, "y": 76.8, "r": 3.0 },
       "badge": { "x": 34.0, "y": 70.0 },
       "schraffur": [[40.0, 64.0], [41.4, 64.0], [41.4, 78.5], [40.0, 78.5]],
-      "zoom": [36, 66, 50, 82]
+      "zoom": [36, 66, 50, 82],
+      "korrektur": [
+        { "typ": "holz", "rechteck": [40.0, 68.5, 41.45, 72.0] },
+        { "typ": "platte", "rechteck": [49.8, 17.6, 50.5, 64.7] },
+        { "typ": "abklebung", "punkte": [[50.55, 56.5], [50.55, 63.65], [56.0, 63.65]] },
+        { "typ": "durchstreichen", "von": [68.3, 74.05], "bis": [70.9, 74.05] },
+        { "typ": "text", "text": "B1: Latte ergänzen", "x": 14.0, "y": 79.5, "ziel": [40.7, 70.3] }
+      ]
     }
   ],
   "offene_fragen": [ { "nr": "F1", "frage": "…?", "warum": "…", "annahme": "…" } ],
@@ -150,6 +173,10 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
 ```
 - Koordinaten in **Prozent** (x von links, y von oben, r bezogen auf die Blattbreite).
 - `zoom` optional (Ausschnitt für die Befundkarte, sonst automatisch um den Kreis).
+- `korrektur`: Elemente der Korrekturskizze (grün) – `holz` (Rechteck mit Kreuz),
+  `platte` (Rechteck mit Querstrich-Schraffur), `abklebung` (dicke gestrichelte Linie),
+  `linie`, `durchstreichen`, `text` (mit optionaler Hinweislinie `ziel`, `rahmen`: false
+  für Ersatzwerte direkt im Text, `groesse` in pt).
 - `prioritaet` optional (`hoch`/`mittel`/`niedrig`), sonst automatisch.
 - Für `nicht_pruefbar`: `regel`, `titel`, `zu_klaeren`, ggf. `nachweis_erforderlich`.
 - Befundnummern im Text („siehe B2“) und Quellen `[[ID]]` werden im Bericht verlinkt.

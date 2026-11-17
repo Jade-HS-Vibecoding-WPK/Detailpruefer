@@ -160,6 +160,119 @@ def zeichne_beschriftung(c, s, pt, w):
     c.drawCentredString(x, y - gr * 0.05, s["text"])
 
 
+GRUEN = HexColor("#15803D")  # Farbe der Korrekturskizze (Ergänzungen / Korrekturen)
+
+
+def zeichne_korrektur(c, k, pt, w, h):
+    """Zeichnet ein Element der Korrekturskizze in Grün.
+
+    Typen (Koordinaten in Prozent):
+      holz          {"rechteck": [x1, y1, x2, y2]}            Kantholz/Latte im Schnitt (Rechteck mit Kreuz)
+      platte        {"rechteck": [...], "richtung": "auto"}   Plattenwerkstoff mit Querstrich-Schraffur
+      abklebung     {"punkte": [[x, y], …]}                   dicke gestrichelte Linie (Klebeband)
+      linie         {"punkte": [[x, y], …]}                   durchgezogene Linie
+      durchstreichen{"von": [x, y], "bis": [x, y]}            falschen Wert/Text durchstreichen
+      text          {"text": "…", "x", "y", "ziel": [x, y]}   Beschriftung, optional mit Hinweislinie
+    """
+    typ = k.get("typ")
+    linie = max(1.0, w * 0.0013)
+    c.saveState()
+    c.setStrokeColor(GRUEN)
+    c.setFillColor(GRUEN)
+    c.setLineCap(1)
+    if typ in ("holz", "platte"):
+        x1, y1, x2, y2 = k["rechteck"]
+        (ax, ay), (bx, by) = pt(x1, y1), pt(x2, y2)
+        lx, ux = min(ax, bx), max(ax, bx)
+        ly, uy = min(ay, by), max(ay, by)
+        c.setFillColor(HexColor("#FFFFFF"))
+        c.rect(lx, ly, ux - lx, uy - ly, stroke=0, fill=1)  # darunterliegende Linien abdecken
+        c.setStrokeColor(GRUEN)
+        c.setLineWidth(linie)
+        c.rect(lx, ly, ux - lx, uy - ly, stroke=1, fill=0)
+        if typ == "holz":
+            c.line(lx, ly, ux, uy)
+            c.line(lx, uy, ux, ly)
+        else:
+            abstand = max(2.0, w * 0.0045)
+            senkrecht = (uy - ly) > (ux - lx) if k.get("richtung", "auto") == "auto" else k["richtung"] == "quer"
+            c.setLineWidth(linie * 0.7)
+            if senkrecht:  # lange Seite vertikal → waagerechte Querstriche
+                yy = ly + abstand / 2
+                while yy < uy:
+                    c.line(lx, yy, ux, yy)
+                    yy += abstand
+            else:
+                xx = lx + abstand / 2
+                while xx < ux:
+                    c.line(xx, ly, xx, uy)
+                    xx += abstand
+    elif typ in ("abklebung", "linie"):
+        punkte = [pt(x, y) for x, y in k["punkte"]]
+        c.setLineWidth(linie * (2.2 if typ == "abklebung" else 1.0))
+        if typ == "abklebung":
+            c.setDash([linie * 4, linie * 2.5])
+        pfad = c.beginPath()
+        pfad.moveTo(*punkte[0])
+        for p in punkte[1:]:
+            pfad.lineTo(*p)
+        c.drawPath(pfad, stroke=1, fill=0)
+    elif typ == "durchstreichen":
+        (ax, ay), (bx, by) = pt(*k["von"]), pt(*k["bis"])
+        c.setLineWidth(linie * 1.3)
+        c.line(ax, ay, bx, by)
+    elif typ == "text":
+        gr = k.get("groesse", max(7.5, w * 0.0075))
+        x, y = pt(k["x"], k["y"])
+        zeilen = str(k["text"]).split("\n")
+        schrift = "Helvetica-Bold" if k.get("fett", True) else "Helvetica"
+        breite = max(c.stringWidth(z, schrift, gr) for z in zeilen)
+        hoehe = gr * 1.2 * len(zeilen)
+        if k.get("ziel"):
+            zx, zy = pt(*k["ziel"])
+            c.setLineWidth(linie * 0.8)
+            ax = x if zx < x else x + breite
+            c.line(ax, y - hoehe / 2 + gr * 0.35, zx, zy)
+            c.circle(zx, zy, linie * 1.2, stroke=0, fill=1)
+        if k.get("rahmen", True):
+            c.setFillColor(HexColor("#FFFFFF"))
+            c.setLineWidth(linie * 0.6)
+            c.rect(x - gr * 0.3, y - hoehe + gr * 0.85, breite + gr * 0.6, hoehe + gr * 0.1, stroke=1, fill=1)
+        c.setFillColor(GRUEN)
+        c.setFont(schrift, gr)
+        for i, z in enumerate(zeilen):
+            c.drawString(x, y - i * gr * 1.2, z)
+    c.restoreState()
+
+
+def korrigierte_seite(pdf_ein, daten):
+    """Gibt (PdfWriter mit Korrekturskizze, Seitennummer, Anzahl Elemente) zurück."""
+    seitennr = int(daten.get("seite", 1))
+    reader = PdfReader(pdf_ein)
+    writer = PdfWriter(clone_from=reader)
+    seite = writer.pages[seitennr - 1]
+    mb = seite.mediabox
+    w, h = float(mb.width), float(mb.height)
+    x0, y0 = float(mb.left), float(mb.bottom)
+
+    def pt(x, y):
+        return x / 100 * w, h - y / 100 * h
+
+    puffer = io.BytesIO()
+    c = canvas.Canvas(puffer, pagesize=(w, h))
+    elemente = [k for b in befunde_lesen(daten) for k in b.get("korrektur", [])]
+    # Flächen zuerst, Texte zuletzt
+    for k in sorted(elemente, key=lambda k: {"holz": 0, "platte": 0, "abklebung": 1, "linie": 1,
+                                              "durchstreichen": 2, "text": 3}.get(k.get("typ"), 1)):
+        zeichne_korrektur(c, k, pt, w, h)
+    for s in daten.get("beschriftungen", []):
+        zeichne_beschriftung(c, s, pt, w)
+    c.save()
+    puffer.seek(0)
+    seite.merge_transformed_page(PdfReader(puffer).pages[0], Transformation().translate(x0, y0))
+    return writer, seitennr, len(elemente)
+
+
 def markierte_seite(pdf_ein, daten):
     """Gibt (PdfWriter mit markierter Zeichnung, Seitennummer, Anzahl Markierungen) zurück."""
     seitennr = int(daten.get("seite", 1))
