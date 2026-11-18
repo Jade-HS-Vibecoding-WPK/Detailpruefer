@@ -27,35 +27,40 @@
       "schicht": "Dacheindeckung Tondachpfanne",
       "dicke": "6,8 cm",
       "status": "ok",
-      "anmerkung": "am First offen (B1)"
+      "anmerkung": "am First offen (B1)",
+      "ueblich": "ca. 30 mm [[DATAHOLZ-SD]]"
     },
     {
       "nr": "D2",
       "schicht": "Traglattung 5/3",
       "dicke": "3,0 cm",
       "status": "ok",
-      "anmerkung": ""
+      "anmerkung": "",
+      "ueblich": "30/50 mm [[DATAHOLZ-SD]]"
     },
     {
       "nr": "D3",
       "schicht": "Konterlattung 3/5",
       "dicke": "3,0 cm",
       "status": "ok",
-      "anmerkung": ""
+      "anmerkung": "gezeichnet ca. 3 cm – dünner als üblich (Konterlatte meist mind. 50 mm, je nach Dachneigung)",
+      "ueblich": "mind. 50 mm [[DATAHOLZ-SD]]"
     },
     {
       "nr": "D4",
       "schicht": "MDF-Platte (Unterdeckung)",
       "dicke": "1,6 cm",
       "status": "ok",
-      "anmerkung": ""
+      "anmerkung": "",
+      "ueblich": "ca. 22 mm [[DATAHOLZ-SD]]"
     },
     {
       "nr": "D5",
       "schicht": "Sparren mit Zwischendämmung (MW WLG 035)",
       "dicke": "20 cm",
       "status": "fehler",
-      "anmerkung": "nur zur Hälfte gedämmt dargestellt, Maßkette 10 + 14,5 cm (B3); Auflager am First fehlt (B2)"
+      "anmerkung": "nur zur Hälfte gedämmt dargestellt, Maßkette 10 + 14,5 cm (B3); Auflager am First fehlt (B2)",
+      "ueblich": "200–240 mm [[DATAHOLZ-SD]]"
     },
     {
       "nr": "D6",
@@ -69,14 +74,16 @@
       "schicht": "Installationsebene, gedämmt",
       "dicke": "3,0 cm",
       "status": "ok",
-      "anmerkung": ""
+      "anmerkung": "",
+      "ueblich": "ca. 50 mm [[DATAHOLZ-SD]]"
     },
     {
       "nr": "D8",
       "schicht": "Gipskartonplatten, 2-lagig",
       "dicke": "2,5 cm",
       "status": "ok",
-      "anmerkung": ""
+      "anmerkung": "",
+      "ueblich": "12,5 mm [[DATAHOLZ-SD]]"
     }
   ],
   "befunde": [

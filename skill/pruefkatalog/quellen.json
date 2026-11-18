@@ -1,6 +1,6 @@
 {
   "_hinweis": "Quellenverzeichnis des Detailprüfers. In befunde.json wird eine Quelle mit [[ID]] im Text zitiert; der Bericht setzt daraus eine hochgestellte, verlinkte Fußnote und listet nur zitierte Quellen. Alle Links wurden am 16./17.11.2026 aufgerufen.",
-  "abgerufen": "17.11.2026",
+  "abgerufen": "18.11.2026",
   "gruppen": [
     "Gesetze",
     "Normen",
@@ -176,6 +176,42 @@
       "kurz": "Nelskamp – Verlegeanleitung D 13 Ü",
       "titel": "Dachziegelwerke Nelskamp: Verlegeanleitung Doppelmuldenfalzziegel D 13 Ü – Detailempfehlungen für First, Grat, Ortgang und Traufe; Sturmklammern zur Windsogsicherung nach den Fachregeln; Lattung 30×50 bzw. 40×60 mm. Weitere funktionale Ausführungen nach den Fachregeln sind möglich.",
       "url": "https://nelskamp.de/downloads/Dachziegel/Doppelmuldenfalz-Ziegel/D13-Ue/Verlegeanleitung_D13-Ue.pdf"
+    },
+    "DATAHOLZ-AW": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "dataholz.eu – Außenwände Holzrahmenbau",
+      "titel": "dataholz.eu (Katalog geprüfter Holzbauteile, holzforschung austria), Außenwände awrhhi01a und awrhhi04a (Referenz Deutschland): Holzfassade 24 mm, Lattung 30 mm (30/50; 30/80), MDF 15 mm, Konstruktionsholz/Dämmung 120–240 mm, OSB 15 mm, Installationsebene 40–80 mm, Gipsplatte/Gipsfaserplatte 10–15 mm.",
+      "url": "https://www.dataholz.eu/bauteile/aussenwand/detail/kz/awrhhi04a.htm"
+    },
+    "DATAHOLZ-SD": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "dataholz.eu – Geneigte Dächer",
+      "titel": "dataholz.eu, geneigte Dächer sdrhzi01a und sdrhzi03a (Referenz Deutschland): Dachziegel/-stein ca. 30 mm, Traglattung 30/50, Konterlattung mind. 50 mm (je nach Dachneigung), Holzfaser-Unterdeckplatte 22 mm, Sparren mit Zwischensparrendämmung 200–240 mm, Installationsebene 50 mm, Gipsplatte 12,5 mm.",
+      "url": "https://www.dataholz.eu/bauteile/geneigtes-dach/detail/kz/sdrhzi03a.htm"
+    },
+    "DATAHOLZ-GD": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "dataholz.eu – Geschossdecke mit Estrich",
+      "titel": "dataholz.eu, Geschossdecke gdmnxa02a: Zementestrich 60 mm, Trennschicht, Trittschalldämmung 30 mm, Splittschüttung 60 mm, Brettsperrholz 140 mm, Gipsplatte 12,5 mm.",
+      "url": "https://www.dataholz.eu/bauteile/geschossdecke/detail/kz/gdmnxa02a.htm"
+    },
+    "BAUPROFESSOR-SAUBERKEITSSCHICHT": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "Bauprofessor – Sauberkeitsschicht",
+      "titel": "Bauprofessor: Sauberkeitsschicht – aus Magerbeton (C8/10) üblicherweise ca. 5–8 cm, aus Kies/Schotter ca. 10 cm; trennt Baugrund und Bauteil, gleicht Unebenheiten aus.",
+      "url": "https://www.bauprofessor.de/sauberkeitsschicht/"
+    },
+    "BAUPROFESSOR-ZEMENTESTRICH": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "Bauprofessor – Zementestrich",
+      "titel": "Bauprofessor: Zementestrich, Ausschreibungsbeispiel Estrich auf Dämmschicht mit 45 mm Nenndicke; Dicke nach DIN 18560-2 abhängig von Festigkeitsklasse, Last und Dämmschicht.",
+      "url": "https://www.bauprofessor.de/zementestrich/"
+    },
+    "BAUNETZ-ESTRICH-SCHWIMMEND": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Schwimmender Estrich",
+      "titel": "BauNetz Wissen Boden: Estrichkonstruktion schwimmender Estrich – Nenndicke abhängig von Festigkeitsklasse, Verkehrslast und Dämmschichtdicke; Dämmschicht vollflächig; Abdeckung über der Dämmung; Randstreifen aus Dämmmaterial verhindert Kontakt des Estrichs mit den Wänden.",
+      "url": "https://www.baunetzwissen.de/boden/fachwissen/estriche/estrichkonstruktion-schwimmender-estrich-983741"
     },
     "PRAXIS": {
       "gruppe": "Praxisempfehlungen",

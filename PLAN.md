@@ -299,4 +299,17 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
 - [x] Nachbesserung danach: Höhen-Abgleich bis zur verursachenden Schicht (SKILL.md),
       neue Regel **SO-04 Bodenaufbau** (Sauberkeitsschicht, Randdämmstreifen, Fußleiste,
       Höhen), Textoption `"farbe": "original"` für verdeckte Beschriftungen/Koten
-- [ ] Neue Version in claude.ai einspielen und weiteren Blindtest (z. B. Ortgang) machen
+- [x] Nachbesserung Sockel in claude.ai eingespielt (v6, 18.11.)
+- [x] **Feature 10 (Mi 18.11.): Übliche Bauteildicken + Bauteil-Check**
+      - Rückfragen geklärt: Richtwerte für alle Bauteile; prüfen + anzeigen; Bauteil-Check nur
+        intern; Werte aus offiziellen, nachweisbaren Quellen (Standardaufbauten), nur Empfehlung
+      - Neu `pruefkatalog/10_bauteildicken.md` (RW-01) mit Richtwerten aus dataholz.eu
+        (awrhhi01a/04a, sdrhzi01a/03a, gdmnxa02a), Bauprofessor, BauNetz Wissen, Nelskamp;
+        wo keine belegbare Quelle: „kein Richtwert – nach Nachweis“ (Bodenplatte, Pfetten,
+        Perimeter- und Bodendämmung, Holzfaser-Außendämmung)
+      - SKILL.md: interner **Bauteil-Check** (jede Schicht/jedes Bauteil + Pflichtbauteile:
+        vorhanden? Dicke gezeichnet/Legende/üblich? Schraffur vollständig?) vor der Prüfung
+      - Bericht: Schichtenaufbau mit Spalte „üblich¹“ (Feld `ueblich`) und Hinweis
+        „Praxis-Richtwert, kein Grenzwert“; 6 neue Quellen
+      - in claude.ai als **v6** eingespielt
+- [ ] **Du:** nächster Blindtest (z. B. Ortgang) in einem neuen claude.ai-Chat

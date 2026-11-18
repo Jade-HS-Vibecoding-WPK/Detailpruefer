@@ -30,7 +30,8 @@ Praxisempfehlungen werden mit `[[PRAXIS]]`, Herstellerangaben mit `[[HERSTELLER]
 | `06_konstruktion_holzrahmenbau.md` | Konstruktion – qualitative Plausibilität, keine Statik | KO |
 | `07_zeichnungsqualitaet.md` | Zeichnungsqualität | ZQ |
 | `08_dach_steildach.md` | **Bauteil-Katalog** Steildach: Tragsystem, First, Traufe, Ortgang, Lattung | DA |
-| `09_wand_sockel.md` | **Bauteil-Katalog** Außenwand Holzrahmenbau und Sockel | SO |
+| `09_wand_sockel.md` | **Bauteil-Katalog** Außenwand Holzrahmenbau, Sockel, Bodenaufbau | SO |
+| `10_bauteildicken.md` | **Übliche Bauteildicken** (Praxis-Richtwerte aus Standardaufbauten) | RW |
 | `quellen.md` | Normausgaben, Gesetzesstand, Quellen | – |
 
 Brand- und Schallschutz: nur Abfrage über `checkliste.md`, keine Prüfung.

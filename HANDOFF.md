@@ -119,7 +119,7 @@ Lüftungsquerschnitte (DIN 4108-3) und Kiesbett-Regeln (DIN 68800-2) bewusst ohn
 
 - 17.11. später: Blindtest 5 (Sockel) ausgewertet (`tests/loesung/AUSWERTUNG_blindtest_5_sockel.md`);
   danach SO-04 Bodenaufbau, Höhen-Abgleich bis zur Schicht, `text` mit `"farbe": "original"`.
-  Diese Nachbesserung ist **noch nicht** in claude.ai eingespielt (dort v5).
+  In claude.ai eingespielt; seit 18.11. dazu übliche Bauteildicken (`10_bauteildicken.md`) und interner Bauteil-Check – claude.ai-Version v6.
 
 ## 5. Was als Nächstes ansteht
 

@@ -59,6 +59,18 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   notwendigen Bauteile und Funktionen dieser Detailart nachschlagen und **jedes einzeln** in
   der Zeichnung suchen (z. B. First: Lastabtrag am First, Firstlatte mit Halter, Firstziegel,
   Lüftung mit Insektenschutz, durchgehende Luftdichtheit, Dämmung bis zum First).
+- **Bauteil-Check (intern, Pflicht – erscheint nicht als eigene Tabelle im Bericht):**
+  Vor dem Prüfen eine Liste aller Bauteile anlegen – **jede Schicht und jedes Bauteil der
+  Zeichnung** (Legende + alles Gezeichnete, auch Kleinteile wie Leisten, Bleche, Streifen)
+  **plus alle Pflichtbauteile** der Detailart aus `08_…`/`09_…`. Je Eintrag festhalten:
+  1. vorhanden? (gezeichnet / nur beschriftet / fehlt)
+  2. Dicke gezeichnet (im Maßstab gemessen) · Dicke laut Legende/Maßkette/Koten
+  3. üblicher Bereich aus `pruefkatalog/10_bauteildicken.md`
+  4. Schraffur passend und über die ganze Schichtdicke?
+  Jede Zeile mit „fehlt“, „nur beschriftet“, „Widerspruch“, „deutlich außerhalb üblich“ oder
+  „Schraffur unvollständig“ wird ein Befund (oder Teil eines Befunds). Erst wenn **jede**
+  Zeile abgehakt ist, zur Prüfung übergehen. Den üblichen Bereich im Schichtenaufbau als
+  Feld `ueblich` mitgeben (mit `[[ID]]`).
 - Raster und Zooms erzeugen:
   ```
   python scripts/raster.py <zeichnung.pdf> raster.png
@@ -98,7 +110,8 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 
 ### 3. Prüfen
 - `pruefkatalog/00_uebersicht.md`, `quellen.md` lesen; **jede Regel** aus `01_…` bis `07_…`
-  (Funktionen) **und** den passenden Bauteil-Katalog (`08_dach_steildach.md` für Dach,
+  (Funktionen), die **üblichen Bauteildicken** (`10_bauteildicken.md`) **und** den passenden
+  Bauteil-Katalog (`08_dach_steildach.md` für Dach,
   First, Traufe, Ortgang; `09_wand_sockel.md` für Wand, Sockel und Bodenaufbau) durchgehen: `erfüllt`,
   `nicht anwendbar` oder Einstufung. Doppelbefunde zusammenführen.
 - Eine **abweichende, aber anerkannte Variante** (siehe „Anerkannte Varianten“ im Katalog)
@@ -216,7 +229,7 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
   "beschriftungen": [ { "text": "Wand A", "x": 33, "y": 52 }, { "text": "Wand B", "x": 56, "y": 88 } ],
   "kurzfazit": "Ein bis zwei Sätze: das Wichtigste zuerst.",
   "schichtenaufbau": [
-    { "nr": "S1", "schicht": "Holzverkleidung Douglasie", "dicke": "2,0 cm", "status": "ok", "anmerkung": "" }
+    { "nr": "S1", "schicht": "Holzverkleidung Douglasie", "dicke": "2,0 cm", "ueblich": "ca. 24 mm [[DATAHOLZ-AW]]", "status": "ok", "anmerkung": "" }
   ],
   "befunde": [
     {

@@ -67,7 +67,8 @@ BEREICHE = {"LD": "Luftdichtheit", "FS": "Feuchteschutz / Dampfbremse",
             "WB": "Wärmeschutz / Wärmebrücken",
             "WH": "Winddichtheit / Hinterlüftung / Schlagregenschutz",
             "HS": "Holzschutz", "KO": "Konstruktion", "ZQ": "Zeichnungsqualität",
-            "DA": "Steildach (Tragsystem, First, Traufe, Ortgang)", "SO": "Außenwand und Sockel"}
+            "DA": "Steildach (Tragsystem, First, Traufe, Ortgang)", "SO": "Außenwand, Sockel, Bodenaufbau",
+            "RW": "Übliche Bauteildicken"}
 FELDER = [("fundstelle", "Fundstelle"), ("erkennbar", "Woran erkennbar"),
           ("begruendung", "Warum relevant"), ("risiko", "Mögliches Risiko"),
           ("zu_klaeren", "Zu klären"), ("verbesserung", "Verbesserung"),
@@ -716,11 +717,24 @@ BILDER_KORREKTUR = None  # wird in main() gesetzt, wenn Korrekturen vorhanden si
 
 
 def schichten_tabelle(daten):
-    z = [kopfzeile_tab(["Nr.", "Schicht (von außen nach innen)", "Dicke", "", "Anmerkung"])]
-    for i, s in enumerate(daten.get("schichtenaufbau", []), 1):
-        z.append([P(s.get("nr", f"S{i}"), S_KLEIN), P(s.get("schicht"), S_KLEIN), P(s.get("dicke"), S_KLEIN),
-                  Status(s.get("status", "ok")), P(s.get("anmerkung") or "", S_KLEIN)])
-    return tabelle(z, [10 * mm, 58 * mm, 26 * mm, 8 * mm, 72 * mm], zebra=True)
+    schichten = daten.get("schichtenaufbau", [])
+    mit_richtwert = any(s.get("ueblich") for s in schichten)
+    kopf = ["Nr.", "Schicht (von außen nach innen)", "Dicke"] + (["üblich¹"] if mit_richtwert else []) + ["", "Anmerkung"]
+    z = [kopfzeile_tab(kopf)]
+    for i, s in enumerate(schichten, 1):
+        zeile = [P(s.get("nr", f"S{i}"), S_KLEIN), P(s.get("schicht"), S_KLEIN), P(s.get("dicke"), S_KLEIN)]
+        if mit_richtwert:
+            zeile.append(Paragraph(mt(s.get("ueblich") or "–"), S_KLEIN))
+        zeile += [Status(s.get("status", "ok")), P(s.get("anmerkung") or "", S_KLEIN)]
+        z.append(zeile)
+    breiten = ([10 * mm, 48 * mm, 22 * mm, 26 * mm, 8 * mm, 60 * mm] if mit_richtwert
+               else [10 * mm, 58 * mm, 26 * mm, 8 * mm, 72 * mm])
+    tab = tabelle(z, breiten, zebra=True)
+    if not mit_richtwert:
+        return tab
+    return KeepTogether([tab, Spacer(1, 1 * mm), P(
+        "¹ Üblicher Bereich aus geprüften Standardaufbauten bzw. Fachliteratur (Praxis-Richtwert, "
+        "kein Grenzwert; ersetzt keinen Wärmeschutz-, Schallschutz- oder Standsicherheitsnachweis).", S_GRAU)])
 
 
 # ---------------------------------------------------------------- Aufbau
