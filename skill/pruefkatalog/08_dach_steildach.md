@@ -148,8 +148,24 @@ Luftdichtheit → LD-02 · Dämmebene → WB-01 · Auflager → KO-06.
   - **Konterlattung**, damit eingedrungenes Wasser abfließen kann – kritisch bei
     Sichtschalung am Ortgang [[BAUNETZ-UNTERDECKUNG-RAND]].
   - Abschluss der Dämmebene und Luftdichtheit an der Giebelwand → WB-01, LD-02.
+  - **Wandkopf der Giebelwand:** oberes Rahmenholz (Rähm) als Abschluss des Ständerwerks und
+    Auflager für das Dach – wie SO-01 (Ständerwerk mit Schwelle und Rähm) und KO-06 (Lastabtrag)
+    [[BAUNETZ-HOLZRAHMENBAU]]. Querschnitt: siehe `10_bauteildicken.md` (Rähm). Eine Platte
+    (z. B. Dach-OSB), die waagerecht über den Wandkopf läuft, **liegt auf dem Rähm und bleibt**
+    – fehlt der Rähm, ist der Befund der fehlende Rähm (KO-06), nicht die Platte (kein KO-07).
+  - **Installationsebene am Wandanschluss:** Die Bekleidung (Gipskarton) braucht auch am Rand
+    eine Latte der Installationsebene (KO-05).
+  - **Fassade am Giebel:** Ist die Wand hinterlüftet, braucht die Hinterlüftung unter dem
+    Dachüberstand eine **Abluftöffnung mit Insektenschutz** (WH-03); die Bekleidung ist bis
+    zum oberen Rand auf einer **Latte befestigt** (oberste Latte nahe der Oberkante, KO-05).
+  - **Dämmung im Sparrenfeld in voller Sparrenhöhe** bis an die Giebelwand (WB-01, RW-01);
+    fehlt die Materialangabe → Baustoff-Empfehlung BS-01.
 - **Anerkannte Varianten:** Ortgangziegel links/rechts · Ortgangbrett (Windbrett) mit
-  Blechabdeckung · Ortgang mit Überstand oder bündig.
+  Blechabdeckung · Ortgang mit Überstand oder bündig · **Dachüberstand als auskragende
+  Holzplatte** (z. B. mehrschichtige Massivholzplatte), die zur Rückverankerung über ein bis
+  zwei Sparrenfelder ins Dach einbindet – in diesem Streifen ersetzt sie die Unterdeckplatte;
+  das ist **kein Befund** (weder FS-01 noch WB-01), höchstens ein Hinweis „Einbindelänge nach
+  Tragwerksplanung“ [[PRAXIS]].
 - **Typische Auffälligkeit:** Deckung endet ohne seitlichen Abschluss; Unterdeckung endet vor
   der Wand; keine Befestigung der Randziegel dargestellt; Sichtschalung ohne Konterlattung.
 - **Warum relevant?** Am Ortgang greift Wind besonders an; Regen darf nicht seitlich unter
@@ -160,7 +176,7 @@ Luftdichtheit → LD-02 · Dämmebene → WB-01 · Auflager → KO-06.
   bis zur Außenkante; Befestigung als Hinweistext.
 - **Grundlage:** [[BAUNETZ-UNTERDECKUNG-RAND]]; [[NELSKAMP-D13]]; [[ZVDH]].
 - **Einstufung:** Seitlicher Abschluss fehlt → **klarer Aufbaufehler**; Befestigung nicht
-  dargestellt → **mögliche Auffälligkeit**; Unterdeckung endet zu früh → **mögliche
+  dargestellt → **Verbesserungshinweis** (wird im Detail oft nur beschrieben); Unterdeckung endet zu früh → **mögliche
   Auffälligkeit** (eindeutig vor der Wand → klarer Aufbaufehler).
 
 ## DA-06 Schichtfolge der Deckung: Traglattung auf Konterlattung

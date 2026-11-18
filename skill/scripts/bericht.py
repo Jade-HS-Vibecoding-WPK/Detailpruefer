@@ -68,7 +68,7 @@ BEREICHE = {"LD": "Luftdichtheit", "FS": "Feuchteschutz / Dampfbremse",
             "WH": "Winddichtheit / Hinterlüftung / Schlagregenschutz",
             "HS": "Holzschutz", "KO": "Konstruktion", "ZQ": "Zeichnungsqualität",
             "DA": "Steildach (Tragsystem, First, Traufe, Ortgang)", "SO": "Außenwand, Sockel, Bodenaufbau",
-            "RW": "Übliche Bauteildicken"}
+            "RW": "Übliche Bauteildicken", "BS": "Geeignete Baustoffe"}
 FELDER = [("fundstelle", "Fundstelle"), ("erkennbar", "Woran erkennbar"),
           ("begruendung", "Warum relevant"), ("risiko", "Mögliches Risiko"),
           ("zu_klaeren", "Zu klären"), ("verbesserung", "Verbesserung"),
@@ -505,6 +505,24 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
                              "Status: Haken = eindeutig, ? = unklar, Kreuz = fehlerhaft.", S_GRAU),
                            Spacer(1, 1.5 * mm), schichten_tabelle(daten)]))
 
+    # ---------- Baustoff-Empfehlungen (nur wenn eine Schicht technisch nicht funktioniert, BS-01)
+    empf = daten.get("baustoff_empfehlungen", [])
+    if empf:
+        z = [kopfzeile_tab(["Bauteil", "Problem", "Geeignete Baustoffe", "Dicke", "Worauf achten"])]
+        for e in empf:
+            bauteil = mt(e.get("bauteil"))
+            if e.get("befund"):
+                bauteil += f'<br/><font size="7">{mt("siehe " + e["befund"])}</font>'
+            z.append([Paragraph(bauteil, S_KLEIN), P(e.get("problem"), S_KLEIN), P(e.get("baustoffe"), S_KLEIN),
+                      P(e.get("dicke"), S_KLEIN), P(e.get("beachten"), S_KLEIN)])
+        f.append(KeepTogether([Anker("abschnitt_baustoffe", SEITEN_AKTUELL), P("Baustoff-Empfehlungen", S_H1),
+                               P("Für Schichten, die in der gezeichneten Form technisch nicht funktionieren: "
+                                 "geeignete Baustoffe für diese Einbaulage aus geprüften Standardaufbauten und "
+                                 "Fachliteratur. Empfehlung, keine Produktwahl – Dicke und Material nach "
+                                 "Wärmeschutznachweis bzw. Tragwerksplanung festlegen.", S_GRAU),
+                               Spacer(1, 1.5 * mm),
+                               tabelle(z, [26 * mm, 34 * mm, 48 * mm, 26 * mm, 40 * mm], zebra=True)]))
+
     # ---------- 1 Befunde im Detail
     # Überschrift bleibt mit der ersten Karte zusammen (keine Überschrift allein am Seitenende)
     kopf_detail = [P("1  Befunde im Detail", S_H1),
@@ -725,7 +743,16 @@ def schichten_tabelle(daten):
         zeile = [P(s.get("nr", f"S{i}"), S_KLEIN), P(s.get("schicht"), S_KLEIN), P(s.get("dicke"), S_KLEIN)]
         if mit_richtwert:
             zeile.append(Paragraph(mt(s.get("ueblich") or "–"), S_KLEIN))
-        zeile += [Status(s.get("status", "ok")), P(s.get("anmerkung") or "", S_KLEIN)]
+        anm = mt(s.get("anmerkung") or "")
+        if s.get("empfehlung"):
+            emp = s["empfehlung"]
+            if "baustoff-empfehlungen" in emp.lower():
+                emp = (f'<a href="#abschnitt_baustoffe" color="{LINK.hexval().replace("0x", "#")}">'
+                       f'{escape(t(emp))}</a>')
+            else:
+                emp = mt(emp)
+            anm = (anm + "<br/>" if anm else "") + f'<font color="{GRUEN_HEX}"><b>Empfehlung:</b></font> {emp}'
+        zeile += [Status(s.get("status", "ok")), Paragraph(anm, S_KLEIN)]
         z.append(zeile)
     breiten = ([10 * mm, 48 * mm, 22 * mm, 26 * mm, 8 * mm, 60 * mm] if mit_richtwert
                else [10 * mm, 58 * mm, 26 * mm, 8 * mm, 72 * mm])

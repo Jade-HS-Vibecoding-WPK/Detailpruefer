@@ -1,0 +1,427 @@
+{
+  "bericht": {
+    "id": "DPA-20261117-BT4",
+    "version": "1.0"
+  },
+  "detail": {
+    "projekt": "nicht angegeben",
+    "titel": "First – Steildach mit Ziegeldeckung (Blindtest 4, Werkzeug- und Ablauftest)",
+    "datei": "first mit fehler.pdf",
+    "bauart": "Holzdach, Sparren mit Zwischendämmung",
+    "fassade": "Ziegeldeckung auf Trag- und Konterlattung, MDF-Unterdeckplatte",
+    "schnitt": "Vertikalschnitt",
+    "massstab": "1:5",
+    "pruefdatum": "17.11.2026"
+  },
+  "seite": 1,
+  "zeichnung_ausschnitt": [
+    4,
+    12,
+    92,
+    96
+  ],
+  "kurzfazit": "Der First ist offen: Firstziegel, Firstlatte und Lüftungselement fehlen (B1). Am First ist kein Lastabtrag dargestellt – weder Firstpfette noch Sparrenverbindung (B2). Das Sparrenfeld ist nur zur Hälfte gedämmt dargestellt; die Maßkette (10 + 14,5 cm) widerspricht der Legende (20 cm) (B3).",
+  "schichtenaufbau": [
+    {
+      "nr": "D1",
+      "schicht": "Dacheindeckung Tondachpfanne",
+      "dicke": "6,8 cm",
+      "status": "ok",
+      "anmerkung": "am First offen (B1)",
+      "ueblich": "ca. 30 mm [[DATAHOLZ-SD]]"
+    },
+    {
+      "nr": "D2",
+      "schicht": "Traglattung 5/3",
+      "dicke": "3,0 cm",
+      "status": "ok",
+      "anmerkung": "",
+      "ueblich": "30/50 mm [[DATAHOLZ-SD]]"
+    },
+    {
+      "nr": "D3",
+      "schicht": "Konterlattung 3/5",
+      "dicke": "3,0 cm",
+      "status": "ok",
+      "anmerkung": "gezeichnet ca. 3 cm – dünner als üblich (Konterlatte meist mind. 50 mm, je nach Dachneigung)",
+      "ueblich": "mind. 50 mm [[DATAHOLZ-SD]]"
+    },
+    {
+      "nr": "D4",
+      "schicht": "MDF-Platte (Unterdeckung)",
+      "dicke": "1,6 cm",
+      "status": "ok",
+      "anmerkung": "",
+      "ueblich": "ca. 22 mm [[DATAHOLZ-SD]]"
+    },
+    {
+      "nr": "D5",
+      "schicht": "Sparren mit Zwischendämmung (MW WLG 035)",
+      "dicke": "20 cm",
+      "status": "fehler",
+      "anmerkung": "nur zur Hälfte gedämmt dargestellt, Maßkette 10 + 14,5 cm (B3); Auflager am First fehlt (B2)",
+      "ueblich": "200–240 mm [[DATAHOLZ-SD]]",
+      "empfehlung": "siehe Baustoff-Empfehlungen"
+    },
+    {
+      "nr": "D6",
+      "schicht": "Dampfbremse",
+      "dicke": "–",
+      "status": "unklar",
+      "anmerkung": "beschriftet; Anschluss am First nicht dargestellt"
+    },
+    {
+      "nr": "D7",
+      "schicht": "Installationsebene, gedämmt (Dämmstoff nicht angegeben)",
+      "dicke": "3,0 cm",
+      "status": "ok",
+      "anmerkung": "",
+      "ueblich": "ca. 50 mm [[DATAHOLZ-SD]]",
+      "empfehlung": "Mineralwolle, Zellulosefaser, Schafwolle oder ungedämmt [[DATAHOLZ-SD]]"
+    },
+    {
+      "nr": "D8",
+      "schicht": "Gipskartonplatten, 2-lagig",
+      "dicke": "2,5 cm",
+      "status": "ok",
+      "anmerkung": "",
+      "ueblich": "12,5 mm [[DATAHOLZ-SD]]"
+    }
+  ],
+  "befunde": [
+    {
+      "nr": 1,
+      "einstufung": "aufbaufehler",
+      "regel": "DA-02",
+      "titel": "First offen – Firstziegel, Firstlatte und Lüftungselement fehlen",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Deckung endet beidseits sichtbar vor der Firstachse",
+      "fundstelle": "First, zwischen den obersten Ziegelreihen beider Dachseiten",
+      "erkennbar": "Beide Dachflächen enden mit der obersten Ziegelreihe vor der Firstachse; dazwischen ist eine Lücke. Firstziegel, Firstlatte und Firstlattenhalter sind nicht gezeichnet.",
+      "begruendung": "Der First ist der wetterfeste Zusammenschluss der Dachflächen [[BAUNETZ-FIRST]]. Ohne Firstabdeckung ist das Dach am First nicht regensicher.",
+      "risiko": "Regen und Flugschnee können in die Konterlattungsebene und weiter in die Dämmung gelangen.",
+      "verbesserung": "Trockenfirst: Firstlatte (z. B. 30/50 hochkant) auf Firstlattenhaltern, Firstziegel mit Lüftungselement und Befestigung nach Herstellerangabe [[NELSKAMP-D13]]. Alternativ Lüfter-Firstziegel.",
+      "grundlage": "[[BAUNETZ-FIRST]]; Fachregeln [[ZVDH]]; Herstellerangabe [[NELSKAMP-D13]]",
+      "massnahme": "Firstziegel mit Lüftungselement auf Firstlatte und Firstlattenhaltern ergänzen",
+      "wo": "First",
+      "kreis": {
+        "x": 46.2,
+        "y": 23.5,
+        "r": 2.6
+      },
+      "badge": {
+        "x": 38.0,
+        "y": 14.0
+      },
+      "zoom": [
+        36.0,
+        13.0,
+        57.0,
+        33.0
+      ],
+      "korrektur": [
+        {
+          "typ": "firstziegel",
+          "first": [
+            46.18,
+            21.66
+          ],
+          "richtung_links": [
+            [
+              36.01,
+              26.95
+            ],
+            [
+              44.11,
+              22.74
+            ]
+          ],
+          "richtung_rechts": [
+            [
+              48.16,
+              22.74
+            ],
+            [
+              55.94,
+              26.95
+            ]
+          ],
+          "breite_cm": 24,
+          "hoehe_cm": 7
+        },
+        {
+          "typ": "firstlatte",
+          "mitte": [
+            46.16,
+            23.4
+          ],
+          "querschnitt_cm": [
+            3,
+            5
+          ],
+          "halter_bis": [
+            46.16,
+            26.4
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B1: Firstziegel mit Lüftungselement, Firstlatte 3/5 auf Firstlattenhaltern",
+          "x": 58.0,
+          "y": 13.0,
+          "ziel": [
+            47.5,
+            19.6
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 2,
+      "einstufung": "aufbaufehler",
+      "regel": "DA-01",
+      "nachweis_erforderlich": true,
+      "titel": "Kein Lastabtrag am First – weder Firstpfette noch Sparrenverbindung",
+      "sicherheit": "mittel",
+      "sicherheit_grund": "Bauteil in der Firstachse nicht benannt; Tragsystem nicht beschriftet",
+      "fundstelle": "Firstachse, unter dem Schnittpunkt der Sparren",
+      "erkennbar": "Die Sparren beider Seiten enden am First ohne Auflager. Eine Firstpfette ist nicht gezeichnet; eine Verbindung der Sparrenköpfe (Laschen, Zange) ist nicht erkennbar. In der Firstachse liegt nur ein schmales, unbenanntes Bauteil.",
+      "begruendung": "Beim Pfettendach liegen die Sparren auf der Firstpfette [[BAUNETZ-PFETTENDACH]], beim Sparrendach stützen sich die Sparren im First gegenseitig [[BAUNETZ-SPARRENDACH]]. Beides ist nicht dargestellt.",
+      "risiko": "Der Lastweg der Sparren am First ist nicht ausführbar. Ob und wie es trägt, kann nur die Tragwerksplanung beurteilen.",
+      "verbesserung": "Firstpfette unter dem First, Sparren darauf aufgelagert (Querschnitt nach Tragwerksplanung, z. B. 14/28). Alternative bei Sparrendach: kraftschlüssige Firstverbindung der Sparrenpaare.",
+      "grundlage": "[[BAUNETZ-PFETTENDACH]]; [[BAUNETZ-SPARRENDACH]]; Bemessung [[EC5]]",
+      "massnahme": "Firstpfette (oder Sparrenverbindung) einzeichnen; Tragwerksplanung",
+      "wo": "Firstachse",
+      "kreis": {
+        "x": 46.2,
+        "y": 46.5,
+        "r": 3.0
+      },
+      "badge": {
+        "x": 30.0,
+        "y": 70.0
+      },
+      "zoom": [
+        36.0,
+        36.0,
+        57.0,
+        62.0
+      ],
+      "korrektur": [
+        {
+          "typ": "holz",
+          "mitte": [
+            46.15,
+            51.5
+          ],
+          "querschnitt_cm": [
+            14,
+            28
+          ],
+          "winkel": 0
+        },
+        {
+          "typ": "bahn",
+          "art": "luftdicht",
+          "punkte": [
+            [
+              37.0,
+              50.68
+            ],
+            [
+              42.81,
+              46.83
+            ],
+            [
+              42.81,
+              48.5
+            ]
+          ]
+        },
+        {
+          "typ": "bahn",
+          "art": "luftdicht",
+          "punkte": [
+            [
+              55.3,
+              50.68
+            ],
+            [
+              49.49,
+              46.83
+            ],
+            [
+              49.49,
+              48.5
+            ]
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B2: Firstpfette (z. B. 14/28 nach Tragwerksplanung), Sparren aufgelagert; Dampfbremse an die Pfette anschließen",
+          "x": 58.0,
+          "y": 63.0,
+          "ziel": [
+            49.4,
+            55.0
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 3,
+      "einstufung": "aufbaufehler",
+      "regel": "WB-01",
+      "titel": "Sparrenfeld nur zur Hälfte gedämmt dargestellt – Maßkette 10 + 14,5 statt 20 cm",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Schraffur endet sichtbar in der Mitte des Sparrenfelds; Maßkette und Legende eindeutig",
+      "fundstelle": "Sparrenfeld beider Dachseiten zwischen Unterdeckung und Sparrenunterseite",
+      "erkennbar": "Die Dämmschraffur (Schlaufen) füllt nur den oberen Teil des Sparrenfelds; darunter ist das Feld leer. Die Legende nennt 20 cm Sparren mit Dämmung, die Maßkette zeigt 10 und 14,5 cm.",
+      "begruendung": "Die Dämmebene soll ohne Lücken durchlaufen; Hohlräume erhöhen den Wärmeverlust (GModG § 12 [[GMODG-12]], Planungsbeispiele DIN 4108 Beiblatt 2 [[DIN-4108-BBL2]]).",
+      "risiko": "Geringerer Wärmeschutz und kältere Innenoberflächen; Luftbewegung im Hohlraum kann die Dämmwirkung zusätzlich mindern.",
+      "verbesserung": "Sparrenfeld über die volle Höhe (20 cm) hohlraumfrei dämmen; Maßkette auf 20 cm korrigieren.",
+      "grundlage": "GModG § 12 [[GMODG-12]]; DIN 4108 Beiblatt 2 [[DIN-4108-BBL2]]",
+      "verweise": "Maßkette (ZQ-02) hier zusammengefasst.",
+      "massnahme": "Sparrenfeld beidseits in voller Höhe dämmen; Maßkette auf 20 cm korrigieren",
+      "wo": "Sparrenfeld beider Dachseiten; Maßkette rechts",
+      "kreis": {
+        "x": 30.0,
+        "y": 50.0,
+        "r": 3.0
+      },
+      "badge": {
+        "x": 22.0,
+        "y": 36.0
+      },
+      "zoom": [
+        14.0,
+        28.0,
+        46.5,
+        62.0
+      ],
+      "korrektur": [
+        {
+          "typ": "daemmung",
+          "art": "weich",
+          "punkte": [
+            [
+              14.0,
+              50.63
+            ],
+            [
+              45.94,
+              29.93
+            ],
+            [
+              45.94,
+              44.76
+            ],
+            [
+              14.0,
+              65.94
+            ]
+          ],
+          "band": [
+            [
+              46.16,
+              29.79
+            ],
+            [
+              36.01,
+              36.37
+            ],
+            [
+              45.94,
+              44.76
+            ]
+          ]
+        },
+        {
+          "typ": "daemmung",
+          "art": "weich",
+          "punkte": [
+            [
+              46.36,
+              29.92
+            ],
+            [
+              78.0,
+              50.42
+            ],
+            [
+              78.0,
+              65.74
+            ],
+            [
+              46.36,
+              44.76
+            ]
+          ],
+          "band": [
+            [
+              46.16,
+              29.79
+            ],
+            [
+              56.31,
+              36.37
+            ],
+            [
+              46.36,
+              44.76
+            ]
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B3: Sparrenfeld in voller Höhe (20 cm) dämmen – beide Dachseiten",
+          "x": 4.5,
+          "y": 44.0,
+          "ziel": [
+            24.0,
+            50.0
+          ]
+        },
+        {
+          "typ": "text",
+          "text": "B3: 20 cm (statt 10 + 14,5)",
+          "x": 88.5,
+          "y": 69.0,
+          "ziel": [
+            84.3,
+            61.5
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 4,
+      "einstufung": "nicht_pruefbar",
+      "regel": "DA-03",
+      "titel": "Abluft der Konterlattungsebene am First",
+      "zu_klaeren": "Lüftungselement bzw. Lüfter-Firstziegel mit Insektenschutz planen; Lüftungsquerschnitt nach DIN 4108-3 bzw. Herstellerangabe nachweisen [[DIN-4108-3]]."
+    }
+  ],
+  "offene_fragen": [],
+  "positiv": [
+    {
+      "regel": "LD-04",
+      "thema": "Installationsebene",
+      "text": "Raumseitig vor der Dampfbremse liegt eine gedämmte Installationsebene."
+    }
+  ],
+  "annahmen": [
+    "Geprüft wie gezeichnet; beheiztes Dachgeschoss (gedämmt dargestellt); Neubau.",
+    "Maßstab 1:5 laut Angabe."
+  ],
+  "baustoff_empfehlungen": [
+    {
+      "bauteil": "D5 Dämmung im Sparrenfeld",
+      "befund": "B3",
+      "problem": "Dämmschraffur füllt nur etwa die halbe Sparrenhöhe; Dämmebene nicht durchgehend.",
+      "baustoffe": "Mineralwolle-Klemmfilz, Zellulosefaser (eingeblasen) oder Schafwolle [[DATAHOLZ-SD]]; Holzfaser-Dämmmatte [[BAUNETZ-HOLZFASERDAEMMUNG]] (Zwischensparrendämmung, Anwendungsgebiet DZ [[DIN-4108-10]])",
+      "dicke": "volle Sparrenhöhe; üblich 200–240 mm [[DATAHOLZ-SD]]",
+      "beachten": "weiche Schraffur = Faserdämmstoff; innen luftdicht anschließen (LD-02); Dicke nach Wärmeschutznachweis"
+    }
+  ]
+}

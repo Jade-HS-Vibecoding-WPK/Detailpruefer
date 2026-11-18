@@ -312,4 +312,40 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       - Bericht: Schichtenaufbau mit Spalte „üblich¹“ (Feld `ueblich`) und Hinweis
         „Praxis-Richtwert, kein Grenzwert“; 6 neue Quellen
       - in claude.ai als **v6** eingespielt
-- [ ] **Du:** nächster Blindtest (z. B. Ortgang) in einem neuen claude.ai-Chat
+- [x] **Blindtest 6 – Ortgang in claude.ai (18.11.):** lief im **alten Sockel-Chat** → Skill-Stand
+      v5, die Bauteildicken (v6) waren nicht aktiv. Treffer: Rähm, Hinterlüftung oben zu,
+      Fugenabdichtung, vertauschte Hinweislinien; Dämmung/Sparren 15 statt 24 cm nur teilweise;
+      obere Fassadenlatte und Installationslatte übersehen; B3 (Holzplatte des Überstands) =
+      Fehlalarm. Nachfrage „Reicht 15 cm?“ → claude.ai hat einen U-Wert überschlagen (Regelverstoß).
+      Details: `tests/loesung/AUSWERTUNG_blindtest_6_ortgang.md`
+- [x] **Feature 11 (Mi 18.11.): Baustoff-Empfehlung + Regeln für Nachfragen**
+      - Rückfragen geklärt: Empfehlung für **alle Schichten**; Detail funktioniert → Anmerkung im
+        Schichtenaufbau, funktioniert technisch nicht → **eigener Abschnitt**; 15 statt 24 cm
+        bleibt **mögliche Auffälligkeit**; B3 = Fehlalarm
+      - Neu `pruefkatalog/11_baustoffe.md` (BS-01): geeignete Baustoffe je Einbaulage
+        (Sparrenfeld, Gefach, Installationsebene, Unterdeckung, WDVS, Trittschall, Perimeter,
+        Platten, Bahnen) aus dataholz-Varianten und BauNetz Wissen; 4 neue Quellen
+        (DIN 4108-10:2021-11, BauNetz Anwendungsbereiche, Holzfaserdämmungen, Perimeterdämmung)
+      - SKILL.md: Bauteil-Check Punkt 5 „Material angegeben?“; Schritt 8 **Nachfragen nach dem
+        Bericht** – keine U-/λ-Werte, stattdessen üblicher Bereich + Baustoffe + Nachweis
+      - DA-05 Ortgang: Rähm, Abluft der Hinterlüftung mit Insektenschutz, oberste Fassadenlatte,
+        Dämmung in voller Sparrenhöhe; Dachüberstandsplatte als anerkannte Variante (auch KO-07)
+      - Bericht: Feld `empfehlung` je Schicht (grün „Empfehlung:“), Abschnitt
+        „Baustoff-Empfehlungen“ (`baustoff_empfehlungen`); Test `tests/ausgabe/bs_test_bericht.pdf`
+      - ZIP/.skill neu gepackt und in claude.ai als **v7** eingespielt (18.11.)
+- [x] **Blindtest 6, zweiter Lauf (v7, neuer Chat):** 6 von 7 Fehlern gefunden (vorher 4);
+      Fehlalarme: Konterlatte 3 cm, DWD-Schraffur; Rähm nur 24/6, Schreibfehler nicht korrigiert,
+      Positiv-Liste widersprüchlich → siehe `AUSWERTUNG_blindtest_6_ortgang.md`
+- [x] **Nachbesserung Ortgang (18.11.):** Konterlatte mind. 30 mm bei Sparren < 8 m (Nelskamp),
+      Rähm = Schwellenquerschnitt bzw. 10 × Wanddicke (Praxisempfehlung), Platte bleibt auf dem
+      Rähm, Installationslatte am Rand, Windsog = Hinweis, Schraffur bei eindeutiger Beschriftung
+      kein Befund, neu **ZQ-06 Rechtschreibung** (Korrektur in der Skizze), Positiv-Abgleich;
+      neue Quelle BauNetz Tafelbau/Rahmenbau. Zusammen mit `verschieben` als **v8** eingespielt (18.11.)
+- [x] **Dämmung in richtiger Dicke + Innenaufbau verschieben (18.11.):** neues Zeichenwerkzeug
+      `verschieben` (Bereich der Originalzeichnung als Vektor versetzt, alter/neuer Ort weiß
+      abgedeckt), `linie`/`text` mit `"farbe": "original"` (schwarz, Text auch gedreht
+      `winkel`); SKILL.md 5b Punkt 7 (Ablauf: Zieldicke → verschieben → Dämmung/Hölzer neu →
+      Linien und Maßzahlen schließen → Kontrolle), RW-01 Punkt 4 (Zieldicke = Legende bzw.
+      Untergrenze üblich). Test Ortgang 15 → 24 cm: `tests/befunde_test_verschieben_ortgang.json`
+      → `tests/ausgabe/verschieben_bericht.pdf`
+- [ ] **Du:** Ortgang mit v8 in einem **neuen** claude.ai-Chat testen (inkl. Nachfrage „Reicht 15 cm?“)

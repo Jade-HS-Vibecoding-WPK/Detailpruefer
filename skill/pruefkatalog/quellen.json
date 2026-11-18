@@ -81,6 +81,12 @@
       "titel": "DIN 4108 Beiblatt 2:2019-06 – Wärmebrücken, Planungs- und Ausführungsbeispiele; berichtigt durch Berichtigung 1:2025-02.",
       "url": "https://www.dinmedia.de/de/technische-regel/din-4108-beiblatt-2/305990077"
     },
+    "DIN-4108-10": {
+      "gruppe": "Normen",
+      "kurz": "DIN 4108-10",
+      "titel": "DIN 4108-10:2021-11 – Wärmeschutz und Energie-Einsparung in Gebäuden, Teil 10: Anwendungsbezogene Anforderungen an Wärmedämmstoffe (Anwendungsgebiete z. B. DZ, DAD, WAB, PB). Status laut DIN Media: aktuell.",
+      "url": "https://www.dinmedia.de/de/norm/din-4108-10/343601642"
+    },
     "DIN-EN-15026": {
       "gruppe": "Normen",
       "kurz": "DIN EN 15026",
@@ -159,6 +165,12 @@
       "titel": "BauNetz Wissen Geneigtes Dach, Dachtragwerke: Kehlbalkendach – Sparrendach mit horizontalem Kehlbalken zwischen den Sparrenpaaren.",
       "url": "https://www.baunetzwissen.de/geneigtes-dach/fachwissen/dachtragwerke/kehlbalkendach-158387"
     },
+    "BAUNETZ-HOLZRAHMENBAU": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Tafelbau/Rahmenbau",
+      "titel": "BauNetz Wissen Holz: Tafelbau/Rahmenbau – Ständerwerk aus Ständern, Rähm und Schwelle; vertikale Lasten werden über den Rähm in die Ständer verteilt und in die Schwelle weitergeleitet; Ständer tragender Außenwände 60/200 bzw. 60/240 mm.",
+      "url": "https://www.baunetzwissen.de/holz/fachwissen/holzbausysteme/tafelbau-rahmenbau-6983558"
+    },
     "BAUNETZ-TRAUFE": {
       "gruppe": "Regelwerke und Fachliteratur",
       "kurz": "BauNetz Wissen – Traufe",
@@ -174,25 +186,25 @@
     "NELSKAMP-D13": {
       "gruppe": "Herstellerangaben",
       "kurz": "Nelskamp – Verlegeanleitung D 13 Ü",
-      "titel": "Dachziegelwerke Nelskamp: Verlegeanleitung Doppelmuldenfalzziegel D 13 Ü – Detailempfehlungen für First, Grat, Ortgang und Traufe; Sturmklammern zur Windsogsicherung nach den Fachregeln; Lattung 30×50 bzw. 40×60 mm. Weitere funktionale Ausführungen nach den Fachregeln sind möglich.",
+      "titel": "Dachziegelwerke Nelskamp: Verlegeanleitung Doppelmuldenfalzziegel D 13 Ü – Detailempfehlungen für First, Grat, Ortgang und Traufe; Sturmklammern zur Windsogsicherung nach den Fachregeln; Lattung 30×50 bzw. 40×60 mm. Weitere funktionale Ausführungen nach den Fachregeln sind möglich. Konterlatten (Sortierklasse S 10) mit Mindestnenndicke 30 mm bei Sparrenlänge bis < 8 m, 40 mm bei 8 bis < 10 m, 60 mm bei 10 bis 15 m.",
       "url": "https://nelskamp.de/downloads/Dachziegel/Doppelmuldenfalz-Ziegel/D13-Ue/Verlegeanleitung_D13-Ue.pdf"
     },
     "DATAHOLZ-AW": {
       "gruppe": "Regelwerke und Fachliteratur",
       "kurz": "dataholz.eu – Außenwände Holzrahmenbau",
-      "titel": "dataholz.eu (Katalog geprüfter Holzbauteile, holzforschung austria), Außenwände awrhhi01a und awrhhi04a (Referenz Deutschland): Holzfassade 24 mm, Lattung 30 mm (30/50; 30/80), MDF 15 mm, Konstruktionsholz/Dämmung 120–240 mm, OSB 15 mm, Installationsebene 40–80 mm, Gipsplatte/Gipsfaserplatte 10–15 mm.",
+      "titel": "dataholz.eu (Katalog geprüfter Holzbauteile, holzforschung austria), Außenwände awrhhi01a und awrhhi04a (Referenz Deutschland): Holzfassade 24 mm, Lattung 30 mm (30/50; 30/80), MDF 15 mm, Konstruktionsholz/Dämmung 120–240 mm, OSB 15 mm, Installationsebene 40–80 mm, Gipsplatte/Gipsfaserplatte 10–15 mm. Dämmstoff in Gefach und Installationsebene als Variante: Mineralwolle, Zellulosefaser, Schafwolle oder Holzfaserdämmung.",
       "url": "https://www.dataholz.eu/bauteile/aussenwand/detail/kz/awrhhi04a.htm"
     },
     "DATAHOLZ-SD": {
       "gruppe": "Regelwerke und Fachliteratur",
       "kurz": "dataholz.eu – Geneigte Dächer",
-      "titel": "dataholz.eu, geneigte Dächer sdrhzi01a und sdrhzi03a (Referenz Deutschland): Dachziegel/-stein ca. 30 mm, Traglattung 30/50, Konterlattung mind. 50 mm (je nach Dachneigung), Holzfaser-Unterdeckplatte 22 mm, Sparren mit Zwischensparrendämmung 200–240 mm, Installationsebene 50 mm, Gipsplatte 12,5 mm.",
+      "titel": "dataholz.eu, geneigte Dächer sdrhzi01a und sdrhzi03a (Referenz Deutschland): Dachziegel/-stein ca. 30 mm, Traglattung 30/50, Konterlattung mind. 50 mm (je nach Dachneigung), Holzfaser-Unterdeckplatte 22 mm, Sparren mit Zwischensparrendämmung 200–240 mm, Installationsebene 50 mm, Gipsplatte 12,5 mm. Dämmstoff im Sparrenfeld als Variante: Mineralwolle (200–240 mm), Zellulosefaser oder Schafwolle.",
       "url": "https://www.dataholz.eu/bauteile/geneigtes-dach/detail/kz/sdrhzi03a.htm"
     },
     "DATAHOLZ-GD": {
       "gruppe": "Regelwerke und Fachliteratur",
       "kurz": "dataholz.eu – Geschossdecke mit Estrich",
-      "titel": "dataholz.eu, Geschossdecke gdmnxa02a: Zementestrich 60 mm, Trennschicht, Trittschalldämmung 30 mm, Splittschüttung 60 mm, Brettsperrholz 140 mm, Gipsplatte 12,5 mm.",
+      "titel": "dataholz.eu, Geschossdecke gdmnxa02a: Zementestrich 60 mm, Trennschicht, Trittschalldämmung 30 mm, Splittschüttung 60 mm, Brettsperrholz 140 mm, Gipsplatte 12,5 mm. Trittschalldämmung: Mineralwolle MW-T.",
       "url": "https://www.dataholz.eu/bauteile/geschossdecke/detail/kz/gdmnxa02a.htm"
     },
     "BAUPROFESSOR-SAUBERKEITSSCHICHT": {
@@ -212,6 +224,24 @@
       "kurz": "BauNetz Wissen – Schwimmender Estrich",
       "titel": "BauNetz Wissen Boden: Estrichkonstruktion schwimmender Estrich – Nenndicke abhängig von Festigkeitsklasse, Verkehrslast und Dämmschichtdicke; Dämmschicht vollflächig; Abdeckung über der Dämmung; Randstreifen aus Dämmmaterial verhindert Kontakt des Estrichs mit den Wänden.",
       "url": "https://www.baunetzwissen.de/boden/fachwissen/estriche/estrichkonstruktion-schwimmender-estrich-983741"
+    },
+    "BAUNETZ-DAEMMSTOFF-ANWENDUNG": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Anwendungsbereiche von Dämmstoffen",
+      "titel": "BauNetz Wissen Dämmstoffe: Benennung und Anwendungsbereiche von Dämmstoffen – Kurzzeichen nach DIN 4108-10, z. B. DAD (Außendämmung Dach unter Deckung), WAB (Außendämmung Wand hinter Bekleidung), PB (unter Bodenplatte), DZ (Zwischensparrendämmung).",
+      "url": "https://www.baunetzwissen.de/daemmstoffe/fachwissen/grundlagen/benennung-und-anwendungsbereiche-von-daemmstoffen-1344395"
+    },
+    "BAUNETZ-HOLZFASERDAEMMUNG": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Holzfaserdämmungen",
+      "titel": "BauNetz Wissen: Holzfaserdämmungen – Übersicht. Lieferformen druckfeste Platten, flexible Matten und loser Dämmstoff zum Einblasen; Einsatz u. a. als Zwischen- und Aufsparrendämmung, Gefachdämmung im Holzrahmenbau, in WDVS und als Trittschalldämmung.",
+      "url": "https://www.baunetzwissen.de/daemmstoffe/fachwissen/daemmstoffe/holzfaserdaemmungen-uebersicht-7690325"
+    },
+    "BAUNETZ-PERIMETERDAEMMUNG": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Kelleraußenwände dämmen",
+      "titel": "BauNetz Wissen Dämmstoffe: Kelleraußenwände dämmen – Perimeterdämmstoffe müssen feuchtigkeitsbeständig, verrottungsfest, frostbeständig und druckstabil sein; XPS und Schaumglas geschlossenzellig; EPS nur bei nicht drückendem Wasser und mit allgemeiner bauaufsichtlicher Zulassung (DIBt).",
+      "url": "https://www.baunetzwissen.de/daemmstoffe/fachwissen/wand/kelleraussenwaende-daemmen-2436347"
     },
     "PRAXIS": {
       "gruppe": "Praxisempfehlungen",

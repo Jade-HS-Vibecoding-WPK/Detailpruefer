@@ -28,7 +28,8 @@ import json
 import math
 import sys
 
-from pypdf import PdfReader, PdfWriter, Transformation
+from pypdf import PageObject, PdfReader, PdfWriter, Transformation
+from pypdf.generic import ContentStream
 from reportlab.lib.colors import Color, HexColor
 from reportlab.pdfgen import canvas
 
@@ -684,6 +685,14 @@ def zeichne_korrektur(c, k, pt, w, h):
 
     Typen (Koordinaten in Prozent):
       entfernen     {"punkte": [[x, y], …]} oder {"rechteck": […]}   falsch gezeichnetes Teil weiß abdecken
+      linie/text mit "farbe": "original": schwarz wie die Zeichnung (Linien: "staerke_pt",
+                    "strich": "strichpunkt"|"gestrichelt"); text mit "winkel" (Grad) = gedreht
+      verschieben   {"rechteck": [x1, y1, x2, y2],                    Bereich der ORIGINALZEICHNUNG (Vektor)
+                     "versatz_cm": [dx, dy]}                          versetzt neu einsetzen; dy > 0 = nach
+                     oder "versatz": [dx%, dy%]                       unten. Alter und neuer Ort werden vorher
+                                                                     weiß abgedeckt. Für Höhenänderungen:
+                                                                     Innenaufbau vollständig verschieben,
+                                                                     frei werdende Fläche danach füllen.
       daemmung      {"punkte": […], "band": [[x,y],[x,y],[x,y]],     Dämmung in Schichtdicke und -richtung;
                      "art": "weich"}                                 "band" = 2 Punkte auf einer Schichtgrenze
                                                                      + 1 Punkt auf der anderen. "art":
@@ -819,6 +828,14 @@ def zeichne_korrektur(c, k, pt, w, h):
         c.setLineWidth(linie * (2.2 if typ == "abklebung" else 1.0))
         if typ == "abklebung":
             c.setDash([linie * 4, linie * 2.5])
+        if k.get("farbe") == "original":
+            # Linie der Zeichnung fortführen (z. B. Maßkette, Hinweislinie nach einer Verschiebung)
+            c.setStrokeColor(HexColor("#000000"))
+            c.setLineWidth(float(k.get("staerke_pt", 0.5)))
+            if k.get("strich") == "strichpunkt":
+                c.setDash([6, 2, 1, 2])
+            elif k.get("strich") == "gestrichelt":
+                c.setDash([4, 2])
         pfad = c.beginPath()
         pfad.moveTo(*punkte[0])
         for p in punkte[1:]:
@@ -828,6 +845,20 @@ def zeichne_korrektur(c, k, pt, w, h):
         (ax, ay), (bx, by) = pt(*k["von"]), pt(*k["bis"])
         c.setLineWidth(linie * 1.3)
         c.line(ax, ay, bx, by)
+    elif typ == "text" and k.get("winkel"):
+        # gedrehter Text (z. B. senkrechte Maßzahl); (x, y) = Anfang der Grundlinie
+        x, y = pt(k["x"], k["y"])
+        gr = k.get("groesse", max(7.5, w * 0.0075))
+        original = k.get("farbe") == "original"
+        schrift = "Helvetica" if original or not k.get("fett", True) else "Helvetica-Bold"
+        breite = stringbreite(str(k["text"]), schrift, gr)
+        c.translate(x, y)
+        c.rotate(float(k["winkel"]))
+        c.setFillColor(WEISS)
+        c.rect(-gr * 0.05, -gr * 0.03, breite + gr * 0.1, gr * 0.8, stroke=0, fill=1)
+        c.setFillColor(HexColor("#000000") if original else GRUEN)
+        c.setFont(schrift, gr)
+        c.drawString(0, 0, str(k["text"]))
     elif typ == "text" and k.get("farbe") == "original":
         # verdeckte Beschriftung/Höhenkote der Zeichnung neu setzen: schwarz, ohne Rahmen
         x, y, zeilen, _, gr, breite, hoehe = text_box(dict(k, fett=False), pt, w, h)
@@ -856,6 +887,57 @@ def zeichne_korrektur(c, k, pt, w, h):
     c.restoreState()
 
 
+def _verschiebung_pt(k, w, h):
+    """Versatz in PDF-Punkten (dx, dy); dy > 0 in der Angabe = nach unten auf dem Blatt."""
+    if "versatz_cm" in k:
+        dx, dy = k["versatz_cm"]
+        return _cm(dx) if dx else 0.0, -_cm(dy) if dy else 0.0
+    dx, dy = k.get("versatz", [0, 0])
+    return dx / 100 * w, -dy / 100 * h
+
+
+def _verschiebungen_anwenden(seite, pdf_ein, seitennr, verschiebungen, pt, w, h, x0, y0):
+    """Höhen-/Lageänderungen: Bereiche der Originalzeichnung als Vektor versetzt neu einsetzen.
+
+    1) alter und neuer Ort werden weiß abgedeckt, 2) die Originalzeichnung wird um den Versatz
+    verschoben und auf den neuen Ort zugeschnitten darübergelegt. Die übrigen Korrekturelemente
+    (z. B. die Dämmung in der frei gewordenen Fläche) werden danach gezeichnet."""
+    bereiche = []
+    for k in verschiebungen:
+        try:
+            (ax, ay), (bx, by) = pt(*k["rechteck"][:2]), pt(*k["rechteck"][2:])
+            dx, dy = _verschiebung_pt(k, w, h)
+        except (KeyError, ValueError, TypeError) as fehler:
+            print(f"Warnung: Korrekturelement „verschieben“ übersprungen – {fehler}")
+            continue
+        qx, qy, qb, qh = min(ax, bx), min(ay, by), abs(bx - ax), abs(by - ay)
+        bereiche.append(((qx, qy, qb, qh), (qx + dx, qy + dy, qb, qh), dx, dy))
+    if not bereiche:
+        return
+    # 1) abdecken
+    puffer = io.BytesIO()
+    c = canvas.Canvas(puffer, pagesize=(w, h))
+    c.setFillColor(HexColor("#FFFFFF"))
+    for quelle, ziel, _, _ in bereiche:
+        for rx, ry, rb, rh in (quelle, ziel):
+            c.rect(rx - 0.3, ry - 0.3, rb + 0.6, rh + 0.6, stroke=0, fill=1)
+    c.save()
+    puffer.seek(0)
+    seite.merge_transformed_page(PdfReader(puffer).pages[0], Transformation().translate(x0, y0))
+    # 2) verschobene, zugeschnittene Kopien der Originalzeichnung
+    for _, (zx, zy, zb, zh), dx, dy in bereiche:
+        original = PdfReader(pdf_ein).pages[seitennr - 1]
+        kopie = PageObject.create_blank_page(width=float(original.mediabox.right),
+                                             height=float(original.mediabox.top))
+        kopie.merge_transformed_page(original, Transformation().translate(dx, dy))
+        daten = kopie.get_contents().get_data()
+        clip = f"q {zx + x0:.3f} {zy + y0:.3f} {zb:.3f} {zh:.3f} re W n\n".encode()
+        inhalt = ContentStream(None, None)
+        inhalt.set_data(clip + daten + b"\nQ\n")
+        kopie.replace_contents(inhalt)
+        seite.merge_page(kopie)
+
+
 def korrigierte_seite(pdf_ein, daten, hinweistexte=True):
     """Gibt (PdfWriter mit Korrekturskizze, Seitennummer, Anzahl Elemente) zurück.
 
@@ -873,10 +955,15 @@ def korrigierte_seite(pdf_ein, daten, hinweistexte=True):
     def pt(x, y):
         return x / 100 * w, h - y / 100 * h
 
-    puffer = io.BytesIO()
-    c = canvas.Canvas(puffer, pagesize=(w, h))
     massstab_setzen(daten)
     elemente = [k for b in befunde_lesen(daten) for k in b.get("korrektur", [])]
+    verschiebungen = [k for k in elemente if k.get("typ") == "verschieben"]
+    elemente = [k for k in elemente if k.get("typ") != "verschieben"]
+    if verschiebungen:
+        _verschiebungen_anwenden(seite, pdf_ein, seitennr, verschiebungen, pt, w, h, x0, y0)
+
+    puffer = io.BytesIO()
+    c = canvas.Canvas(puffer, pagesize=(w, h))
     if not hinweistexte:
         elemente = [k for k in elemente if k.get("typ") != "text" or k.get("rahmen") is False
                     or k.get("farbe") == "original"]

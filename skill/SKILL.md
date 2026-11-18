@@ -67,8 +67,13 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   2. Dicke gezeichnet (im Maßstab gemessen) · Dicke laut Legende/Maßkette/Koten
   3. üblicher Bereich aus `pruefkatalog/10_bauteildicken.md`
   4. Schraffur passend und über die ganze Schichtdicke?
-  Jede Zeile mit „fehlt“, „nur beschriftet“, „Widerspruch“, „deutlich außerhalb üblich“ oder
-  „Schraffur unvollständig“ wird ein Befund (oder Teil eines Befunds). Erst wenn **jede**
+  5. **Material angegeben?** (Legende/Beschriftung; z. B. Dämmung im Sparrenfeld ohne Text)
+     – fehlt es, geeignete Baustoffe nach `pruefkatalog/11_baustoffe.md` (BS-01) bestimmen.
+  6. **Beschriftung richtig geschrieben?** Jede Beschriftung Wort für Wort lesen (ZQ-06).
+  Querschnitte fehlender Bauteile (z. B. Rähm) aus `10_bauteildicken.md` bzw. aus gleichartigen
+  Bauteilen derselben Zeichnung (z. B. Schwelle) übernehmen – nie frei schätzen.
+  Jede Zeile mit „fehlt“, „nur beschriftet“, „Widerspruch“, „deutlich außerhalb üblich“,
+  „Schraffur unvollständig“ oder „Material fehlt“ wird ein Befund (oder Teil eines Befunds). Erst wenn **jede**
   Zeile abgehakt ist, zur Prüfung übergehen. Den üblichen Bereich im Schichtenaufbau als
   Feld `ueblich` mitgeben (mit `[[ID]]`).
 - Raster und Zooms erzeugen:
@@ -110,10 +115,23 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 
 ### 3. Prüfen
 - `pruefkatalog/00_uebersicht.md`, `quellen.md` lesen; **jede Regel** aus `01_…` bis `07_…`
-  (Funktionen), die **üblichen Bauteildicken** (`10_bauteildicken.md`) **und** den passenden
+  (Funktionen), die **üblichen Bauteildicken** (`10_bauteildicken.md`), die **geeigneten
+  Baustoffe** (`11_baustoffe.md`) **und** den passenden
   Bauteil-Katalog (`08_dach_steildach.md` für Dach,
   First, Traufe, Ortgang; `09_wand_sockel.md` für Wand, Sockel und Bodenaufbau) durchgehen: `erfüllt`,
   `nicht anwendbar` oder Einstufung. Doppelbefunde zusammenführen.
+- **Positiv festgestellt** nur, was keinem Befund widerspricht: Steht ein Bereich in einem
+  Befund (z. B. Dämmung zu dünn, Rähm fehlt), darf „Positiv“ ihn nicht als gelöst nennen.
+  Vor dem Bericht die Positiv-Liste gegen alle Befunde abgleichen.
+- **Keine Fehlalarme:** Nur melden, was eine Regel verletzt. Eine korrekt beschriftete
+  Schicht, die nur anders schraffiert ist (ZQ-05), oder ein üblicher Querschnitt (z. B.
+  Konterlatte 30/50 bei Sparren < 8 m, RW-01) ist **kein** Befund.
+- **Baustoff-Empfehlung (BS-01):** Fehlt das Material einer Schicht oder funktioniert eine
+  Schicht technisch nicht, geeignete Baustoffe für diese Einbaulage aus `11_baustoffe.md`
+  nennen (mit `[[ID]]` und üblicher Dicke). **Detail funktioniert noch** (nur Angabe fehlt) →
+  Feld `empfehlung` der Schicht im Schichtenaufbau. **Detail funktioniert nicht** (klarer
+  Aufbaufehler oder Dicke deutlich außerhalb üblich, z. B. Dämmung viel zu dünn) → eigener
+  Abschnitt `baustoff_empfehlungen`. Die Einstufung des Befunds bleibt davon unberührt.
 - Eine **abweichende, aber anerkannte Variante** (siehe „Anerkannte Varianten“ im Katalog)
   ist **kein** Befund. Fehlt für eine Detailart eine Regel, aus dem Fachwissen der Kataloge
   und belegten Quellen ableiten und das im Bericht offenlegen.
@@ -166,6 +184,31 @@ Zeichnung (gilt für jedes Detail):**
    `firstziegel`, `profil` (freie Form, auch mit Dicke – Bleche, Formteile), `bahn` (Folien,
    Abdichtungen, Lüftungsband), `platte`, `daemmung`, `entfernen`. Was keine Vorlage hat,
    mit `profil` aus Punkten zeichnen.
+7. **Dicke ändern = Innenaufbau verschieben (Pflicht, wenn eine Dämmung zu dünn ist):**
+   Die Dämmung wird in **richtiger Dicke** eingezeichnet, und **alles raumseitig dahinter**
+   rückt um den Unterschied Δ nach innen – **vollständig**, keine Schicht geht verloren:
+   1. Zieldicke und Δ in cm bestimmen (RW-01 Punkt 4), z. B. Sparren 24 statt 15 → Δ = 9 cm.
+   2. `verschieben` mit `rechteck` = Bereich von der Innenseite der Dämmschicht bis über das
+      Ende des Innenaufbaus (inkl. der Beschriftungen, Hinweislinien und Maßketten, die zum
+      Innenaufbau gehören) und `versatz_cm` in Richtung Raum (Dach: `[0, Δ]` = nach unten;
+      Wand: `[±Δ, 0]`). Die Originalzeichnung wird dabei als Vektor versetzt.
+   3. **Schnittkanten** nur dort legen, wo ausschließlich gleichförmig weiterlaufende Linien
+      liegen (z. B. senkrechte Wandschichten weit unterhalb des Anschlusses) – **nie durch
+      Texte, Maßzahlen oder Bauteilkanten**. Die äußere Kante genau neben eine durchgehende
+      Schichtgrenze legen (nicht auf die Linie). Liegen Maßzahlen der Maßkette nahe der
+      Schnittkante, für die Maßkette ein **eigenes** `verschieben`-Rechteck mit passender
+      Oberkante verwenden.
+   4. Alte Dämmung und angeschnittene Hölzer mit `entfernen` abdecken und neu in voller Dicke
+      zeichnen (`daemmung` mit derselben `art`, `holz` in voller Höhe, z. B. Sparren).
+   5. Linien, die durch die frei gewordene Fläche laufen (Maßketten, Hinweislinien,
+      Bruchlinie), mit `linie` + `"farbe": "original"` schließen (Bruchlinie mit
+      `"strich": "strichpunkt"`); geänderte **Maßzahlen** (Teil- und Gesamtmaß) mit `entfernen`
+      + `text` `"farbe": "original"` neu setzen – senkrechte Maßzahlen mit `"winkel": 90`,
+      `x` = Grundlinie (links neben der Maßlinie), `y` = unteres Textende.
+   6. Kontrollbild: Ist jede Schicht des Innenaufbaus noch da und nur verschoben? Nichts
+      doppelt, keine halbierten Texte, Maßkette durchgehend?
+5a. **Schreibfehler korrigieren (ZQ-06):** falsches Wort mit `entfernen` abdecken und richtig
+   mit `text` (`"rahmen": false`, `groesse` wie die Zeichnung) an derselben Stelle setzen.
 5. **Beschriftung** kurz („B1: Sparrenfeld vollständig dämmen“) mit Hinweislinie in einem
    freien Bereich; lange Texte werden automatisch umbrochen und auf dem Blatt gehalten.
    Keine Texte oder Linien der Zeichnung verdecken. **Verdeckt ein eingezeichnetes Bauteil
@@ -201,13 +244,28 @@ nebeneinander; zusätzlich wird `<bericht>_korrekturskizze.pdf` als Vektor-PDF g
 python scripts/bericht.py <zeichnung.pdf> befunde.json pruefbericht.pdf
 ```
 Gliederung: Berichtskopf · Kurzfazit mit Befundliste · Maßnahmenliste zum Abhaken ·
-markierte Zeichnung (Querformat) · Schichtenaufbau · Befunde im Detail (mit Zeichnungs-
+markierte Zeichnung (Querformat) · Schichtenaufbau · ggf. Baustoff-Empfehlungen · Befunde im Detail (mit Zeichnungs-
 ausschnitt) · Nicht prüfbar und offene Fragen · Positiv festgestellt · Anhang (Methode,
 Annahmen, Code-Legende, Quellenverzeichnis). Danach die Seiten als Bild kontrollieren
 (keine zerrissenen Karten, keine halbleeren Seiten außer vor der Querformatseite).
 
 ### 7. Antwort im Chat
 Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Bericht übergeben.
+
+### 8. Nachfragen nach dem Bericht (gleiche Regeln wie die Prüfung)
+Fragt der Nutzer nach („Reicht die Dämmung?“, „Welches Material nehme ich?“), gelten
+**dieselben Grundsätze** – auch ohne neuen Bericht:
+- **Keine Berechnungen und keine Schätzwerte:** keine U-, R-, sd- oder λ-Werte überschlagen,
+  keine angenommenen Rechenwerte, kein „rechnerisch reicht es wahrscheinlich“.
+- Stattdessen: Dicke laut Zeichnung mit dem **üblichen Bereich** (`10_bauteildicken.md`,
+  mit `[[ID]]`) vergleichen, Widersprüche (Legende ↔ Zeichnung ↔ Maßkette) benennen,
+  **geeignete Baustoffe** (`11_baustoffe.md`) nennen und auf den **Wärmeschutznachweis**
+  (bzw. Tragwerksplanung) verweisen.
+- Beispiel: „Gezeichnet sind 15 cm, üblich sind bei Zwischensparrendämmung 200–240 mm; die
+  Legende nennt Sparren 24 cm. Empfehlung: Sparrenfeld in voller Höhe dämmen, z. B. mit
+  Mineralwolle, Zellulose oder Holzfaser-Dämmmatte. Ob das genügt, zeigt nur der
+  Wärmeschutznachweis.“
+- Ändert die Nachfrage das Ergebnis, `befunde.json` anpassen und den Bericht neu erzeugen.
 
 ## Format `befunde.json`
 
@@ -229,7 +287,18 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
   "beschriftungen": [ { "text": "Wand A", "x": 33, "y": 52 }, { "text": "Wand B", "x": 56, "y": 88 } ],
   "kurzfazit": "Ein bis zwei Sätze: das Wichtigste zuerst.",
   "schichtenaufbau": [
-    { "nr": "S1", "schicht": "Holzverkleidung Douglasie", "dicke": "2,0 cm", "ueblich": "ca. 24 mm [[DATAHOLZ-AW]]", "status": "ok", "anmerkung": "" }
+    { "nr": "S1", "schicht": "Holzverkleidung Douglasie", "dicke": "2,0 cm", "ueblich": "ca. 24 mm [[DATAHOLZ-AW]]", "status": "ok", "anmerkung": "" },
+    { "nr": "S5", "schicht": "Dämmung im Gefach (Material nicht angegeben)", "dicke": "24 cm", "ueblich": "120–240 mm [[DATAHOLZ-AW]]", "status": "unklar", "anmerkung": "", "empfehlung": "Mineralwolle, Zellulose, Schafwolle oder Holzfaserdämmung [[DATAHOLZ-AW]]" }
+  ],
+  "baustoff_empfehlungen": [
+    {
+      "bauteil": "D4 Dämmung im Sparrenfeld",
+      "befund": "B5",
+      "problem": "Nur 15 cm gezeichnet, üblich 200–240 mm; Material nicht angegeben.",
+      "baustoffe": "Mineralwolle-Klemmfilz, Zellulosefaser (eingeblasen), Schafwolle [[DATAHOLZ-SD]] oder Holzfaser-Dämmmatte [[BAUNETZ-HOLZFASERDAEMMUNG]]",
+      "dicke": "volle Sparrenhöhe, üblich 200–240 mm [[DATAHOLZ-SD]]",
+      "beachten": "weiche Dämmschraffur = Faserdämmstoff; Dicke nach Wärmeschutznachweis festlegen"
+    }
   ],
   "befunde": [
     {
@@ -269,8 +338,11 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
 ```
 - Koordinaten in **Prozent** (x von links, y von oben, r bezogen auf die Blattbreite).
 - `zoom` optional (Ausschnitt für die Befundkarte, sonst automatisch um den Kreis).
-- `korrektur`: Elemente der Korrekturskizze (grün), Reihenfolge beim Zeichnen: entfernen →
-  Flächen → Linien → Texte:
+- `korrektur`: Elemente der Korrekturskizze (grün), Reihenfolge beim Zeichnen: verschieben →
+  entfernen → Flächen → Linien → Texte:
+  - `verschieben` – `rechteck` (Bereich der Originalzeichnung) + `versatz_cm` `[dx, dy]`
+    (dy > 0 = nach unten) oder `versatz` in %: Bereich als Vektor versetzt neu einsetzen;
+    alter und neuer Ort werden vorher weiß abgedeckt (für Dickenänderungen, 5b Punkt 7).
   - `entfernen` – `punkte` (Polygon) oder `rechteck`: falsch Gezeichnetes weiß abdecken.
   - `daemmung` – `punkte` (Polygon) + `band` `[[x,y],[x,y],[x,y]]` (zwei Punkte auf einer
     Schichtgrenze, ein Punkt auf der gegenüberliegenden) + `art` (`weich` | `hart` |
@@ -298,11 +370,17 @@ Kurz zusammenfassen (Anzahl je Einstufung, wichtigste Maßnahmen) und den Berich
   - `abklebung` (dicke gestrichelte Linie), `linie`, `durchstreichen`, `text` (mit optionaler
     Hinweislinie `ziel`, `rahmen`: false für Ersatzwerte direkt im Text, `groesse` in pt,
     `"farbe": "original"` = schwarz ohne Rahmen, um verdeckte Beschriftungen/Koten der
-    Zeichnung neu zu setzen).
+    Zeichnung neu zu setzen; `"winkel": 90` = gedreht, z. B. senkrechte Maßzahl).
+    `linie` mit `"farbe": "original"` = schwarze Linie der Zeichnung fortführen
+    (`staerke_pt`, `"strich": "strichpunkt"` | `"gestrichelt"`).
   - Angaben in cm brauchen `"detail": {"massstab": "1:5"}`; fehlt der Maßstab in der
     Zeichnung, aus einer Maßkette ableiten und als Annahme nennen.
   - Alle Koordinaten werden **in jeder Zeichnung neu** aus Raster und Zooms abgelesen –
     nie aus Beispielen oder früheren Prüfungen übernehmen.
+- `empfehlung` (je Schicht, optional): kurze Baustoff-Empfehlung, wenn nur die Materialangabe
+  fehlt (BS-01). `baustoff_empfehlungen` (optional): eigener Abschnitt, wenn eine Schicht
+  technisch nicht funktioniert; `befund` verlinkt auf die Befundkarte. Die betroffene Schicht
+  bekommt dann `"empfehlung": "siehe Baustoff-Empfehlungen"`.
 - `prioritaet` optional (`hoch`/`mittel`/`niedrig`), sonst automatisch.
 - Für `nicht_pruefbar`: `regel`, `titel`, `zu_klaeren`, ggf. `nachweis_erforderlich`.
 - Befundnummern im Text („siehe B2“) und Quellen `[[ID]]` werden im Bericht verlinkt.

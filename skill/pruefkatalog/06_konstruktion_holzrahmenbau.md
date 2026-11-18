@@ -146,6 +146,10 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
   **klarer Aufbaufehler**. Ende nicht eindeutig erkennbar → **mögliche Auffälligkeit**.
 - **Abgrenzung:** Hauptbefund hier; Dämmlücke (WB-01) und dichte Schicht auf der kalten
   Seite (FS-02) nur als Verweis. Fehlender Anschluss der Luftdichtheitsschicht → LD-02.
+- **Kein Befund (anerkannte Variante, DA-05):** Eine **Dachüberstandsplatte am Ortgang bzw.
+  an der Traufe**, die **außen über den Sparren** in der Ebene der Unterdeckung liegt und zur
+  Rückverankerung ein bis zwei Sparrenfelder ins Dach einbindet, läuft nicht durch die
+  Dämmebene – sie ersetzt dort die Unterdeckplatte. Nicht als KO-07, FS-01 oder WB-01 werten.
 - **Korrekturskizze (immer beide Schritte):** (1) überstehendes Plattenstück mit `entfernen`
   weiß abdecken; (2) den **ganzen frei werdenden Bereich bis zum nächsten Bauteil** (z. B. bis
   Füllholz, Sparren, Pfettenoberkante) mit der Dämmung des Nachbarbauteils füllen – `daemmung`

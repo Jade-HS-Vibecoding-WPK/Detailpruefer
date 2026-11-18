@@ -84,4 +84,21 @@ werden leicht falsch ausgeführt.
 - **Warum relevant?** Verwechslungsgefahr.
 - **Verbesserungsmöglichkeiten:** Maßstab ergänzen, Schraffuren vereinheitlichen, Texte korrigieren.
 - **Grundlage:** Zeichnungskonventionen (Praxisempfehlung).
-- **Einstufung:** **Verbesserungshinweis**.
+- **Einstufung:** **Verbesserungshinweis**. **Ausnahme:** Ist die Schicht **eindeutig
+  beschriftet** (z. B. „DWD-Platte (4cm)“), ist eine abweichende Schraffur **kein Befund** –
+  nur melden, wenn die Schraffur zu einer falschen Deutung führen kann (z. B. unbeschriftete
+  Schicht oder zwei verschiedene Dämmstoffe mit gleicher Schraffur).
+
+## ZQ-06 Rechtschreibung der Beschriftungen
+
+- **Gilt für:** alle Texte der Zeichnung (Legende, Bauteilbezeichnungen, Titel).
+- **Prüfe:** Jede Beschriftung Wort für Wort lesen: Tippfehler, vertauschte oder fehlende
+  Buchstaben (z. B. „Dampfbremmse“ statt „Dampfbremse“), falsche Fachbegriffe.
+- **Warum relevant?** Falsch geschriebene Bezeichnungen wirken unsauber und können in
+  Ausschreibung oder Werkplanung übernommen werden.
+- **Verbesserungsmöglichkeiten:** Korrekte Schreibweise angeben **und in der Korrekturskizze
+  korrigieren**: falsches Wort mit `entfernen` weiß abdecken und richtig mit `text`
+  (`"rahmen": false`, Schriftgröße wie die Zeichnung) an derselben Stelle neu setzen.
+- **Grundlage:** Zeichnungsplausibilität [[PRAXIS]].
+- **Einstufung:** **Verbesserungshinweis** – alle Schreibfehler in **einem** Befund sammeln
+  (Liste „falsch → richtig“).

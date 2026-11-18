@@ -1,0 +1,401 @@
+{
+ "detail": {
+  "massstab": "1:5",
+  "titel": "Ortgang – Test Verschieben",
+  "pruefdatum": "18.11.2026"
+ },
+ "seite": 1,
+ "befunde": [
+  {
+   "nr": 5,
+   "einstufung": "auffaelligkeit",
+   "titel": "Sparren und Dämmung nur 15 cm – Legende nennt Sparren 24/8",
+   "korrektur": [
+    {
+     "typ": "verschieben",
+     "rechteck": [
+      35.83,
+      39.034,
+      93.5,
+      65.0
+     ],
+     "versatz_cm": [
+      0,
+      9
+     ]
+    },
+    {
+     "typ": "verschieben",
+     "rechteck": [
+      93.5,
+      38.55,
+      99.5,
+      65.0
+     ],
+     "versatz_cm": [
+      0,
+      9
+     ]
+    },
+    {
+     "typ": "entfernen",
+     "rechteck": [
+      35.83,
+      29.058,
+      91.53,
+      39.054
+     ]
+    },
+    {
+     "typ": "daemmung",
+     "art": "weich",
+     "punkte": [
+      [
+       35.83,
+       29.008
+      ],
+      [
+       43.2,
+       29.008
+      ],
+      [
+       43.2,
+       45.09460436009979
+      ],
+      [
+       35.83,
+       45.09460436009979
+      ]
+     ],
+     "band": [
+      [
+       35.83,
+       29.008
+      ],
+      [
+       43.2,
+       29.008
+      ],
+      [
+       35.83,
+       45.09460436009979
+      ]
+     ]
+    },
+    {
+     "typ": "daemmung",
+     "art": "weich",
+     "punkte": [
+      [
+       47.09,
+       29.008
+      ],
+      [
+       81.33,
+       29.008
+      ],
+      [
+       81.33,
+       45.09460436009979
+      ],
+      [
+       47.09,
+       45.09460436009979
+      ]
+     ],
+     "band": [
+      [
+       47.09,
+       29.008
+      ],
+      [
+       81.33,
+       29.008
+      ],
+      [
+       47.09,
+       45.09460436009979
+      ]
+     ]
+    },
+    {
+     "typ": "daemmung",
+     "art": "weich",
+     "punkte": [
+      [
+       85.19,
+       29.008
+      ],
+      [
+       91.54,
+       29.008
+      ],
+      [
+       91.54,
+       45.09460436009979
+      ],
+      [
+       85.19,
+       45.09460436009979
+      ]
+     ],
+     "band": [
+      [
+       85.19,
+       29.008
+      ],
+      [
+       91.54,
+       29.008
+      ],
+      [
+       85.19,
+       45.09460436009979
+      ]
+     ]
+    },
+    {
+     "typ": "holz",
+     "rechteck": [
+      43.2,
+      29.008,
+      47.09,
+      45.09460436009979
+     ]
+    },
+    {
+     "typ": "holz",
+     "rechteck": [
+      81.33,
+      29.008,
+      85.19,
+      45.09460436009979
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       45.145,
+       31.037
+      ],
+      [
+       83.26,
+       31.037
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       45.145,
+       30.55
+      ],
+      [
+       45.145,
+       31.55
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       83.26,
+       30.55
+      ],
+      [
+       83.26,
+       31.55
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       44.9,
+       31.45
+      ],
+      [
+       45.39,
+       30.62
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       83.015,
+       31.45
+      ],
+      [
+       83.505,
+       30.62
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "text",
+     "text": "80",
+     "x": 63.53,
+     "y": 30.78,
+     "groesse": 16
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       86.464,
+       29.008
+      ],
+      [
+       86.464,
+       45.144604360099784
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       84.05,
+       44.19460436009979
+      ],
+      [
+       84.05,
+       45.144604360099784
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       91.566,
+       38.934
+      ],
+      [
+       91.566,
+       45.19460436009979
+      ]
+     ],
+     "strich": "strichpunkt"
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       95.136,
+       38.45
+      ],
+      [
+       95.136,
+       45.19460436009979
+      ]
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "linie",
+     "punkte": [
+      [
+       96.997,
+       38.45
+      ],
+      [
+       96.997,
+       45.19460436009979
+      ]
+     ]
+    },
+    {
+     "typ": "entfernen",
+     "rechteck": [
+      93.9,
+      33.0,
+      95.08,
+      34.95
+     ]
+    },
+    {
+     "typ": "entfernen",
+     "rechteck": [
+      95.8,
+      30.7,
+      96.9,
+      32.7
+     ]
+    },
+    {
+     "farbe": "original",
+     "typ": "text",
+     "text": "24",
+     "x": 95.02,
+     "y": 37.941302180049895,
+     "winkel": 90,
+     "groesse": 16
+    },
+    {
+     "farbe": "original",
+     "typ": "text",
+     "text": "47",
+     "x": 96.83,
+     "y": 35.6603021800499,
+     "winkel": 90,
+     "groesse": 16
+    },
+    {
+     "typ": "text",
+     "text": "B5: Sparren 24/8 laut Legende, Sparrenfeld in voller Höhe dämmen; Innenaufbau um 9 cm nach innen verschoben",
+     "x": 60,
+     "y": 20.5,
+     "ziel": [
+      66,
+      36
+     ]
+    }
+   ],
+   "regel": "RW-01 / ZQ-01",
+   "sicherheit": "hoch",
+   "fundstelle": "Dach, Sparrenebene",
+   "erkennbar": "Maßkette 15, Legende Sparren 24/8.",
+   "verbesserung": "Sparrenfeld in voller Höhe (24 cm) dämmen; Innenaufbau um 9 cm nach innen verschieben.",
+   "massnahme": "Sparren und Dämmung 24 cm zeichnen",
+   "wo": "Dach",
+   "kreis": {
+    "x": 66,
+    "y": 34,
+    "r": 3
+   },
+   "badge": {
+    "x": 66,
+    "y": 22
+   },
+   "zoom": [
+    30,
+    15,
+    99,
+    72
+   ]
+  }
+ ],
+ "zeichnung_ausschnitt": [
+  5,
+  5,
+  100,
+  96
+ ]
+}

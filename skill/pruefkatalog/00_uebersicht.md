@@ -32,6 +32,8 @@ Praxisempfehlungen werden mit `[[PRAXIS]]`, Herstellerangaben mit `[[HERSTELLER]
 | `08_dach_steildach.md` | **Bauteil-Katalog** Steildach: Tragsystem, First, Traufe, Ortgang, Lattung | DA |
 | `09_wand_sockel.md` | **Bauteil-Katalog** Außenwand Holzrahmenbau, Sockel, Bodenaufbau | SO |
 | `10_bauteildicken.md` | **Übliche Bauteildicken** (Praxis-Richtwerte aus Standardaufbauten) | RW |
+| `07_zeichnungsqualitaet.md` → ZQ-06 | **Rechtschreibung** der Beschriftungen (Korrektur auch in der Skizze) | ZQ |
+| `11_baustoffe.md` | **Geeignete Baustoffe je Einbaulage** (Empfehlung bei fehlender Materialangabe oder nicht funktionsfähiger Schicht) | BS |
 | `quellen.md` | Normausgaben, Gesetzesstand, Quellen | – |
 
 Brand- und Schallschutz: nur Abfrage über `checkliste.md`, keine Prüfung.

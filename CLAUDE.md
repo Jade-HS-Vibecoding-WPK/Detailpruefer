@@ -22,6 +22,11 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
 - Nach jedem Arbeitsschritt **Schritt für Schritt erklären**, was gemacht wurde.
 - Vor einer neuen Sitzung bzw. wenn der Kontext voll wird: `HANDOFF.md` aktualisieren.
 - Rückfragen an den Nutzer gesammelt in **einer** Runde stellen (Fragedialog mit Antwortoptionen).
+- **Erst fragen, dann umsetzen:** Gibt es offene Fragen zu einer Aufgabe, diese vor Beginn mit
+  dem Nutzer klären (bei größeren Vorhaben kurz interviewen) – nicht mit Annahmen loslegen.
+- Nach jeder Änderung an `skill/`: `dist/detailpruefer-architektur.zip` und `.skill` neu packen.
+  In claude.ai einspielen (Plugins → ⋯ → „Neue Version hochladen“) nur auf Wunsch des Nutzers;
+  danach die aktive Version (v…) in `HANDOFF.md` vermerken.
 
 ## Fachliche Regeln
 - **Maßstab sind deutsche Normen und Gesetze** (DIN 4108, DIN 68800, DIN 4109, GModG –
@@ -48,6 +53,18 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   am besten geeignete Lösung zeichnen, Alternativen im Text nennen.
 - **Tragsystem erkennen** (Pfetten-/Sparrendach usw.) und danach prüfen.
 - **Rückfragen nur konstruktiv relevant** (kein Projektname, keine sd-Werte, nie „geplant?“).
+- **Interner Bauteil-Check vor jeder Prüfung:** jede Schicht und jedes Bauteil der Zeichnung
+  plus alle Pflichtbauteile der Detailart (Kataloge `08_…`/`09_…`) einzeln abhaken –
+  vorhanden? Dicke gezeichnet/Legende/Maßkette/Höhenkoten? üblicher Bereich? Schraffur über
+  die ganze Schichtdicke? Erscheint nicht als eigene Tabelle im Bericht.
+- **Höhen-Abgleich bis zur Schicht:** Widersprechen sich Koten, Maßketten und Schichtdicken,
+  die verursachende Schicht benennen und in der Korrekturskizze in richtiger Dicke zeichnen.
+- **Übliche Bauteildicken** (`skill/pruefkatalog/10_bauteildicken.md`) nur aus offiziellen,
+  nachweisbaren Quellen (z. B. dataholz-Standardaufbauten) – als **Empfehlung**, kein
+  Grenzwert; Abweichung → mögliche Auffälligkeit; im Schichtenaufbau Feld `ueblich`. Ohne
+  belegbare Quelle: „kein Richtwert – nach Nachweis“.
+- **Foren sind keine Quelle** (auch nicht als Beleg für Zahlen); widersprüchliche oder
+  ungeprüfte Zahlen weglassen.
 - Keine Pauschalaussagen „sicher/normgerecht“. Jeder Befund: woran in der Zeichnung erkennbar.
 - Jeder Prüfbericht enthält den Hinweis: *Hilfestellung – ersetzt keine fachliche Prüfung
   und keinen Nachweis. Die KI kann sich irren; Ergebnisse sind zu überprüfen.*
@@ -56,9 +73,10 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   die Regel korrigieren (Beispiel: Gehrung an Holzfassaden-Außenecken ist empfohlen).
 - **Fehlt für eine Bauteilart eine Regel** (z. B. Dach, Sockel, Fenster), zuerst den
   Prüfkatalog mit Quelle ergänzen, dann prüfen – und das im Bericht/der Antwort offenlegen.
-- Ablauf jeder Prüfung: Zeichnung erfassen (Raster, Zooms, Texte mit Positionen) →
-  eine Fragerunde → alle Regeln → `befunde.json` → markieren → Korrekturskizze → Bericht →
-  **jede Berichtsseite als Bild kontrollieren** (Überlappungen, Umbrüche, leere Seiten).
+- Ablauf jeder Prüfung: Zeichnung erfassen (Raster, Zooms, Texte mit Positionen, Tragsystem)
+  → Bauteil-Check → Fragerunde (nur falls konstruktiv relevante Fragen) → alle Regeln →
+  `befunde.json` → markieren → Korrekturskizze → Bericht → **jede Berichtsseite als Bild
+  kontrollieren** (Überlappungen, Umbrüche, leere Seiten, abgeschnittene Texte).
 
 ## Testen
 - Testzeichnungen: `tests/details/`

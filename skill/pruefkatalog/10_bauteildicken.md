@@ -24,6 +24,11 @@
      verursachende Schicht liegt).
 3. **Korrekturskizze:** Nennt die Zeichnung kein Maß, eine fehlende Schicht in einem
    **üblichen Wert** einzeichnen und im Text „(üblich, nach Nachweis festlegen)“ schreiben.
+4. **Dämmung unter dem üblichen Mindestbereich** (oder dünner als laut Legende, z. B. Sparren
+   24 cm, Dämmung 15 cm): in der Korrekturskizze die Dämmung **in richtiger Dicke einzeichnen
+   und den Innenaufbau vollständig verschieben** (SKILL.md 5b, Punkt 7). Zieldicke: Legende
+   bzw. Bauteilhöhe (Sparren, Ständer); ohne Angabe die **Untergrenze des üblichen Bereichs**
+   „(nach Wärmeschutznachweis festlegen)“.
 
 ## Außenwand Holzrahmenbau (hinterlüftet)
 
@@ -44,7 +49,7 @@
 |---|---|---|
 | Dachziegel / Dachstein | ca. 30 mm (Bauhöhe je nach Produkt) | [[DATAHOLZ-SD]] |
 | Traglattung | 30/50 mm (auch 40/60 mm) | [[DATAHOLZ-SD]], [[NELSKAMP-D13]] |
-| Konterlattung | mind. 50 mm (je nach Dachneigung und Anforderungen) | [[DATAHOLZ-SD]] |
+| Konterlattung | Mindestnenndicke **30 mm** bei Sparrenlänge < 8 m, 40 mm bei 8–10 m, 60 mm bei 10–15 m (z. B. 30/50 üblich); im Standardaufbau 50 mm. Ist die Sparrenlänge nicht erkennbar, gilt 30 mm als im üblichen Bereich – kein Befund | [[NELSKAMP-D13]], [[DATAHOLZ-SD]] |
 | Unterdeckplatte (Holzfaser) | ca. 22 mm | [[DATAHOLZ-SD]] |
 | Sparren mit Zwischensparrendämmung | 200–240 mm (Sparrenbreite ca. 80 mm) | [[DATAHOLZ-SD]] |
 | Installationsebene (Querlattung) | ca. 50 mm | [[DATAHOLZ-SD]] |
@@ -77,3 +82,10 @@
 |---|---|---|
 | Abstand Unterkante Holz – Gelände | 30 cm (Regelwert, geringer nur unter Bedingungen DIN 68800-2) | [[BAUNETZ-HOLZFASSADE]], [[DIN-68800-2]] |
 | Schwelle | Breite = Ständerwerk; Höhe nach Planung | [[DATAHOLZ-AW]] |
+
+## Ständerwerk Holzrahmenbau (Schwelle, Ständer, Rähm)
+
+| Bauteil | üblich | Quelle |
+|---|---|---|
+| Ständer tragender Außenwände | 60/200 bzw. 60/240 mm | [[BAUNETZ-HOLZRAHMENBAU]] |
+| Rähm (oberer Abschluss des Ständerwerks) | Breite = Tiefe des Ständerwerks (z. B. 24 cm); **Querschnitt der Schwelle übernehmen**, wenn die Zeichnung ihn nennt, sonst **10 cm hoch** zeichnen (Praxisempfehlung) – Querschnitt nach Tragwerksplanung | [[BAUNETZ-HOLZRAHMENBAU]], [[PRAXIS]] |
