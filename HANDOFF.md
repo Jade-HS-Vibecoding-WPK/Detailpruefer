@@ -1,10 +1,10 @@
 # HANDOFF – Detailprüfer Architektur
 
-> Übergabe für eine neue Sitzung. Stand: **Mi 18.11.2026**, letzter Speicherstand `f053c35`
-> (lokal = GitHub, Kurs-Repo). In claude.ai ist **Skill-Version v8** aktiv (18.11.) = lokaler Stand:
-> Feature 11, Nachbesserung Ortgang (Konterlatte, Rähm, ZQ-06 Rechtschreibung …) und Werkzeug
-> `verschieben` – gespeichert als `f053c35` (GitHub). **Lokal weiter:** Feature 12 (Detail-Datenbank
-> `12_detailtypen.md`, Referenzskizzen, `linien.py`, Rückfrage K0) – gepackt, nicht eingespielt, kein Commit.
+> Übergabe für eine neue Sitzung. Stand: **Mi 18.11.2026**, letzter Speicherstand `e86ded6`
+> (lokal = GitHub, Kurs-Repo). In claude.ai ist **Skill-Version v9** aktiv (18.11.) = Stand `e86ded6`:
+> Feature 11 (Baustoffe), Ortgang-Nachbesserung, Werkzeug `verschieben`, Feature 12 (Detail-Datenbank
+> `12_detailtypen.md`, Referenzskizzen `referenz/`, `linien.py`, Rückfrage K0). **Lokal weiter:**
+> Nachbesserung First (Spuren fehlender Bauteile, K0 verschärft, Pfettenlage nach Maß) – gepackt, kein Commit.
 > Zuerst diese Datei, dann `CLAUDE.md` (Dauerregeln) und `PLAN.md` (Plan, Stand, Entscheidungen).
 
 ---
@@ -143,7 +143,7 @@ Browser dafür: Claude in Chrome (dort ist der Nutzer angemeldet; im eingebauten
 
 ## 5. Was als Nächstes ansteht
 
-0. v8 ist eingespielt → Ortgang (`tests/details/blindtest_6_ortgang.pdf`) in einem
+0. v9 ist eingespielt → First und Ortgang (`tests/details/blindtest_6_ortgang.pdf`) in einem
    **neuen** claude.ai-Chat erneut testen – Blindtest 6 lief im alten Sockel-Chat mit v5.
 
 1. **Blindtest mit v6** in einem **neuen** claude.ai-Chat (z. B. Ortgang; Detail liefert der

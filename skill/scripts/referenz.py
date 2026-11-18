@@ -356,7 +356,7 @@ def _deckung(sk, a_deg, laenge, d0=22.2, first=True):
 def first_pfettendach(ziel):
     a = 30
     sk = Skizze("Referenz DT-D1 · First, Pfettendach, Zwischensparrendämmung",
-                "Firstpfette UNTER den Sparren, Oberkante Pfette = Schnittpunkt der Sparren-Unterkanten in der Firstachse;"
+                "Firstpfette UNTER den Sparren (Sparren aufgekervt); Oberkante nach Maß der Zeichnung, sonst im Schnittpunkt der Sparren-Unterkanten;"
                 " Innenaufbau endet an der Pfette, Dampfbremse luftdicht angeschlossen.",
                 ursprung=(285, 330), mass=2.6)
     L = 85
@@ -369,6 +369,10 @@ def first_pfettendach(ziel):
         p0 = _versatz(seite, a, t0, 0)
         sk.luftdicht([_versatz(seite, a, L, 0), p0, (seite * 7, p0[1] - 5)])
     _deckung(sk, a, L)
+    # Sparren-Pfetten-Verschraubung: schräge Schrauben aus den Sparren in die Pfette
+    for seite in (-1, 1):
+        sk.linie([_versatz(seite, a, 30, 21), (-seite * 3, -14)], GRAU, 0.8, [6, 2, 1, 2])
+    sk.nr(11, _versatz(1, a, 18, 14), (70, 62), "Schrauben (z. B. Tellerkopf-/Vollgewindeschrauben) schräg durch die Sparren IN die Pfette – laufen sie ins Leere, fehlt die Pfette")
     sk.nr(1, (0, 31), (-60, 60), "Firstziegel auf Firstlatte, Lüftungselement mit Insektenschutz (Abluft ≥ 0,5 ‰, ≥ 50 cm²/m)")
     sk.nr(2, (0, 22), (-45, 72), "Firstlatte (z. B. 4/6 hochkant) auf Firstlattenhaltern")
     sk.nr(3, _versatz(-1, a, 45, 30), (-95, 40), "Deckung auf Traglattung 3/5")

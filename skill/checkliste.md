@@ -24,7 +24,7 @@ für die Konstruktion wichtig ist, und die **Annahme**, die ohne Antwort gilt.
 
 | Nr. | Frage | Warum wichtig? | Annahme, wenn keine Antwort |
 |---|---|---|---|
-| K0 | **Konstruktion/Tragsystem nicht eindeutig zuordenbar** (z. B. am First weder Firstpfette noch Sparrenverbindung → „Pfettendach oder Sparren-/Kehlbalkendach?“; Aufsparren- oder Zwischensparrendämmung?; Flachdach-Typ?) – **immer fragen**, Antwortoptionen aus `pruefkatalog/12_detailtypen.md` | Davon hängen Pflichtbauteile, Befunde und die Korrekturskizze ab (DT-00) | **keine** – erst nach der Antwort prüfen und zeichnen |
+| K0 | **Konstruktion/Tragsystem nicht eindeutig zuordenbar** (z. B. am First keine Firstpfette und keine **als Bauteil gezeichnete und beschriftete** Firstverbindung – Schrauben, Fuge oder stumpfer Stoß genügen nicht → „Pfettendach mit Firstpfette oder Sparren-/Kehlbalkendach?“, gefundene Spuren wie ins Leere laufende Maße/Schrauben als Hinweis nennen; Aufsparren- oder Zwischensparrendämmung?; Flachdach-Typ?) – **immer fragen**, Antwortoptionen aus `pruefkatalog/12_detailtypen.md` | Davon hängen Pflichtbauteile, Befunde und die Korrekturskizze ab (DT-00) | **keine** – erst nach der Antwort prüfen und zeichnen |
 | K1 | Ist der Raum hinter dem Detail **beheizt** (z. B. ausgebautes Dachgeschoss) oder **unbeheizt** (Kaltdach, Spitzboden)? | Bestimmt, ob Dämmung, Luftdichtheit und Dampfbremse an dieser Stelle nötig sind | wie gezeichnet: gedämmt = beheizt |
 | K2 | **Neubau oder Bestand/Sanierung?** | Bestand kann vorhandene Bauteile erklären, die man neu anders lösen würde | Neubau |
 | K3 | **Besondere Raumnutzung** mit hoher Feuchte (Bad, Schwimmbad, Küche gewerblich)? | Hohe Raumfeuchte verschärft die Anforderungen an die Dampfbremse | Wohnen, normales Raumklima |

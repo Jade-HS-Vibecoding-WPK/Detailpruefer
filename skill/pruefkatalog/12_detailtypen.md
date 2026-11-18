@@ -19,14 +19,26 @@ schematisch, nicht maßstäblich) zum Anschauen.
    (z. B. Firstpfette im Querschnitt sichtbar → Pfettendach; Sparren stoßen im First
    aneinander → Sparrendach; Kehlbalken → Kehlbalkendach; Dämmung über den Sparren →
    Aufsparrendämmung).
-3. **Lässt sich die Konstruktion nicht eindeutig zuordnen** (z. B. am First weder Pfette noch
+3. **Spuren fehlender Bauteile lesen:** Maße, Höhenkoten, Schraubenachsen oder Hinweislinien,
+   die **ins Leere** laufen (an ihrem Ende ist kein Bauteil gezeichnet), zeigen fast immer auf ein
+   **fehlendes Bauteil** – z. B. ein Höhenmaß in der Firstachse, das in der Dämmung endet
+   (= Oberkante der fehlenden Firstpfette), oder Schrauben, die schräg aus den Sparren nach
+   unten in den Raum laufen (= Sparren-Pfetten-Verschraubung ohne Pfette). Das fehlende Bauteil
+   **genau dort** einzeichnen, wo diese Spuren enden.
+4. **Sparrendach erst, wenn die Firstverbindung eindeutig ist:** Fehlt am First eine Pfette, gilt
+   das Dach nur dann als Sparren-/Kehlbalkendach, wenn eine **Firstverbindung als Bauteil
+   gezeichnet und beschriftet** ist (Laschen, Zange, Scherzapfen, Blatt) oder Legende/Titel es
+   nennen. **Schrauben allein, ein stumpfer Sparrenstoß oder eine Fuge reichen nicht** – dann ist
+   die Konstruktion **nicht eindeutig** → Rückfrage K0 (mit den gefundenen Spuren als Hinweis,
+   z. B. „Ein Höhenmaß in der Firstachse endet ohne Bauteil – Pfettendach mit Firstpfette?“).
+5. **Lässt sich die Konstruktion nicht eindeutig zuordnen** (z. B. am First weder Pfette noch
    Sparrenverbindung, unklar ob Dachraum beheizt), **immer vor der Prüfung nachfragen**
    (Checkliste K1) – nicht raten (Entscheidung Nutzer 18.11.2026). Erst nach der Antwort
    prüfen und die Korrekturskizze nach dem passenden Typ zeichnen.
-4. Weicht das Detail von allen Typen ab, aber erfüllt es die **Funktionen** (Lastabtrag,
+6. Weicht das Detail von allen Typen ab, aber erfüllt es die **Funktionen** (Lastabtrag,
    Regensicherheit, Wind-/Luftdichtheit, Dämmung, Belüftung, Holzschutz) erkennbar, ist es
    **kein Befund** – nach den Funktionsregeln (Kataloge 01–07) prüfen.
-5. **Geometrie nie schätzen:** Kanten, Neigungen und Schnittpunkte mit
+7. **Geometrie nie schätzen:** Kanten, Neigungen und Schnittpunkte mit
    `python scripts/linien.py` aus der Vektorzeichnung lesen (siehe SKILL.md, Schritt 1).
 
 ---
@@ -36,7 +48,11 @@ schematisch, nicht maßstäblich) zum Anschauen.
 ### DT-D1 First, Pfettendach, Zwischensparrendämmung (Raum bis unter den First beheizt)
 
 - **Erkennen:** Firstpfette (Kantholz/BSH, im Querschnitt mit Kreuz) unter den Sparren in der
-  Firstachse; Sparren liegen links und rechts auf der Pfette auf.
+  Firstachse; Sparren liegen links und rechts auf der Pfette auf (stumpf gestoßen, oft mit Fuge).
+- **Hinweise auf eine fehlende Firstpfette:** Sparren stoßen im First stumpf oder mit Fuge
+  aneinander, ohne gezeichnete Firstverbindung; schräge Schraubenachsen (z. B. Tellerkopf- bzw.
+  Vollgewindeschrauben) laufen aus den Sparren nach unten ins Leere; ein Höhenmaß in der
+  Firstachse endet ohne Bauteil; die Firstfuge läuft bis in den Raum.
 - **Bauteile von außen nach innen:** Firstziegel auf Firstlatte mit Firstlattenhaltern,
   Lüftungselement mit Insektenschutz (Abluft mind. 0,5 ‰ der Dachfläche, mind. 50 cm²/m
   [[IDH-HOLZSCHUTZ]]) · Deckung · Trag-/Konterlattung · Unterdeckung bis über den First ·
@@ -46,10 +62,16 @@ schematisch, nicht maßstäblich) zum Anschauen.
 - **Geometrie (so einzeichnen):**
   - Pfettenmitte **auf der Firstachse** (Schnittpunkt der Dachflächen, mit `linien.py
     --schnitt` aus den beiden Deckungs- oder Unterdeckungslinien).
-  - **Oberkante Pfette = Schnittpunkt der beiden Sparren-Unterkanten** in der Firstachse
-    (`linien.py --schnitt` mit den Unterkanten-Linien links und rechts); die Sparren liegen mit
-    einer geringen Kerve auf, die Pfettenoberkante darf daher bis wenige cm darüber liegen
-    [[BAUNETZ-PFETTENDACH]].
+  - **Oberkante Pfette – in dieser Reihenfolge bestimmen:**
+    1. **Maß oder Kote der Zeichnung**, das in der Firstachse endet (z. B. Höhenmaß von der
+       Firstspitze nach unten, das ohne Bauteil in der Dämmung endet) → Oberkante genau am
+       Maßende (mit `linien.py` die Maßlinie und ihr Ende auslesen).
+    2. Angabe in Legende/Text (z. B. „Sparren aufgekervt“, Kervtiefe).
+    3. Sonst: Schnittpunkt der beiden Sparren-Unterkanten in der Firstachse (`linien.py
+       --schnitt`); die Sparren liegen dann mit einer Kerve auf (Kervtiefe nach
+       Tragwerksplanung) [[BAUNETZ-PFETTENDACH]].
+    Die Pfettenoberkante liegt damit **innerhalb der Sparrenhöhe** (Sparren aufgekervt), die
+    Pfette reicht nach unten **unter** den Innenaufbau.
   - Querschnitt aus Legende/Bemaßung, sonst „nach Tragwerksplanung“ (Praxis z. B. 14/28,
     hochkant) [[PRAXIS]]. Die Pfette **hängt nach unten** aus dem Innenaufbau (Sichtpfette)
     oder wird bekleidet – **nie** oben in der Dämmebene oder in der Unterdeckung.

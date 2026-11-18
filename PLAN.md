@@ -364,4 +364,11 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       - Neues Werkzeug `scripts/linien.py` (Vektorlinien, Schnittpunkte, Parallelen)
       - Checkliste K0 (Konstruktion nicht zuordenbar → Pflichtfrage); SKILL.md Schritt 1 + 5b 3a
       - Test: Firstpfette lokal richtig gezeichnet → `tests/ausgabe/firstpfette_test.pdf`
-- [ ] **Du:** neuen Skill in claude.ai einspielen und First + Ortgang in **neuen** Chats testen
+- [x] Feature 12 gespeichert (`e86ded6`) und in claude.ai als **v9** eingespielt (18.11.)
+- [x] **Blindtest 4 – First, dritter Lauf (v9):** Pfette wieder nicht gezeichnet – Schrauben als
+      Sparrendach-Firstverbindung gedeutet, keine Rückfrage K0; Maß „21,5“ ins Leere nicht gelesen
+- [x] **Nachbesserung First (18.11.):** Spuren fehlender Bauteile lesen (Maße/Schrauben ins Leere),
+      Sparrendach nur bei gezeichneter + beschrifteter Firstverbindung, sonst K0; Pfettenoberkante
+      zuerst nach Maß der Zeichnung; Bauteil-Check Punkt 7; Referenzskizze mit Schrauben;
+      lokaler Test deckt sich mit der Musterlösung – gepackt, nicht eingespielt
+- [ ] **Du:** First + Ortgang mit der neuen Version in **neuen** Chats testen

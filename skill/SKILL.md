@@ -85,6 +85,11 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   5. **Material angegeben?** (Legende/Beschriftung; z. B. Dämmung im Sparrenfeld ohne Text)
      – fehlt es, geeignete Baustoffe nach `pruefkatalog/11_baustoffe.md` (BS-01) bestimmen.
   6. **Beschriftung richtig geschrieben?** Jede Beschriftung Wort für Wort lesen (ZQ-06).
+  7. **Läuft etwas ins Leere?** Jedes Maß, jede Kote, jede Schrauben-/Achslinie und jede
+     Hinweislinie bis zum Ende verfolgen: Endet sie ohne Bauteil, fehlt dort sehr
+     wahrscheinlich ein Bauteil (z. B. Höhenmaß in der Firstachse → Oberkante Firstpfette;
+     Schrauben aus den Sparren in den Raum → Pfette fehlt). Fehlendes Bauteil genau dort
+     einzeichnen (DT-00 Punkt 3).
   Querschnitte fehlender Bauteile (z. B. Rähm) aus `10_bauteildicken.md` bzw. aus gleichartigen
   Bauteilen derselben Zeichnung (z. B. Schwelle) übernehmen – nie frei schätzen.
   Jede Zeile mit „fehlt“, „nur beschriftet“, „Widerspruch“, „deutlich außerhalb üblich“,
@@ -188,8 +193,9 @@ Zeichnung (gilt für jedes Detail):**
    derselben Schicht mit **demselben `band`** angeben – dann läuft die Schraffur nahtlos weiter.
 3a. **Lage nach dem Detailtyp:** Fehlende Bauteile dort einzeichnen, wo sie nach
    `12_detailtypen.md` und der Referenzskizze hingehören – Bezugspunkte mit `linien.py`
-   (z. B. Firstpfette: Mitte auf der Firstachse, Oberkante im Schnittpunkt der
-   Sparren-Unterkanten, hängt nach unten aus dem Innenaufbau; Innenschichten, die durch die
+   (z. B. Firstpfette: Mitte auf der Firstachse, Oberkante nach DT-D1 – zuerst am Ende eines
+   ins Leere laufenden Maßes der Zeichnung, sonst im Schnittpunkt der Sparren-Unterkanten –,
+   hängt nach unten aus dem Innenaufbau; Innenschichten, die durch die
    Pfette laufen, mit `entfernen` abdecken; Dampfbremse mit `abklebung` an die Pfette).
    Nach dem Zeichnen im Kontrollbild prüfen: Liegt das Bauteil in der richtigen Ebene?
 4. **Maße und Lage** an vorhandenen Bauteilen derselben Zeichnung abnehmen (Schichtgrenzen,
