@@ -171,6 +171,42 @@
       "titel": "BauNetz Wissen Holz: Tafelbau/Rahmenbau – Ständerwerk aus Ständern, Rähm und Schwelle; vertikale Lasten werden über den Rähm in die Ständer verteilt und in die Schwelle weitergeleitet; Ständer tragender Außenwände 60/200 bzw. 60/240 mm.",
       "url": "https://www.baunetzwissen.de/holz/fachwissen/holzbausysteme/tafelbau-rahmenbau-6983558"
     },
+    "IDH-HOLZSCHUTZ": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "holzbau handbuch – Holzschutz, Bauliche Maßnahmen",
+      "titel": "Informationsdienst Holz, holzbau handbuch Reihe 5, Teil 2, Folge 2: Holzschutz – Bauliche Maßnahmen, 2. Auflage 01/2023 (Holzbau Deutschland-Institut). Funktionsschichten geneigter Dächer, Be-/Entlüftung Traufe ≥ 2 ‰ bzw. 200 cm²/m und First ≥ 0,5 ‰ bzw. 50 cm²/m, Firstausbildung kalter Dachraum mit Lüftungsschlitz, Traufdetails, Dachüberstände, Flachdachtypen I–V, Außenwände, Sockel (Abstand 30/15/5 cm), Schwellen.",
+      "url": "https://informationsdienst-holz.de/publikationen/2-informationsdienst-holz-holzbau-handbuch/reihe-5-holzschutz/holzschutz-bauliche-massnahmen"
+    },
+    "IDH-FLACHDACH": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "holzbau handbuch – Flachdächer in Holzbauweise",
+      "titel": "Informationsdienst Holz, holzbau handbuch Reihe 3, Teil 2, Folge 1: Flachdächer in Holzbauweise, 01/2019 (Holzbau Deutschland-Institut). Bauarten I–V, Anschlussdetails Attika (Typ I), Dachüberstand (Typ II), Dachterrasse, belüftetes Flachdach (Typ IV).",
+      "url": "https://informationsdienst-holz.de/publikationen/r03t02f01-flachdaecher-in-holzbauweise"
+    },
+    "BAUNETZ-BELUEFTET": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – belüftete geneigte Dächer",
+      "titel": "BauNetz Wissen Holz: Geneigte Dächer – belüftete Konstruktionen. Belüftungsebene ≥ 20 mm über Konterlattung, Unterdeckung als zweite wasserführende Ebene, im Gefach belüftete Dächer nicht mehr zeitgemäß.",
+      "url": "https://www.baunetzwissen.de/holz/fachwissen/geneigte-daecher/geneigte-daecher--belueftete-konstruktionen-8640274"
+    },
+    "BAUNETZ-LUFTDICHT": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Luftdichte Gebäudehülle",
+      "titel": "BauNetz Wissen Holz: Luftdichte Gebäudehülle und Winddichtheit – Anschlüsse nach DIN 4108-7, Stöße mit Klebebändern/Dichtungsbändern, Überlappungen mechanisch sichern, keine Acryl-/Silikondichtstoffe; Winddichtung außen auf der Dämmung.",
+      "url": "https://www.baunetzwissen.de/holz/fachwissen/waerme--und-feuchteschutz/luftdichte-gebaeudehuelle-und-winddichtheit-8607269"
+    },
+    "BAUNETZ-ANSCHLUSSFUGEN": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "BauNetz Wissen – Anschlussfugen Fenster",
+      "titel": "BauNetz Wissen Fenster und Türen: Anschlussfugen – Abdichtung zwischen Fenster und Baukörper dauerhaft schlagregendicht und luftundurchlässig, Windsperre umlaufend ohne Unterbrechung, Bewegungsaufnahme, Tauwasservermeidung.",
+      "url": "https://www.baunetzwissen.de/fenster-und-tueren/fachwissen/konstruktion-funktion/anschlussfugen-155171"
+    },
+    "RAL-FENSTER": {
+      "gruppe": "Regelwerke und Fachliteratur",
+      "kurz": "RAL-Leitfaden Fenstermontage",
+      "titel": "RAL-Gütegemeinschaft Fenster und Haustüren mit ift Rosenheim, BIV und BHKH: Leitfaden zur Planung und Ausführung der Montage von Fenstern und Haustüren, Ausgabe 2024 (Beschreibung bei BauNetz Wissen; Leitfaden kostenpflichtig).",
+      "url": "https://www.baunetzwissen.de/glas/tipps/planungshilfen/leitfaden-zur-planung-und-ausfuehrung-der-montage-von-fenstern-und-haustueren-159512"
+    },
     "BAUNETZ-TRAUFE": {
       "gruppe": "Regelwerke und Fachliteratur",
       "kurz": "BauNetz Wissen – Traufe",

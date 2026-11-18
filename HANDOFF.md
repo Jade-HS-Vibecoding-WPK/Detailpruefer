@@ -1,9 +1,10 @@
 # HANDOFF – Detailprüfer Architektur
 
-> Übergabe für eine neue Sitzung. Stand: **Mi 18.11.2026**, letzter Speicherstand `68ec816`
+> Übergabe für eine neue Sitzung. Stand: **Mi 18.11.2026**, letzter Speicherstand `f053c35`
 > (lokal = GitHub, Kurs-Repo). In claude.ai ist **Skill-Version v8** aktiv (18.11.) = lokaler Stand:
 > Feature 11, Nachbesserung Ortgang (Konterlatte, Rähm, ZQ-06 Rechtschreibung …) und Werkzeug
-> `verschieben` – alles seit `68ec816` noch **nicht gespeichert** (kein Commit).
+> `verschieben` – gespeichert als `f053c35` (GitHub). **Lokal weiter:** Feature 12 (Detail-Datenbank
+> `12_detailtypen.md`, Referenzskizzen, `linien.py`, Rückfrage K0) – gepackt, nicht eingespielt, kein Commit.
 > Zuerst diese Datei, dann `CLAUDE.md` (Dauerregeln) und `PLAN.md` (Plan, Stand, Entscheidungen).
 
 ---

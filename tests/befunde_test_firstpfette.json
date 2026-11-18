@@ -1,0 +1,77 @@
+{
+ "detail": {
+  "massstab": "1:5"
+ },
+ "seite": 1,
+ "befunde": [
+  {
+   "nr": 2,
+   "einstufung": "aufbaufehler",
+   "titel": "t",
+   "korrektur": [
+    {
+     "typ": "entfernen",
+     "rechteck": [
+      42.819663359785075,
+      44.604,
+      49.48633664021492,
+      49.0
+     ]
+    },
+    {
+     "typ": "holz",
+     "rechteck": [
+      42.819663359785075,
+      44.604,
+      49.48633664021492,
+      63.45921356475489
+     ]
+    },
+    {
+     "typ": "abklebung",
+     "punkte": [
+      [
+       41.6,
+       47.6
+      ],
+      [
+       42.819663359785075,
+       46.8
+      ],
+      [
+       42.819663359785075,
+       48.0
+      ]
+     ]
+    },
+    {
+     "typ": "abklebung",
+     "punkte": [
+      [
+       50.7,
+       47.6
+      ],
+      [
+       49.48633664021492,
+       46.8
+      ],
+      [
+       49.48633664021492,
+       48.0
+      ]
+     ]
+    },
+    {
+     "typ": "text",
+     "text": "B2: Firstpfette 14/28 (nach Statik) unter den Sparren, Dampfbremse an die Pfette angeschlossen",
+     "x": 52,
+     "y": 60,
+     "ziel": [
+      48.48633664021492,
+      56
+     ]
+    }
+   ]
+  }
+ ]
+}

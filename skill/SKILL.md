@@ -55,6 +55,21 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 - **Tragsystem bestimmen** (bei Dächern: Pfettendach mit First-/Mittel-/Fußpfette,
   Sparrendach mit Sparrenpaaren und Kehlbalken/Zugband, Kehlbalkendach; bei Wänden:
   Holzrahmen, Massivholz) – aus Beschriftung, Bauteilen und Querschnitten.
+- **Detailtyp zuordnen** (`pruefkatalog/12_detailtypen.md`, DT-00): Erkennungsmerkmale
+  vergleichen und die **Referenzskizze** des Typs ansehen (`referenz/<name>.png`, mit dem
+  Bild-Werkzeug öffnen). Sie zeigt, **wo** jedes Bauteil liegt (z. B. Firstpfette **unter** den
+  Sparren, nicht in der Dämmebene). Weicht das Detail ab, aber die Funktionen sind erfüllt,
+  ist das eine richtige Variante. **Ist die Konstruktion nicht eindeutig zuordenbar → immer
+  Rückfrage K0** (Checkliste) vor der Prüfung.
+- **Geometrie exakt lesen statt schätzen:** Kanten, Schichtgrenzen und Neigungen mit
+  ```
+  python scripts/linien.py <zeichnung.pdf> --ausschnitt x1 y1 x2 y2 --min 3
+  python scripts/linien.py <zeichnung.pdf> --punkt x y
+  python scripts/linien.py <zeichnung.pdf> --schnitt x1 y1 x2 y2 x3 y3 x4 y4
+  ```
+  ermitteln (Prozentkoordinaten wie in `befunde.json`). Jede Schichtgrenze ist eine Linie
+  mit gleichem Winkel; Abstand senkrecht = Dicke. Schnittpunkte (z. B. beide
+  Sparren-Unterkanten in der Firstachse = Oberkante Firstpfette) mit `--schnitt` berechnen.
 - **Bauteil-Vollständigkeit:** Im passenden Bauteil-Katalog (`pruefkatalog/08_…` ff.) die
   notwendigen Bauteile und Funktionen dieser Detailart nachschlagen und **jedes einzeln** in
   der Zeichnung suchen (z. B. First: Lastabtrag am First, Firstlatte mit Halter, Firstziegel,
@@ -115,7 +130,7 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
 
 ### 3. Prüfen
 - `pruefkatalog/00_uebersicht.md`, `quellen.md` lesen; **jede Regel** aus `01_…` bis `07_…`
-  (Funktionen), die **üblichen Bauteildicken** (`10_bauteildicken.md`), die **geeigneten
+  (Funktionen), den **Detailtyp** (`12_detailtypen.md`), die **üblichen Bauteildicken** (`10_bauteildicken.md`), die **geeigneten
   Baustoffe** (`11_baustoffe.md`) **und** den passenden
   Bauteil-Katalog (`08_dach_steildach.md` für Dach,
   First, Traufe, Ortgang; `09_wand_sockel.md` für Wand, Sockel und Bodenaufbau) durchgehen: `erfüllt`,
@@ -171,6 +186,12 @@ Zeichnung (gilt für jedes Detail):**
    Plattenstück), die Fläche so festlegen, dass die Schicht ohne Lücke bis an das nächste
    Bauteil läuft (z. B. Dachdämmung bis an Füllholz und Pfette). Grenzen mehrerer Flächen
    derselben Schicht mit **demselben `band`** angeben – dann läuft die Schraffur nahtlos weiter.
+3a. **Lage nach dem Detailtyp:** Fehlende Bauteile dort einzeichnen, wo sie nach
+   `12_detailtypen.md` und der Referenzskizze hingehören – Bezugspunkte mit `linien.py`
+   (z. B. Firstpfette: Mitte auf der Firstachse, Oberkante im Schnittpunkt der
+   Sparren-Unterkanten, hängt nach unten aus dem Innenaufbau; Innenschichten, die durch die
+   Pfette laufen, mit `entfernen` abdecken; Dampfbremse mit `abklebung` an die Pfette).
+   Nach dem Zeichnen im Kontrollbild prüfen: Liegt das Bauteil in der richtigen Ebene?
 4. **Maße und Lage** an vorhandenen Bauteilen derselben Zeichnung abnehmen (Schichtgrenzen,
    Latte so groß wie die vorhandenen Latten, Pfette in beschrifteter Größe). **Bauteile in
    echten Maßen (cm)** angeben (`querschnitt_cm`, `breite_cm` …) – das Skript rechnet über
@@ -388,4 +409,6 @@ Fragt der Nutzer nach („Reicht die Dämmung?“, „Welches Material nehme ich
 ## Technische Hinweise
 - Python-Pakete: `pypdf`, `reportlab`, `pypdfium2`, `pillow`
   (`pip install pypdf reportlab pypdfium2 pillow`).
-- Skripte in `scripts/`; Prüfregeln und Quellen in `pruefkatalog/`.
+- Skripte in `scripts/`; Prüfregeln und Quellen in `pruefkatalog/`; Referenzskizzen der
+  Detailtypen in `referenz/` (erzeugt mit `scripts/referenz.py`).
+- `linien.py` liest die Vektorlinien der Zeichnung (pypdfium2) – genauer als das Rasterbild.

@@ -33,6 +33,7 @@ Praxisempfehlungen werden mit `[[PRAXIS]]`, Herstellerangaben mit `[[HERSTELLER]
 | `09_wand_sockel.md` | **Bauteil-Katalog** Außenwand Holzrahmenbau, Sockel, Bodenaufbau | SO |
 | `10_bauteildicken.md` | **Übliche Bauteildicken** (Praxis-Richtwerte aus Standardaufbauten) | RW |
 | `07_zeichnungsqualitaet.md` → ZQ-06 | **Rechtschreibung** der Beschriftungen (Korrektur auch in der Skizze) | ZQ |
+| `12_detailtypen.md` | **Detailtypen** (Steildach, Wand, Fenster, Flachdach/Pultdach): Erkennen, Bauteile in ihrer Lage, Varianten, Zeichenanleitung, Referenzskizzen | DT |
 | `11_baustoffe.md` | **Geeignete Baustoffe je Einbaulage** (Empfehlung bei fehlender Materialangabe oder nicht funktionsfähiger Schicht) | BS |
 | `quellen.md` | Normausgaben, Gesetzesstand, Quellen | – |
 

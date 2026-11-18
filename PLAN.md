@@ -348,4 +348,20 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Linien und Maßzahlen schließen → Kontrolle), RW-01 Punkt 4 (Zieldicke = Legende bzw.
       Untergrenze üblich). Test Ortgang 15 → 24 cm: `tests/befunde_test_verschieben_ortgang.json`
       → `tests/ausgabe/verschieben_bericht.pdf`
-- [ ] **Du:** Ortgang mit v8 in einem **neuen** claude.ai-Chat testen (inkl. Nachfrage „Reicht 15 cm?“)
+- [x] **Blindtest 4 – First, zweiter Lauf (v8):** Firstabdeckung, Dämmung, EPDM, Dampfbremse,
+      Schreibfehler richtig; Firstpfette als Befund erkannt, aber Sparrendach geraten und Pfette
+      als Sechseck in der Dämmebene gezeichnet → `tests/loesung/AUSWERTUNG_blindtest_4_first_v8.md`
+- [x] **Feature 12 (Mi 18.11.): Detail-Datenbank + exakte Geometrie**
+      - Rückfragen geklärt: alle Bereiche (Steildach, Wand, Fenster/Türen, Flach-/Pultdach);
+        Quellen Fachverbände/Institute + BauNetz Wissen; unklare Konstruktion → **immer fragen**;
+        Katalog **und** eigene Referenzskizzen
+      - Neu `pruefkatalog/12_detailtypen.md` (DT-00 Zuordnung, DT-D1…D7, DT-W1…W3, DT-F1,
+        DT-FD0…FD2, DT-P1) mit Erkennen, Bauteilen in ihrer Lage, Varianten, Zeichenanleitung
+      - 6 neue Quellen: holzbau handbuch Holzschutz (2023) und Flachdächer (2019) des
+        Informationsdienst Holz, BauNetz belüftete Dächer, Luftdichtheit, Anschlussfugen, RAL-Leitfaden
+      - Eigene Referenzskizzen `skill/referenz/*.png` (First Pfetten-/Sparrendach, Traufe, Ortgang,
+        Sockel, Fenster unten, Attika), erzeugt mit `scripts/referenz.py`
+      - Neues Werkzeug `scripts/linien.py` (Vektorlinien, Schnittpunkte, Parallelen)
+      - Checkliste K0 (Konstruktion nicht zuordenbar → Pflichtfrage); SKILL.md Schritt 1 + 5b 3a
+      - Test: Firstpfette lokal richtig gezeichnet → `tests/ausgabe/firstpfette_test.pdf`
+- [ ] **Du:** neuen Skill in claude.ai einspielen und First + Ortgang in **neuen** Chats testen
