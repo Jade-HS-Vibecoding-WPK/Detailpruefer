@@ -194,6 +194,19 @@ schematisch, nicht maßstäblich) zum Anschauen.
   (Eckständer/Zulage); Dämmung bis in die Ecke; luftdichte Ebene an der Innenecke geschlossen
   (Plattenstoß abgeklebt); Unterkonstruktion der Fassade an der Ecke; Eckausbildung der
   Bekleidung nach Fachregel 01 [[FACHREGEL-01]], [[DATAHOLZ-AW]] (siehe KO-01, KO-02, KO-05, LD-02).
+- **Erkennen:** Horizontalschnitt mit zwei Wänden im rechten Winkel. Eine Wand läuft bis zur
+  Außenecke durch (Endständer über die volle Gefachtiefe), die andere stößt **stumpf** gegen deren
+  Ständerebene (ihr Endständer liegt dort an).
+- **Geometrie (Prinzip, KO-09):** Der Plattenrand der raumseitigen Beplankung der durchlaufenden
+  Wand endet dort, wo die stoßende Wand beginnt – **direkt dahinter** liegt ein Zusatzstiel/eine
+  Zulage im Gefach, **raumseitig bündig** mit der Ständerebene und **am Endständer der stoßenden
+  Wand** anliegend (Anschluss nach Statik). **Außen vor dem Zusatzstiel läuft die Dämmung weiter.**
+  Der Plattenrand der stoßenden Wand liegt auf deren Endständer. Luftdichte Ebene: OSB der einen
+  Wand → Eckstoß abgeklebt → OSB der anderen Wand. Fassadenlatten beidseits unmittelbar an der
+  Außenecke; winddichte Platte bis zur Ecke.
+- **Varianten:** versetzter Endständer, Eckausbildung aus drei Ständern, gespiegelte Lösung
+  (die andere Wand läuft durch) – richtig, wenn KO-01, KO-09 und LD-02 erfüllt sind.
+- **Referenzskizze:** `referenz/ecke_aussen.png`
 
 ### DT-W3 Geschossdecke an Außenwand
 

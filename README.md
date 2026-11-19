@@ -79,12 +79,12 @@ Jeder Befund bekommt außerdem eine **Aussagesicherheit** (hoch / mittel / gerin
 | Wärmeschutz / Wärmebrücken | WB-01 … 04 | lückenlose Dämmung, Dämmung in voller Schichtdicke |
 | Winddichtheit, Hinterlüftung, Schlagregen | WH-01 … 07 | Zu- und Abluft, Insektenschutz, Unterdeckung |
 | Holzschutz | HS-01 … 03 | baulicher Holzschutz, Spritzwasser |
-| Konstruktion | KO-01 … 08 | Auflager, Unterkonstruktion an Ecken, Schichten enden am Anschluss, **jede Schicht in allen Abschnitten** |
+| Konstruktion | KO-01 … 09 | Auflager, Unterkonstruktion an Ecken, Schichten enden am Anschluss, **jede Schicht in allen Abschnitten**, **Zusatzhölzer nach Funktion** |
 | Zeichnungsqualität | ZQ-01 … 06 | Legende passt zur Zeichnung, Maßketten, Hinweislinien, Rechtschreibung |
 | Steildach | DA-01 … 06 | Tragsystem, First, Traufe, Ortgang, Lattung |
 | Wand und Sockel | SO-01 … 04 | Schichtenfolge, Spritzwasserabstand, Schwelle, Bodenaufbau |
 | Bauteildicken, Baustoffe | RW-01, BS-01 | übliche Dicken als Praxis-Richtwert, geeignete Baustoffe |
-| Detail-Datenbank | DT-00 ff. | First, Traufe, Ortgang, Sockel, Ecke, Fenster, Flachdach, Pultdach – mit eigenen Referenzskizzen |
+| Detail-Datenbank | DT-00 ff. | First, Traufe, Ortgang, Sockel, Wandecke, Fenster, Flachdach, Pultdach – mit eigenen Referenzskizzen |
 
 **Maßstab sind deutsche Normen und Regelwerke**, u. a. DIN 4108, DIN 68800, das GModG
 (vormals GEG), die Fachregeln des Zimmerer- und Dachdeckerhandwerks, dataholz.eu und

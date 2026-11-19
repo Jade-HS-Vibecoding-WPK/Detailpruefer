@@ -1,0 +1,75 @@
+{
+  "bericht": { "id": "DPA-TEST-ECKSTIEL", "version": "1.0" },
+  "detail": {
+    "projekt": "nicht angegeben",
+    "titel": "Gebäudeecke Außenwand – Test Zusatzholz nach Funktion (KO-09)",
+    "datei": "wandeck_mit_fehlern.pdf",
+    "bauart": "Holzrahmenbau",
+    "fassade": "hinterlüftete Holzschalung",
+    "schnitt": "Horizontalschnitt",
+    "massstab": "1:5",
+    "pruefdatum": "19.11.2026",
+    "pruefsumme": "CEAAB8D26E3D"
+  },
+  "pruefprotokoll": {
+    "KO-01": "Befund B2",
+    "KO-09": "Befund B2 – Funktion: Auflager OSB-Rand Wand A + Anschluss Endständer Wand B; Lage hinter dem Rand, am Endständer B; raumseitig 6 cm, Dämmung außen davor",
+    "LD-02": "Befund B1"
+  },
+  "seite": 1,
+  "zeichnung_ausschnitt": [16, 10, 90, 92],
+  "beschriftungen": [ { "text": "Wand A", "x": 46, "y": 40 }, { "text": "Wand B", "x": 57, "y": 70 } ],
+  "kurzfazit": "Testlauf nur für die Eckausbildung: An der Innenecke fehlen die luftdichte Abklebung und ein Auflager für den OSB-Rand von Wand A bzw. ein Anschlussholz für den Endständer von Wand B.",
+  "befunde": [
+    {
+      "nr": 1,
+      "einstufung": "aufbaufehler",
+      "regel": "LD-02",
+      "titel": "Luftdichte Abklebung an der Innenecke fehlt",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Hinweislinie „Luftdichte Abklebung“ zeigt in die Innenecke, dort ist kein Band gezeichnet",
+      "fundstelle": "Innenecke, Stoß OSB Wand A / OSB Wand B",
+      "erkennbar": "Die OSB-Platten beider Wände stoßen in der Innenecke stumpf aneinander; ein Klebeband ist nicht dargestellt.",
+      "begruendung": "Die luftdichte Ebene muss an Ecken dauerhaft geschlossen sein [[DIN-4108-7]].",
+      "risiko": "Durch die Fuge kann warme Raumluft in die Konstruktion strömen; das kann Tauwasser begünstigen.",
+      "verbesserung": "Eckstoß raumseitig mit Klebeband über beide OSB-Platten abkleben (auf festem Untergrund, siehe B2).",
+      "grundlage": "[[DIN-4108-7]]",
+      "massnahme": "Innenecke OSB/OSB luftdicht abkleben",
+      "wo": "Innenecke",
+      "kreis": { "x": 50.6, "y": 63.0, "r": 2.2 },
+      "badge": { "x": 60.0, "y": 52.0 },
+      "korrektur": [
+        { "typ": "abklebung", "punkte": [[50.62, 60.2], [50.62, 63.55], [54.5, 63.55]] },
+        { "typ": "text", "text": "B1: Eckstoß OSB A / OSB B luftdicht abkleben", "x": 61.0, "y": 55.0, "ziel": [50.7, 61.5] }
+      ]
+    },
+    {
+      "nr": 2,
+      "einstufung": "aufbaufehler",
+      "regel": "KO-01",
+      "titel": "OSB-Rand von Wand A ohne Auflager – Endständer von Wand B ohne Anschlussholz",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Hinter dem OSB-Rand und neben dem Endständer von Wand B liegt nur die Gefachdämmung von Wand A (exakt mit linien.py)",
+      "fundstelle": "Gefach von Wand A an der Innenecke, ca. 0–16 cm über dem Endständer von Wand A",
+      "erkennbar": "Die OSB von Wand A endet an der Innenecke; dahinter liegt Dämmung. Der Endständer von Wand B liegt bis zum Endständer von Wand A frei vor der Gefachdämmung.",
+      "begruendung": "Plattenränder brauchen ein Auflager [[PRAXIS]]; an der Ecke brauchen beide Beplankungen innen ein Auflager [[FACHREGEL-01]]. Zusatzhölzer gehören dorthin, wo sie gebraucht werden, und verdrängen nur so viel Dämmung wie nötig (KO-09) [[GMODG-12]].",
+      "risiko": "Der Plattenrand kann federn; die Eckabklebung (B1) hat keinen festen Untergrund; Wand B ist an der Ecke nicht angeschlossen.",
+      "verbesserung": "Zusatzstiel 6/16 raumseitig bündig im Gefach von Wand A, direkt hinter dem OSB-Rand und am Endständer von Wand B anliegend (auf dem Endständer von Wand A); Dämmung außen vor dem Zusatzstiel weiterführen. Alternativ versetzter Endständer – Anschluss nach Tragwerksplanung.",
+      "grundlage": "[[PRAXIS]]; [[FACHREGEL-01]]; [[GMODG-12]]",
+      "verweise": "KO-09; Folge für die Luftdichtheit siehe B1",
+      "massnahme": "Zusatzstiel raumseitig hinter dem OSB-Rand von Wand A ergänzen",
+      "wo": "Innenecke, Gefach Wand A",
+      "kreis": { "x": 48.3, "y": 66.5, "r": 3.0 },
+      "badge": { "x": 34.0, "y": 60.0 },
+      "korrektur": [
+        { "typ": "entfernen", "rechteck": [42.25, 60.65, 49.7, 71.35] },
+        { "typ": "daemmung", "art": "weich", "punkte": [[42.16, 60.65], [46.92, 60.65], [46.92, 71.42], [42.16, 71.42]],
+          "band": [[42.16, 60.65], [42.16, 71.42], [46.92, 66.0]] },
+        { "typ": "holz", "rechteck": [46.92, 60.65, 49.78, 71.42] },
+        { "typ": "text", "text": "B2: Zusatzstiel 6/16 raumseitig hinter dem OSB-Rand, am Endständer von Wand B; Dämmung außen davor", "x": 18.0, "y": 64.0, "ziel": [48.3, 66.0] }
+      ]
+    }
+  ],
+  "positiv": [],
+  "annahmen": [ "Testlauf: nur die Eckausbildung (KO-01, KO-09, LD-02) wird geprüft, nicht das ganze Detail." ]
+}

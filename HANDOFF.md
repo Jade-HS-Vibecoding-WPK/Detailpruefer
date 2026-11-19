@@ -1,9 +1,8 @@
 # HANDOFF – Detailprüfer Architektur
 
-> Übergabe für eine neue Sitzung. Stand: **Do 19.11.2026** (v12 in claude.ai aktiv).
+> Übergabe für eine neue Sitzung. Stand: **Do 19.11.2026** (v13 in claude.ai aktiv).
 > Letzter Speicherstand `42954cb` (v11 + v12, lokal = GitHub, Kurs-Repo).
-> README.md und docs/ (Bilder aus dem Bericht Gebäudeecke/Blindtest V3) sind gespeichert.
-> In claude.ai ist **v12** eingespielt (19.11., Plugin-Seite zeigt „v12“).
+> Skill **v13** ist gespeichert (GitHub) und in claude.ai eingespielt (19.11., Plugin-Seite zeigt „v13“).
 > Speicherstand nur, wenn der Nutzer es sagt.
 > Zuerst diese Datei, dann `CLAUDE.md` (Dauerregeln) und `PLAN.md` (Plan, Stand, Entscheidungen).
 
@@ -36,7 +35,7 @@ detailpruefer-architektur/
 ├─ HANDOFF.md                diese Übergabe
 ├─ .gitignore                tests/ausgabe/, dist/, __pycache__, .env
 ├─ skill/                    ← DER SKILL (als .zip/.skill in claude.ai hochgeladen)
-│  ├─ VERSION                Skill-Version (eine Zeile, aktuell „12 (19.11.2026)“) – erscheint im Bericht
+│  ├─ VERSION                Skill-Version (eine Zeile, aktuell „13 (19.11.2026)“) – erscheint im Bericht
 │  ├─ SKILL.md               Hauptanweisung: Grundsätze, Einstufungen, „Gleiches Detail → gleiches
 │  │                         Ergebnis“, Ablauf 1–8 (Fakten, Tragsystem, Detailtyp, Bauteil-Check,
 │  │                         Abgleiche, Fragerunde, Prüfen, Korrekturskizze, Bericht), Format befunde.json
@@ -49,7 +48,7 @@ detailpruefer-architektur/
 │  │  ├─ 03_waermeschutz_waermebruecken.md   WB-01…04
 │  │  ├─ 04_winddichtheit_hinterlueftung.md  WH-01…07
 │  │  ├─ 05_holzschutz.md             HS-01…03
-│  │  ├─ 06_konstruktion_holzrahmenbau.md    KO-01…08 (KO-05 Eck-Latten-Regel, KO-08 Schicht in allen Abschnitten)
+│  │  ├─ 06_konstruktion_holzrahmenbau.md    KO-01…09 (KO-05 Eck-Latten-Regel, KO-08 Schicht in allen Abschnitten, KO-09 Zusatzhölzer nach Funktion)
 │  │  ├─ 07_zeichnungsqualitaet.md    ZQ-01…06
 │  │  ├─ 08_dach_steildach.md         DA-01…06 (Tragsystem, First, Belüftung, Traufe, Ortgang, Lattung)
 │  │  ├─ 09_wand_sockel.md            SO-01…04 (Wand, Spritzwasser, Schwelle, Bodenaufbau)
@@ -69,7 +68,7 @@ detailpruefer-architektur/
 │     │                      ab v11: Datei/Prüfsumme/Skill-Version auf Seite 1, Warnung bei falscher
 │     │                      Zeichnung, Anhang A3 Prüfprotokoll
 │     └─ requirements.txt    pypdf, reportlab, pypdfium2, pillow
-├─ dist/                     (nicht auf GitHub) detailpruefer-architektur.zip / .skill (Stand v12)
+├─ dist/                     (nicht auf GitHub) detailpruefer-architektur.zip / .skill (Stand v13)
 ├─ README.md                 Projektbeschreibung für GitHub (Bilder in docs/)
 ├─ beispiel/                 ältere Beispielberichte (Wandecke, Blindtest 2, Traufe) für README/Poster
 └─ tests/
@@ -157,8 +156,17 @@ hochzählen**, wenn eine neue Fassung eingespielt wird.
    Test: `tests/befunde_test_sauberkeitsschicht.json` → `tests/ausgabe/sks_test_bericht.pdf`;
    Auswertung `tests/loesung/AUSWERTUNG_blindtest_5_v11.md`.
 
+5. **Wandecke – Zusatzstiel falsch eingezeichnet (v13, 19.11.):** claude.ai-Bericht v12 hat den
+   fehlenden Eckstiel erkannt, aber über der Ecke und über die volle Gefachtiefe gezeichnet. Nutzer
+   bestätigt das Prinzip: Zusatzholz direkt hinter dem Plattenrand, am anzuschließenden Bauteil,
+   raumseitig bündig, Dämmung außen davor. Umgesetzt: **KO-09** (vier Fragen + Selbstkontrolle),
+   SKILL.md 5b Punkt 3b, KO-02, DT-W2, eigene Referenzskizze `referenz/ecke_aussen.png`
+   (`referenz.py ecke_aussen`). Test `tests/befunde_test_eckstiel.json` → `tests/ausgabe/eckstiel_bericht.pdf`;
+   Auswertung `tests/loesung/AUSWERTUNG_wandeck_v12.md`.
+
 ## 5. Was als Nächstes ansteht
 
+0. **Wandecke und Sockel mit v13 in neuen claude.ai-Chats prüfen** (v13 ist eingespielt).
 0. **Sockel mit v12 in einem neuen Chat prüfen** (v12 ist eingespielt): Wird die fehlende Sauberkeitsschicht unter der Sohle als klarer Aufbaufehler
    gemeldet, und nennt das Prüfprotokoll bei KO-08 die Abschnitte?
 1. **README.md** ist fertig und auf GitHub (19.11.).

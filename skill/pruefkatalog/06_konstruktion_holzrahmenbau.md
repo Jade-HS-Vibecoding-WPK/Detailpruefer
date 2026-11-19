@@ -42,7 +42,9 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
 - **Mögliches Risiko:** wie KO-01.
 - **Verbesserungsmöglichkeiten:** Mehrere übliche Eckausbildungen sind möglich, z. B.
   zusätzlicher Eckstiel, versetzter Endständer oder Eckausbildung nach Planungsbeispielen
-  der Fachliteratur; dabei Holzanteil und Dämmung beachten (→ WB-02).
+  der Fachliteratur; dabei Holzanteil und Dämmung beachten (→ WB-02). **Lage jedes
+  Eckholzes nach KO-09** (direkt hinter dem Plattenrand, am Endständer der anderen Wand,
+  Dämmung auf der Gegenseite durchgehend); Referenzskizze `referenz/ecke_aussen.png`.
 - **Grundlage:** (Praxisempfehlung / Fachliteratur Holzrahmenbau).
 - **Einstufung:** Wenn das fehlende Auflager bereits unter KO-01 aufgeführt ist → hier
   **kein zweiter Befund**, nur Verweis. Eckausbildung unklar → **mögliche Auffälligkeit**.
@@ -211,6 +213,59 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
   im Protokoll als Verweis; Schicht läuft **zu weit** in ein Nachbarbauteil → KO-07.
 - **Protokoll:** Im `pruefprotokoll` die geprüften Schichten **mit Abschnitten** nennen
   (z. B. „Sauberkeitsschicht: Fundament ✓, Sohle ✗ → B2“).
+
+## KO-09 Zusatzhölzer liegen dort, wo sie gebraucht werden – Lage nach Funktion
+
+- **Gilt für:** alle Details, in denen ein zusätzliches Holz ergänzt wird oder ergänzt werden
+  soll: Eckstiel, Zulage, Auflagerholz, Riegel, Anschlussholz (Wandecke, Wand-Wand-Anschluss,
+  Fenster- und Türlaibung, Deckenanschluss, Plattenstöße). Gilt für die **Prüfung** der
+  Zeichnung **und** für jede **Korrekturskizze**.
+- **Prüfe – vier Fragen je Zusatzholz, in dieser Reihenfolge:**
+  1. **Wozu dient es?** Funktion(en) ausdrücklich benennen: Auflager für **welchen**
+     Plattenrand (KO-01)? Anschluss für **welches** Bauteil (z. B. Endständer der anderen
+     Wand)? Befestigung für **welche** Bekleidung?
+  2. **Liegt es dort, wo die Funktion ist?** Das Holz liegt **direkt hinter dem Plattenrand**,
+     den es trägt (der Rand endet **auf** dem Holz, nicht davor oder darüber), und **berührt**
+     das Bauteil, das es anschließt (kein Spalt, nicht versetzt daneben, nicht oberhalb der
+     Anschlussstelle).
+  3. **Verdrängt es nur so viel Dämmung wie nötig?** Querschnitt nur so groß wie die Funktion
+     es verlangt; auf der Seite der Funktion **bündig** anordnen (z. B. raumseitig bündig mit
+     der Ständerebene, wenn es den raumseitigen Plattenrand trägt). Die Dämmung läuft auf der
+     anderen Seite **weiter** (z. B. außen vor dem Zusatzstiel). Ein Holz **über die volle
+     Dämmdicke** nur, wenn es tragend nötig ist (Endständer, Pfosten nach Statik) – sonst
+     entsteht unnötig eine Wärmebrücke über die ganze Wanddicke.
+  4. **Doppelt es vorhandenes Holz?** Liegt schon ein Ständer/Riegel an der Stelle, diesen
+     nutzen statt ein zweites Holz einzuzeichnen.
+- **So erkennst du es in der Zeichnung:** Plattenränder (OSB, Holzfaser, Gipskarton) an der
+  Stelle bis zu ihrem Ende verfolgen (`linien.py`): Was liegt direkt dahinter? Endständer und
+  Anschlussbauteile des Nachbarbauteils suchen: Woran stoßen sie? Dämmschraffur um das Holz
+  herum prüfen: Läuft sie auf der Gegenseite weiter?
+- **Typische Auffälligkeit:** Eckstiel oberhalb bzw. neben der Ecke statt am Endständer der
+  anderen Wand; Zulage über die volle Gefachtiefe, obwohl nur der raumseitige Plattenrand ein
+  Auflager braucht; Zusatzholz ohne Kontakt zum Plattenrand; Dämmung vor dem Zusatzholz
+  weggelassen.
+- **Warum relevant?** Ein Zusatzholz an der falschen Stelle erfüllt seine Funktion nicht
+  (Plattenrand bleibt frei, Wand B ist nicht angeschlossen) und schwächt trotzdem die
+  Dämmebene; Wärmebrücken sind so gering wie möglich zu halten [[GMODG-12]], Planungsbeispiele
+  [[DIN-4108-BBL2]]; Plattenränder brauchen ein Auflager [[PRAXIS]].
+- **Mögliches Risiko:** frei federnde Plattenränder und abreißende Abklebungen; unnötige
+  Wärmebrücke an der Ecke, die kühlere Innenoberflächen begünstigen kann.
+- **Verbesserungsmöglichkeiten:** Lage nach den vier Fragen festlegen; die **Referenzskizze**
+  des Detailtyps ansehen (Wandecke: `referenz/ecke_aussen.png`, DT-W2). Mehrere Lösungen sind
+  richtig (z. B. Zusatzstiel, versetzter Endständer, Eckausbildung aus drei Ständern) – jede
+  muss die vier Fragen erfüllen.
+- **Grundlage:** [[PRAXIS]]; Wärmebrücken [[GMODG-12]], [[DIN-4108-BBL2]]; Eckausbildung
+  [[FACHREGEL-01]], [[DATAHOLZ-AW]].
+- **Einstufung (Prüfung der Zeichnung):** Zusatzholz erfüllt seine Funktion nicht (Rand bleibt
+  frei, Bauteil nicht angeschlossen) → wie das Fehlen (KO-01/KO-02, **klarer Aufbaufehler**
+  bei eindeutig freiem Rand); Zusatzholz unnötig über die volle Dämmdicke →
+  **Verbesserungshinweis** (Wärmebrücke, Verweis WB-02).
+- **Korrekturskizze (Pflicht-Selbstkontrolle):** Nach dem Zeichnen jedes ergänzten Holzes im
+  Kontrollbild die vier Fragen beantworten und im Befund unter „Verbesserung“ in einem Satz
+  nennen, **wo** das Holz liegt und **woran** es anliegt (z. B. „Zusatzstiel 6/16 raumseitig
+  im Gefach von Wand A, direkt hinter dem OSB-Rand, am Endständer von Wand B; Dämmung außen
+  davor“). Die Dämmung um das Holz mit `daemmung` in derselben `art`/`band` wie die
+  angrenzende Fläche schließen.
 
 ## KO-04 Raster und Plattenstöße passen zusammen
 

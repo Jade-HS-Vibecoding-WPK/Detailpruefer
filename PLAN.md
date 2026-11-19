@@ -396,3 +396,7 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
       Benutzung claude.ai/Claude Code, Grenzen, Blindtests, Projektaufbau, KI-Kennzeichnung)
 - [x] README gegengelesen (Traufe → Gebäudeecke als Beispiel, „Warum?“ neu) und gespeichert (19.11.)
 - [ ] Poster
+- [x] **Feature 14 (Do 19.11.): Zusatzhölzer nach Funktion (v13)** – Wandecke v12: Eckstiel erkannt, aber
+      an falscher Stelle/über volle Dämmdicke gezeichnet. Nutzer bestätigt Prinzip; neu **KO-09**, SKILL.md 3b,
+      KO-02/DT-W2, Referenzskizze `ecke_aussen.png`; lokaler Test richtig; gespeichert und in claude.ai als **v13** eingespielt (19.11.)
+- [ ] **Du:** v13 in claude.ai testen (Wandecke + Sockel, neue Chats)

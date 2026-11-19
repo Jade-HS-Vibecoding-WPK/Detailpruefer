@@ -252,6 +252,17 @@ Zeichnung (gilt für jedes Detail):**
    hängt nach unten aus dem Innenaufbau; Innenschichten, die durch die
    Pfette laufen, mit `entfernen` abdecken; Dampfbremse mit `abklebung` an die Pfette).
    Nach dem Zeichnen im Kontrollbild prüfen: Liegt das Bauteil in der richtigen Ebene?
+3b. **Zusatzhölzer nach Funktion platzieren (KO-09, Pflicht für jedes ergänzte Holz):** Nie die
+   Lage schätzen oder ein Holz „irgendwo in die Ecke“ setzen. Vor dem Zeichnen die vier Fragen
+   beantworten: (1) **Wozu?** – welcher Plattenrand, welches Bauteil; (2) **Wo ist die
+   Funktion?** – Plattenende und Endständer/Anschlussbauteil mit `linien.py` bestimmen, das Holz
+   liegt **direkt hinter dem Plattenrand** und **berührt** das anzuschließende Bauteil;
+   (3) **Wie klein?** – nur so groß wie nötig, auf der Seite der Funktion bündig (z. B.
+   raumseitig), **Dämmung auf der Gegenseite weiterführen** (`daemmung` mit derselben `art`/
+   `band`), kein Holz über die volle Dämmdicke ohne tragenden Grund; (4) **Schon vorhanden?** –
+   vorhandenes Holz nutzen. Bei Wandecken die Referenzskizze `referenz/ecke_aussen.png` ansehen.
+   **Kontrollbild:** Endet der Plattenrand auf dem neuen Holz? Liegt das Holz am Bauteil an, das
+   es anschließt? Ist die Dämmung um das Holz geschlossen? Sonst Lage korrigieren und neu zeichnen.
 4. **Maße und Lage** an vorhandenen Bauteilen derselben Zeichnung abnehmen (Schichtgrenzen,
    Latte so groß wie die vorhandenen Latten, Pfette in beschrifteter Größe). **Bauteile in
    echten Maßen (cm)** angeben (`querschnitt_cm`, `breite_cm` …) – das Skript rechnet über

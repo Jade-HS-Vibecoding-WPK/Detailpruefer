@@ -637,7 +637,65 @@ def attika(ziel):
     return sk.fertig(ziel, "attika", "Informationsdienst Holz, holzbau handbuch R3/T2/F1 Flachdächer (2019), Abb. 8.1; R5/T2/F2 (2023).")
 
 
-ALLE = [first_pfettendach, first_sparrendach, traufe_pfettendach, ortgang, sockel, fenster_unten, attika]
+def ecke_aussen(ziel):
+    """Horizontalschnitt Außenecke: Wand A (senkrecht) läuft durch, Wand B (waagerecht) stößt stumpf an."""
+    sk = Skizze("Referenz DT-W2 · Außenecke Holzrahmenbau (Horizontalschnitt)",
+                "Wand A läuft bis zur Außenecke durch, Wand B stößt stumpf an. Zusatzstiel nur dort, wo er gebraucht wird:"
+                " hinter dem OSB-Rand von Wand A, am Endständer von Wand B; Dämmung außen davor.",
+                ursprung=(150, 70), mass=4.2)
+    # Schichtgrenzen von außen (0) nach innen, gleich für beide Wände (cm)
+    FA, LA, HF, GE, OS, IN, GK = 2.0, 5.0, 6.5, 22.5, 24.0, 30.0, 32.5
+    L = 112                                       # Länge der Wände im Ausschnitt
+    # --- Fassade, Lattung (Hinterlüftung), Holzfaserplatte
+    sk.flaeche([(0, 0), (FA, 0), (FA, L), (0, L)], "diagonal", 0.6)                # Bekleidung Wand A
+    sk.flaeche([(FA, 0), (L, 0), (L, FA), (FA, FA)], "diagonal", 0.6)             # Bekleidung Wand B
+    for y in (LA + 0.5, 55):                                                      # Latten Wand A
+        sk.holz(FA, y, LA, y + 5)
+    for x in (LA + 0.5, 60):                                                      # Latten Wand B
+        sk.holz(x, FA, x + 5, LA)
+    sk.flaeche([(LA, LA), (HF, LA), (HF, L), (LA, L)], "zickzack", richtung=((LA, L), (LA, LA), HF - LA))
+    sk.flaeche([(HF, LA), (L, LA), (L, HF), (HF, HF)], "zickzack", richtung=((HF, LA), (L, LA), HF - LA))
+    # --- Wand A: Endständer über volle Gefachtiefe, Zusatzstiel raumseitig, Dämmung
+    sk.holz(HF, HF, GE, HF + 6)                                                   # Endständer A
+    zs = (GE - 6, HF + 6, GE, HF + 22)                                            # Zusatzstiel 6/16
+    sk.flaeche([(HF, HF + 6), (zs[0], HF + 6), (zs[0], zs[3]), (HF, zs[3])], "weich",
+               richtung=((HF, zs[3]), (HF, HF + 6), zs[0] - HF))                  # Dämmung außen davor
+    sk.holz(*zs)
+    sk.flaeche([(HF, zs[3]), (GE, zs[3]), (GE, L), (HF, L)], "weich", richtung=((HF, L), (HF, zs[3]), GE - HF))
+    sk.holz(HF, 80, GE, 86)                                                       # Regelständer A
+    # --- Wand B: Endständer am Zusatzstiel, Dämmung, Regelständer
+    sk.holz(GE, HF, GE + 6, GE)                                                   # Endständer B
+    sk.flaeche([(GE + 6, HF), (L, HF), (L, GE), (GE + 6, GE)], "weich", richtung=((GE + 6, HF), (L, HF), GE - HF))
+    sk.holz(85, HF, 91, GE)                                                       # Regelständer B
+    # --- OSB: Rand A endet auf dem Zusatzstiel, Rand B liegt auf dem Endständer B
+    sk.flaeche([(GE, GE), (OS, GE), (OS, L), (GE, L)], "diagonal", 0.6)           # OSB A (ab Wand B)
+    sk.flaeche([(OS, GE), (L, GE), (L, OS), (OS, OS)], "diagonal", 0.6)           # OSB B
+    # --- Installationsebene, Eck-Installationslatte, Gipskarton
+    sk.holz(OS, OS, IN, IN)
+    sk.flaeche([(OS, IN), (IN, IN), (IN, L), (OS, L)], "weich", richtung=((OS, L), (OS, IN), IN - OS))
+    sk.flaeche([(IN, OS), (L, OS), (L, IN), (IN, IN)], "weich", richtung=((IN, OS), (L, OS), IN - OS))
+    sk.flaeche([(IN, IN), (GK, IN), (GK, L), (IN, L)], "punkte", 0.6)
+    sk.flaeche([(GK, IN), (L, IN), (L, GK), (GK, GK)], "punkte", 0.6)
+    # --- luftdichte Ebene über die Innenecke, Verbindung B → Zusatzstiel
+    sk.luftdicht([(OS + 0.4, 70), (OS + 0.4, OS + 0.4), (70, OS + 0.4)])
+    sk.linie([(zs[0] - 1, HF + 14), (GE + 5, HF + 14)], GRAU, 0.6, [1.5, 1])
+    sk.text(42, 95, "Wand A", 9, SCHWARZ)
+    sk.text(L - 16, HF + 2.2, "Wand B", 9, SCHWARZ)
+    sk.nr(9, (HF - 0.7, 45), (-30, 80), "winddichte Holzfaserplatte bis zur Ecke durchgehend")
+    sk.nr(2, (GE - 3, HF + 19), (-30, 50), "Zusatzstiel raumseitig bündig im Gefach von Wand A – direkt hinter dem OSB-Rand,"
+          " am Endständer von Wand B")
+    sk.nr(3, ((HF + zs[0]) / 2, HF + 17), (-30, 30), "Dämmung läuft außen vor dem Zusatzstiel weiter"
+          " (keine Wärmebrücke über die volle Wanddicke)")
+    sk.nr(8, ((FA + LA) / 2, LA + 3), (-30, 10), "Fassadenlatten beidseits unmittelbar an der Außenecke (KO-05)")
+    sk.nr(1, ((HF + GE) / 2, HF + 3), (5, -14), "Wand A läuft bis zur Außenecke durch: Endständer über die volle Gefachtiefe")
+    sk.nr(4, (GE + 3, HF + 4), (35, -14), "Endständer von Wand B liegt am Zusatzstiel an (Verbindung nach Statik)")
+    sk.nr(5, (OS - 0.7, GE + 1.5), (55, 62), "OSB-Ränder beider Wände enden auf Holz (KO-01)")
+    sk.nr(7, ((OS + IN) / 2, (OS + IN) / 2), (55, 48), "Installationslatte in der Innenecke")
+    sk.nr(6, (OS + 0.4, 55), (55, 80), "luftdichte Ebene: OSB A – Eckstoß abgeklebt – OSB B (LD-02)")
+    return sk.fertig(ziel, "ecke_aussen", "Fachregel 01 Zimmererhandwerk; dataholz.eu Außenwand; GModG § 12, DIN 4108 Bbl. 2.")
+
+
+ALLE = [first_pfettendach, first_sparrendach, traufe_pfettendach, ortgang, sockel, fenster_unten, attika, ecke_aussen]
 
 if __name__ == "__main__":
     ziel = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "referenz")
