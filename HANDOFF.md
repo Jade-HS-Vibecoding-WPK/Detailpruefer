@@ -1,10 +1,9 @@
 # HANDOFF – Detailprüfer Architektur
 
 > Übergabe für eine neue Sitzung. Stand: **Do 19.11.2026** (v12 in claude.ai aktiv).
-> Letzter Speicherstand `0609cc8` (lokal = GitHub, Kurs-Repo).
-> **Nicht gespeichert (uncommitted):** alle Änderungen für **Skill-Version 11 und 12**
-> (u. a. `skill/VERSION`, `fakten.py`, `bericht.py`, `markieren.py`, `SKILL.md`, Katalog 00/06/07/09/12,
-> Tests, `HANDOFF.md`, `PLAN.md`). In claude.ai ist **v12** eingespielt (19.11., Plugin-Seite zeigt „v12“).
+> Letzter Speicherstand `42954cb` (v11 + v12, lokal = GitHub, Kurs-Repo).
+> README.md und docs/ (Bilder aus dem Bericht Gebäudeecke/Blindtest V3) sind gespeichert.
+> In claude.ai ist **v12** eingespielt (19.11., Plugin-Seite zeigt „v12“).
 > Speicherstand nur, wenn der Nutzer es sagt.
 > Zuerst diese Datei, dann `CLAUDE.md` (Dauerregeln) und `PLAN.md` (Plan, Stand, Entscheidungen).
 
@@ -71,6 +70,7 @@ detailpruefer-architektur/
 │     │                      Zeichnung, Anhang A3 Prüfprotokoll
 │     └─ requirements.txt    pypdf, reportlab, pypdfium2, pillow
 ├─ dist/                     (nicht auf GitHub) detailpruefer-architektur.zip / .skill (Stand v12)
+├─ README.md                 Projektbeschreibung für GitHub (Bilder in docs/)
 ├─ beispiel/                 ältere Beispielberichte (Wandecke, Blindtest 2, Traufe) für README/Poster
 └─ tests/
    ├─ details/               Testzeichnungen (u. a. wandeck_mit_fehlern, blindtest_2, blindtest_3_traufe,
@@ -161,9 +161,8 @@ hochzählen**, wenn eine neue Fassung eingespielt wird.
 
 0. **Sockel mit v12 in einem neuen Chat prüfen** (v12 ist eingespielt): Wird die fehlende Sauberkeitsschicht unter der Sohle als klarer Aufbaufehler
    gemeldet, und nennt das Prüfprotokoll bei KO-08 die Abschnitte?
-1. **Speicherstand** für v11 + v12 – nur auf Anweisung.
-2. **README.md** für GitHub (Was, Wie benutzen inkl. Upload in claude.ai, Beispielbilder,
-   Grenzen, KI-Kennzeichnung) – **Pflicht für die Abgabe (Fr 20.11., 16 Uhr)**.
+1. **README.md** ist fertig und auf GitHub (19.11.).
+2. **Poster** – **Abgabe Fr 20.11., 16 Uhr**.
 3. **Beispielberichte** in `beispiel/` mit aktuellem Stand neu erzeugen (für README/Poster).
 4. **Poster** (Vorlage auf Moodle).
 5. Optional: Übertragbarkeit auf andere Modelle (Entscheidung des Nutzers); Reproduzierbarkeit

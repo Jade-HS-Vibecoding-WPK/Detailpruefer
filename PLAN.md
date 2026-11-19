@@ -391,3 +391,8 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
         (Lücke erkannt, Korrektur wie Musterlösung); alte Berichte laufen weiter
       - `skill/VERSION` → 12, ZIP/.skill gepackt; in claude.ai als **v12** eingespielt (19.11.)
 - [ ] **Du:** Sockel mit v12 in einem **neuen** Chat prüfen
+- [x] Speicherstand v11 + v12 (`42954cb`, 19.11.)
+- [x] **README.md** geschrieben (Was, Beispielbilder in `docs/`, Bericht, Einstufungen, Prüfbereiche,
+      Benutzung claude.ai/Claude Code, Grenzen, Blindtests, Projektaufbau, KI-Kennzeichnung)
+- [x] README gegengelesen (Traufe → Gebäudeecke als Beispiel, „Warum?“ neu) und gespeichert (19.11.)
+- [ ] Poster
