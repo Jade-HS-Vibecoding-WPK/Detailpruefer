@@ -1,7 +1,7 @@
 # HANDOFF – Detailprüfer Architektur
 
 > Übergabe für eine neue Sitzung. Stand: **Do 19.11.2026** (v13 in claude.ai aktiv).
-> Letzter Speicherstand `42954cb` (v11 + v12, lokal = GitHub, Kurs-Repo).
+> Letzter Speicherstand `5b225e1` (v13, lokal = GitHub, Kurs-Repo).
 > Skill **v13** ist gespeichert (GitHub) und in claude.ai eingespielt (19.11., Plugin-Seite zeigt „v13“).
 > Speicherstand nur, wenn der Nutzer es sagt.
 > Zuerst diese Datei, dann `CLAUDE.md` (Dauerregeln) und `PLAN.md` (Plan, Stand, Entscheidungen).
