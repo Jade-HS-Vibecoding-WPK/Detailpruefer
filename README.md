@@ -162,6 +162,44 @@ Lösung für ein einzelnes Detail.
 | First | Firstabdeckung, Dämmung und Dampfbremse sicher erkannt; Firstpfette erst nach mehreren Nachbesserungen |
 | Ortgang | 6 von 7 Fehlern |
 | Sockel | 4 von 5 Fehlern; die übersehene Sauberkeitsschicht führte zur Regel KO-08 (v12) |
+| Gebäudeecke (zweites Detail) | 2 von 2 Fehlern erkannt (Eckabklebung, fehlender Eckstiel); der Eckstiel wurde aber an falscher Stelle eingezeichnet, daraus entstand die Regel KO-09 (v13) |
+
+### Aus Fehlern gelernt: Prinzipien statt Musterlösungen
+
+Wenn der Skill etwas übersieht oder falsch einzeichnet, wird **nicht** die Musterlösung in den
+Skill kopiert. Stattdessen wird das **Prinzip dahinter** als Regel formuliert, die für jedes
+Detail gilt. Zwei Beispiele aus den letzten Versionen:
+
+- **Jede Schicht in allen Abschnitten (KO-08, v12):** Beim Sockel lag die Sauberkeitsschicht
+  nur unter dem Fundament, unter der Bodenplatte fehlte sie. Weil die Beschriftung auf das
+  Fundament zeigte, hielt der Skill die Schicht für vorhanden. Neue Regel: **Eine Beschriftung
+  belegt eine Schicht nur an der Spitze ihrer Hinweislinie.** Der Skill listet für jede Schicht
+  alle Abschnitte auf, in denen sie liegen muss, und prüft jeden einzeln. Das gilt ebenso für
+  Abdichtung, Dämmung, Trennlagen und Bahnen. Eine Schichtenfolge wird erst nach diesem Check
+  als „vollständig“ gewertet.
+- **Zusatzhölzer nach Funktion (KO-09, v13):** An der Wandecke hat der Skill den fehlenden
+  Eckstiel erkannt, ihn aber oberhalb der Ecke und durch die ganze Dämmebene gezeichnet. Neue
+  Regel: Für jedes Zusatzholz beantwortet der Skill vier Fragen.
+  1. **Wozu dient es?** Welchen Plattenrand trägt es, welches Bauteil schließt es an?
+  2. **Wo ist diese Funktion?** Das Holz liegt direkt hinter dem Plattenrand und berührt das
+     Bauteil, das es anschließt.
+  3. **Wie klein geht es?** Nur so groß wie nötig. Die Dämmung läuft auf der Gegenseite weiter,
+     damit keine unnötige Wärmebrücke entsteht.
+  4. **Ist schon Holz da?** Dann wird das vorhandene genutzt.
+
+  Nach dem Zeichnen kontrolliert der Skill das im Bild. Dazu kam eine eigene Referenzskizze für
+  die Außenecke. Die Regel gilt für alle Zusatzhölzer: an Ecken, Wandanschlüssen, Laibungen,
+  Decken und Plattenstößen.
+
+### Versionsstand
+
+| Version | Neu |
+|---|---|
+| v11 | Fakten (Maße, Legende, Winkel, Texte) werden exakt aus der PDF gelesen; Prüfsumme und Skill-Version im Bericht; Prüfprotokoll aller Regeln |
+| v12 | KO-08: jede Schicht in allen Abschnitten; fehlende Sauberkeitsschicht = klarer Aufbaufehler |
+| v13 | KO-09: Zusatzhölzer nach Funktion platzieren; Referenzskizze Außenecke |
+
+Der aktuelle Stand steht in [`skill/VERSION`](skill/VERSION) und auf Seite 1 jedes Berichts.
 
 ## Projektaufbau
 
