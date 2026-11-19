@@ -87,9 +87,16 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
   eigener Unterkonstruktion (z. B. Eckbrett auf Latte).
 - **Grundlage:** Befestigung von Außenwandbekleidungen und Regeldetails für Außenecken:
   Fachregel 01 des Zimmererhandwerks [[FACHREGEL-01]]; Herstellerangaben [[HERSTELLER]].
-- **Einstufung:** Senkrechte Lattung erkennbar, aber an der Ecke eindeutig keine Latte →
-  **klarer Aufbaufehler**. Lattung nur teilweise dargestellt oder Richtung unklar →
-  **mögliche Auffälligkeit**.
+- **Was „an der Ecke“ heißt (Entscheidungsregel, damit jeder Lauf gleich urteilt):** Eine
+  Latte gilt als Eck-Latte, wenn sie im **Eckbereich** liegt – also deutlich näher an der
+  Ecke als die Latten in der Wandfläche untereinander (typisch: wenige Zentimeter bis etwa
+  eine Lattenbreite plus Brettende vor der Ecke) [[PRAXIS]]. Dann ist die Regel **erfüllt**,
+  auch wenn die Latte nicht genau in der Ecke sitzt. Nur wenn die nächste Latte erst im
+  Abstand der übrigen Latten (bzw. einen großen Teil davon) folgt und die Lattungsebene
+  dazwischen leer ist, fehlt die Eck-Latte. Abstände im Maßstab ablesen und im Befund nennen.
+- **Einstufung:** Senkrechte Lattung erkennbar, aber im Eckbereich (siehe oben) eindeutig keine
+  Latte → **klarer Aufbaufehler**. Latte im Eckbereich vorhanden → **erfüllt** (kein Befund).
+  Lattung nur teilweise dargestellt oder Richtung unklar → **mögliche Auffälligkeit**.
 - **Abgrenzung:** Hinterlüftung (Luftraum) → WH-02; Wasserableitung der Ecke → WH-04.
 
 ## KO-06 Tragende Hölzer haben ein Auflager – Lastweg ist plausibel dargestellt
@@ -156,6 +163,54 @@ Platten ein Auflager, ist die Ecke baubar, passen Darstellung und Beschriftung z
   mit derselben `art` und demselben `band` wie die angrenzende Dämmfläche, damit die
   Schraffur nahtlos weiterläuft. Alte Linien im Bereich (z. B. Gefachdämmung der Wand) werden
   dabei mit abgedeckt.
+
+## KO-08 Jede Schicht liegt in allen Abschnitten, in denen sie liegen muss
+
+- **Gilt für:** alle Details (Wand, Dach, Sockel, Bodenaufbau, Anschlüsse) – jede Schicht,
+  Bahn, Platte und Lage.
+- **Prüfe:** Für **jede** Schicht alle Abschnitte bestimmen, in denen sie nach ihrer Funktion
+  liegen muss, und **jeden Abschnitt einzeln** ansehen. Ist die Schicht dort gezeichnet?
+  Typische Abschnitte:
+  - **Sauberkeitsschicht:** unter jedem Fundament **und** unter der ganzen Bodenplatte –
+    jede Betonunterseite gegen Erdreich (SO-04).
+  - **Abdichtung:** unter der Wand bzw. Schwelle, in der Fläche, an Aufkantung/Sockel und an
+    den Übergängen (SO-03, SO-04).
+  - **Perimeter-/Bodendämmung:** Fläche, Sockel außen, Anschluss an die Wanddämmung (WB-01).
+  - **Trennlage, Randdämmstreifen:** unter dem ganzen Estrich, an allen aufgehenden
+    Bauteilen (SO-04).
+  - **Luftdichte und winddichte Ebene, Unterdeckung:** Fläche und jeder Anschluss
+    (LD-02, WH-01).
+  - **Dämmung, Lattung, Bekleidung:** bis zum Anschluss bzw. zur Ecke (WB-01, KO-05, KO-07).
+- **So erkennst du es in der Zeichnung:** Eine Beschriftung belegt eine Schicht **nur an der
+  Spitze ihrer Hinweislinie**, nicht ihren ganzen Verlauf. Deshalb die Schraffur bzw. die
+  Begrenzungslinien der Schicht entlang aller Abschnitte verfolgen (Zoom, `linien.py`).
+  Hinweise auf eine Lücke: Unterseite eines Bauteils grenzt ohne die Schicht an Erdreich
+  bzw. an die leere Fläche; Maßkette oder Höhenkote endet an der Unterkante ohne die
+  darunterliegende Schicht; dieselbe Schicht ist in einem Abschnitt gezeichnet, im
+  benachbarten nicht.
+- **Typische Auffälligkeit:** Sauberkeitsschicht nur unter dem Fundament, nicht unter der
+  Sohle; Abdichtung nur unter der Schwelle, nicht in der Fläche; Randdämmstreifen nur an einer
+  Wand; Unterdeckung endet vor dem First.
+- **Warum relevant?** Die Schicht erfüllt ihre Funktion nur dort, wo sie liegt. Eine Lücke in
+  einem Abschnitt wirkt wie eine fehlende Schicht – die Baustelle übersieht sie leicht, weil
+  die Schicht in der Legende steht [[PRAXIS]].
+- **Mögliches Risiko:** je nach Schicht wie beim Fehlen der Schicht (siehe die Fachregel).
+- **Verbesserungsmöglichkeiten:** Schicht in **derselben Dicke und Darstellung** durch alle
+  Abschnitte führen (Korrekturskizze: `platte`, `daemmung`, `bahn` mit gleicher Schraffur
+  bzw. Art; Maßkette/Koten mit `text` ergänzen).
+- **Grundlage:** Zeichnungsplausibilität [[PRAXIS]]; Funktion der jeweiligen Schicht nach
+  ihrer Fachregel (z. B. SO-04 [[BAUPROFESSOR-SAUBERKEITSSCHICHT]], LD-02, WB-01).
+- **Einstufung:** wie das **Fehlen der Schicht** in der jeweiligen Fachregel – fehlt eine
+  funktional notwendige Schicht in einem Abschnitt eindeutig → **klarer Aufbaufehler**
+  (Grundsatz 7); Sauberkeitsschicht fehlt unter einem erdberührten Betonbauteil →
+  **klarer Aufbaufehler** (SO-04). Abschnitt liegt außerhalb des Zeichnungsausschnitts bzw.
+  hinter einer Bruchlinie → **aus der Datei nicht prüfbar**. Ist eine **gleichwertige**
+  Schicht dort gezeichnet und beschriftet (z. B. Kies-/Schotterschicht statt Magerbeton) →
+  kein Befund.
+- **Abgrenzung:** Hauptbefund in der Fachregel der Schicht (z. B. SO-04, LD-02, WB-01), KO-08
+  im Protokoll als Verweis; Schicht läuft **zu weit** in ein Nachbarbauteil → KO-07.
+- **Protokoll:** Im `pruefprotokoll` die geprüften Schichten **mit Abschnitten** nennen
+  (z. B. „Sauberkeitsschicht: Fundament ✓, Sohle ✗ → B2“).
 
 ## KO-04 Raster und Plattenstöße passen zusammen
 

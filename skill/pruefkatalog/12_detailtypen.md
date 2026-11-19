@@ -181,7 +181,9 @@ schematisch, nicht maßstäblich) zum Anschauen.
   **Horizontalabdichtung** unter der Schwelle, **luftdichter Anschluss** Wand ↔ Bodenplatte,
   Perimeterdämmung mit Sockelputz im Spritzwasserbereich [[IDH-HOLZSCHUTZ]].
 - **Geometrie:** Schwelle in Breite des Ständerwerks unmittelbar auf Unterfütterung/Abdichtung;
-  Bekleidung endet mit Abstand über Gelände; Bodenaufbau innen nach SO-04.
+  Bekleidung endet mit Abstand über Gelände; Bodenaufbau innen nach SO-04;
+  **Sauberkeitsschicht unter Fundament und ganzer Sohle** – Abschnitte einzeln prüfen (KO-08)
+  [[BAUPROFESSOR-SAUBERKEITSSCHICHT]].
 - **Varianten:** Betonaufkantung (GOK ≤ OKFF), Rinne mit Gitterrost an Türen
   [[IDH-HOLZSCHUTZ]].
 - **Referenzskizze:** `referenz/sockel.png`

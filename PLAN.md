@@ -370,5 +370,24 @@ Rhythmus pro Sitzung: **neue Sitzung → ein Feature → testen & speichern → 
 - [x] **Nachbesserung First (18.11.):** Spuren fehlender Bauteile lesen (Maße/Schrauben ins Leere),
       Sparrendach nur bei gezeichneter + beschrifteter Firstverbindung, sonst K0; Pfettenoberkante
       zuerst nach Maß der Zeichnung; Bauteil-Check Punkt 7; Referenzskizze mit Schrauben;
-      lokaler Test deckt sich mit der Musterlösung – gepackt, nicht eingespielt
+      lokaler Test deckt sich mit der Musterlösung – gespeichert `0609cc8`, in claude.ai als **v10**
 - [ ] **Du:** First + Ortgang mit der neuen Version in **neuen** Chats testen
+- [x] **Reproduzierbarkeit (v11, 18.11.):** `scripts/fakten.py` (Prüfsumme, Legende, Maße,
+      Winkel, Texte exakt aus der PDF), Datei/Prüfsumme/Skill-Version auf Seite 1, Anhang A3
+      Prüfprotokoll, Abschnitt „Gleiches Detail → gleiches Ergebnis“, KO-05-Entscheidungsregel
+      (Eck-Latte); in claude.ai als **v11** eingespielt
+- [x] **Blindtest 5 – Sockel mit v11 (claude.ai, 19.11.):** 4 von 5 Fehlern; **Sauberkeitsschicht
+      unter der Sohle übersehen** (Beschriftung zeigt aufs Fundament) und sogar als positiv
+      gewertet → `tests/loesung/AUSWERTUNG_blindtest_5_v11.md`
+- [x] **Feature 13 (Do 19.11.): Schicht über alle Abschnitte verfolgen (v12)**
+      - Rückfragen geklärt: Sauberkeitsschicht fehlt (ganz oder teilweise) = **klarer
+        Aufbaufehler**; Quelle recherchiert (keine gesicherte Normfundstelle gefunden →
+        Bauprofessor + Praxisempfehlung)
+      - Neue allgemeine Regel **KO-08** (jede Schicht in allen Abschnitten; Protokoll mit
+        Abschnitten); SKILL.md Bauteil-Check Punkt 8 (Abschnitts-Check) und 9 (Unterkanten-/
+        Rand-Check), Positiv erst nach Abschnitts-Check; SO-04, ZQ-04, DT-W1, `00_uebersicht`
+      - `platte` mit Schraffur `kreuz` (Magerbeton/Sauberkeitsschicht)
+      - Lokaler Test: `tests/befunde_test_sauberkeitsschicht.json` → `tests/ausgabe/sks_test_bericht.pdf`
+        (Lücke erkannt, Korrektur wie Musterlösung); alte Berichte laufen weiter
+      - `skill/VERSION` → 12, ZIP/.skill gepackt; in claude.ai als **v12** eingespielt (19.11.)
+- [ ] **Du:** Sockel mit v12 in einem **neuen** Chat prüfen

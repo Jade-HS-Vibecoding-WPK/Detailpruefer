@@ -60,7 +60,9 @@ werden leicht falsch ausgeführt.
 - **Gilt für:** alle Detailzeichnungen.
 - **Prüfe:** Zeigt jede Hinweislinie auf das beschriebene Bauteil, und ist es dort auch
   **gezeichnet**?
-- **So erkennst du es in der Zeichnung:** Jede Hinweislinie bis zur Spitze verfolgen.
+- **So erkennst du es in der Zeichnung:** Jede Hinweislinie bis zur Spitze verfolgen. Die
+  Spitze belegt die Schicht **nur an dieser Stelle** – ob sie auch in allen anderen
+  Abschnitten liegt, prüft KO-08.
 - **Typische Auffälligkeit:** Beschriftung „Luftdichte Abklebung“, an der Spitze der
   Hinweislinie ist aber kein Band dargestellt.
 - **Warum relevant?** Die Baustelle sieht einen Widerspruch oder übersieht das Bauteil.

@@ -299,7 +299,8 @@ DAEMM_ARTEN = ("weich", "hart", "hart_doppelt", "geschlaengelt")
 
 def _plattenschraffur(c, art, punkte, k, pt, w, linie):
     """Schraffur von Plattenwerkstoffen – wie dieselbe Schicht in der Zeichnung:
-    striche (OSB/Holzwerkstoff), zickzack (MDF/Holzfaser), punkte (Gipskarton), diagonal (Brett/Holz)."""
+    striche (OSB/Holzwerkstoff), zickzack (MDF/Holzfaser), punkte (Gipskarton), diagonal (Brett/Holz),
+    kreuz (Magerbeton/Sauberkeitsschicht)."""
     a, (ux, uy), (nx, ny), dicke = _band(k, punkte, pt)
     proj = [(px - a[0]) * ux + (py - a[1]) * uy for px, py in punkte]
     s0, s1 = min(proj), max(proj)
@@ -328,6 +329,17 @@ def _plattenschraffur(c, art, punkte, k, pt, w, linie):
             weg.lineTo(a[0] + s * ux + q * nx, a[1] + s * uy + q * ny)
             oben = not oben
         c.drawPath(weg, stroke=1, fill=0)
+        return
+    if art == "kreuz":
+        # Kreuzschraffur (z. B. Magerbeton/Sauberkeitsschicht): 45° in beide Richtungen,
+        # über die Ränder hinaus – der Umriss schneidet sie ab.
+        abstand = max(2.0, w * 0.0035)
+        s = s0 - dicke
+        while s <= s1 + dicke:
+            x0, y0 = a[0] + s * ux, a[1] + s * uy
+            c.line(x0, y0, x0 + dicke * ux + dicke * nx, y0 + dicke * uy + dicke * ny)
+            c.line(x0 + dicke * ux, y0 + dicke * uy, x0 + dicke * nx, y0 + dicke * ny)
+            s += abstand
         return
     abstand = max(2.0, w * 0.0045) if art == "striche" else max(2.5, dicke * 0.6)
     s = s0 + abstand / 2
@@ -718,7 +730,7 @@ def zeichne_korrektur(c, k, pt, w, h):
                                                                      abdichtung | unterdeckbahn | lueftungsband
     Maße in cm brauchen den Maßstab: "detail": {"massstab": "1:5"}.
       platte        {"rechteck"|"punkte", "schraffur": "striche"}    Plattenwerkstoff; Schraffur wie in der
-                                                                     Zeichnung: striche | zickzack | punkte | diagonal
+                                                                     Zeichnung: striche | zickzack | punkte | diagonal | kreuz
       abklebung     {"punkte": [[x, y], …]}                          dicke gestrichelte Linie (Klebeband)
       linie         {"punkte": [[x, y], …]}                          durchgezogene Linie
       durchstreichen{"von": [x, y], "bis": [x, y]}                   falschen Wert/Text durchstreichen

@@ -91,7 +91,9 @@ Funktionskatalogen (LD, FS, WB, WH, HS, KO) – hier wird darauf verwiesen.
 
 - **Gilt für:** Sockel- und Bodendetails mit Bodenplatte (auch Decken mit schwimmendem Estrich).
 - **Pflichtbauteile von unten nach oben (typische Folge, Praxisempfehlung [[PRAXIS]]):**
-  Sauberkeitsschicht unter der Bodenplatte · Bodenplatte · Abdichtung · Dämmung (Platten →
+  **Sauberkeitsschicht unter allen erdberührten Betonbauteilen** – unter jedem Fundament
+  **und** unter der ganzen Bodenplatte (Magerbeton ca. 5–8 cm bzw. Kies/Schotter ca. 10 cm
+  [[BAUPROFESSOR-SAUBERKEITSSCHICHT]]; Abschnitte einzeln prüfen → KO-08) · Bodenplatte · Abdichtung · Dämmung (Platten →
   Schraffur `hart`) · Trennlage/PE-Folie · Estrich mit **Randdämmstreifen** an allen
   aufgehenden Bauteilen (Estrich darf die Wand nicht berühren) · Bodenbelag ·
   **Fuß-/Sockelleiste** als Abschluss zur Wand.
@@ -100,7 +102,9 @@ Funktionskatalogen (LD, FS, WB, WH, HS, KO) – hier wird darauf verwiesen.
 - **Höhen-Abgleich (immer):** Höhenkoten (OKFF, OKRD, UKRD), Maßketten und Schichtdicken
   müssen zusammenpassen. Widerspruch → die **verursachende Schicht** bestimmen (z. B.
   Dämmung dünner gezeichnet als nach Koten/Legende möglich) und benennen.
-- **Typische Auffälligkeit:** Sauberkeitsschicht fehlt; Estrich stößt ohne Randdämmstreifen
+- **Typische Auffälligkeit:** Sauberkeitsschicht fehlt – **oft nur teilweise**: unter dem
+  Fundament gezeichnet und beschriftet, unter der Sohle (UKRD) nicht (die Beschriftung zeigt
+  dann auf das Fundament und täuscht Vollständigkeit vor); Estrich stößt ohne Randdämmstreifen
   an die Wand; Fußleiste fehlt; Summe der Schichten ≠ Höhenkoten bzw. Maßkette.
 - **Warum relevant?** Randdämmstreifen trennen den Estrich schalltechnisch und lassen ihm
   Bewegung; falsche Schichtdicken verschieben alle Höhen und den Wärmeschutz.
@@ -109,10 +113,15 @@ Funktionskatalogen (LD, FS, WB, WH, HS, KO) – hier wird darauf verwiesen.
 - **Beste Korrektur:** fehlende bzw. zu dünne Schicht **in richtiger Dicke** einzeichnen
   (`entfernen` + `daemmung` `hart` bzw. `platte`/`profil`); Sauberkeitsschicht als `platte`;
   Randdämmstreifen als `daemmung` `geschlaengelt`; Fußleiste als `holz`; Maßkette/Kote mit
-  `durchstreichen` + `text`.
-- **Grundlage:** Zeichnungsplausibilität und übliche Bauweise [[PRAXIS]]; Dämmung/Wärmebrücke
-  → WB-01; Abdichtung/Holzschutz → SO-03.
+  `durchstreichen` + `text`. Fehlende Sauberkeitsschicht unter der Sohle als `platte` in
+  **derselben Dicke und Schraffur** wie unter dem Fundament über die **ganze** Sohlenunterseite
+  bis zum Bildrand; Maßkette/Koten (z. B. „5“) mit `text` ergänzen.
+- **Grundlage:** Zeichnungsplausibilität und übliche Bauweise [[PRAXIS]]; Sauberkeitsschicht
+  trennt Baugrund und Bauteil und gleicht Unebenheiten aus [[BAUPROFESSOR-SAUBERKEITSSCHICHT]];
+  Dämmung/Wärmebrücke → WB-01; Abdichtung/Holzschutz → SO-03; Schicht in allen Abschnitten → KO-08.
 - **Einstufung:** funktional notwendige Schicht fehlt (Abdichtung, Dämmung, Randdämmstreifen
-  bei schwimmendem Estrich) → **klarer Aufbaufehler**; Sauberkeitsschicht oder Fußleiste fehlt
-  → **mögliche Auffälligkeit**; Höhenwiderspruch → **mögliche Auffälligkeit** mit Benennung
+  bei schwimmendem Estrich) → **klarer Aufbaufehler**; **Sauberkeitsschicht fehlt unter einem
+  erdberührten Betonbauteil** (ganz oder in einem Abschnitt, z. B. nur unter der Sohle) →
+  **klarer Aufbaufehler** (Festlegung des Projekts; Kies-/Schotterschicht als gleichwertige
+  Variante, wenn gezeichnet und beschriftet); Fußleiste fehlt → **mögliche Auffälligkeit**; Höhenwiderspruch → **mögliche Auffälligkeit** mit Benennung
   der Schicht (eindeutig zu dünne Dämmschicht → **klarer Aufbaufehler**, WB-01).

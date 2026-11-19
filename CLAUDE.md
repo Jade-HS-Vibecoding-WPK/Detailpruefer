@@ -24,6 +24,8 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
 - Rückfragen an den Nutzer gesammelt in **einer** Runde stellen (Fragedialog mit Antwortoptionen).
 - **Erst fragen, dann umsetzen:** Gibt es offene Fragen zu einer Aufgabe, diese vor Beginn mit
   dem Nutzer klären (bei größeren Vorhaben kurz interviewen) – nicht mit Annahmen loslegen.
+- Bei jeder neuen Fassung, die in claude.ai eingespielt wird, `skill/VERSION` hochzählen
+  (die Version steht im Bericht).
 - Nach jeder Änderung an `skill/`: `dist/detailpruefer-architektur.zip` und `.skill` neu packen.
   In claude.ai einspielen (Plugins → ⋯ → „Neue Version hochladen“) nur auf Wunsch des Nutzers;
   danach die aktive Version (v…) in `HANDOFF.md` vermerken.
@@ -59,6 +61,19 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   die ganze Schichtdicke? Erscheint nicht als eigene Tabelle im Bericht.
 - **Höhen-Abgleich bis zur Schicht:** Widersprechen sich Koten, Maßketten und Schichtdicken,
   die verursachende Schicht benennen und in der Korrekturskizze in richtiger Dicke zeichnen.
+- **Beschriftung ≠ vollständiger Verlauf:** Eine Hinweislinie belegt eine Schicht nur an ihrer
+  Spitze. Jede Schicht über **alle Abschnitte** verfolgen, in denen sie liegen muss (z. B.
+  Sauberkeitsschicht unter Fundament **und** ganzer Bodenplatte; Abdichtung unter Wand, in der
+  Fläche und an der Aufkantung). Fehlt sie in einem Abschnitt, ist das ein Befund – auch wenn
+  sie anderswo gezeichnet und beschriftet ist. „Positiv“ erst nach diesem Abschnitts-Check.
+- **Gleiches Detail → gleiches Ergebnis:** immer zuerst `scripts/fakten.py`; Legende, Maße,
+  Winkel und Texte nur aus `fakten.json`; Prüfsumme in `detail.pruefsumme`; alle Regeln in
+  fester Reihenfolge ins `pruefprotokoll`; Einstufung wörtlich nach Regeltext (im Zweifel die
+  vorsichtigere); vor jedem klaren Aufbaufehler Gegenbeweis suchen. Berichte nur vergleichen,
+  wenn Datei-Prüfsumme **und** Skill-Version übereinstimmen.
+- **Fehlerklassen statt Einzelfälle beheben:** Wird ein Fehler übersehen, die allgemeine
+  Ursache in Katalog/SKILL.md verankern (gilt für alle Details), nie die Lösung eines
+  einzelnen Details (keine detailbezogenen Koordinaten) – und am Testdetail nachprüfen.
 - **Übliche Bauteildicken** (`skill/pruefkatalog/10_bauteildicken.md`) nur aus offiziellen,
   nachweisbaren Quellen (z. B. dataholz-Standardaufbauten) – als **Empfehlung**, kein
   Grenzwert; Abweichung → mögliche Auffälligkeit; im Schichtenaufbau Feld `ueblich`. Ohne
@@ -116,9 +131,12 @@ Zu Beginn jeder Sitzung lesen: `HANDOFF.md` (Übergabe), dann `PLAN.md` (Plan un
   (Dämmung, Holz, Plattenwerkstoffe), Beschriftung mit Hinweislinien.
 
 ## Technik
-- Skill-Ordner: `skill/` (SKILL.md, pruefkatalog/, checkliste.md, scripts/).
-- Ablauf der Skripte: `raster.py` (Positionen ablesen) → `befunde.json` →
-  `markieren.py` (Kontrolle) → `skizze.py` (Korrekturskizze) → `bericht.py` (PDF-Prüfbericht).
+- Skill-Ordner: `skill/` (SKILL.md, VERSION, pruefkatalog/, checkliste.md, referenz/, scripts/).
+- Ablauf der Skripte: `fakten.py` (feste Fakten + Prüfsumme) → `raster.py`/`linien.py`
+  (Positionen, exakte Kanten) → `befunde.json` → `markieren.py` (Kontrolle) → `skizze.py`
+  (Korrekturskizze) → `bericht.py` (PDF-Prüfbericht).
+- Skripte **modellneutral** halten (reines Python, keine Claude-spezifischen Aufrufe) – damit
+  der Skill später auch mit anderen KI-Modellen (z. B. Codex über `AGENTS.md`) nutzbar bleibt.
 - Python: `%LOCALAPPDATA%\Programs\Python\Python312\python.exe` (in Git Bash:
   `/c/Users/ozand/AppData/Local/Programs/Python/Python312/python.exe`); Git 2.56.
 - GitHub: https://github.com/Jade-HS-Vibecoding-WPK/Detailpruefer (Branch `main`, Kurs-Organisation; Remote `origin`). Altes Repo als Remote `alt`.

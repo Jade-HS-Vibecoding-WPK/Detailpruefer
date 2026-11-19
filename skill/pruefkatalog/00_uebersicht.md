@@ -137,6 +137,11 @@ Auffälligkeit bei LD/FS · mittel = übrige mögliche Auffälligkeiten · niedr
    (ZQ-01) und Unterkonstruktionen bis zur Ecke verfolgen (KO-01, KO-05). An Anschlüssen
    jede Platte und Bahn bis zu ihrem tatsächlichen Ende verfolgen: Endet sie dort, wo ihre
    Funktion übergeben wird, oder läuft sie in das Nachbarbauteil hinein (KO-07)?
+   **Jede Schicht über alle Abschnitte verfolgen (KO-08):** Eine Beschriftung belegt eine
+   Schicht nur an der Spitze ihrer Hinweislinie. Je Schicht alle Abschnitte auflisten, in
+   denen sie liegen muss (z. B. Sauberkeitsschicht unter Fundament **und** ganzer Sohle), und
+   jeden einzeln prüfen; jede Bauteil-Unterseite gegen Erdreich und jeden Bereich bis zum
+   Bildrand ansehen.
 2. Jede Regel aller Bereiche durchgehen; Geltungsbereich prüfen.
 3. Je Regel notieren: `erfüllt`, `nicht anwendbar` oder eine Einstufung – mit Kürzel.
 4. Doppelbefunde zusammenführen (Grundsatz 8).

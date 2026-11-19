@@ -48,9 +48,38 @@ Hilfestellung – ersetzt keine fachliche Prüfung und keinen Nachweis; die KI k
 
 Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurzem Grund.
 
+## Gleiches Detail → gleiches Ergebnis (Pflicht)
+
+Dieselbe Zeichnung muss bei jedem Lauf zu denselben Befunden führen. Deshalb:
+1. **Fakten zuerst, immer mit dem Skript:** `python scripts/fakten.py <zeichnung.pdf> fakten.json`.
+   Legende, Maßzahlen, Winkel, Beschriftungen und Maßstab **nur aus `fakten.json`** übernehmen
+   (nie aus dem Bild abschreiben). Die dort ausgegebene **Prüfsumme** in `detail.pruefsumme`
+   eintragen – der Bericht warnt, wenn Befunde und Zeichnung nicht zusammenpassen.
+2. **Feste Reihenfolge:** alle Regeln in Katalog-Reihenfolge (00 → 12) prüfen und **jede** im
+   Feld `pruefprotokoll` mit Ergebnis eintragen (`erfüllt`, `nicht anwendbar`,
+   `nicht prüfbar`; Regeln mit Befund ergänzt der Bericht selbst). Der Bericht druckt das
+   vollständige Protokoll (Anhang A3) und meldet Regeln ohne Ergebnis. Beim Eintrag zu
+   **KO-08** die geprüften Schichten **mit ihren Abschnitten** nennen (z. B. „Sauberkeitsschicht:
+   Fundament ✓, Sohle ✓; Abdichtung: Wandfuß ✓, Fläche ✓“) – ein bloßes „erfüllt“ reicht dort
+   nicht.
+3. **Einstufung nur nach Regeltext:** Für jede Regel die Zeile „Einstufung“ wörtlich anwenden –
+   nicht nach Gefühl. Passt ein Fall auf zwei Einstufungen, gilt die im Regeltext genannte
+   **vorsichtigere** (Auffälligkeit statt Aufbaufehler, Hinweis statt Auffälligkeit).
+4. **Gegenprüfung vor dem Bericht:** Für jeden klaren Aufbaufehler aktiv nach einem
+   **Gegenbeweis** suchen (Zoom bzw. `linien.py`): Gibt es das „fehlende“ Bauteil in der Nähe
+   (z. B. Latte wenige Zentimeter vor der Ecke, Abklebe-Symbol, Auflager)? Gibt es einen
+   Gegenbeweis → kein Aufbaufehler.
+5. **Frühere Prüfung derselben Datei:** Lädt die Person einen früheren Bericht oder eine
+   `befunde.json` mit **derselben Prüfsumme** hoch, deren Befunde als Ausgangspunkt nehmen und
+   nur mit Begründung abweichen (Begründung unter „Annahmen“ nennen).
+6. Der Bericht nennt auf Seite 1 **Datei, Prüfsumme und Skill-Version** (`VERSION`). Berichte
+   sind nur vergleichbar, wenn alle drei übereinstimmen.
+
 ## Ablauf
 
 ### 1. Zeichnung erfassen
+- **Zuerst** `python scripts/fakten.py <zeichnung.pdf> fakten.json` ausführen (Prüfsumme,
+  Legende, Maßzahlen, Winkel, Texte mit Position).
 - Detailart, Schnittart, Maßstab, Bauart, Fassadensystem bestimmen.
 - **Tragsystem bestimmen** (bei Dächern: Pfettendach mit First-/Mittel-/Fußpfette,
   Sparrendach mit Sparrenpaaren und Kehlbalken/Zugband, Kehlbalkendach; bei Wänden:
@@ -78,7 +107,7 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   Vor dem Prüfen eine Liste aller Bauteile anlegen – **jede Schicht und jedes Bauteil der
   Zeichnung** (Legende + alles Gezeichnete, auch Kleinteile wie Leisten, Bleche, Streifen)
   **plus alle Pflichtbauteile** der Detailart aus `08_…`/`09_…`. Je Eintrag festhalten:
-  1. vorhanden? (gezeichnet / nur beschriftet / fehlt)
+  1. vorhanden? (gezeichnet / nur beschriftet / fehlt / **nur in einem Teil der Abschnitte**)
   2. Dicke gezeichnet (im Maßstab gemessen) · Dicke laut Legende/Maßkette/Koten
   3. üblicher Bereich aus `pruefkatalog/10_bauteildicken.md`
   4. Schraffur passend und über die ganze Schichtdicke?
@@ -90,9 +119,29 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
      wahrscheinlich ein Bauteil (z. B. Höhenmaß in der Firstachse → Oberkante Firstpfette;
      Schrauben aus den Sparren in den Raum → Pfette fehlt). Fehlendes Bauteil genau dort
      einzeichnen (DT-00 Punkt 3).
+  8. **Liegt die Schicht in allen Abschnitten? (KO-08, Pflicht für jede Schicht)** Eine
+     Beschriftung belegt eine Schicht **nur an der Spitze ihrer Hinweislinie** – nicht den
+     ganzen Verlauf. Deshalb je Schicht **alle Abschnitte auflisten, in denen sie liegen
+     muss**, und **jeden Abschnitt einzeln** im Zoom bzw. mit `linien.py` ansehen:
+     - Sauberkeitsschicht: unter **jedem** Fundament **und** unter der **ganzen** Bodenplatte
+       (jede Betonunterseite gegen Erdreich).
+     - Abdichtung: unter der Wand/Schwelle, in der Fläche, an Aufkantung/Sockel, Übergänge.
+     - Perimeter-/Bodendämmung: Fläche, Sockel außen, Anschluss an die Wanddämmung.
+     - Trennlage/PE-Folie und Randdämmstreifen: unter dem ganzen Estrich, an **allen**
+       aufgehenden Bauteilen.
+     - Luftdichte Ebene, winddichte Ebene, Unterdeckung: Fläche **und** jeder Anschluss.
+     - Dämmung, Lattung, Bekleidung: bis zum Anschluss bzw. bis zur Ecke (WB-01, KO-05, KO-07).
+     Fehlt die Schicht in einem Abschnitt, ist das ein Befund – **auch wenn sie anderswo
+     gezeichnet und beschriftet ist**. Im Bauteil-Check die Abschnitte einzeln abhaken
+     (z. B. „Sauberkeitsschicht: unter Fundament ✓ · unter Sohle ✗“).
+  9. **Unterkanten- und Rand-Check:** Jede Bauteil-Unterseite gegen Erdreich (z. B. Raum
+     unter UKRD, unter Fundamenten) und jeden Bereich bis zum Bildrand bzw. zur Bruchlinie
+     ansehen: Was liegt dort – und was **müsste** dort liegen? Endet eine Maßkette an einer
+     Unterkante ohne die darunterliegende Schicht, ist das ein Hinweis auf eine fehlende
+     Schicht.
   Querschnitte fehlender Bauteile (z. B. Rähm) aus `10_bauteildicken.md` bzw. aus gleichartigen
   Bauteilen derselben Zeichnung (z. B. Schwelle) übernehmen – nie frei schätzen.
-  Jede Zeile mit „fehlt“, „nur beschriftet“, „Widerspruch“, „deutlich außerhalb üblich“,
+  Jede Zeile mit „fehlt“, „nur in einem Teil der Abschnitte“, „nur beschriftet“, „Widerspruch“, „deutlich außerhalb üblich“,
   „Schraffur unvollständig“ oder „Material fehlt“ wird ein Befund (oder Teil eines Befunds). Erst wenn **jede**
   Zeile abgehakt ist, zur Prüfung übergehen. Den üblichen Bereich im Schichtenaufbau als
   Feld `ueblich` mitgeben (mit `[[ID]]`).
@@ -139,10 +188,15 @@ Je Befund außerdem **Aussagesicherheit** `hoch` / `mittel` / `gering` mit kurze
   Baustoffe** (`11_baustoffe.md`) **und** den passenden
   Bauteil-Katalog (`08_dach_steildach.md` für Dach,
   First, Traufe, Ortgang; `09_wand_sockel.md` für Wand, Sockel und Bodenaufbau) durchgehen: `erfüllt`,
-  `nicht anwendbar` oder Einstufung. Doppelbefunde zusammenführen.
+  `nicht anwendbar` oder Einstufung – und **jedes** Ergebnis ins `pruefprotokoll` schreiben.
+  Doppelbefunde zusammenführen. Vor dem Bericht die **Gegenprüfung** (siehe „Gleiches Detail →
+  gleiches Ergebnis“, Punkt 4) für jeden klaren Aufbaufehler machen.
 - **Positiv festgestellt** nur, was keinem Befund widerspricht: Steht ein Bereich in einem
   Befund (z. B. Dämmung zu dünn, Rähm fehlt), darf „Positiv“ ihn nicht als gelöst nennen.
-  Vor dem Bericht die Positiv-Liste gegen alle Befunde abgleichen.
+  Vor dem Bericht die Positiv-Liste gegen alle Befunde abgleichen. **Eine Schichtenfolge
+  („Bodenaufbau vollständig“, „Schichtenfolge korrekt“) erst positiv nennen, wenn der
+  Abschnitts-Check (Bauteil-Check Punkt 8, KO-08) für jede ihrer Schichten erfüllt ist** –
+  die Aufzählung der Legende allein belegt keine Vollständigkeit.
 - **Keine Fehlalarme:** Nur melden, was eine Regel verletzt. Eine korrekt beschriftete
   Schicht, die nur anders schraffiert ist (ZQ-05), oder ein üblicher Querschnitt (z. B.
   Konterlatte 30/50 bei Sparren < 8 m, RW-01) ist **kein** Befund.
@@ -307,8 +361,11 @@ Fragt der Nutzer nach („Reicht die Dämmung?“, „Welches Material nehme ich
     "fassade": "hinterlüftete Holzschalung, geschlossen",
     "schnitt": "Horizontalschnitt",
     "massstab": "1:5",
-    "pruefdatum": "17.11.2026"
+    "pruefdatum": "17.11.2026",
+    "pruefsumme": "6BDDA9355EBF"
   },
+  "pruefprotokoll": { "LD-01": "erfüllt", "LD-03": "erfüllt", "WH-05": "nicht anwendbar",
+                      "WB-02": "nicht prüfbar" },
   "seite": 1,
   "zeichnung_ausschnitt": [14, 8, 92, 96],
   "beschriftungen": [ { "text": "Wand A", "x": 33, "y": 52 }, { "text": "Wand B", "x": 56, "y": 88 } ],
@@ -376,7 +433,7 @@ Fragt der Nutzer nach („Reicht die Dämmung?“, „Welches Material nehme ich
     `hart_doppelt` | `geschlaengelt`, siehe Tabelle 5b – **immer angeben**). Ohne `band`
     gelten erste Polygonkante + letzter Punkt.
   - `platte` – `rechteck` oder `punkte` (+ `band`), `schraffur`: `striche` | `zickzack` |
-    `punkte` | `diagonal`.
+    `punkte` | `diagonal` | `kreuz` (Kreuzschraffur, z. B. Magerbeton/Sauberkeitsschicht).
   - `holz` – `rechteck` (achsparallel) **oder** `mitte`/`auf` `[x,y]` + `querschnitt_cm`
     `[b, h]` + `richtung` `[[x,y],[x,y]]` bzw. `winkel` (Grad) + `seite` (`oben`/`unten`/
     `links`/`rechts`, wohin das Holz von einer Linie aus ragt) + `schnitt` (`quer` = Kreuz,

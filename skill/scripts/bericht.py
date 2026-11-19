@@ -10,7 +10,10 @@ Gliederung (wichtiges zuerst):
     1  Befunde im Detail (Karten mit Zeichnungsausschnitt)
     2  Nicht prüfbar und offene Fragen
     3  Positiv festgestellt
-    Anhang  A1 Methode und Einstufungen · A2 Annahmen · A3 Code-Legende · A4 Quellenverzeichnis
+    Anhang  A1 Methode und Einstufungen · A2 Annahmen · A3 Prüfprotokoll · A4 Code-Legende ·
+            A5 Quellenverzeichnis
+Seite 1 nennt geprüfte Datei, Prüfsumme (SHA-256) und Skill-Version – damit ist erkennbar,
+ob zwei Berichte dieselbe Zeichnung betreffen.
 
 Quellen: Im Text von befunde.json mit [[ID]] zitieren (IDs aus pruefkatalog/quellen.json).
 Der Bericht setzt daraus hochgestellte, verlinkte Fußnoten und listet nur zitierte Quellen.
@@ -45,6 +48,16 @@ from markieren import (FARBEN, GRUEN, befund_kennung, befunde_lesen,  # noqa: E4
 GRUEN_HEX = GRUEN.hexval().replace("0x", "#")
 
 KATALOG = os.path.join(HIER, "..", "pruefkatalog")
+from fakten import pruefsumme  # noqa: E402  (gleiche Prüfsumme wie fakten.py)
+
+
+def skill_version():
+    """Versionsnummer des Skills aus der Datei VERSION (eine Zeile, z. B. „11 (18.11.2026)“)."""
+    try:
+        with open(os.path.join(HIER, "..", "VERSION"), encoding="utf-8") as f:
+            return f.readline().strip() or "–"
+    except OSError:
+        return "–"
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -371,6 +384,29 @@ def prioritaet(b):
     return 3
 
 
+def pruefprotokoll(daten, befunde, titel):
+    """Ergebnis je Regel in Katalog-Reihenfolge.
+
+    Quelle 1: Feld "pruefprotokoll" in befunde.json ({"LD-01": "erfüllt", "WH-05": "nicht anwendbar", …}).
+    Quelle 2: Befunde selbst – jede im Feld "regel" genannte Regel bekommt „Befund Bx“.
+    Fehlt beides, steht „nicht dokumentiert“ (Hinweis auf eine unvollständige Prüfung)."""
+    vorgabe = daten.get("pruefprotokoll", {}) or {}
+    aus_befunden = {}
+    for b in befunde:
+        for code in re.findall(r"[A-Z]{2}-\d{2}", str(b.get("regel", ""))):
+            aus_befunden.setdefault(code, []).append(b["_id"])
+    zeilen = []
+    for code in titel:   # Reihenfolge wie in den Katalogdateien
+        if code in aus_befunden:
+            ergebnis = "Befund " + ", ".join(aus_befunden[code])
+        elif code in vorgabe:
+            ergebnis = str(vorgabe[code])
+        else:
+            ergebnis = "nicht dokumentiert"
+        zeilen.append((code, ergebnis))
+    return zeilen
+
+
 def regel_titel():
     """Liest Regel-Titel (z. B. 'LD-02 …') aus den Katalogdateien für die Code-Legende."""
     titel = {}
@@ -418,8 +454,12 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
 
     # ---------- Seite 1: Titel (ohne Kopf-Tabelle – Projekt, Bericht-ID und Version stehen in der Kopfzeile)
     unterzeile = " · ".join(x for x in (d.get("titel"), d.get("pruefdatum")) if x)
+    ident = daten.get("_identitaet", {})
+    identzeile = (f"Geprüfte Datei: {ident.get('datei', '–')} · Prüfsumme {ident.get('pruefsumme', '–')} · "
+                  f"Skill-Version {ident.get('skill_version', '–')}")
     f = [P("Prüfbericht Baudetail", S_TITEL),
          P(unterzeile or "Qualitative Plausibilitätsprüfung einer Detailzeichnung", S_UNTER),
+         P(identzeile, S_GRAU),
          Spacer(1, 4 * mm)]
 
     hinweis = Table([[P(HINWEIS, S_HINWEIS)]], colWidths=[BREITE])
@@ -609,9 +649,21 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
         z.append(["", P("Keine.", S_KLEIN)])
     f.append(tabelle(z, [14 * mm, 160 * mm], zebra=True))
 
-    # Code-Legende erst nach allen Texten (damit alle Codes gesammelt sind)
+    # Prüfprotokoll: jede Regel des Katalogs mit Ergebnis (macht Läufe vergleichbar und vollständig)
     titel = regel_titel()
-    f.append(P("A3  Code-Legende", S_H2))
+    protokoll = pruefprotokoll(daten, befunde, titel)
+    f.append(P("A3  Prüfprotokoll", S_H2))
+    f.append(P("Ergebnis jeder Prüfregel in fester Reihenfolge. Zwei Berichte zur selben Datei (gleiche "
+               "Prüfsumme) und derselben Skill-Version lassen sich Zeile für Zeile vergleichen.", S_GRAU))
+    f.append(Spacer(1, 1.5 * mm))
+    z = [kopfzeile_tab(["Code", "Prüfregel", "Ergebnis"])]
+    for code, ergebnis in protokoll:
+        z.append([P(code, S_KLEIN), P(titel.get(code, "–"), S_KLEIN),
+                  P(ergebnis, S_LABEL if ergebnis.startswith("B") else S_KLEIN)])
+    f.append(tabelle(z, [16 * mm, 118 * mm, 40 * mm], zebra=True))
+
+    # Code-Legende erst nach allen Texten (damit alle Codes gesammelt sind)
+    f.append(P("A4  Code-Legende", S_H2))
     f.append(P("Die kleinen grauen Codes verweisen auf die Prüfregeln des Detailprüfers. "
                "Aufgeführt sind alle Codes, die in diesem Bericht vorkommen.", S_GRAU))
     f.append(Spacer(1, 1.5 * mm))
@@ -622,7 +674,7 @@ def inhalt_erzeugen(daten, quellen, bilder, seiten, fest=None, bilder_korrektur=
     f.append(tabelle(z, [16 * mm, 58 * mm, 100 * mm], zebra=True))
 
     # Quellenverzeichnis
-    f.append(P("A4  Quellenverzeichnis", S_H2))
+    f.append(P("A5  Quellenverzeichnis", S_H2))
     f.append(P(f"Nur im Bericht zitierte Quellen. Hochgestellte Zahlen im Text verweisen hierher. "
                f"Links aufgerufen am {quellen.get('abgerufen', '–')}. Norminhalte sind sinngemäß "
                f"wiedergegeben; Normtexte sind in der Regel kostenpflichtig über DIN Media erhältlich.",
@@ -769,7 +821,9 @@ def baue(pdf_ziel, daten, quellen, bilder, seiten, gesamt, fest=None):
     d = daten.get("detail", {})
     bericht = daten.get("bericht", {})
     kopf_links = t(f"Projekt: {d.get('projekt') or 'nicht angegeben'} · {d.get('titel', '')}")
-    kopf_rechts = t(f"Bericht {bericht.get('id', '')} · Version {bericht.get('version', '1.0')}")
+    ident = daten.get("_identitaet", {})
+    kopf_rechts = t(f"Bericht {bericht.get('id', '')} · Version {bericht.get('version', '1.0')} · "
+                    f"Datei {ident.get('pruefsumme', '–')} · Skill {ident.get('skill_version', '–')}")
 
     def kopf_fuss(c, doc):
         breite, hoehe = c._pagesize
@@ -823,6 +877,23 @@ def main():
         heute = datetime.date.today().strftime("%Y%m%d")
         kurz = hashlib.sha1(os.path.basename(pdf_ein).encode("utf-8")).hexdigest()[:4].upper()
         daten["bericht"]["id"] = f"DPA-{heute}-{kurz}"
+
+    # Identität der geprüften Zeichnung – wird aus der Datei selbst berechnet, nicht übernommen
+    summe = pruefsumme(pdf_ein)
+    daten["_identitaet"] = {
+        "datei": daten.get("detail", {}).get("datei") or os.path.basename(pdf_ein),
+        "pruefsumme": summe,
+        "skill_version": skill_version(),
+    }
+    erwartet = str(daten.get("detail", {}).get("pruefsumme", "")).upper()
+    if erwartet and erwartet != summe:
+        print(f"WARNUNG: befunde.json gehört zu einer anderen Zeichnung (Prüfsumme {erwartet}, "
+              f"diese Datei {summe}). Bitte die richtige Zeichnung verwenden.")
+    titel_alle = regel_titel()
+    offen = [c for c, e in pruefprotokoll(daten, [dict(b, _id=befund_kennung(b)) for b in befunde_lesen(daten)],
+                                         titel_alle) if e == "nicht dokumentiert"]
+    if offen:
+        print(f"Hinweis: {len(offen)} Prüfregeln ohne Ergebnis im Prüfprotokoll: {', '.join(offen)}")
 
     writer, seitennr, anzahl = markierte_seite(pdf_ein, daten)
     puffer = io.BytesIO()

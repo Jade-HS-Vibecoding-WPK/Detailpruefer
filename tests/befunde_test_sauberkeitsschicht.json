@@ -1,0 +1,55 @@
+{
+  "bericht": { "id": "DPA-TEST-SKS", "version": "1.0" },
+  "detail": {
+    "projekt": "nicht angegeben",
+    "titel": "Sockel Holzrahmenwand – Test Abschnitts-Check (KO-08)",
+    "datei": "blindtest_5_sockel.pdf",
+    "bauart": "Holzrahmenbau auf Betonfertigteil",
+    "fassade": "hinterlüftete Bekleidung",
+    "schnitt": "Vertikalschnitt",
+    "massstab": "1:5",
+    "pruefdatum": "19.11.2026",
+    "pruefsumme": "0A1CA30A1524"
+  },
+  "pruefprotokoll": {
+    "KO-08": "Befund B1 – Sauberkeitsschicht: Fundament ✓, Sohle ✗; Abdichtung: Wandfuß ✓, Fläche ✓; Randdämmstreifen: nicht geprüft (Test)",
+    "SO-04": "Befund B1"
+  },
+  "seite": 1,
+  "zeichnung_ausschnitt": [24, 10, 86, 90],
+  "kurzfazit": "Testlauf nur für den Abschnitts-Check: Die Sauberkeitsschicht liegt nur unter dem Fundament, unter der Stahlbetonsohle fehlt sie.",
+  "schichtenaufbau": [
+    { "nr": "S1", "schicht": "Stb.-Sohle", "dicke": "20 cm", "ueblich": "kein Richtwert – nach Nachweis", "status": "ok", "anmerkung": "" },
+    { "nr": "S2", "schicht": "Sauberkeitsschicht", "dicke": "5 cm", "ueblich": "ca. 50–80 mm [[BAUPROFESSOR-SAUBERKEITSSCHICHT]]", "status": "fehler", "anmerkung": "nur unter dem Fundament, unter der Sohle fehlt sie (B1)" }
+  ],
+  "befunde": [
+    {
+      "nr": 1,
+      "einstufung": "aufbaufehler",
+      "regel": "SO-04",
+      "titel": "Sauberkeitsschicht fehlt unter der Stahlbetonsohle",
+      "sicherheit": "hoch",
+      "sicherheit_grund": "Unter der Sohle (UKRD −0,44 m) ist keine Schicht gezeichnet; unter dem Fundament dagegen 5 cm mit Kreuzschraffur",
+      "fundstelle": "Unterseite der Bodenplatte, von der Fundamentkante bis zum rechten Bildrand",
+      "erkennbar": "Die Beschriftung „Sauberkeitsschicht“ zeigt auf die Schicht unter dem Fundament (−0,80 m). Unter der Sohle (UKRD −0,44 m) grenzt der Beton ohne Schicht an das Erdreich; die Maßkette rechts endet an der UKRD ohne 5 cm darunter.",
+      "begruendung": "Die Sauberkeitsschicht trennt Baugrund und Bauteil und gleicht Unebenheiten aus [[BAUPROFESSOR-SAUBERKEITSSCHICHT]]. Sie muss unter allen erdberührten Betonbauteilen liegen – die Beschriftung belegt sie nur an der Spitze der Hinweislinie (KO-08).",
+      "risiko": "Ohne Sauberkeitsschicht kann die Bewehrung beim Betonieren verschmutzt werden oder ihre Lage verlieren; das kann die Dauerhaftigkeit der Sohle beeinträchtigen.",
+      "verbesserung": "Sauberkeitsschicht (Magerbeton, ca. 5 cm wie unter dem Fundament) unter der ganzen Sohle durchführen; Maßkette und Koten um 5 cm ergänzen. Alternative: Kies-/Schotterschicht ca. 10 cm [[BAUPROFESSOR-SAUBERKEITSSCHICHT]].",
+      "grundlage": "Übliche Bauweise [[PRAXIS]]; [[BAUPROFESSOR-SAUBERKEITSSCHICHT]]",
+      "verweise": "KO-08",
+      "massnahme": "Sauberkeitsschicht 5 cm unter der ganzen Sohle ergänzen",
+      "wo": "Unterseite Bodenplatte, UKRD −0,44 m",
+      "kreis": { "x": 66.5, "y": 64.8, "r": 3.5 },
+      "badge": { "x": 66.5, "y": 74.0 },
+      "zoom": [52, 56, 82, 72],
+      "korrektur": [
+        { "typ": "platte", "rechteck": [58.7, 63.77, 75.78, 66.06], "schraffur": "kreuz" },
+        { "typ": "text", "text": "UKRD -0,44m", "x": 68.6, "y": 65.2, "farbe": "original", "rahmen": false },
+        { "typ": "text", "text": "5", "x": 77.0, "y": 64.9, "winkel": 90, "rahmen": false },
+        { "typ": "text", "text": "B1: Sauberkeitsschicht 5 cm unter der ganzen Sohle", "x": 80.5, "y": 68.0, "ziel": [74.0, 65.6] }
+      ]
+    }
+  ],
+  "positiv": [],
+  "annahmen": [ "Testlauf: nur der neue Abschnitts-Check (KO-08) wird geprüft, nicht das ganze Detail." ]
+}
